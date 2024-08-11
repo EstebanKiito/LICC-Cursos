@@ -6,14 +6,23 @@
 
 <br>
 <p align="center">
-Repositorio para compartir mis materiales de estudio, para los cursos de Licenciatura en Ciencia de la Computación UC.
+Bienvenidos al repositorio de materiales de estudio para los cursos de la Licenciatura en Ciencia de la Computación de la UC. Aquí encontrarás recursos, apuntes, y documentos que pueden ser útiles para tu aprendizaje y preparación en los diferentes cursos de la carrera.
 </p>
 
 ---
 
+## <img src="https://media.giphy.com/media/YJ5OlVLZ2QNl6/giphy.gif" width="28px"> **Contacto**
+
+<p align="center">
+<a href="https://github.com/EstebanKiito" target="_blank"><img src="https://img.shields.io/badge/-EstebanKiito-black?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="mailto:esteban.ortega@uc.cl"><img src="https://img.shields.io/badge/-esteban.ortega@uc.cl-c14438?style=for-the-badge&logo=Gmail&logoColor=white"/></a>
+<a href="https://www.instagram.com/esteban._.d._.luffy" target="_blank"><img src="https://img.shields.io/badge/-@esteban._.d._.luffy-E4405F?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
+</p>
+<br>
+
 ## <picture><img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/about_me.gif" width="50px"></picture> **Sobre el Repositorio**
 
-<picture> <img align="right" src="https://media.giphy.com/media/LMcB8XospGZO8UQq87/giphy.gif" width="250px"></picture>
+<img align="right" src="https://media.giphy.com/media/LMcB8XospGZO8UQq87/giphy.gif" width="250px">
 
 - 📚 Contiene Apuntes, Ejercicios, y **RESUMENES** hechos por mi para diversos cursos.
 - 🎓 Material útil para estudiantes de la Lic en Ciencia de la Computación (Tambien de Datos).
@@ -76,22 +85,3 @@ Repositorio para compartir mis materiales de estudio, para los cursos de Licenci
 <div align="center">
  <img src="https://media.giphy.com/media/d31vTpVi1LAcDvdm/giphy.gif" width="200">
 </div>
-
----
-
-## <img src="https://media.giphy.com/media/YJ5OlVLZ2QNl6/giphy.gif" width="28px"> **Contacto**
-
-<p align="center">
-<a href="https://github.com/EstebanKiito" target="_blank"><img src="https://img.shields.io/badge/-EstebanKiito-black?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="mailto:esteban.ortega@uc.cl"><img src="https://img.shields.io/badge/-esteban.ortega@uc.cl-c14438?style=for-the-badge&logo=Gmail&logoColor=white"/></a>
-<a href="https://www.instagram.com/esteban._.d._.luffy" target="_blank"><img src="https://img.shields.io/badge/-@esteban._.d._.luffy-E4405F?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
-</p>
-
----
-
-<p align="center">
-<img src="https://media.giphy.com/media/LMcB8XospGZO8UQq87/giphy.gif" width="150">
-</p>
-
----
-
