@@ -1,0 +1,172 @@
+nombre;vigente;estilo;repartomin;sucursal;direccion;telefono;area
+DCCRestaurant;TRUE;fast food;10000;Las Parcelas;Av. Las Parcelas 1234, Macul, Santiago;562994152387; Macul
+Meet Burger;FALSE;fast food;5000;Providencia;Av. Providencia 456, Las Condes, Santiago;56871243659; Las Condes
+Meet Burger;FALSE;fast food;5000;Vitacura;Av. Vitacura 789, Vitacura, Santiago;56274568231; Vitacura
+Meet Burger;FALSE;fast food;5000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56321078546; Las Condes
+Meet Burger;FALSE;fast food;5000;Kennedy;Av. Kennedy 456, Las Condes, Santiago;562109876452; Las Condes
+Burger Queen;FALSE;fast food;8000;Padre Mariano;Calle Padre Mariano 789, La Reina, Santiago;56784561032; La Reina
+Burger Queen;FALSE;fast food;8000;Larraín;Av. Larraín 123, La Reina, Santiago;562367891254; La Reina
+Delicia China;FALSE;internacional;11000;Recoleta;Av. Recoleta 456, Huechuraba, Santiago;56215647893; Huechuraba
+Delicia China;FALSE;internacional;11000;San Pablo;Calle San Pablo 789, La Cisterna, Santiago;562981456702; La Cisterna
+Delicia China;FALSE;internacional;11000;Libertador;Av. Libertador 123, Rancagua;56670938215; Rancagua
+Indian Cuisine;TRUE;internacional;8000;Vitacura;Av. Vitacura 456, Vitacura, Santiago;562547812369; Vitacura
+Indian Cuisine;TRUE;internacional;8000;Prat;Calle Prat 789, Iquique;56123984756; Iquique
+Indian Cuisine;TRUE;internacional;8000;Libertador;Av. Libertador 123, Viña del Mar;562789465123; Viña del Mar
+Indian Cuisine;TRUE;internacional;8000;Larga;Calle Larga 456, Los Andes;56456789012; Los Andes
+Indian Cuisine;TRUE;internacional;8000;Colón;Av. Colón 789, Antofagasta;562345678901; Antofagasta
+Mestiza;TRUE;fancy;10000;Lientur;Av. Lientur 123, Los Andes;56987654321; Los Andes
+Bogaro;TRUE;fancy;4000;Escriva de Balaguer;Av. San Jos√© María Escriv√° de Balaguer 5970, Vitacura, Santiago;562192837465; Vitacura
+Chick-Fil-A;TRUE;fancy;6000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56876543210; Las Condes
+Chick-Fil-A;TRUE;fancy;6000;Estado;Calle Estado 456, Santiago Centro;562765432109; Santiago Centro
+Chick-Fil-A;TRUE;fancy;6000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;56109876543;Ñuñoa
+Chick-Fil-A;TRUE;fancy;6000;Viel;Calle Viel 123, Viña del Mar;562432109876; Viña del Mar
+Chick-Fil-A;TRUE;fancy;6000;OHiggins;Av. OHiggins 456, Rancagua;56543210987; Rancagua
+Chick-Fil-A;TRUE;fancy;6000;Prat;Calle Prat 789, Iquique;562987654321; Iquique
+Chick-Fil-A;TRUE;fancy;6000;Alemania;Av. Alemania 123, Temuco;56210987654; Temuco
+Donald Mc;FALSE;fast food;3000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;562654321098;Ñuñoa
+Donald Mc;FALSE;fast food;3000;Estado;Calle Estado 789, Santiago Centro;56876543219; Santiago Centro
+Donald Mc;FALSE;fast food;3000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;562321098765; Las Condes
+Donald Mc;FALSE;fast food;3000;Viel;Calle Viel 456, Viña del Mar;56543219876; Viña del Mar
+Donald Mc;FALSE;fast food;3000;OHiggins;Av. OHiggins 789, Rancagua;562098765432; Rancagua
+Donald Mc;FALSE;fast food;3000;Prat;Calle Prat 123, Iquique;56219876543; Iquique
+Donald Mc;FALSE;fast food;3000;Alemania;Av. Alemania 456, Temuco;562876543210; Temuco
+Donald Mc;FALSE;fast food;3000;Larga;Calle Larga 789, Los Andes;56765432109; Los Andes
+Donald Mc;FALSE;fast food;3000;Colón;Av. Colón 123, Antofagasta;562543210987; Antofagasta
+Donald Mc;FALSE;fast food;3000;Vitacura;Av. Vitacura 456, Vitacura, Santiago;56432109876; Vitacura
+Aroma Limeño;TRUE;internacional;3000;San Juan;Av. San Juan 202, Machalí;562210987654; Machalí
+Nolita;TRUE;fancy;11000;Vitacura;Av. Vitacura 123, Vitacura, Santiago;56109876542; Vitacura
+Nolita;TRUE;fancy;11000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;562987654320; Las Condes
+Nolita;TRUE;fancy;11000;San Antonio;Calle San Antonio 789, San Antonio;56765432108; San Antonio
+Nolita;TRUE;fancy;11000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;562543210986;Ñuñoa
+Nolita;TRUE;fancy;11000;Estado;Calle Estado 456, Santiago Centro;56432109875; Santiago Centro
+Outback Steak;FALSE;fast food;19000;Las Condes;Av. Las Condes 789, Las Condes, Santiago;562210987653; Las Condes
+Outback Steak;FALSE;fast food;19000;Maintención;Calle Maintención 123, Maintencillo;56109876541; Maintencillo
+Gilded Truffle;TRUE;internacional;19000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;562987654319;Ñuñoa
+Gilded Truffle;TRUE;internacional;19000;Estado;Calle Estado 789, Santiago Centro;56765432107; Santiago Centro
+Gilded Truffle;TRUE;internacional;19000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;562543210985; Las Condes
+Gilded Truffle;TRUE;internacional;19000;Viel;Calle Viel 456, Viña del Mar;56432109874; Viña del Mar
+Gilded Truffle;TRUE;internacional;19000;OHiggins;Av. OHiggins 789, Rancagua;562210987652; Rancagua
+Gilded Truffle;TRUE;internacional;19000;Prat;Calle Prat 123, Iquique;56109876540; Iquique
+Gilded Truffle;TRUE;internacional;19000;Alemania;Av. Alemania 456, Temuco;562987654318; Temuco
+Gilded Truffle;TRUE;internacional;19000;Larga;Calle Larga 789, Los Andes;56765432106; Los Andes
+Gilded Truffle;TRUE;internacional;19000;Colón;Av. Colón 123, Antofagasta;562543210984; Antofagasta
+FCK;FALSE;fast food;9000;Vitacura;Av. Vitacura 456, Vitacura, Santiago;56432109873; Vitacura
+FCK;FALSE;fast food;9000;Apoquindo;Av. Apoquindo 789, Las Condes, Santiago;562210987651; Las Condes
+FCK;FALSE;fast food;9000;San Antonio;Calle San Antonio 123, San Antonio;56109876539; San Antonio
+FCK;FALSE;fast food;9000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;562987654317;Ñuñoa
+FCK;FALSE;fast food;9000;Estado;Calle Estado 789, Santiago Centro;56765432105; Santiago Centro
+FCK;FALSE;fast food;9000;Las Condes;Av. Las Condes 123, Las Condes, Santiago;562543210983; Las Condes
+FCK;FALSE;fast food;9000;Maintención;Calle Maintención 456, Maintencillo;56432109872; Maintencillo
+FCK;FALSE;fast food;9000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;562210987650;Ñuñoa
+FCK;FALSE;fast food;9000;Estado;Calle Estado 123, Santiago Centro;56109876538; Santiago Centro
+FCK;FALSE;fast food;9000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;562987654316; Las Condes
+Central Perk;FALSE;caf√©;18000;Vitacura;Av. Vitacura 789, Vitacura, Santiago;56765432104; Vitacura
+Central Perk;FALSE;caf√©;18000;San Antonio;Calle San Antonio 123, San Antonio;562543210982; San Antonio
+Central Perk;FALSE;caf√©;18000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;56432109871;Ñuñoa
+Central Perk;FALSE;caf√©;18000;Estado;Calle Estado 789, Santiago Centro;562210987649; Santiago Centro
+Central Perk;FALSE;caf√©;18000;Las Condes;Av. Las Condes 123, Las Condes, Santiago;56109876537; Las Condes
+Krusty Krab;TRUE;fancy;3000;Maintención;Calle Maintención 456, Maintencillo;562987654315; Maintencillo
+Krusty Krab;TRUE;fancy;3000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;56765432103;Ñuñoa
+Krusty Krab;TRUE;fancy;3000;Estado;Calle Estado 123, Santiago Centro;562543210981; Santiago Centro
+Krusty Krab;TRUE;fancy;3000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;56432109870; Las Condes
+Krusty Krab;TRUE;fancy;3000;Viel;Calle Viel 789, Viña del Mar;562210987648; Viña del Mar
+Krusty Krab;TRUE;fancy;3000;OHiggins;Av. OHiggins 123, Rancagua;56109876536; Rancagua
+Krusty Krab;TRUE;fancy;3000;Prat;Calle Prat 456, Iquique;562987654314; Iquique
+Krusty Krab;TRUE;fancy;3000;Alemania;Av. Alemania 789, Temuco;56765432102; Temuco
+Krusty Krab;TRUE;fancy;3000;Larga;Calle Larga 123, Los Andes;562543210980; Los Andes
+Krusty Krab;TRUE;fancy;3000;Colón;Av. Colón 456, Antofagasta;56432109869; Antofagasta
+Chum Bucket;FALSE;fast food;11000;Vitacura;Av. Vitacura 789, Vitacura, Santiago;562210987647; Vitacura
+Chum Bucket;FALSE;fast food;11000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56109876535; Las Condes
+Chum Bucket;FALSE;fast food;11000;San Antonio;Calle San Antonio 456, San Antonio;562987654313; San Antonio
+Chum Bucket;FALSE;fast food;11000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;56765432101;Ñuñoa
+Chum Bucket;FALSE;fast food;11000;Estado;Calle Estado 123, Santiago Centro;562543210979; Santiago Centro
+Chum Bucket;FALSE;fast food;11000;Las Condes;Av. Las Condes 456, Las Condes, Santiago;56432109868; Las Condes
+Chum Bucket;FALSE;fast food;11000;Maintención;Calle Maintención 789, Maintencillo;562210987646; Maintencillo
+Chum Bucket;FALSE;fast food;11000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;56109876534;Ñuñoa
+Doble Queso;TRUE;fast food;3000;Estado;Calle Estado 456, Santiago Centro;562987654312; Santiago Centro
+Doble Queso;TRUE;fast food;3000;Apoquindo;Av. Apoquindo 789, Las Condes, Santiago;56765432100; Las Condes
+Doble Queso;TRUE;fast food;3000;Viel;Calle Viel 123, Viña del Mar;562543210978; Viña del Mar
+Doble Queso;TRUE;fast food;3000;OHiggins;Av. OHiggins 456, Rancagua;56432109867; Rancagua
+Doble Queso;TRUE;fast food;3000;Prat;Calle Prat 789, Iquique;562210987645; Iquique
+Doble Queso;TRUE;fast food;3000;Alemania;Av. Alemania 123, Temuco;56109876533; Temuco
+Pollos Hermanos;FALSE;internacional;7000;Larga;Calle Larga 456, Los Andes;562987654311; Los Andes
+Pollos Hermanos;FALSE;internacional;7000;Colón;Av. Colón 789, Antofagasta;56765432099; Antofagasta
+Pollos Hermanos;FALSE;internacional;7000;Vitacura;Av. Vitacura 123, Vitacura, Santiago;562543210977; Vitacura
+Pollos Hermanos;FALSE;internacional;7000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;56432109866; Las Condes
+Pollos Hermanos;FALSE;internacional;7000;San Antonio;Calle San Antonio 789, San Antonio;562210987644; San Antonio
+Pollos Hermanos;FALSE;internacional;7000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;56109876532;Ñuñoa
+Pollos Hermanos;FALSE;internacional;7000;Estado;Calle Estado 456, Santiago Centro;562987654310; Santiago Centro
+Casiss;FALSE;caf√©;10000;Las Condes;Av. Las Condes 789, Las Condes, Santiago;56765432098; Las Condes
+Casiss;FALSE;caf√©;10000;Maintención;Calle Maintención 123, Maintencillo;562543210976; Maintencillo
+Casiss;FALSE;caf√©;10000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;56432109865;Ñuñoa
+Casiss;FALSE;caf√©;10000;Estado;Calle Estado 789, Santiago Centro;562210987643; Santiago Centro
+Casiss;FALSE;caf√©;10000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56109876531; Las Condes
+Casiss;FALSE;caf√©;10000;Viel;Calle Viel 456, Viña del Mar;562987654309; Viña del Mar
+Casiss;FALSE;caf√©;10000;OHiggins;Av. OHiggins 789, Rancagua;56765432097; Rancagua
+Comida Peruana;FALSE;internacional;19000;Prat;Calle Prat 123, Iquique;562543210975; Iquique
+Comida Peruana;FALSE;internacional;19000;Alemania;Av. Alemania 456, Temuco;56432109864; Temuco
+Comida Peruana;FALSE;internacional;19000;Larga;Calle Larga 789, Los Andes;562210987642; Los Andes
+DeliQuick;TRUE;fast food;8000;Colón;Av. Colón 123, Antofagasta;56109876530; Antofagasta
+DeliQuick;TRUE;fast food;8000;Vitacura;Av. Vitacura 456, Vitacura, Santiago;562987654308; Vitacura
+DeliQuick;TRUE;fast food;8000;Apoquindo;Av. Apoquindo 789, Las Condes, Santiago;56765432096; Las Condes
+DeliQuick;TRUE;fast food;8000;San Antonio;Calle San Antonio 123, San Antonio;562543210974; San Antonio
+Korf;FALSE;fast food;16000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;56432109863;Ñuñoa
+Korf;FALSE;fast food;16000;Estado;Calle Estado 789, Santiago Centro;562210987641; Santiago Centro
+Korf;FALSE;fast food;16000;Las;Av. Las Condes 123, Las Condes, Santiago;56109876529; Las Condes
+Korf;FALSE;fast food;16000;Maintención;Calle Maintención 456, Maintencillo;562987654307; Maintencillo
+Korf;FALSE;fast food;16000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;56765432095;Ñuñoa
+Korf;FALSE;fast food;16000;Estado;Calle Estado 123, Santiago Centro;562543210973; Santiago Centro
+Korf;FALSE;fast food;16000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;56432109862; Las Condes
+Korf;FALSE;fast food;16000;Viel;Calle Viel 789, Viña del Mar;562210987640; Viña del Mar
+Castaña;TRUE;caf√©;4000;OHiggins;Av. OHiggins 123, Rancagua;56109876528; Rancagua
+Castaña;TRUE;caf√©;4000;Prat;Calle Prat 456, Iquique;562987654306; Iquique
+Castaña;TRUE;caf√©;4000;Alemania;Av. Alemania 789, Temuco;56765432094; Temuco
+Castaña;TRUE;caf√©;4000;Larga;Calle Larga 123, Los Andes;562543210972; Los Andes
+Castaña;TRUE;caf√©;4000;Colón;Av. Colón 456, Antofagasta;56432109861; Antofagasta
+Castaña;TRUE;caf√©;4000;Vitacura;Av. Vitacura 789, Vitacura, Santiago;562210987639; Vitacura
+Castaña;TRUE;caf√©;4000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56109876527; Las Condes
+Castaña;TRUE;caf√©;4000;San Antonio;Calle San Antonio 456, San Antonio;562987654305; San Antonio
+Castaña;TRUE;caf√©;4000;Grecia;Av. Grecia 789,Ñuñoa, Santiago;56765432093;Ñuñoa
+Papa Juan;FALSE;fast food;15000;Estado;Calle Estado 123, Santiago Centro;562543210971; Santiago Centro
+Papa Juan;FALSE;fast food;15000;Las Condes;Av. Las Condes 456, Las Condes, Santiago;56432109860; Las Condes
+Papa Juan;FALSE;fast food;15000;Maintención;Calle Maintención 789, Maintencillo;562210987638; Maintencillo
+Papa Juan;FALSE;fast food;15000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;56109876526;Ñuñoa
+Papa Juan;FALSE;fast food;15000;Estado;Calle Estado 456, Santiago Centro;562987654304; Santiago Centro
+Papa Juan;FALSE;fast food;15000;Apoquindo;Av. Apoquindo 789, Las Condes, Santiago;56765432092; Las Condes
+Papa Juan;FALSE;fast food;15000;Viel;Calle Viel 123, Viña del Mar;562543210970; Viña del Mar
+Papa Juan;FALSE;fast food;15000;OHiggins;Av. OHiggins 456, Rancagua;56432109859; Rancagua
+Papa Juan;FALSE;fast food;15000;Prat;Calle Prat 789, Iquique;562210987637; Iquique
+Pequeño Cesar;FALSE;fast food;8000;Alemania;Av. Alemania 123, Temuco;56109876525; Temuco
+Pequeño Cesar;FALSE;fast food;8000;Larga;Calle Larga 456, Los Andes;562987654303; Los Andes
+Pequeño Cesar;FALSE;fast food;8000;Colón;Av. Colón 789, Antofagasta;56765432091; Antofagasta
+Pequeño Cesar;FALSE;fast food;8000;Vitacura;Av. Vitacura 123, Vitacura, Santiago;562543210969; Vitacura
+Pequeño Cesar;FALSE;fast food;8000;Apoquindo;Av. Apoquindo 456, Las Condes, Santiago;56432109858; Las Condes
+Pequeño Cesar;FALSE;fast food;8000;San Antonio;Calle San Antonio 789, San Antonio;562210987636; San Antonio
+Pequeño Cesar;FALSE;fast food;8000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;56109876524;Ñuñoa
+Pequeño Cesar;FALSE;fast food;8000;Estado;Calle Estado 456, Santiago Centro;562987654302; Santiago Centro
+Metro Sandwich;FALSE;fast food;2000;Las Condes;Av. Las Condes 789, Las Condes, Santiago;56765432090; Las Condes
+Metro Sandwich;FALSE;fast food;2000;Maintención;Calle Maintención 123, Maintencillo;562543210968; Maintencillo
+Metro Sandwich;FALSE;fast food;2000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;56432109857;Ñuñoa
+Metro Sandwich;FALSE;fast food;2000;Estado;Calle Estado 789, Santiago Centro;562210987635; Santiago Centro
+New Sushi;FALSE;internacional;3000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;56109876523; Las Condes
+New Sushi;FALSE;internacional;3000;Viel;Calle Viel 456, Viña del Mar;562987654301; Viña del Mar
+New Sushi;FALSE;internacional;3000;OHiggins;Av. OHiggins 789, Rancagua;56765432089; Rancagua
+New Sushi;FALSE;internacional;3000;Prat;Calle Prat 123, Iquique;562543210967; Iquique
+New Sushi;FALSE;internacional;3000;Alemania;Av. Alemania 456, Temuco;56789456123; Temuco
+New Sushi;FALSE;internacional;3000;Larga;Calle Larga 789, Los Andes;562321456789; Los Andes
+New Sushi;FALSE;internacional;3000;Colón;Av. Colón 123, Antofagasta;56987321456; Antofagasta
+Carlos Sr;FALSE;fast food;7000;Vitacura;Av. Vitacura 456, Vitacura, Santiago;562147896325; Vitacura
+Carlos Sr;FALSE;fast food;7000;San Antonio;Calle San Antonio 789, San Antonio;56258963147; San Antonio
+Carlos Sr;FALSE;fast food;7000;Grecia;Av. Grecia 123,Ñuñoa, Santiago;562369258147;Ñuñoa
+Carlos Sr;FALSE;fast food;7000;Estado;Calle Estado 456, Santiago Centro;56471396258; Santiago Centro
+Carlos Sr;FALSE;fast food;7000;Las;Av. Las Condes 789, Las Condes, Santiago;562582147963; Las Condes
+Just Pizza;TRUE;fast food;8000;Maintención;Calle Maintención 123, Maintencillo;56693258147; Maintencillo
+Just Pizza;TRUE;fast food;8000;Grecia;Av. Grecia 456,Ñuñoa, Santiago;562714963258;Ñuñoa
+Just Pizza;TRUE;fast food;8000;Estado;Calle Estado 789, Santiago Centro;56825369147; Santiago Centro
+Just Pizza;TRUE;fast food;8000;Apoquindo;Av. Apoquindo 123, Las Condes, Santiago;562936147258; Las Condes
+Just Pizza;TRUE;fast food;8000;Viel;Calle Viel 456, Viña del Mar;56147258369; Viña del Mar
+Just Pizza;TRUE;fast food;8000;OHiggins;Av. OHiggins 789, Rancagua;562258369147; Rancagua
+Just Pizza;TRUE;fast food;8000;Prat;Calle Prat 123, Iquique;56369147258; Iquique
+Just Pizza;TRUE;fast food;8000;Alemania;Av. Alemania 456, Temuco;562147896325; Temuco
+Just Pizza;TRUE;fast food;8000;Larga;Calle Larga 789, Los Andes;56369147258; Los Andes
+Just Pizza;TRUE;fast food;8000;Colón;Av. Colón 123, Antofagasta;562478963125; Antofagasta
