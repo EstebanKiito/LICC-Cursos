@@ -1,0 +1,114 @@
+[
+    {
+        "nombre": "Los Jaivas",
+        "largo_acto": 99,
+        "miembros": 9,
+        "genero": "folk",
+        "llave": "0r890w"
+    },
+    {
+        "nombre": "Mon Laferte",
+        "largo_acto": 120,
+        "miembros": 5,
+        "genero": "pop",
+        "llave": "0u28zm"
+    },
+    {
+        "nombre": "Los Prisioneros",
+        "largo_acto": 75,
+        "miembros": 3,
+        "genero": "rock",
+        "llave": "08g9h0"
+    },
+    {
+        "nombre": "Los Huasos Quincheros",
+        "largo_acto": 51,
+        "miembros": 7,
+        "genero": "cueca",
+        "llave": "15m6n7"
+    },
+    {
+        "nombre": "Los Tres",
+        "largo_acto": 91,
+        "miembros": 8,
+        "genero": "rock",
+        "llave": "02t3u4"
+    },
+    {
+        "nombre": "Francisca Valenzuela",
+        "largo_acto": 89,
+        "miembros": 1,
+        "genero": "pop",
+        "llave": "19a0b1"
+    },
+    {
+        "nombre": "La Sonora de Tommy Rey",
+        "largo_acto": 47,
+        "miembros": 9,
+        "genero": "cumbia",
+        "llave": "1gj432"
+    },
+    {
+        "nombre": "Young Cister",
+        "largo_acto": 43,
+        "miembros": 1,
+        "genero": "urbano",
+        "llave": "0239sd"
+    },
+    {
+        "nombre": "Illapu",
+        "largo_acto": 49,
+        "miembros": 7,
+        "genero": "folk",
+        "llave": "023a32"
+    },
+    {
+        "nombre": "La Noche",
+        "largo_acto": 60,
+        "miembros": 4,
+        "genero": "cumbia",
+        "llave": "04e5f6"
+    },
+    {
+        "nombre": "Amar azul",
+        "largo_acto": 7,
+        "miembros": 5,
+        "genero": "cumbia",
+        "llave": "07c8d9"
+    },
+    {
+        "nombre": "Sol y Lluvia",
+        "largo_acto": 72,
+        "miembros": 6,
+        "genero": "rock",
+        "llave": "04j5k6"
+    },
+    {
+        "nombre": "Joe Vasconcellos",
+        "largo_acto": 33,
+        "miembros": 1,
+        "genero": "fusion",
+        "llave": "02j3kc"
+    },
+    {
+        "nombre": "Ana Tijoux",
+        "largo_acto": 75,
+        "miembros": 1,
+        "genero": "hip hop",
+        "llave": "09i0j1"
+    }, 
+    {
+        "nombre": "Los Bunkers",
+        "largo_acto": 90,
+        "miembros": 5,
+        "genero": "rock",
+        "llave": "02k3l4"
+    },
+    {
+        "nombre": "Los Auténticos Decadentes",
+        "largo_acto": 90,
+        "miembros": 9,
+        "genero": "rock",
+        "llave": "01q2r3"
+    }
+]

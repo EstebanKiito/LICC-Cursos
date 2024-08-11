@@ -1,0 +1,240 @@
+import sys
+import unittest
+
+# Advertencia, la siguiente línea solo es utiliza por el cuerpo docente.
+# Se considerará una mala práctica ocuparlo en sus evaluaciones.
+sys.path.append("..")
+
+from consultas import id_funciones_genero
+from utilidades import Peliculas, Funciones
+from typing import Generator
+
+
+class TestIdFuncionesGenero(unittest.TestCase):
+
+    def test_0(self):
+        """
+        Test basico
+        """
+        lista_peliculas = [
+            Peliculas(id=46804999, titulo="Guardians of the Galaxy Vol. 2", genero="Superhéroes", rating=7.1),
+            Peliculas(id=81591753, titulo="Zootopia", genero="Animación", rating=8.0),
+            Peliculas(id=69065378, titulo="Black Panther", genero="Superhéroes", rating=8.0),
+            Peliculas(id=81744489, titulo="Cow Belles", genero="Comedia", rating=6.1),
+            Peliculas(id=99972342, titulo="The Cheetah Girls 2", genero="Comedia", rating=5.9),
+            Peliculas(id=73079370, titulo="Thor: The Dark World", genero="Animación", rating=7.2),
+            Peliculas(id=39971720, titulo="Ant-Man", genero="Superhéroes", rating=7.5),
+            Peliculas(id=49034902, titulo="The Godfather", genero="Crimen", rating=9.2),
+            Peliculas(id=95817124, titulo="Fight Club", genero="Crimen", rating=8.8),
+            Peliculas(id=30060914, titulo="Get a Clue", genero="Comedia", rating=6.2),
+            Peliculas(id=47377474, titulo="The Dark Knight Rises", genero="Bélico", rating=8.4),
+            Peliculas(id=59197164, titulo="Motocrossed", genero="Deportes", rating=6.6),
+            Peliculas(id=29533644, titulo="Saving Private Ryan", genero="Superhéroes", rating=8.6),
+            Peliculas(id=48119451, titulo="The Thirteenth Year", genero="Fantasía", rating=6.6),
+            Peliculas(id=52568632, titulo="Shutter Island", genero="Superhéroes", rating=8.5),
+            Peliculas(id=33612645, titulo="Goodfellas", genero="Animación", rating=8.9),
+            Peliculas(id=95417284, titulo="Camp Rock", genero="Musical", rating=5.1),
+            Peliculas(id=51418590, titulo="The Shawshank Redemption", genero="Drama", rating=9.3),
+            Peliculas(id=61234416, titulo="Howl's Moving Castle", genero="Animación", rating=8.9),
+            Peliculas(id=21803572, titulo="Avengers", genero="Acción", rating=8.0),
+            Peliculas(id=40312799, titulo="Finding Nemo", genero="Misterio", rating=8.2),
+            Peliculas(id=25035329, titulo="The Matrix", genero="Ciencia Ficción", rating=8.8),
+            Peliculas(id=87114047, titulo="Jump In!", genero="Deportes", rating=5.4),
+            Peliculas(id=75421892, titulo="The Little Mermaid", genero="Aventura", rating=8.0),
+            Peliculas(id=42103973, titulo="Schindler's List", genero="Fantasía", rating=9.3),
+            Peliculas(id=98811629, titulo="Braveheart", genero="Animación", rating=8.5),
+            Peliculas(id=61161814, titulo="High School Musical", genero="Musical", rating=6.4),
+            Peliculas(id=32568878, titulo="Harry Potter and the Sorcerer's Stone", genero="Bélico", rating=7.6),
+            Peliculas(id=36540564, titulo="Tarzan", genero="Ciencia Ficción", rating=7.6),
+            Peliculas(id=49895401, titulo="Pixel Perfect", genero="Ciencia Ficción", rating=6.0),
+        ]
+        lista_funciones = [
+            Funciones(id=1765, numero_sala=6, id_pelicula=81744489, horario=6, fecha="21-04-23"),
+            Funciones(id=8642, numero_sala=3, id_pelicula=39971720, horario=6, fecha="14-04-23"),
+            Funciones(id=6189, numero_sala=4, id_pelicula=33612645, horario=4, fecha="07-10-23"),
+            Funciones(id=9231, numero_sala=6, id_pelicula=95417284, horario=1, fecha="04-05-23"),
+            Funciones(id=1536, numero_sala=8, id_pelicula=33612645, horario=5, fecha="05-10-23"),
+            Funciones(id=4027, numero_sala=8, id_pelicula=51418590, horario=8, fecha="23-09-23"),
+            Funciones(id=6499, numero_sala=8, id_pelicula=52568632, horario=3, fecha="20-03-23"),
+            Funciones(id=1640, numero_sala=2, id_pelicula=73079370, horario=2, fecha="17-01-23"),
+            Funciones(id=4504, numero_sala=7, id_pelicula=61161814, horario=9, fecha="04-06-23"),
+            Funciones(id=2631, numero_sala=8, id_pelicula=95817124, horario=9, fecha="22-11-23"),
+            Funciones(id=7335, numero_sala=1, id_pelicula=81591753, horario=2, fecha="18-10-23"),
+            Funciones(id=9980, numero_sala=4, id_pelicula=33612645, horario=8, fecha="13-07-23"),
+            Funciones(id=1090, numero_sala=3, id_pelicula=98811629, horario=4, fecha="20-03-23"),
+            Funciones(id=9866, numero_sala=9, id_pelicula=33612645, horario=6, fecha="13-01-23"),
+            Funciones(id=3343, numero_sala=4, id_pelicula=99972342, horario=2, fecha="16-11-23"),
+            Funciones(id=9639, numero_sala=9, id_pelicula=33612645, horario=6, fecha="16-03-23"),
+            Funciones(id=3443, numero_sala=2, id_pelicula=32568878, horario=4, fecha="01-02-23"),
+            Funciones(id=2856, numero_sala=8, id_pelicula=61234416, horario=3, fecha="12-10-23"),
+            Funciones(id=8404, numero_sala=5, id_pelicula=99972342, horario=3, fecha="06-02-23"),
+            Funciones(id=3009, numero_sala=1, id_pelicula=30060914, horario=2, fecha="24-11-23"),
+            Funciones(id=6711, numero_sala=6, id_pelicula=81591753, horario=4, fecha="26-03-23"),
+            Funciones(id=3884, numero_sala=3, id_pelicula=61234416, horario=5, fecha="27-02-23"),
+            Funciones(id=7508, numero_sala=3, id_pelicula=46804999, horario=8, fecha="21-07-23"),
+            Funciones(id=1337, numero_sala=5, id_pelicula=33612645, horario=3, fecha="23-10-23"),
+            Funciones(id=1553, numero_sala=3, id_pelicula=73079370, horario=7, fecha="27-09-23"),
+            Funciones(id=8320, numero_sala=8, id_pelicula=87114047, horario=8, fecha="18-11-23"),
+            Funciones(id=8862, numero_sala=2, id_pelicula=61234416, horario=3, fecha="15-11-23"),
+            Funciones(id=9365, numero_sala=4, id_pelicula=40312799, horario=8, fecha="02-11-23"),
+            Funciones(id=8461, numero_sala=9, id_pelicula=61234416, horario=5, fecha="23-05-23"),
+            Funciones(id=7641, numero_sala=6, id_pelicula=32568878, horario=5, fecha="02-11-23"),
+        ]
+        lista_esperada = [6189, 1536, 1640, 7335, 9980, 1090, 9866, 9639, 2856, 6711, 3884, 1337,
+                          1553, 8862, 8461]
+
+        resultado = id_funciones_genero(iter(lista_peliculas), iter(lista_funciones), "Animación")
+        self.assertIsInstance(resultado, (list, tuple, set, filter, map, Generator))
+        self.assertCountEqual(list(resultado), lista_esperada)
+
+    def test_1(self):
+        """
+        Test basico
+        """
+        lista_peliculas = [
+            Peliculas(id=42986062, titulo="The Lord of the Rings", genero="Fantasía", rating=8.7),
+            Peliculas(id=98811629, titulo="Braveheart", genero="Animación", rating=8.5),
+            Peliculas(id=23678361, titulo="Scarface", genero="Crimen", rating=8.8),
+            Peliculas(id=27868789, titulo="Guardians of the Galaxy", genero="Animación", rating=7.5),
+            Peliculas(id=64787434, titulo="Casino", genero="Western", rating=8.5),
+            Peliculas(id=21803572, titulo="Avengers", genero="Acción", rating=8.0),
+            Peliculas(id=20610700, titulo="The Princess and the Frog", genero="Animación", rating=7.1),
+            Peliculas(id=91153956, titulo="Blade Runner", genero="Ciencia Ficción", rating=8.1),
+            Peliculas(id=47377474, titulo="The Dark Knight Rises", genero="Bélico", rating=8.4),
+            Peliculas(id=30060914, titulo="Get a Clue", genero="Comedia", rating=6.2),
+            Peliculas(id=11615401, titulo="The Princess Bride", genero="Aventura", rating=7.5),
+            Peliculas(id=87538292, titulo="Monsters Inc.", genero="Animación", rating=8.1),
+            Peliculas(id=46804999, titulo="Guardians of the Galaxy Vol. 2", genero="Superhéroes", rating=7.1),
+            Peliculas(id=73079370, titulo="Thor: The Dark World", genero="Animación", rating=7.2),
+            Peliculas(id=95054110, titulo="Thor: Ragnarok", genero="Superhéroes", rating=7.9),
+            Peliculas(id=33896817, titulo="La La Land", genero="Musical", rating=8.0),
+            Peliculas(id=49895401, titulo="Pixel Perfect", genero="Ciencia Ficción", rating=6.0),
+            Peliculas(id=42456754, titulo="The Matrix Reloaded", genero="Fantasía", rating=7.2),
+            Peliculas(id=85068287, titulo="Wendy Wu: Homecoming Warrior", genero="Acción", rating=6.2),
+            Peliculas(id=39971720, titulo="Ant-Man", genero="Superhéroes", rating=7.5),
+            Peliculas(id=62863901, titulo="The Prestige", genero="Superhéroes", rating=8.6),
+            Peliculas(id=93369344, titulo="Avengers: Infinity War", genero="Superhéroes", rating=8.4),
+            Peliculas(id=11568343, titulo="The Social Network", genero="Drama", rating=7.7),
+            Peliculas(id=79145064, titulo="Forrest Gump", genero="Ciencia", rating=8.8),
+            Peliculas(id=81187977, titulo="Moana", genero="Animación", rating=8.0),
+            Peliculas(id=34755557, titulo="The Notebook", genero="Western", rating=7.8),
+            Peliculas(id=59848286, titulo="The Silence of the Lambs", genero="Suspense", rating=8.6),
+            Peliculas(id=92004621, titulo="Treasure Planet", genero="Deportes", rating=7.7),
+            Peliculas(id=95230455, titulo="Your Name", genero="Animación", rating=8.4),
+            Peliculas(id=44000862, titulo="American History X", genero="Superhéroes", rating=8.5),
+        ]
+        lista_funciones = [
+            Funciones(id=3158, numero_sala=9, id_pelicula=93369344, horario=4, fecha="08-03-23"),
+            Funciones(id=6538, numero_sala=2, id_pelicula=39971720, horario=6, fecha="02-12-23"),
+            Funciones(id=7918, numero_sala=2, id_pelicula=44000862, horario=8, fecha="06-07-23"),
+            Funciones(id=8367, numero_sala=3, id_pelicula=59848286, horario=1, fecha="03-08-23"),
+            Funciones(id=4018, numero_sala=2, id_pelicula=44000862, horario=2, fecha="01-08-23"),
+            Funciones(id=3509, numero_sala=1, id_pelicula=91153956, horario=2, fecha="04-10-23"),
+            Funciones(id=1697, numero_sala=5, id_pelicula=44000862, horario=6, fecha="25-08-23"),
+            Funciones(id=1016, numero_sala=8, id_pelicula=39971720, horario=6, fecha="21-01-23"),
+            Funciones(id=4385, numero_sala=2, id_pelicula=49895401, horario=7, fecha="13-10-23"),
+            Funciones(id=3379, numero_sala=5, id_pelicula=62863901, horario=3, fecha="23-12-23"),
+            Funciones(id=2600, numero_sala=6, id_pelicula=64787434, horario=5, fecha="26-03-23"),
+            Funciones(id=7498, numero_sala=2, id_pelicula=39971720, horario=9, fecha="16-09-23"),
+            Funciones(id=9685, numero_sala=4, id_pelicula=93369344, horario=1, fecha="06-02-23"),
+            Funciones(id=9769, numero_sala=9, id_pelicula=81187977, horario=7, fecha="18-03-23"),
+            Funciones(id=3947, numero_sala=4, id_pelicula=62863901, horario=6, fecha="22-07-23"),
+            Funciones(id=8987, numero_sala=7, id_pelicula=46804999, horario=1, fecha="17-04-23"),
+            Funciones(id=5761, numero_sala=7, id_pelicula=44000862, horario=4, fecha="23-01-23"),
+            Funciones(id=7214, numero_sala=6, id_pelicula=39971720, horario=9, fecha="02-05-23"),
+            Funciones(id=6783, numero_sala=7, id_pelicula=23678361, horario=1, fecha="05-03-23"),
+            Funciones(id=1396, numero_sala=1, id_pelicula=27868789, horario=5, fecha="28-12-23"),
+            Funciones(id=9954, numero_sala=5, id_pelicula=93369344, horario=5, fecha="15-08-23"),
+            Funciones(id=8217, numero_sala=8, id_pelicula=91153956, horario=6, fecha="14-06-23"),
+            Funciones(id=2425, numero_sala=9, id_pelicula=44000862, horario=7, fecha="10-01-23"),
+            Funciones(id=6055, numero_sala=6, id_pelicula=44000862, horario=8, fecha="11-01-23"),
+            Funciones(id=8839, numero_sala=1, id_pelicula=42456754, horario=6, fecha="21-09-23"),
+            Funciones(id=2849, numero_sala=9, id_pelicula=93369344, horario=6, fecha="06-04-23"),
+            Funciones(id=7820, numero_sala=2, id_pelicula=95054110, horario=7, fecha="13-03-23"),
+            Funciones(id=5753, numero_sala=6, id_pelicula=39971720, horario=9, fecha="13-04-23"),
+            Funciones(id=2184, numero_sala=1, id_pelicula=95230455, horario=1, fecha="23-03-23"),
+            Funciones(id=3385, numero_sala=8, id_pelicula=93369344, horario=6, fecha="19-06-23"),
+        ]
+        lista_esperada = [3158, 6538, 7918, 4018, 1697, 1016, 3379, 7498, 9685, 3947, 8987, 5761, 7214, 9954, 2425, 6055, 2849, 7820, 5753, 3385]
+
+        resultado = id_funciones_genero(iter(lista_peliculas), iter(lista_funciones), "Superhéroes")
+        self.assertIsInstance(resultado, (list, tuple, set, filter, map, Generator))
+        self.assertCountEqual(list(resultado), lista_esperada)
+
+    def test_2(self):
+        """
+        Una pelicula con varias funciones
+        """
+        lista_peliculas = [
+            Peliculas(id=41115118, titulo="Avatar", genero="Crimen", rating=7.8),
+            Peliculas(id=75421892, titulo="The Little Mermaid", genero="Aventura", rating=8.0),
+            Peliculas(id=36540564, titulo="Tarzan", genero="Ciencia Ficción", rating=7.6),
+            Peliculas(id=99972342, titulo="The Cheetah Girls 2", genero="Comedia", rating=5.9),
+            Peliculas(id=34304754, titulo="Iron Man 3", genero="Animación", rating=7.1),
+            Peliculas(id=11568343, titulo="The Social Network", genero="Drama", rating=7.7),
+            Peliculas(id=89737370, titulo="Iron Man", genero="Animación", rating=7.6),
+            Peliculas(id=23678361, titulo="Scarface", genero="Crimen", rating=8.8),
+            Peliculas(id=95230455, titulo="Your Name", genero="Animación", rating=8.4),
+            Peliculas(id=19177277, titulo="High School Musical 3", genero="Musical", rating=6.9),
+            Peliculas(id=40873645, titulo="The Terminator", genero="Ciencia Ficción", rating=8.5),
+            Peliculas(id=95054110, titulo="Thor: Ragnarok", genero="Superhéroes", rating=7.9),
+            Peliculas(id=87538292, titulo="Monsters Inc.", genero="Animación", rating=8.1),
+            Peliculas(id=69065378, titulo="Black Panther", genero="Superhéroes", rating=8.0),
+            Peliculas(id=57395306, titulo="Inuyasha", genero="Animación", rating=8.4),
+            Peliculas(id=75259113, titulo="Up", genero="Crimen", rating=8.4),
+            Peliculas(id=35569845, titulo="The Princess Diaries 2", genero="Comedia", rating=5.8),
+            Peliculas(id=32152163, titulo="The Princess Diaries", genero="Comedia", rating=6.2),
+            Peliculas(id=55774654, titulo="The Pianist", genero="Superhéroes", rating=8.5),
+            Peliculas(id=25227924, titulo="Kill Bill: Vol. 2", genero="Western", rating=8.7),
+            Peliculas(id=75759551, titulo="The Lion King", genero="Animación", rating=8.5),
+            Peliculas(id=81744489, titulo="Cow Belles", genero="Comedia", rating=6.1),
+            Peliculas(id=76172796, titulo="Inception", genero="Ciencia Ficción", rating=8.8),
+            Peliculas(id=25035329, titulo="The Matrix", genero="Ciencia Ficción", rating=8.8),
+            Peliculas(id=81591753, titulo="Zootopia", genero="Animación", rating=8.0),
+            Peliculas(id=77439731, titulo="The Lord of the Rings: The Fellowship of the Ring", genero="Animación", rating=8.4),
+            Peliculas(id=72588542, titulo="Frozen", genero="Animación", rating=7.4),
+            Peliculas(id=34755557, titulo="The Notebook", genero="Western", rating=7.8),
+            Peliculas(id=30060914, titulo="Get a Clue", genero="Comedia", rating=6.2),
+            Peliculas(id=42103973, titulo="Schindler's List", genero="Fantasía", rating=9.3),
+        ]
+        lista_funciones = [
+            Funciones(id=4162, numero_sala=2, id_pelicula=23678361, horario=1, fecha="27-06-23"),
+            Funciones(id=6444, numero_sala=9, id_pelicula=95230455, horario=7, fecha="08-07-23"),
+            Funciones(id=8511, numero_sala=4, id_pelicula=95054110, horario=3, fecha="13-01-23"),
+            Funciones(id=8295, numero_sala=3, id_pelicula=75759551, horario=4, fecha="06-09-23"),
+            Funciones(id=8460, numero_sala=4, id_pelicula=75421892, horario=4, fecha="19-09-23"),
+            Funciones(id=9354, numero_sala=4, id_pelicula=25227924, horario=2, fecha="04-04-23"),
+            Funciones(id=2522, numero_sala=1, id_pelicula=23678361, horario=7, fecha="15-06-23"),
+            Funciones(id=3009, numero_sala=9, id_pelicula=75461892, horario=8, fecha="03-02-23"),
+            Funciones(id=3163, numero_sala=8, id_pelicula=75421892, horario=1, fecha="04-02-23"),
+            Funciones(id=3109, numero_sala=1, id_pelicula=25035329, horario=4, fecha="10-11-23"),
+            Funciones(id=4099, numero_sala=7, id_pelicula=55774654, horario=5, fecha="16-07-23"),
+            Funciones(id=5335, numero_sala=2, id_pelicula=42103973, horario=8, fecha="01-10-23"),
+            Funciones(id=8839, numero_sala=2, id_pelicula=75421892, horario=2, fecha="18-11-23"),
+            Funciones(id=6789, numero_sala=3, id_pelicula=76172796, horario=8, fecha="18-10-23"),
+            Funciones(id=6833, numero_sala=9, id_pelicula=72588542, horario=5, fecha="15-09-23"),
+            Funciones(id=5071, numero_sala=6, id_pelicula=34755557, horario=2, fecha="19-12-23"),
+            Funciones(id=7295, numero_sala=8, id_pelicula=36540564, horario=4, fecha="12-10-23"),
+            Funciones(id=9491, numero_sala=9, id_pelicula=75759551, horario=3, fecha="14-03-23"),
+            Funciones(id=9126, numero_sala=9, id_pelicula=75421892, horario=6, fecha="16-10-23"),
+            Funciones(id=8735, numero_sala=2, id_pelicula=30060914, horario=8, fecha="09-12-23"),
+            Funciones(id=5468, numero_sala=3, id_pelicula=23678361, horario=8, fecha="10-08-23"),
+            Funciones(id=7403, numero_sala=6, id_pelicula=87538292, horario=6, fecha="02-05-23"),
+            Funciones(id=8152, numero_sala=8, id_pelicula=72588542, horario=8, fecha="18-06-23"),
+            Funciones(id=4395, numero_sala=9, id_pelicula=75421892, horario=1, fecha="07-12-23"),
+            Funciones(id=6703, numero_sala=3, id_pelicula=55774654, horario=4, fecha="19-07-23"),
+            Funciones(id=5368, numero_sala=8, id_pelicula=30060914, horario=1, fecha="16-03-23"),
+            Funciones(id=3789, numero_sala=9, id_pelicula=75721892, horario=7, fecha="01-05-23"),
+            Funciones(id=2997, numero_sala=8, id_pelicula=34304754, horario=7, fecha="04-08-23"),
+            Funciones(id=6632, numero_sala=4, id_pelicula=99972342, horario=2, fecha="22-05-23"),
+            Funciones(id=6153, numero_sala=7, id_pelicula=34755557, horario=4, fecha="23-09-23"),
+        ]
+        lista_esperada = [8460, 3163, 8839, 9126, 4395]
+
+        resultado = id_funciones_genero(iter(lista_peliculas), iter(lista_funciones), "Aventura")
+        self.assertIsInstance(resultado, (list, tuple, set, filter, map, Generator))
+        self.assertCountEqual(list(resultado), lista_esperada)
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

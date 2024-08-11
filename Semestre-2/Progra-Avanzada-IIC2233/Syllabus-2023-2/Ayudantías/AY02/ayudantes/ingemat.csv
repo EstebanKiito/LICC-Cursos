@@ -1,0 +1,6 @@
+nombre;creditos;ramos_ingemat;formula_favorita
+Carlos;40;ING2030|MAT2511|EYP2114|ICS113H;e ** (i * pi) + 1 = 0
+Clemente;50;MAT2511|MAT2605|EYP2114|IIC2133|BIO141C;int_a_b(f(x) dx) = F(a) - F(b)
+Carlita;45;DPT5000|MAT2511|IIC2133|BIO141C|ING2030;a ** 2 + b ** 2 = c ** 2
+Angel;40;MAT2605|EYP2114|IIC2133|BIO141C;d(x,y) = 0 <=> x = y
+Gonzalo;50;MAT2511|EYP2114|ICS113H|MAT2605|IIC2133;n + (n-1) + ... + 1 = (n * (n - 1)) / 2

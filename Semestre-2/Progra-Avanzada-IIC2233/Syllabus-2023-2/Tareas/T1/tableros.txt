@@ -1,0 +1,5 @@
+ejemplo_chico_sin_solución,2,5,V2,--,PP,--,H2,H3,--,--,PP,R11
+ejemplo_solucionado,2,2,R2,--,PP,PP
+test_1,2,2,R2,--,PP,PP
+test_2,2,3,--,--,PP,PP,--,--
+test_3,6,4,--,R3,PP,--,H2,--,PP,V5,--,PP,--,V2,R7,--,PP,--,PP,--,--,R3,PP,PP,H4,--

@@ -1,0 +1,8 @@
+nombre,precio,categoria
+espresso,1500,cafe_caliente
+frappuccino,3900,cafe_frio
+cold_brew,3000,cafe_frio
+te_chai,1900,te
+earl_gray,1500,te
+americano,1500,cafe_caliente
+cappuccino,2500,cafe_caliente
