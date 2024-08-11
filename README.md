@@ -4,6 +4,7 @@
  <img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" width="200">
 </div>
 
+<br>
 <p align="center">
 Repositorio para compartir mis materiales de estudio, para los cursos de Licenciatura en Ciencia de la Computación UC.
 </p>
@@ -12,13 +13,12 @@ Repositorio para compartir mis materiales de estudio, para los cursos de Licenci
 
 ## <picture><img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/about_me.gif" width="50px"></picture> **Sobre el Repositorio**
 
-<picture> <img align="right" src="https://media.giphy.com/media/2u11zA4yUb7nq/giphy.gif" width="250px"></picture>
+<picture> <img align="right" src="https://media.giphy.com/media/LMcB8XospGZO8UQq87/giphy.gif" width="250px"></picture>
 
-- 📚 Contiene Apuntes, Ejercicios, y RESUMENES hechos por mi para diversos cursos.
+- 📚 Contiene Apuntes, Ejercicios, y **RESUMENES** hechos por mi para diversos cursos.
 - 🎓 Material útil para estudiantes de la Lic en Ciencia de la Computación (Tambien de Datos).
 - 🏫 Pueden contactarme por ayuda para ramos, tengo mucha disposición en ayudar!!.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Contenido</b>
 
