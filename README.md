@@ -33,45 +33,47 @@ Bienvenidos al repositorio de materiales de estudio para los cursos de la Licenc
 
 <p align="center">
 
-- **Primer Año**:
+- **Primer Semestre**:
   - Introducción a la Programación
   - Algoritmos y Sistemas Computacionales
   - Introducción al Cálculo
   - Introducción al Álgebra y Geometría
   - Filosofía: ¿Para qué?
 
-- **Segundo Año**:
+- **Segundo Semestre**:
   - Matemáticas Discretas
   - Programación Avanzada
   - Arquitectura de Computadores
   - Cálculo I
 
-- **Tercer Año**:
+- **Tercer Semestre**:
   - Estructura de Datos y Algoritmos
   - Bases de Datos
   - Cálculo II
   - Álgebra Lineal
 
-- **Cuarto Año**:
+- **Cuarto Semestre**:
   - Modelos Probabilísticos
   - Ingeniería de Software
   - Autómatas y Compiladores
   - Sistemas Operativos y Redes
 
-- **Quinto Año**:
+- **Quinto Semestre**:
   - Fundamentos de Lenguajes de Programación
   - Teoría de la Computación
   - Tecnologías y Aplicaciones
 
-- **Sexto Año**:
+- **Sexto Semestre**:
   - Inteligencia Artificial
   - Diseño y Análisis de Algoritmos
   - Seguridad Computacional
   - Ética para la Ciencia de la Computación
 
-- **Séptimo Año**:
+- **Séptimo Semestre**:
   - Sistemas Distribuidos
   - Interfaces y Experiencia de Usuario
+ 
+- **Octavo Semestre**:
   - Proyecto de Innovación y Computación
 
 ---
