@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="148.14mm" height="83.682mm" version="1.1" viewBox="0 0 148.13939 83.682222" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker1078" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker1079" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406-0" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(54.929 -27.725)">
+  <g>
+   <text x="-24.159376" y="30.169554" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-24.159376" y="30.169554">P1 (ID: 4592)</tspan></text>
+   <text x="53.908325" y="37.383541" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="53.908325" y="37.383541">P2 (ID: 4601)</tspan></text>
+   <rect transform="scale(1,-1)" x="-54.729" y="-62.397" width="79.651" height="30.267" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="37.132" y="-75.659" width="55.879" height="32.28" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="-53.19656" y="36.401981" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-53.19656" y="36.401981">printf("Antes de fork()\n");</tspan><tspan x="-53.19656" y="39.92976">pid_t child_pid = fork();</tspan><tspan x="-53.19656" y="43.457539">if (child_pid == 0) {</tspan><tspan x="-53.19656" y="46.985313">  ...</tspan><tspan x="-53.19656" y="50.513092">}</tspan><tspan x="-53.19656" y="54.040871">else if (child_pid &gt; 0) {</tspan><tspan x="-53.19656" y="57.568649">  printf("PARENT: child_pid is %d\n", child_pid);</tspan><tspan x="-53.19656" y="61.096424">  wait(&amp;status);</tspan></text>
+  </g>
+  <path d="m-8.7268 41.285 44.929-.000345" fill="none" marker-end="url(#marker2406)" stroke="#000" stroke-width=".26458px"/>
+  <g>
+   <text x="38.349297" y="36.401981" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="38.349297" y="38.850754"/><tspan x="38.349297" y="42.378532">pid_t child_pid = fork();</tspan><tspan x="38.349297" y="45.906311">if (child_pid == 0) {</tspan><tspan x="38.349297" y="49.43409">  printf("CHILD: running\n");</tspan><tspan x="38.349297" y="52.961868">  ...</tspan><tspan x="38.349297" y="56.489643">  ...</tspan><tspan x="38.349297" y="60.017422">  ...</tspan><tspan x="38.349297" y="63.5452">  ...</tspan><tspan x="38.349297" y="67.072975">  ...</tspan><tspan x="38.349297" y="70.600754">  ...</tspan><tspan x="38.349297" y="74.128532">  exit(9);</tspan><tspan x="38.349297" y="77.656311">  </tspan></text>
+   <text x="13.368379" y="92.799629" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="13.368379" y="92.799629" stroke-width="0">Output</tspan></text>
+   <rect transform="scale(1,-1)" x="-14.471" y="-111.36" width="65.756" height="17.711" rx="0" ry="0" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".1">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="-13.996292" y="96.036705" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-13.996292" y="96.036705">Antes de fork()</tspan><tspan x="-13.996292" y="99.564484">PARENT: child_pid is 4601</tspan><tspan x="-13.996292" y="103.09226">CHILD: running</tspan><tspan x="-13.996292" y="106.62004">PARENT: Child finished</tspan><tspan x="-13.996292" y="110.14782">Exit status: 9</tspan></text>
+  </g>
+  <g fill="#ff0000" font-family="Calibri" font-size="2.8222px" font-style="italic" letter-spacing="0px" stroke-width="0" word-spacing="0px">
+   <text x="30.268929" y="103.30163" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="30.268929" y="103.30163">Output de P2</tspan></text>
+   <text x="52.70216" y="109.13395" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="52.70216" y="109.13395">Output de P1</tspan></text>
+   <text x="52.49395" y="96.276329" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="52.49395" y="96.276329">Output de P1</tspan></text>
+  </g>
+  <g fill="none" stroke="#f00" stroke-width=".26458px">
+   <path d="m29.18 104.81h2.6785v5.8592h-2.3437"/>
+   <path d="m31.859 107.74 19.426.68604" marker-end="url(#marker1079)"/>
+   <path d="m29.18 94.232h2.6785v5.8592h-2.3437"/>
+   <path d="m31.859 96.632 19.426-.90146" marker-end="url(#marker1078)"/>
+  </g>
+  <rect transform="scale(1,-1)" x="-54.729" y="-87.366" width="79.651" height="12.019" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+   <desc>dfsdfsdfsdf</desc>
+  </rect>
+  <g>
+   <text x="-53.69878" y="78.755821" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-53.69878" y="78.755821">}</tspan><tspan x="-53.69878" y="82.2836">printf("PARENT: Child finished\n");</tspan><tspan x="-53.69878" y="85.811378">printf("Exit status: %d\n", WEXITSTATUS(&amp;status));</tspan></text>
+   <path d="m37.132 75.659-12.324-.000345" fill="none" marker-end="url(#marker2406-0)" stroke="#000" stroke-width=".26458px"/>
+   <g>
+    <path d="m-14.903 62.397v13.479" fill="none" stroke="#556b2f" stroke-dasharray="4, 0.5" stroke-width=".5"/>
+    <text x="-13.974528" y="68.786552" fill="#556b2f" font-family="Calibri" font-size="2.8222px" font-style="italic" letter-spacing="0px" stroke="#556b2f" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-13.974528" y="68.786552">P1 en estado waiting</tspan></text>
+    <text x="25.75709" y="74.667007" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="25.75709" y="74.667007">exit(9)</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>

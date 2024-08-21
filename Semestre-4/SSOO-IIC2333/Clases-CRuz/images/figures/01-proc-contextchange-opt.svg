@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="114.22mm" height="40.443mm" version="1.1" viewBox="0 0 114.22403 40.443089" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker3838" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker3030" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2382" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="Arrow2Lend" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-17.2 -25.476)">
+  <g>
+   <rect transform="scale(1,-1)" x="21.072" y="-61.647" width="109.9" height="15.488" rx="0" ry="0" fill="#ffa07a" stroke="#ff4500" stroke-linecap="round" stroke-linejoin="round" stroke-width=".10112">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="21.071" y="-46.078" width="109.9" height="20.551" rx="0" ry="0" fill="#6b8e23" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".10074">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="23.01186" y="28.359615" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="23.01186" y="28.359615" font-family="Calibri" font-size="2.8222px" font-style="italic" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">User space</tspan></text>
+   <rect transform="scale(1,-1)" x="37.287" y="-52.332" width="15.751" height="2.5261" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="21.223" y="-42.576" width="13.693" height="2.4771" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="22.482693" y="60.63879" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="22.482693" y="60.63879" font-family="Calibri" font-size="2.8222px" font-style="italic" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Kernel space</tspan></text>
+   <text x="18.712177" y="42.22282" fill="#000000" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="18.712177" y="42.22282" fill="#000000" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">P1</tspan></text>
+  </g>
+  <g>
+   <g>
+    <path d="m35.62 41.372 81.911 2e-6" fill="none" stroke="#556b2f" stroke-dasharray="4, 4" stroke-width=".5"/>
+    <text x="76.830688" y="39.857903" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.830688" y="39.857903" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">en espera (ready)</tspan></text>
+    <text x="37.747444" y="48.456905" fill="#f0ffff" font-family="Calibri" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="37.747444" y="48.456905" font-family="Calibri" font-size="2.8222px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">INTERRUPCION</tspan></text>
+   </g>
+   <path d="m26.26 64.352h91.294" fill="none" marker-end="url(#Arrow2Lend)" stroke="#000" stroke-width=".26458px"/>
+  </g>
+  <g>
+   <text x="124.73347" y="65.292244" fill="#f0ffff" font-family="Calibri" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="124.73347" y="65.292244" fill="#000000" font-family="Calibri" font-size="3.5278px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">tiempo</tspan></text>
+   <rect transform="scale(1,-1)" x="115.64" y="-42.576" width="15.58" height="2.4771" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="56.318" y="-34.638" width="37.088" height="2.4771" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+  </g>
+  <g fill="none">
+   <path d="m21.332 33.434 35.226 2e-6" stroke="#556b2f" stroke-dasharray="4, 4" stroke-width=".5"/>
+   <path d="m93.406 33.434 37.564 2e-6" stroke="#556b2f" stroke-dasharray="4, 4" stroke-width=".5"/>
+   <path d="m34.915 41.337 2.3717 9.7316" marker-end="url(#marker2406)" stroke="#000" stroke-width=".26458px"/>
+  </g>
+  <g stroke-width=".26458px">
+   <text x="27.32856" y="54.816525" fill="#ffffff" font-family="Calibri" font-size="2.8222px" letter-spacing="0px" word-spacing="0px" style="line-height:100%" xml:space="preserve"><tspan x="27.32856" y="54.816525">Almacena estado de P1 en PCB1</tspan><tspan x="27.32856" y="57.666309">Restaura estado de P2 desde PCB2 </tspan></text>
+   <path d="m53.039 51.069 3.52-17.635" fill="none" marker-end="url(#marker2382)" stroke="#000"/>
+   <path d="m93.406 33.434 3.6766 17.635" fill="none" marker-end="url(#marker3030)" stroke="#000"/>
+  </g>
+  <rect transform="scale(1,-1)" x="97.612" y="-52.332" width="15.751" height="2.5261" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+   <desc>dfsdfsdfsdf</desc>
+  </rect>
+  <path d="m113.36 51.069 2.4616-9.1679" fill="none" marker-end="url(#marker3838)" stroke="#000" stroke-width=".26458px"/>
+  <g font-family="Calibri" letter-spacing="0px" word-spacing="0px">
+   <text x="42.963989" y="32.449562" fill="#f0ffff" font-size="8.4667px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="42.963989" y="32.449562" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">en espera (ready)</tspan></text>
+   <text x="97.543335" y="48.456905" fill="#f0ffff" font-size="2.8222px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="97.543335" y="48.456905" font-family="Calibri" font-size="2.8222px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">INTERRUPCION</tspan></text>
+   <text x="86.595276" y="54.816525" fill="#ffffff" font-size="2.8222px" stroke-width=".26458px" style="line-height:100%" xml:space="preserve"><tspan x="86.595276" y="54.816525">Almacena estado de P2 en PCB2</tspan><tspan x="86.595276" y="57.666309">Restaura estado de P1 desde PCB1 </tspan></text>
+  </g>
+  <g fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px">
+   <text x="27.618151" y="41.974571" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="27.618151" y="41.974571" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">CPU (running)</tspan></text>
+   <text x="75.772362" y="34.037064" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="75.772362" y="34.037064" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">CPU (running)</tspan></text>
+   <text x="123.3974" y="41.974571" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="123.3974" y="41.974571" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">CPU (running)</tspan></text>
+   <text x="104.87658" y="51.49958" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="104.87658" y="51.49958" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">CPU (kernel)</tspan></text>
+   <text x="45.080681" y="51.49958" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="45.080681" y="51.49958" font-family="Calibri" font-size="2.1167px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">CPU (kernel)</tspan></text>
+  </g>
+  <text x="18.712177" y="34.285313" fill="#000000" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="18.712177" y="34.285313" fill="#000000" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">P2</tspan></text>
+ </g>
+</svg>

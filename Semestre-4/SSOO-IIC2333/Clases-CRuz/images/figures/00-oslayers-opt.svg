@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="108.28mm" height="66.768mm" version="1.1" viewBox="0 0 108.27503 66.76757" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-21.246 -25.026)">
+  <rect transform="scale(1,-1)" x="22.039" y="-91.294" width="106.97" height="19.967" rx="3.7418" ry="3.7418" fill="#6495ed" stroke="#4169e1" stroke-linecap="round" stroke-linejoin="round">
+   <desc>dfsdfsdfsdf</desc>
+  </rect>
+  <rect transform="scale(1,-1)" x="22.023" y="-69.085" width="107" height="19.998" rx="3.7418" ry="3.7418" fill="#ffa07a" stroke="#ff4500" stroke-linecap="round" stroke-linejoin="round">
+   <desc>dfsdfsdfsdf</desc>
+  </rect>
+  <g fill="#6b8e23" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round">
+   <rect transform="scale(1,-1)" x="21.746" y="-46.078" width="19.552" height="20.552" rx="3.7418" ry="3.7418">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="43.442" y="-46.078" width="19.552" height="20.552" rx="3.7418" ry="3.7418">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="65.138" y="-46.078" width="19.552" height="20.552" rx="3.7418" ry="3.7418">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="87.363" y="-46.078" width="19.552" height="20.552" rx="3.7418" ry="3.7418">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="109.06" y="-46.078" width="19.552" height="20.552" rx="3.7418" ry="3.7418">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+  </g>
+  <g fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px">
+   <text x="60.307648" y="83.6502" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="60.307648" y="83.6502" stroke-width="0"><tspan x="60.307648" y="83.6502" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Hardware</tspan></tspan></text>
+   <text x="45.428528" y="61.390369" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="45.428528" y="61.390369" stroke-width="0"><tspan x="45.428528" y="61.390369" stroke-width="0">Sistema Operativo</tspan></tspan></text>
+   <text x="23.541027" y="37.355457" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="23.541027" y="37.355457" font-family="Calibri" font-size="3.5278px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="23.541027" y="37.355457" font-family="Calibri" font-size="3.5278px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Navegador</tspan></tspan></text>
+   <text x="65.86895" y="36.797474" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="65.86895" y="36.797474" font-family="Calibri" font-size="3.5278px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Reproductor</tspan></text>
+   <text x="48.406433" y="37.326641" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="48.406433" y="37.326641" font-family="Calibri" font-size="3.5278px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan x="48.406433" y="37.326641" font-family="Calibri" font-size="3.5278px" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Editor</tspan></tspan></text>
+   <text x="88.623138" y="36.797474" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="88.623138" y="36.797474" font-family="Calibri" font-size="3.5278px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Compilador</tspan></text>
+   <text x="110.84818" y="36.797474" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="110.84818" y="36.797474" font-family="Calibri" font-size="3.5278px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Mensajería</tspan></text>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="60.06mm" height="113.33mm" version="1.1" viewBox="0 0 60.060448 113.33017" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker14995" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker12121" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker7936" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker7778" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker7730" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="Arrow2Lend" overflow="visible" orient="auto">
+   <path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-32.478 -48.701)">
+  <g>
+   <ellipse cx="64.634" cy="56.418" rx="18.24" ry="7.4672" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+   <text x="57.18824" y="58.081242" fill="#000000" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="57.18824" y="58.081242" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">START</tspan></text>
+   <ellipse cx="64.634" cy="154.31" rx="18.24" ry="7.4672" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+   <text x="58.383514" y="155.97687" fill="#000000" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="58.383514" y="155.97687" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">HALT</tspan></text>
+   <rect x="49.858" y="75.253" width="29.552" height="11.429" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".44763"/>
+   <text x="56.92469" y="82.952095" fill="#000000" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="56.92469" y="82.952095" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">FETCH</tspan></text>
+   <rect x="49.858" y="98.536" width="29.552" height="11.429" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".44763"/>
+   <text x="54.251984" y="106.23545" fill="#000000" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="54.251984" y="106.23545" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">DECODE</tspan></text>
+   <rect x="49.858" y="122.35" width="29.552" height="11.429" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".44763"/>
+   <text x="53.445831" y="130.04794" fill="#000000" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="53.445831" y="130.04794" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">EXECUTE</tspan></text>
+  </g>
+  <g fill="none" stroke="#000">
+   <g stroke-width=".26458px">
+    <path d="m64.634 63.885v11.368" marker-end="url(#Arrow2Lend)"/>
+    <path d="m64.634 86.682v11.854" marker-end="url(#marker7730)"/>
+    <path d="m64.634 109.97v12.383" marker-end="url(#marker7778)"/>
+   </g>
+   <path d="m64.634 133.78v13.068" marker-end="url(#marker7936)" stroke-width=".26458"/>
+   <path d="m79.41 103.83h12.996v-22.966h-12.996" marker-end="url(#marker12121)" stroke-width=".26458px"/>
+   <path d="m49.858 127.91h-17.248v-47.043h17.248" marker-end="url(#marker14995)" stroke-width=".26458px"/>
+  </g>
+ </g>
+</svg>

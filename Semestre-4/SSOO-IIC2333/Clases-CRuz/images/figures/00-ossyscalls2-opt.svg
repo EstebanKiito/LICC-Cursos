@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="110mm" height="43.075mm" version="1.1" viewBox="0 0 109.99999 43.074925" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker5025" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker4347" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker1235" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker1009" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#f00" fill-rule="evenodd" stroke="#f00" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2065" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker1579" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-21.021 -18.622)">
+  <g>
+   <rect transform="scale(1,-1)" x="21.072" y="-61.647" width="109.9" height="15.488" rx="0" ry="0" fill="#ffa07a" stroke="#ff4500" stroke-linecap="round" stroke-linejoin="round" stroke-width=".10112">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="21.071" y="-46.078" width="109.9" height="20.551" rx="0" ry="0" fill="#6b8e23" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".10074">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="23.01186" y="28.359615" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="23.01186" y="28.359615" font-family="Calibri" font-size="2.8222px" font-style="italic" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">User space</tspan></text>
+   <g stroke-linecap="round" stroke-linejoin="round">
+    <rect transform="scale(1,-1)" x="51.445" y="-59.795" width="6.6364" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-width=".42994">
+     <desc>dfsdfsdfsdf</desc>
+    </rect>
+    <rect transform="scale(1,-1)" x="21.223" y="-41.437" width="11.181" height="8.5963" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-width=".40365">
+     <desc>dfsdfsdfsdf</desc>
+    </rect>
+    <rect transform="scale(1,-1)" x="127.48" y="-41.438" width="3.3379" height="8.5985" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-width=".40148">
+     <desc>dfsdfsdfsdf</desc>
+    </rect>
+   </g>
+   <text x="23.01186" y="52.172127" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="23.01186" y="52.172127" font-family="Calibri" font-size="2.8222px" font-style="italic" stroke-width="0" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Kernel space</tspan></text>
+   <text x="47.816368" y="21.05615" fill="#000000" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="47.816368" y="21.05615" fill="#000000" font-family="Consolas" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">cp source.txt dest.txt</tspan></text>
+  </g>
+  <g>
+   <path d="m32.445 37.139 94.822 2e-6" fill="none" stroke="#556b2f" stroke-dasharray="4, 4" stroke-width=".5"/>
+   <path d="m22.993 37.139h9.0558" fill="none" marker-end="url(#marker1579)" marker-mid="url(#marker2065)" marker-start="url(#marker2065)" stroke="#000" stroke-dasharray="0.79374995, 0.79374995" stroke-width=".26458"/>
+   <text x="64.801956" y="46.900417" fill="#f0ffff" font-family="Calibri" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="64.801956" y="46.900417" font-family="Calibri" font-size="2.8222px" font-style="italic" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">INTERRUPCION</tspan></text>
+  </g>
+  <g transform="translate(45.611 -32.012)">
+   <rect transform="scale(1,-1)" x="-17.551" y="-80.591" width="97.233" height="5.2378" rx="1.5" ry="1.5" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".7">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="35.671089" y="78.93866" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="35.671089" y="78.93866" font-family="Calibri" font-size="3.5278px" stroke-width="0" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%"><tspan font-family="Calibri" font-size="3.5278px" font-style="italic" stroke-width="0" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Syscalls</tspan></tspan></text>
+  </g>
+  <g>
+   <path d="m32.445 37.139 2.5957 18.372" fill="none" marker-end="url(#marker1009)" stroke="#f00" stroke-width=".4"/>
+   <rect transform="scale(1,-1)" x="35.57" y="-59.795" width="7.306" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="36.174683" y="55.981144" fill="#f0ffff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="36.174683" y="55.981144" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">stat</tspan></text>
+   <path d="m43.17 55.51 2.0764-18.372" fill="none" marker-end="url(#marker1235)" stroke="#f00" stroke-width=".4"/>
+  </g>
+  <g>
+   <rect transform="scale(1,-1)" x="45.565" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".40365">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="51.520531" y="55.981144" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="51.520531" y="55.981144" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">open</tspan></text>
+   <rect transform="scale(1,-1)" x="61.969" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".40365">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="65.732" y="-59.795" width="6.6364" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="66.337212" y="55.981144" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="66.337212" y="55.981144" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">mmap</tspan></text>
+   <rect transform="scale(1,-1)" x="74.14" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".40365">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="79.491" y="-59.795" width="6.6364" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="79.566391" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="79.566391" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">read</tspan></text>
+   <rect transform="scale(1,-1)" x="93.249" y="-59.795" width="7.6673" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="93.324738" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="93.324738" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">write</tspan></text>
+   <rect transform="scale(1,-1)" x="106.17" y="-59.795" width="9.8171" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="119.18" y="-59.795" width="6.6364" height="8.5701" rx="0" ry="0" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".42994">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="106.55389" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="106.55389" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">munmap</tspan></text>
+   <text x="118.72473" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="118.72473" y="56.510311" fill="#f0feff" font-family="Consolas" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">close</tspan></text>
+  </g>
+  <g fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".40365">
+   <rect transform="scale(1,-1)" x="87.898" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="102.19" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="116.47" y="-41.437" width="2.4764" height="8.5963" rx="0" ry="0">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+  </g>
+  <g fill="none">
+   <path d="m48.32 37.139 2.6169 18.372" marker-end="url(#marker4347)" stroke="#f00" stroke-width=".4"/>
+   <path d="m57.986 55.51 3.6638-18.372" marker-end="url(#marker5025)" stroke="#f00" stroke-width=".4"/>
+   <path d="m30.563 36.754-2.8459-15.234" stroke="#000" stroke-width=".26458px"/>
+  </g>
+ </g>
+</svg>

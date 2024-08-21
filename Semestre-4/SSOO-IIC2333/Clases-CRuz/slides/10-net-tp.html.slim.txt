@@ -1,0 +1,724 @@
+\frame{\titlepage}
+
+
+%---------------------------------------------------------------------
+/ Frame
+\frametitle{Contenidos}
+%\tableofcontents[currentsection]
+\tableofcontents
+
+
+
+%---------------------------------------------------------------------
+\section{Elementos de Transporte}
+
+/ Frame
+  \frametitle{Capa de Transporte}
+
+  Objetivo: Establecer comunicación entre dos procesos
+  
+  ¿Y las demás capas qué?
+  
+  ul
+    li.fragment Capa de Enlace: comunicación a través de un enlace
+    li.fragment Capa de Red: enrutamiento de {\em host} a {\em host}
+    li.fragment Capa de Transporte: comunicación {\bf lógica} entre {\em hosts}
+    
+
+  Relación con otras capas  
+  ul
+    li.fragment Servicio usado por la capa de aplicación
+    li.fragment Utiliza servicios de la capa de red
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Capa de Transporte}
+  
+  Protocolos de transporte transmiten información de un proceso en {\em host} emisor a un proceso en {\em host} receptor
+  ul
+    li.fragment {\bf Emisor}: recibe un mensaje de capa de aplicación, lo divide en segmentos,
+          y solicita a la capa de red que envíe los segmentos al receptor
+    li.fragment {\bf Receptor}: recibe segmentos, los ensambla para formar el mensaje, y lo entrega a la capa de aplicación
+  
+  
+  Dos protocolos representativos de medios de transporte
+  ul
+    li.fragment TCP
+    li.fragment UDP
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Protocolos de Transporte}
+  \framesubtitle{¿Cómo quiere su entrega?}
+  
+  Entrega confiable y ordenada (TCP)
+  ul
+    li.fragment Control de congestión, control de flujo, y establecimiento de conexión
+  
+  Entrega no confiable y desordenada (UDP)
+  ul
+    li.fragment Mejor esfuerzo posible
+  
+
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/08-transporte.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Formato de Segmento}
+
+  Mensaje es dividido en segmentos
+  ul
+    li.fragment Segmentos se transmiten en paquetes IP
+  
+  ¿Cómo identificar mensajes a distintos procesos?
+  ul
+    li.fragment Se utiliza un {\bf puerto} para establecer diferencias
+          entre procesos de origen y destino dentro de un mismo emisor o receptor
+    li.fragment Multiplexación de mensajes
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/08-segmento.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Demultiplexación sin conexión}
+
+  Cada aplicación (proceso) crea mensajes con número de puerto de específico
+  ul
+    li.fragment Segmento UDP: $\langle$IP destino, puerto destino$\rangle$
+  
+  {\em Host} receptor
+  ul
+    li.fragment Observa el puerto de destino
+    li.fragment Pasa el segmento al proceso asociado al puerto de destino
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Demultiplexación orientada a la conexión}
+
+  Segmento TCP se identifica con 4 elementos:
+  ul
+    li.fragment IP origen, puerto origen
+    li.fragment IP destino, puerto destino
+  
+  Servidores pueden gestionar múltiples conexiones TCP
+  ul
+    li.fragment Se pueden asociar distintos sockets a distintos clientes
+  
+
+%---------------------------------------------------------------------
+%\section{Control de Congestión}
+
+%---------------------------------------------------------------------
+\section{UDP}
+
+/ Frame
+  \frametitle{UDP: User Datagram Protocol}
+  
+  ul
+    li.fragment Servicio de ``mejor esfuerzo'' (best-effort)
+    li.fragment Segmentos pueden perderse
+    li.fragment Segmentos pueden llegar y entregarse a capa de aplicación en distinto orden
+  
+  Servicio {\bf no orientado a conexión} ({\em connection-less})
+  ul
+    li.fragment No se establece conexión previa
+    li.fragment Cada segmento UDP se gestiona de manera independiente
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{UDP: User Datagram Protocol}
+
+  Si entrega tan pocas garantías \ldots ¿para qué?
+  ul
+    li.fragment Envío simple. Poco {\em overhead} en emisor y receptor.
+    li.fragment Procesamiento más rápido
+    li.fragment Encabezados más livianos
+    li.fragment Si la red es confiable habrá pocas pérdidas
+    li.fragment Sin gestión de congestión: se puede enviar a cualquier velocidad
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{UDP: User Datagram Protocol}
+
+  ul
+    li.fragment Frecuente en servicios multimedia
+      ul
+        li.fragment Servicios multimedia pueden tolerar pérdidas
+        li.fragment Tasa de transferencia es más importante que integridad
+      
+    li.fragment Usado también en DNS, SNMP
+    li.fragment ¿Y si se quiere agregar confiabilidad sin sacrificar tasa de transporte?
+      ul
+        li.fragment Se pueden agregar chequeos en capa de aplicación
+      
+  
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/08-segmento-udp.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+\section{TCP}
+
+/ Frame
+  \frametitle{Transferencia fiable (Reliable Data Transfer)}
+  
+  La situación:  
+  ul
+    li.fragment Diseñar un protocolo que permita comunicación fiable
+      ul
+        li.fragment Todos los paquetes deben ser recibidos
+        li.fragment Saber si algún paquete no ha podido ser entregado
+      
+    li.fragment Desafío: debe funcionar sobre un enlace no-fiable (IP)
+  
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/08-rdt-1.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Caso simple: canal confiable
+  ul
+    li.fragment Canal de transmisión no pierde paquetes
+    li.fragment No se requieren bits de error
+  
+  Se modela como una máquina de estados
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/08-rdt-2.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Canal reales puede modificar los bits
+  ul
+    li.fragment Mensajes {\bf ACK}: receptor responde explícitamente indicando que el paquete fue recibido
+    li.fragment Mensajes {\bf NACK}: receptor responde explícitamente indicando que el paquete contenía errores
+    li.fragment Al recibir un {\bf NACK}, el emisor reenvía el paquete
+  
+  Dos características nuevas:
+  ul
+    li.fragment {\em Feedback} del receptor
+    li.fragment Mecanismo de retransmisión
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-3.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Problema: ACK o NACK pueden llegar con errores
+  ul
+    li.fragment Emisor no sabe qué ocurrió en el receptor
+  
+  Solución
+  ul
+    li.fragment Retransmitir si ACK o NACK llegan con errores
+    li.fragment Receptor podría recibir duplicados
+      ul
+        li.fragment Emisor añade número de secuencia a cada paquete
+        li.fragment Receptor puede descartar duplicados
+        li.fragment Modelo {\bf stop-and-wait}: emisor envía un paquete y espera respuesta
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Emisor
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-4.png}
+  \end{center}
+  Número de secuencia de 1-bit: 0 ó 1
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Receptor
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-5.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Problema: paquete no sólo pueden llegar con errores; también pueden perderse
+  ul
+    li.fragment ACKs, NACKs pueden perderse
+    li.fragment Receptor no sabe qué pasó con su último ACN/NACK
+  
+  Solución: temporizador
+  ul
+    li.fragment Emisor espera durante un tiempo determinado los ACK
+    li.fragment Si no se reciben ACKs, se retransmite
+      ul
+        li.fragment Números de secuencia permiten manejar duplicados
+        li.fragment Receptor debe indicar numero de secuencia asociado al ACK, NACK
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Emisor
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-6.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-7.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-rdt-8.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Utilización del emisor
+  \begin{center}
+    \includegraphics[width=11cm]{figs/08-rdt-9.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Enlace de 1Gpbs. Paquetes 8000 bit. 15ms tiempo de transmisión.
+  ul
+    li.fragment Tiempo para transmitir un paquete:
+      \[ \frac{8\times 10^3 \text{bit}}{10^9 \text{bps}} = 8 \times 10^{-6} \text{sec} \]
+    li.fragment Round-Trip Time: $2 \times 15 \times 10^{-3} \text{sec} = 30 \times 10^{-3} \text{sec}$
+    li.fragment Utilización emisor:
+      \[ U_e = \frac{8 \times 10^{-6}}{30\times 10^{-3} + 8\times 10^{-6}} = 0.00027 = 0.027 \% \]
+  
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Solución: implementaciones ``en cadena'' ({\em chained})
+  ul
+    li.fragment Envío de múltiples ACK
+    li.fragment Rango de número de secuencia incrementales
+    li.fragment Requiere buffers en emisor o receptor
+    li.fragment Implementaciones:
+      ul
+        li.fragment Go-Back-N
+        li.fragment Repetición Selectiva
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/08-rdt-10.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+
+  Enlace de 1Gpbs. Paquetes 8000 bit. 15ms tiempo de transmisión.
+  ul
+    li.fragment Solo enviando y esperando por grupos de 3 paquetes+ACKs
+    li.fragment Tiempo para transmitir un paquete:
+      \[ \frac{8\times 10^3 \text{bit}}{10^9 \text{bps}} = 8 \times 10^{-6} \text{sec} \]
+    li.fragment Round-Trip Time: $2 \times 15 \times 10^{-3} \text{sec} = 30 \times 10^{-3} \text{sec}$
+    li.fragment Utilización emisor:
+      \[ U_e = \frac{3\times 8 \times 10^{-6}}{30\times 10^{-3} + 8\times 10^{-6}} = 0.00081 = 0.081 \% \]
+  
+
+
+  
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+  \framesubtitle{Go-Back-N}
+  
+  ul
+    li.fragment Emisor puede mantener hasta $N$ paquetes sin ACK
+    li.fragment Receptor envía ACK sólo al recibir correctamente un grupo de paquetes
+    li.fragment Emisor usa {\em timer} para paquete más antiguo sin ACK
+      ul
+        li.fragment Si el {\em timer} expira, se retransmite todo el grupo de paquetes
+      
+  
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/08-rdt-11.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+  \framesubtitle{Go-Back-N}
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-rdt-12.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+  \framesubtitle{Repetición Selectiva}
+  
+  ul
+    li.fragment Emisor puede mantener hasta $N$ paquetes sin ACK
+    li.fragment Receptor envía ACK para cada paquete individual
+    li.fragment Emisor usa {\em timer} para paquete más antiguo sin ACK
+      ul
+        li.fragment Si el {\em timer} expira, se retransmite todo el grupo de paquetes
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+  \framesubtitle{Repetición Selectiva}
+
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/08-rdt-13.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Reliable Data Transfer}}
+  \framesubtitle{Repetición Selectiva}
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/08-rdt-14.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Entonces ... ¿TCP?}
+  \framesubtitle{Transmission Control Protocol}
+
+  ul
+    li.fragment Protocolo de transmisión fiable
+    li.fragment Transmisión encadenanada ({\em chained})
+      ul
+        li.fragment Gestiona control de flujo a través del tamaño de la ventana
+      
+    li.fragment Buffer en emisor y en receptor
+    li.fragment Orientado a conexión
+      ul
+        li.fragment Protocolo de establecimiento de conexión antes de enviar paquetes de datos
+      
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+%  \framesubtitle{Transmission Control Protocol}
+
+  Segmento TCP
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-tcp-header.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  Números de secuencia y ACKs
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-tcp-seq.png}
+  \end{center}
+
+  ACKs puede ser agregados ({\em piggybacked}) en mensajes siguientes
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  Timeout TCP: ¿cómo estimarlo?
+  ul
+    li.fragment Estimación muy corta: muchos timeout
+    li.fragment Estimación muy larga: reacción lenta a errores
+  
+  Estimación de RTT
+  ul
+    li.fragment Se mide repetidamente el RTT
+    li.fragment {\em SampleRTT}: tiempo desde envío hasta recepción de ACK
+      ul
+        li.fragment Se mantiene promedio de últimos RTT
+      
+    li.fragment {\em EstimatedRTT}: se obtiene mediante media ponderada con decrecimiento exponencial
+      \[ \text{EstimatedRTT} = (1-\alpha) \times \text{EstimatedRTT} + \alpha \times \text{SampleRTT} \]
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/08-tcp-estimation.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Transferencia fiable}
+
+  ul
+    li.fragment Segmentos encadenados
+    li.fragment ACKs acumulativos
+    li.fragment Timer de retransmisión único
+  
+  Retransmite en:
+  ul
+    li.fragment Timeout
+    li.fragment ACKs duplicados
+  
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  Algoritmo de transmisión fiable de TCP
+  \begin{center}
+    \includegraphics[width=8cm]{figs/08-tcp-send-algorithm.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/08-tcp-reliable-1.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-tcp-reliable-2.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-tcp-reliable-3.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  Retransmisión rápida
+  ul
+    li.fragment {\em Timeout}s pueden tomar mucho tiempo
+    li.fragment Retransmisión rápida envía proactivamente segmentos probablemente perdidos,
+          antes de que ocurra un timeout
+  
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/08-tcp-retransmisionrapida.png}
+  \end{center}
+
+
+  
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  Retransmisión rápida
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/08-tcp-retransmisionrapida-2.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  Control de Flujo
+  
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-tcp-flow.png}
+  \end{center}
+  
+  ul
+    li.fragment Emisor no debe saturar al receptor
+    li.fragment Procesos en el receptor pueden demorarse en leer datos
+    li.fragment Receptor anuncia su espacio libren {\em buffer}: {\em RcvWindow}
+    li.fragment Emisor no envía más datos que los que quepan en {\em RcvWindow}
+    li.fragment Si no hay control de flujo (UDP), paquetes que no pueden ser recibidos se descartan
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Establecimiento de Conexión}
+  TCP Handshake Protocol
+  ul
+    li.fragment Paso 1. Cliente envía segmento {\tt SYN} al servidor
+      ul
+        li.fragment Incluye número de secuencia inicial
+      
+    li.fragment Paso 2. Servidor recibe {\tt SYN}, y responde con {\tt SYN ACK}
+      ul
+        li.fragment Servidor asigna buffer
+        li.fragment Servidor establece número de secuencia inicial
+      
+    li.fragment Paso 3. Cliente recibe {\tt SYN ACK}, y responde con {\tt ACK}
+      ul
+        li.fragment Este paquete ya puede contener datos
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Establecimiento de Conexión}
+  TCP Cierre de Conexión
+  ul
+    li.fragment Paso 1. Cliente envía {\tt FIN} al servidor
+    li.fragment Paso 2. Servidor recibe FIN, responde con {\tt ACK}, cierra conexión y envía {\tt FIN}
+    li.fragment Paso 3. Cliente recibe {\tt FIN}, responde con {\tt ACK}, cerrará conexión después de timeout.
+    li.fragment Paso 4. Servidor recibe ACK, cierra conexión.
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Establecimiento de Conexión}
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/08-tcp-close.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Ciclo de vida de Cliente TCP}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-tcp-client-lc.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{TCP}
+  \framesubtitle{Ciclo de vida de Servidor TCP}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/08-tcp-server-lc.png}
+  \end{center}
+
+

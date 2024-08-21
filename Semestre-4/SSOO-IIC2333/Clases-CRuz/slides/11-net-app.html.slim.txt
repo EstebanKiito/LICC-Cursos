@@ -1,0 +1,460 @@
+\frame{\titlepage}
+
+
+%---------------------------------------------------------------------
+/ Frame
+\frametitle{Contenidos}
+%\tableofcontents[currentsection]
+\tableofcontents
+
+
+
+%---------------------------------------------------------------------
+\section{Protocolos de Aplicación}
+
+/ Frame
+  \frametitle{¿Y las aplicaciones?}
+  
+  Hasta aquí todo ha sido: ¿cómo enviar datos?
+  ul
+    li.fragment ¿Enviar bits?: Capa Física
+    li.fragment ¿Enviar frames en un enlace?: Capa de Enlace
+    li.fragment ¿Mover paquetes de dirección origen a dirección de destino?: Capa de Red
+    li.fragment ¿Transmitir un mensaje completo desde nodo origen a nodo destino?: Capa de Transporte
+  
+  ¿Y qué hacer con los mensajes? \onslide<2->{{\bf ¡Capa de Aplicación!}}
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Capa de Aplicación}
+  
+  Procesos en distintos nodos que intentan comunicarse
+  ul
+    li.fragment Reglas de comunicación
+    li.fragment Comunicación interprocesos
+      ul
+        li.fragment Pero procesos en distintos {\em hosts}
+      
+    li.fragment Aquí se construyen las aplicaciones
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Capa de Aplicación}
+
+  Algunos protocolos que funcionan en capa de aplicación:
+  ul
+    li.fragment DNS, Domain Name System
+    li.fragment HTTP, Hypertext Transfer Protocol
+    li.fragment FTP, File Transfer Protocol
+    li.fragment SSH, Secure Shell
+    li.fragment TELNET, Remote Shell
+    li.fragment SMTP, Simple Mail Transfer Protocol
+    li.fragment POP, Post-Office Protocol
+    li.fragment IMAP, Internet Message Access Protocol
+    li.fragment NTP, Network Time Protocol
+    li.fragment IRC, Internet Relay Chat
+    li.fragment LDAP, Lightweight Directory Access Protocol
+  
+  Protocolos utilizan servicio de capa de transporte: sockets vía TCP ó UDP
+
+
+
+/ Frame
+  \frametitle{Arquitecturas}
+
+  ¿Cómo comunicar los procesos?
+  
+  Dos modelos:
+  ul
+    li.fragment Cliente-Servidor
+      ul
+        li.fragment Clásico. Servidor escucha, cliente inicia la comunicación
+        li.fragment Servidor debe escuchar en un puerto conocido por el cliente
+      
+    li.fragment Peer-to-Peer
+      ul
+        li.fragment No hay roles específicos de servidor
+        li.fragment Sistema decentralizado
+        li.fragment Conexiones intermitentes
+      
+  
+  
+
+
+
+%---------------------------------------------------------------------
+\section{HTTP}
+
+/ Frame
+  \frametitle{HTTP: HyperText Transfer Protocol}
+
+  Básicamente un sistema de archivos remoto
+  ul
+    li.fragment Modelo cliente-servidor
+    li.fragment Cliente HTTP: solicita y recibe archivos
+      ul
+        li.fragment Opcionalmente podría parsearlos e interpretarlos localmente
+      
+    li.fragment Servidor HTTP: recibe solicitudes y envía archivos
+  
+  
+  \begin{center}
+    \includegraphics[width=6cm]{figs/09-http.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{HTTP: HyperText Transfer Protocol}
+
+  Protocolo sin estado ({\em stateless})
+  ul
+    li.fragment Cliente crea socket TCP al puerto 80 del servidor
+    li.fragment Servidor acepta conexión TCP desde el cliente
+    li.fragment Cliente y servidr intercambian mensaje HTTP
+    li.fragment Cliente cierra la conexión
+    li.fragment Es posible informar que se desea mantener la conexión abierta: HTTP persistente
+  
+  Al no tener estado, no se recuerda conexiones anteriores del cliente
+  ul
+    li.fragment Pero hay mecanismos para mantener un estado en el cliente: {\em cookies}
+  
+  Dos tipos de solicitudes
+  ul
+    li.fragment HTTP Request
+    li.fragment HTTP Response
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{HTTP Request}
+  
+  Mensajes HTTP se transmiten en formato ASCII (otros protocolos utilizan un formato binario)
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/09-http-request.png}
+  \end{center}
+
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{HTTP Request}
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/09-http-request-2.png}
+  \end{center}
+
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{HTTP Response}
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/09-http-response.png}
+  \end{center}
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{HTTP Codes}
+
+  Códigos HTTP indican tipo de respuesta a la solicitud.
+  
+  ul
+    li.fragment 1xx. Mensaje de información.
+    li.fragment 2xx. Mensaje de éxito
+      ul
+        li.fragment 200 OK
+        li.fragment 206 Partial Content
+      
+    li.fragment 3xx. Mensaje de redirección
+      ul
+        li.fragment 301 Moved Permanently
+        li.fragment 307 Temporary Redirect
+      
+    li.fragment 4xx. Mensaje de error del cliente
+      ul
+        li.fragment 400 Bad Request
+        li.fragment 403 Forbidden
+        li.fragment 404 Not Found
+        li.fragment 405 Method Not Allowed
+      
+    li.fragment 5xx. Mensaje de error del servidor
+      ul
+        li.fragment 500 Internal Server Error
+        li.fragment 501 Not Implemented
+        li.fragment 502 Bad Gateway
+        li.fragment 503 Server Not Available
+      
+  
+
+
+
+%---------------------------------------------------------------------
+\section{DNS}
+
+/ Frame
+  \frametitle{DNS: Domain Name System}
+
+  Una base de datos distribuida
+  ul
+    li.fragment Almacenamiento de pares $\langle \text{nombre}, \text{dirección IP} \rangle$
+    li.fragment Arquitectura cliente/servidor jerárquica
+      ul
+        li.fragment Servidores se conocen como servidores de nombres
+        li.fragment Organización jerárquica permite crear {\em dominios}
+        li.fragment Organización jerárquica permite balancear carga
+      
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+
+  Organización jerárquica
+  \begin{center}
+    \includegraphics[width=10cm]{figs/09-dns-arbol.png}
+  \end{center}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Servidores raíz, TLD, autoritativos}
+  
+  Servidores almacenan {\em mapping}s 
+  ul
+    li.fragment Si un servidor no conoce un {\em mapping}, lo consulta a un servidor superior en la jerarquía
+    li.fragment Eventualmente puede llegar a un servidor raíz
+    li.fragment Servidor raíz conocen ubicación de servidores TLD
+      ul
+        li.fragment gTLD: General Top-Level Domain. {\tt .com}, {\tt .org}, {\tt .edu} 
+        li.fragment ccTLD: Country-Code Top-Level Domain. {\tt .cl}, {\tt .nl}, {\tt .es}, {\tt .au}
+      
+    li.fragment 13 servidores raíz en el mundo: A,B,C,D,E,F,G,H,I,J,K,L,M
+      ul
+        li.fragment Con múltiples instancias de cada uno (dos de ellos replicados en Chile)
+        li.fragment {\tt http://www.root-servers.org}
+      
+    li.fragment Servidores que administran el mapping son {\em servidores autoritativos}
+      ul
+        li.fragment Servidores autoritativos administran el mapping (al nivel de institución)
+        li.fragment Servidores no-autoritativos mantienen temporalmente el mapping
+      
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Ejemplo}
+  Host en dominio {\tt ing.puc.cl} desea contactar {\tt www.amazon.com}
+  
+  Consulta iterativa
+  \begin{center}
+    \includegraphics[width=5cm]{figs/09-dns-example.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Ejemplo}
+
+  Host en dominio {\tt ing.puc.cl} desea contactar {\tt www.yahoo.com}
+  
+  Consulta recursiva
+  \begin{center}
+    \includegraphics[width=5cm]{figs/09-dns-example-2.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Caching}
+
+  Al resolver un mapping, éste es almacenado en los servidores
+  ul
+    li.fragment Caching de respuestas permite reducir el tráfico
+    li.fragment Respuestas {\em cached} posee un {\em timeout}
+    li.fragment Servidores TLD suelen estar en cache de servidores locales
+    li.fragment Servidores raíz no son tan visitados
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Registro DNS}
+
+  Entradas de DNS se llaman RR: Resource Register
+  
+  \begin{center}
+    {\tt (nombre, valor, tipo, ttl)}
+  \end{center}
+  
+  ul
+    li.fragment Tipo A: {\tt nombre} es nombre del host; {\tt valor} es dirección IP
+    li.fragment Tipo NS: {\tt nombre} es dominio; {\tt valor} es IP de host autoritativo
+    li.fragment Tipo CNAME: alias, {\tt nombre} es alias; {\tt valor} es nombre real
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DNS: Domain Name System}
+  \framesubtitle{Formato DNS}
+
+  Mensaje DNS se transmite via UDP
+  
+  \begin{center}
+    \includegraphics[width=6cm]{figs/09-dns-message.png}
+  \end{center}
+
+
+
+\section{SSH}
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH}
+  \framesubtitle{Secure Shell}
+  
+  Protocolo para iniciar sesiones en sevidores remotos
+  ul
+    li.fragment Concebido como reemplazado para protocolos antiguos que usaban texto plano: {\tt rlogin}, {\tt telnet}, {\tt rsh}
+    li.fragment Diseñado para proveer comunicación seguro sobre un canal inseguro
+    li.fragment Utiliza criptografía de clave pública
+    li.fragment Diversas implementaciones. Una de las más comunes: {\tt OpenSSH}    
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH}
+  \framesubtitle{Secure Shell}
+
+  Aplicaciones  
+  ul
+    li.fragment Ejecución de sesiones en servidores remotos
+    li.fragment Transferencia segura de archivos: {\tt scp}, {\tt rsync}, {\tt sftp}
+    li.fragment Ejecución de aplicaciones gráficas remotas (X forwarding)
+    li.fragment Proxy seguro (SOCKS)
+    li.fragment Montar directorios remotos de manera segura ({\tt SSHFS})
+    li.fragment Redirección de puertos a través de un canal seguro ({\em tunneling})
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+
+  Utilizar un acceso {\tt ssh} para encauzar comunicación.
+
+  Ejemplos:
+  ul
+    li.fragment Local port forwarding
+    li.fragment Remote port forwarding
+    li.fragment Dynamic port forwarding
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+  \framesubtitle{Local Port Forwarding}
+
+  Problema: Deseamos acceder a un sitio, pero está bloqueado
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/09-sshproblem.jpg}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+  \framesubtitle{Local Port Forwarding}
+
+  Solución, establecer un túnel a través de un servidor que tenga acceso al sitio bloqueado.
+  
+  \begin{center}
+    {\tt ssh -L <local-port-to-listen>:<remote-host>:<remote-port>}
+   
+    \includegraphics[width=8cm]{figs/09-sshlocal.jpg}
+    
+    {\tt ssh -L 9001:yahoo.com:80 home}
+  \end{center}
+   
+   Ahora es posible conectar a {\tt http://localhost:9001}
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+  \framesubtitle{Local Port Forwarding}
+
+  También es posible acceder a puertos bloqueados:
+  \begin{center}
+    {\tt ssh -L 5900:localhost:5900 home}
+  \end{center}
+  
+  O a servidores ``prohibidos'':
+  
+  \begin{center}
+    {\tt ssh -L 9001:banned:22 home}
+   
+    \includegraphics[width=8cm]{figs/09-sshlocalsession.jpg}
+    
+  \end{center}
+   
+   Con lo cual ahora es posible conectarse con {\tt ssh -p localhost:9001}
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+  \framesubtitle{Reverse Tunnelling}
+
+  Problema: acceder a un sitio interno, desde afuera\footnote{Suponiendo que no tenemos una VPN, que sería una mejor solución}
+  
+  Solución: túnel reverso (ejecutado desde {\em work})
+  \begin{center}
+    {\tt ssh -R 9001:intra-site.com:80 home}
+  
+    \includegraphics[width=8cm]{figs/09-sshreverse.jpg}
+  \end{center}
+
+   Ahora es posible conectar a {\tt http://localhost:9001} (desde {\em home})
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{SSH Tunneling}
+  \framesubtitle{Dynamic Forwarding}
+
+  Problema: acceder a un sitio interno desde afuera. {\em Reverse Tunnelling} sirve, pero es necesario
+  crear un túnel para cada conexión.
+  
+  Solución: usar un puerto como {\em proxy}
+  \begin{center}
+    {\tt ssh -D 9001 home}, permite configurar un proxy SOCKS
+  
+    \includegraphics[width=8cm]{figs/09-sshdynamic.jpg}
+  \end{center}
+
+   Requieren configurar el navegador para conectar a un proxy SOCKS en {\tt localhost:9001}
+
+

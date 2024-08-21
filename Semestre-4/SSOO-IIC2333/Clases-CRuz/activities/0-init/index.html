@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>Init</title><meta content="IIC2333 Sistemas Operativos y Redes, 2022-1" name="description" /><meta content="Cristian Ruz" name="author" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"><script src="../js/highlight.pack.js"></script><script src="../js/fairyDustCursor.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script><script src="js/countdown.min.js"></script><script>hljs.initHighlightingOnLoad();</script><style type="text/css">html {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+}
+pre code.hljs {
+  display: block;
+}
+code.hljs {
+  display: inline;
+}
+
+// Hover stuff
+code:hover>div {
+  display: block;
+}
+code>div {
+  display: none;
+}
+table {
+  margin: auto;
+  //border-collapse: separate;
+  //border-spacing: 0 0.1em;
+}
+tr.sep {
+  margin-top: 0.2em;
+}
+td {
+  min-width:4em;
+}
+td.r2 {
+  rowspan: 2;
+}
+td.full {
+  color: #ddd;
+  background-color: #282;
+}
+td.empty {
+  color: #ddd;
+  background-color: #333;
+}
+
+// Fix dl/ dd-dt
+dl.inline dd {
+  display: inline;
+  margin: 0;
+}
+dl.inline dd:after{
+  display: block;
+  content: '';
+}
+dl.inline dt{
+  display: inline-block;
+  min-width: 100px;
+}
+
+section {
+  padding-top: 2em;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0.4em;
+}
+.top {
+  padding-top: 0.2em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container > img {
+  align-content: center;
+}
+.container-col > img {
+  align-content: center;
+}
+body {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+  color: #000;
+
+}
+.card{
+  margin:auto;
+  float: left;
+  width: 12rem;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+
+}
+
+.row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}</style></head><body><a href="/"><header class="col-xs-8 col-md-10 col-md-offset-1"><br /><a href="https://www.youtube.com/watch?v=FGwevyxoycw"><img src="../../images/figures/logo1.gif" width="100%" /></a></header></a><div class="col-xs-12 col-md-8 col-md-offset-3"><div class="row"><div class="columm"><div class="card"><div class="card-title">⭐️ Sitio Canvas ⭐️</div><div class="card-title"><a href="https://cursos.canvas.uc.cl/courses/39207" class="btn btn-primary btn-sm" role="button">Ir</a> <!-- 2022-1 --></div></div></div><div class="columm"><div class="card"><div class="card-title">📈 Planilla de Notas 📈</div><div class="card-title"><a href="#" class="btn btn-primary btn-sm disabled" role="button">Ir</a></div></div></div></div></div><div class="col-xs-12 col-md-8 col-md-offset-2"><article><section class="top"><p>Para este curso van a necesitar un compilador de C, una shell decente y usar git.</p><p>En la actividad de esta semana prepararán su propio entorno de trabajo.</p><p>Recuerden que tienen internet y que pueden buscar guías y documentación (=</p></section><section><h3>Opciones</h3><p>Para preparar su entorno pueden:</p><ul><li>Usar Linux.</li><li>Usar una VM con Linux.</li><li>Intentar usar Windows, MacOS u otro SO y lograr que todo funcione. (No quieren hacerlo)</li></ul><section><h5>VM</h5><p>Si ya usan Linux vayan a la sección de <a href="#programas">programas</a>.</p><p>Si no usan Linux, les recomendamos usar una VM, ya que no requiere particionar su disco.</p><p>Mientras descargan e instalan pueden comenzar a leer en paralelo la sección de <a href="#git" target="blank">git</a>.</p><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><strong><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox (Gratis)</a></strong></li><li><a href="http://www.vmware.com/">VMWare</a></li><li><a href="http://www.parallels.com/">Parallels</a></li></ul><p>En algunos computadores la virtualización debe ser habilitada desde la BIOS.</p><p>Existen muchas distribuciones de Linux. Todas ofrecen el kernel de Linux y un package manager, el que permite instalar paquetes de software, los que tienen programas o librerías que se instalan de manera uniforme tanto en interfaz como dentro del sistema de archivos.</p></section><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><a href="https://www.archlinux.org/download">Archlinux</a></li><li><strong><a href="https://manjaro.github.io/download">Manjaro (Archlinux-based)</a></strong></li><li><a href="https://www.debian.org/distrib/netinst">Debian</a></li><li><strong><a href="https://www.ubuntu.com/desktop">Ubuntu (Debian-based)</a></strong></li></ul><p>Manjaro y Ubuntu ofrecen discos de instalación bastante amigables. Desde ahora en adelante asumiremos que usan Linux.</p><section id="programas"><h5>Programas</h5><p>Los programas necesarios son:</p><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><dl class="iinlinenline"><dt><dfn><abbr title="GNU Compiler Collection">GCC</abbr></dfn></dt><dd>Un compilador de C.</dd></dl></li><li><dl class="inline"><dt><dfn>Qemu</dfn></dt><dd> Un emulador.</dd></dl></li><li><strong>git</strong></li><li>Un emulador de Terminal.</li><li>Una <strong>shell</strong>.</li><li>Un editor de texto.</li></ul></section></section><section><h3>Ambiente</h3><p>Durante el proyecto y las tareas van a pasar la mayoría del tiempo trabajando con una shell, por lo que es recomendable por lo que es recomendable que inviertan un poco de tiempo en acostumbrarse y hacerla más cómoda.</p><section><h5>Terminal</h5><p>Los <a href="https://en.wikipedia.org/wiki/VT100">terminales</a> son máquinas para usar remotamente un servidor, básicamente una pantalla y un teclado conectado en red al servidor. Hoy ya no se usan máquinas especiales, sólo un programa que simula una, por lo que en la práctica son sólo un programa para interactuar con una shell.</p><p>No hay demasiado que aprender y arreglar acá, sólo pueden cambiar la fuente y el colorscheme, así que pueden saltar a la sección de <a href="#shell">Shells</a>.</p><p>Varios 'prompts' usan caracteres especiales que necesitan parchar las fuentes para agregarlos, el set más usual es el de powerline, y existen paquetes con versiones parchadas de las fuentes, así que si su prompt se ve mal tienen que instalar y usar una fuente adecuada.</p><p>Existen varios emuladores de terminal, por lo general los escritorios tienen uno preferido, pero pueden usar cualquiera.</p><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li>konsole / yakuake <small>(KDE [Qt])</small></li><li>gnome-terminal / guake <small>(Gnome,Unity [GTK])</small></li><li>terminology <small>(Enlightenment [EFL])</small></li><li>terminator <small>([GTK])</small></li><li><small>urxvt</small></li><li><small>xterm</small></li></ul><p>Fonts</p><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><a href="https://github.com/powerline/fonts">powerline/fonts</a></li><li><a href="https://aur.archlinux.org/packages/powerline-fonts-git/">AUR: powerline-fonts-git</a></li></ul><p>ColorSchemes</p><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><a href="http://ethanschoonover.com/solarized">Solarized</a></li><li><a href="http://color.smyck.org/">SMYCK</a></li><li><a href="http://ciembor.github.io/4bit/">Terminal ColorScheme Designer</a></li></ul></section><section id="shell"><h5>Shell</h5><p>Una shell es un intérprete de comandos (al igual que el REPL de ruby/python/js/haskell/), lo que tiene de especial es que está orientada a ejecutar otros programas.</p><h6>¿Cuál usar?</h6><p>Existen varias,</p><ul><li>bash (generalmente default)</li><li>zsh</li><p>Casi 100% compatible con bash. La configuración default es mala, pero existen algunos frameworks fáciles de usar para configurarla:</p><ul><li><strong><a href="https://github.com/sorin-ionescu/prezto">prezto</a></strong></li><li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></li></ul><li>fish</li><p>Muy buena por default. Tiene sintáxis distinta a la de bash, lo que quita portabilidad a sus scripts, pero no es un problema. También existe un framework para instalar plugins y themes:</p><ul><li><a href="https://github.com/oh-my-fish/oh-my-fish">oh-my-fish</a></li></ul><li>tsh, csh, ksh, ...</li></ul><h6>Usando la shell</h6><p>Existe una lista de directorios donde la shell puede descubrir programas, es conocida como <code>PATH</code>. Es posible extenderla para ejecutar programas desde directorios personales.</p><p>Ejecutar programas es simple, basta escribir el nombre del programa<small>, o la ruta completa si no están en el PATH</small>. Se le pueden entregar argumentos separados por espacios, todos son strings.</p><p>Por ejemplo, podemos llamar a 'telnet' y darle un string como argumento para conectarnos a algún servidor.</p><pre><code class="hljs">telnet towel.blinkenlights.nl</code></pre><h6>Pipes</h6><pre><code class="hljs">echo "Mooo" | cowsay</code></pre><p>Acá llamamos a 'echo' con 'Mooo' como argumento, el que ejecuta y pasa su output como input de 'cowsay' sin argumentos. Esto produce el siguiente output:</p><pre><code class="hljs">  ______
+ < Mooo >
+  ------
+           \   ^__^
+            \  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||</code></pre><p>El operador pipe <code>|</code> toma el output del programa de la izquierda y se lo entrega como input al de la derecha, se puede usar siempre. La ejecución se hace en paralelo y los datos se intercambian en líneas completas. Hay que notar que algunos programas no pueden generar output antes de consumir todo el input (sort).</p><p>Pueden encadenarse varios programas,</p><pre><code class="hljs">echo "Moooooooo" | cowsay | cowsay -n | cowsay -n</code></pre><p>Más adelante se verán con más detalle, por ahora basta que sepan que sirven para componer programas.</p></section><section><h5>Editor</h5><p>Existen varios editores de texto. Vim y Emacs son muy configurables, por lo que es cómodo comenzar con una base.</p><ul><li>vim</li><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><strong><a href="https://github.com/spf13/spf13-vim">vim spf13</a></strong></li><li><a href="https://github.com/begriffs/haskell-vim-now">haskell-vim-now</a></li><li><a href="https://github.com/derekwyatt/vim-config">Derek Wyatt's config</a></li><li><a href="https://github.com/VundleVim/Vundle.vim">Vundle (Plugin Manager, DIY config)</a></li></ul><li>emacs</li><ul style="-webkit-columns:2; -moz-columns:2; columns:2;  list-style-position: inside;"><li><strong><a href="https://github.com/syl20bnr/spacemacs">Spacemacs</a></strong></li><li><a href="http://aaronbedra.com/emacs.d/">Aaron Bedra's config</a></li><li><a href="http://pages.sachachua.com/.emacs.d/Sacha.html">Sacha Chua's config</a></li></ul><li>kate/gedit</li><li>atom/sublime/notepad++</li><li><small>(ed)</small></li></ul><p>Lo más importante es que les sea una herramienta útil y los haga eficientes en vez de ser un obstáculo. Vim y Emacs son superiores a la mayoría, pero hay que aprender a usarlos (comenzar es fácil, gastar 30 minutos y ser más lento al principio se paga).</p></section><section id="git"><h5>Git</h5><p>Git es un sistema de control de versiones distribuido que se ha convertido en una herramienta esencial para cualquier proyecto serio.</p><p>Para aprender git existe mucho material en internet.</p><ul><li><strong><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Book</a></strong></li><li><a href="https://git-scm.com/docs">Docs</a></li><li><strong><a href="http://rogerdudler.github.io/git-guide/">Simple Guide</a></strong></li><li><a href="http://gitimmersion.com/">Git Immersion</a></li><li><strong><a href="https://try.github.io/levels/1/challenges/1">CodeSchool</a></strong></li><li><a href="http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide">SO practical guide</a></li><li><a href="http://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></li><li><a href="http://onlywei.github.io/explain-git-with-d3">Explain git with D3 (tree management)</a></li></ul></section></section></article></div><footer><div class="col-xs-12 col-md-8 col-md-offset-2"><p style="padding-top:4em;">Profesor: 
+<br> Cristian Ruz cruz@ing.puc.cl</p><p>Ayudantes: 
+<br> Raul Alvarez, rsalvarez@uc.cl, Jefe Sistemas Operativos
+<br> Pablo Araneda, pharaneda@uc.cl, Ayud Sistemas Operativos
+<br> Por Fijar, fijar.por@uc.cl, Ayud Sistemas Operativos
+<!--<br> Florencia Ljubetic, mfljubetic@uc.cl, Ayud Sistemas Operativos
+<br> Álvaro Quintana, alvaroq@uc.cl, Ayud Sistemas Operativos
+<br> Felipe Arellano, fharellano@uc.cl, Jefe Redes-->
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes</p><p style="padding-top:2em;">IIC2333 Sistemas Operativos y Redes, Semestre 2022-1<br/>Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile<br/></p><img src="https://i.giphy.com/media/VOMvlxVHR7CF2/200.gif" style="width:220px" /><img src="../../images/figures/linux.gif" width="100%" /></div></footer><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script><script>opt = {
+  "delimiters": [
+    {left:   "$", right:   "$",  display: false},
+    {left:  "$$", right:  "$$",  display: true},
+    {left: "\\[", right: "\\]",  display: true},
+    {left: "\\(", right: "\\)",  display: false}
+  ]
+}
+renderMathInElement(document.body, opt);</script></body></html>

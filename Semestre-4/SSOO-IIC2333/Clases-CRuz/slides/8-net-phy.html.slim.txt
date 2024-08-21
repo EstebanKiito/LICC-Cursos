@@ -1,0 +1,735 @@
+
+
+
+%---------------------------------------------------------------------
+\subsection{Ancho de banda}
+
+/ Frame
+  \frametitle{Ancho de banda}
+
+  Todos los medios sufren atenuación
+  ul
+    li.fragment Hasta cierta frecuencia $f_c$ (en Hz) las amplitudes de los armónicos más altos se pierden
+    li.fragment La capacidad de frecuencias (harmónicos) que se pueden enviar por el canal
+          sin ser (muy) atenuadas, determina el {\bf ancho de banda}
+  
+  Si queremos enviar $8$-bit, a $b$ bits/sec (bps)
+  ul
+    li.fragment Tiempo requerido: $8/b$ sec
+    li.fragment Frecuencia para primer armónico: $b/8$ Hz
+    li.fragment Línea telefónica transmite hasta $3000$ Hz
+    li.fragment Armónico más alto en línea telefónica: $3000/(b/8)=24000/b Hz$
+  
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Ancho de banda}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/06-bitrates.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Ancho de banda máximo}
+
+  Henry Nyquist (1924): Una señal con frecuencia $B$ puede ser completamente reconstruída
+  tomando exactamente $2B$ muestra por segundo
+  
+  \begin{alertblock}{Teorema de Nyquist}
+    \[\text{Máxima tasa de transferencia} = 2B \log_2 V \text{bps}\]
+  \end{alertblock}
+  
+  donde:
+  ul
+    li.fragment $B$: frecuencia máxima de la señal
+    li.fragment $V$: cantidad de niveles discretos
+  
+  Ejemplo
+  ul
+    li.fragment Canal perfecto de $3000$ Hz.
+    li.fragment Transmisión binaria, $V=2$
+    li.fragment Tasa máxima: $6000$ bps
+  
+
+
+
+
+%---------------------------------------------------------------------
+\subsection{Medios de transmisión}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+
+  Satélites
+  
+  ul
+    li.fragment Comunicación de larga distancia
+    li.fragment Configuraciones
+      ul
+        li.fragment Geoestacionaria
+        li.fragment Órbita media (MEO): GPS ($\sim 32$)
+        li.fragment Órbita baja (LEO):  
+      
+    li.fragment Velocidad de transmisión: $\sim 300000$km/s
+    li.fragment Comunicación puede apoyarse en medios terrestres
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+
+  IEEE 802.11, Wireless LAN
+  
+  ul
+    li.fragment 802.11b, $2.4\sim 2.5$GHz, 11 Mbps
+    li.fragment 802.11a, $5 \sim 6$GHz, 54 Mbps, sensible a interferencias físicas
+    li.fragment 802.11g, $2.4\sim 2.5$GHz, 54 Mbps
+    li.fragment 802.11n, $2.4\sim 2.5$GHz, 200 Mbps, múltiples antenas
+  
+
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+  \framesubtitle{IEEE 802.11, Wireless LAN}
+
+  Canales. Espectro 2.4GHz $\sim$ 2.485GHz dividido en 11 canales
+  
+  ul
+    li.fragment Administrador de AP elige el canal
+    li.fragment {\em Host} escucha canales y detecta {\em beacons} enviados por AP
+    li.fragment {\em Beacons} contienen SSID (nombre de AP) y MAC Address de AP
+    
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/06-channels.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+  \framesubtitle{IEEE 802.16, WiMax}
+
+  ul
+    li.fragment Comunicación base-hosts: antena omnidireccional
+    li.fragment Comunicación base-base: antena punto a punto
+    li.fragment Rango $\sim$ 10Km, $\sim$ 14Mbps
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-wimax1.png}
+    \includegraphics[width=4cm]{figs/06-wimax2.png}
+    \includegraphics[width=4cm]{figs/06-wimax3.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+  \framesubtitle{Red Móvil 2G}
+
+  ul
+    li.fragment Canales de voz
+    li.fragment IS-136: TDMA + FDMA (Time Division/Freq Division)
+    li.fragment GSM: Global System for Telecommunications
+    li.fragment IS-95: CDMA (Code Division Multiple Access)
+  
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+  \framesubtitle{Red Móvil 2.5G}
+
+  ul
+    li.fragment GPRS: General Packet Radio Service
+      ul
+        li.fragment GSM++
+        li.fragment Envío de datos
+      
+    li.fragment EDGE: Enhanced Data rates for Global Evolution
+      ul
+        li.fragment Data rates hasta 384Kbps
+      
+  
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Medios Inalámbricos}
+  \framesubtitle{Red Móvil 3G}
+
+  Voz + Datos
+  
+  ul
+    li.fragment UMTS: Universal Mobile Telecommunications Service
+      ul
+        li.fragment WCDMA
+        li.fragment HSPA+, High Speed Packet Access (evolved): 168Mbps downlink, 22Mbps uplink
+      
+    li.fragment CDMA-2000: CDMA en slots TDMA
+  
+
+
+
+%---------------------------------------------------------------------
+\section{Frames, control de flujo, corrección de errores}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Capa de Enlace}
+
+  Detección de errores
+  ul
+    li.fragment No utilizado en medios de baja tasa de error (fibra, cables)
+    li.fragment Importante en medios con atenuación (inalámbricos)
+      ul
+        li.fragment Receptor detecta errores por atenuación 
+        li.fragment Solicita retransmisión, o desecha {\em frame}
+        li.fragment Si se agrega código de corrección, receptor puede corregir
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Frame {\em Ethernet}}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/06-frameethernet.png}
+  \end{center}
+
+  ul
+    li.fragment {\bf Preámbulo}
+      ul
+        li.fragment 7 bytes 10101010, + 1 byte 10101011
+        li.fragment Usado para sincronizar relojes de emisor y receptor
+      
+    li.fragment {\bf Direcciones}: 6 bytes
+    li.fragment {\bf Tipo}: indica protocolo de capa de red
+    li.fragment {\bf CRC}: Cyclic Redundancy Check, comprobación de errores
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Frame {\em WLAN}}
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/06-framewlan.png}
+  \end{center}
+
+
+
+
+
+%---------------------------------------------------------------------
+\section{Acceso al medio: ethernet y wireless LAN}
+  
+  
+
+
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Partición de frecuencia: FDMA}
+  \framesubtitle{{\em Frequency Division Multiple Access}}
+
+  ul
+    li.fragment División por bandas de frecuencia. (Ej: canales de radio, televisión)
+    li.fragment Cada estación tiene una banda fija asignada
+    li.fragment Bandas no utilizadas quedan inactivas
+  
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/06-fdma.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{División por código: CDMA}
+  \framesubtitle{{\em Code Division Multiple Access}}
+
+  ul
+    li.fragment Permite que varios usuarios transmitan en la misma frecuencia
+    li.fragment Cada usuario posee un código de transmisión
+      ul
+        li.fragment Requisito: códigos deben ser ortogonales
+        li.fragment Señal a transmitir: {\em data cliente} $ \cdot $ {\em código cliente}
+        li.fragment Señal recibida: {\em data recibida} $ \cdot $ {\em código cliente}
+      
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{División por código: CDMA}
+  \framesubtitle{{\em Code Division Multiple Access}}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/06-cdma1.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{División por código: CDMA}
+  \framesubtitle{{\em Code Division Multiple Access}}
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/06-cdma2.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Acceso Aleatorio}
+  \framesubtitle{Todos hablan cuando quieren}
+
+  Protocolos optimistas
+  ul
+    li.fragment Cada nodos transmite cuando lo desea ocupando todo el ancho de banda disponible
+    li.fragment Si dos o más transmite al mismo tiempo, se produce {\bf colisión}
+    li.fragment Protocolo debe determinar:
+      ul
+        li.fragment Cómo detectar colisiones
+        li.fragment Qué hacer ante una colisión (cómo recuperarse)
+      
+    li.fragment Protocolos:
+      ul
+        li.fragment ALOHA particionado
+        li.fragment ALOHA
+        li.fragment CSMA, CSMA/CD, CSMA/CA
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{ALOHA Particionado}
+%  \framesubtitle{Todos hablan cuando quieren}
+
+  ul
+    li.fragment Todos los frames deben tener el mismo tamaño
+    li.fragment El tiempo se divide en particiones del tamaño requerido para transmitir un frame
+    li.fragment Nodos pueden empezar a transmitir sólo al comienzo de estas particiones
+    li.fragment Si dos o más empiezan a transmitir en la misma partición, se detecta {\bf colisión}
+  
+  Ante una colisión:
+  ul
+    li.fragment Cada nodo vuelve a transmitir en la siguiente partición, con probabilidad $p$, hasta que no haya colisiones
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/06-aloha-part.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{ALOHA Particionado}
+  Eficiencia
+  ul
+    li.fragment $N$ nodos con {\em frames} a enviar. Probabilidad de enviar $p$.
+    li.fragment Probabilidad que un nodo dado pueda transmitir: $p(1-p)^{N-1}$
+    li.fragment Probabilidad que cualquier nodo pueda transmitir: $Np(1-p)^{N-1}$
+    li.fragment Maximo valor para esta expresión $\sim 0.368$
+    li.fragment Canal es utilizado a los más el $37\%$ del tiempo
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{ALOHA}
+  No hay sincronización al momento de empezar a transmitir
+  ul
+    li.fragment Mayor probabilidad de colisiones
+    li.fragment Frame enviado en instante $t_0$ puede colisionar con frames enviados entre $[t_0-1,t_0+1]$
+    li.fragment Eficiencia $\sim 0.18$
+  
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/06-aloha.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{CSMA}
+  \framesubtitle{Carrier Sense Multiple Access}
+  
+  La idea es no interrumpir a los demás
+  ul
+    li.fragment Emisor escucha antes de transmitir
+    li.fragment Si detecta canal inactivo, envía
+    li.fragment Si detecta canal activo, espera hasta dejar de detectar actividad
+    li.fragment Retrasos en la propagación permite que ocurran colisiones
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-csma.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{CSMA/CD}
+  \framesubtitle{Carrier Sense Multiple Access / Colission Detection}
+
+  ul
+    li.fragment Detección rápida de colisiones
+    li.fragment Transmisión se aborta en cuanto se detecta colisión, usando una {\em jam signal}
+    li.fragment Usando en LAN cableada (Ethernet): comparando nivel de fuerza de señales
+    li.fragment En WLAN: difícil de detectar
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-csma-cd.png}
+  \end{center}
+
+
+
+%%---------------------------------------------------------------------
+/ Frame
+  \frametitle{CSMA/CA}
+  \framesubtitle{Carrier Sense Multiple Access / Colission Avoidance}
+
+  ul
+    li.fragment Usado en WLAN.
+    li.fragment Si se detecta colisión se espera un tiempo aleatorio
+    li.fragment Complementado con paquetes adicionales:
+      ul
+        li.fragment RTS (Request to Send)
+        li.fragment CTS (Clear to Send)
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Protocolos por Turnos}
+%  \framesubtitle{Carrier Sense Multiple Access / Colission Avoidance}
+
+  ul
+    li.fragment Protocolos de particionamiento
+      ul
+        li.fragment Eficientes con alta carga, canal desperdiciado con baja carga
+      
+    li.fragment Protocolos de acceso aleatorio
+      ul
+        li.fragment Eficientes con baja carga, poco eficientes con alta carga
+      
+  
+
+
+%%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Protocolos por Turnos}
+  \framesubtitle{Master/Slave}
+  
+  Esquema master/slave
+    ul
+      li.fragment Master invita a los slaves a transmitir
+      li.fragment Eficiente con terminales ``tontos''
+      li.fragment Alta latencia con muchos slaves
+      li.fragment Punto de falla centralizado
+      li.fragment Usado en Bluetooth
+    
+  
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-turnos1.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Protocolos por Turnos}
+  \framesubtitle{Token}
+
+  ul
+    li.fragment Nodos se pasan un {\em token}
+    li.fragment Sólo el que tiene el {\em token} puede transmitir
+    li.fragment Alta latencia con muchos miembros
+    li.fragment ¿Qué pasa si el nodo que tiene el {\em token} desaparece?
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-turnos2.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+
+  ul
+    li.fragment Objetivo: asociar puertas de interfaz (NIC o switch) con destinos específicos
+    li.fragment {\em Dirección MAC}: 48-bit
+      ul
+        li.fragment Dirección universal
+        li.fragment Particionadas por fabricante
+        li.fragment Guardada en ROM de NIC
+        li.fragment Puede ser enmascarada por software
+      
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+
+  Dirección broadcast: FF-FF-FF-FF-FF-FF
+  \begin{center}
+    \includegraphics[width=6cm]{figs/06-lan-mac.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+
+  ul
+    li.fragment Direcciones asignadas por IEEE
+    li.fragment Cada fabricante compra un conjunto de direcciones
+      ul
+        li.fragment 24-bit identifican al fabricante
+        li.fragment 24-bit identifican la tarjeta
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+  \framesubtitle{ARP: Address Resolution Protocol}
+  
+  ul
+    li.fragment Cada nodo (host,switch,router) mantiene una tabla ARP
+    li.fragment Tabla ARP contiene asociaciones $\langle \text{IP},\text{MAC},TTL \rangle$
+    li.fragment TTL: Time-To-Live, indica el tiempo que será recordada esa entrada
+  
+  ¿Cómo determinar una dirección MAC?
+  \begin{center}
+    \includegraphics[width=6cm]{figs/06-arp.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+  \framesubtitle{ARP: Address Resolution Protocol}
+
+  ¿Cómo determinar una dirección MAC?
+  ul
+    li.fragment Si $A$ quiere comunicarse con $B$, que no está en su tabla
+    li.fragment $A$ envía mensaje ARP con IP de $B$ y broadcast FF-FF-FF-FF-FF-FF
+    li.fragment Todos reciben el mensaje
+    li.fragment Solo $B$ responde, con su dirección MAC
+    li.fragment $A$ guarda en su tabla ARP la asocación IP,MAC de $B$
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direccionamiento en Capa de Enlace}
+  \framesubtitle{Ruteo a distintas LAN}
+
+  $A$ quiere enviar frame a $B$, vía $R$. $A$ conoce la IP de $B$
+  ul
+    li.fragment $R$ mantiene dos tablas ARP, una para cada LAN
+  
+
+  \begin{center}
+    \includegraphics[width=9cm]{figs/06-arp-route.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{HUB}
+
+  Dispositivo repetidor
+  ul
+    li.fragment Cada {\em frame} que es recibido por una entrada es reenviado por {\em todas} las otras salidas
+    li.fragment Implementa topología de bus
+    li.fragment Todos los pares de nodos pueden tener colisiones
+    li.fragment NICs implementan CSMA/CD para detectar colisiones, pero el {\em hub} no  
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-hub.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Switch}
+
+  Dispositivo activo
+  ul
+    li.fragment Almacena y reenvía {\em frames} Ethernet de manera selectiva
+    li.fragment Implementa CSMA/CD
+    li.fragment Transparente para nodos
+    li.fragment ¿Cómo se programan las entradas/salidas?
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-switch.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Switch}
+
+  Aprendizaje de tablas
+  ul
+    li.fragment {\em Switch} mantiene tablas de ubicación de nodos
+    li.fragment {\em Switch} aprende los nodos que están a su alcance
+    li.fragment Direcciones no conocidas se preguntan por {\em flooding}
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/06-switch-tablas.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Switch: interconexiones}
+
+  {\em Switches} pueden estar interconectados
+  ul
+    li.fragment El método es el mismo
+  
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/06-switch-inter.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Spanning Trees}
+
+  ¿Cómo determinar el origen de B?
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/06-switch-spanning.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Spanning Tree Protocol}
+
+  ul
+    li.fragment IEEE 802.1D
+    li.fragment Cada {\em switch} posee un identificador (único)
+    li.fragment Cada {\em switch} propaga su ID usando un {\em broadcast}:
+      ul
+        li.fragment BPDU ({\em Bridge Protocol Data Unit}) frame
+      
+    li.fragment {\em Switches} con menor identificador pasan a ser raíz
+    li.fragment Caminos se eligen en dirección a la raíz
+    li.fragment ¿Minimum Spanning Tree?
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Hardware y Capa de Enlace}
+  \framesubtitle{Spanning Tree Protocol}
+
+  STP establece estados para los puertos
+  ul
+    li.fragment {\bf Blocking}: no transmite {\em frames}. Sólo recibe BPDU
+    li.fragment {\bf Listening}: recibe y procesa BPDU. Puede pasar a {\em blocking} o {\em forwarding}
+    li.fragment {\bf Learning}: no transmite {\em frames}. Sólo procesa BPDU y actualiza tablas de transmisión
+    li.fragment {\bf Forwarding}: estado normal en que transmite {\em frames}
+  
+
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Control de Flujo}
+%  \framesubtitle{Spanning Tree Protocol}
+
+  ul
+    li.fragment Método para adaptar velocidad entre emisor y receptor
+    li.fragment {\em Switches} reciben datos desde diferentes interfaces
+    li.fragment Dos métodos basados en confirmación de receción
+      ul
+        li.fragment Sliding Window
+        li.fragment Stop \& Wait
+      
+  
+
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Control de Flujo}
+  \framesubtitle{Stop \& Wait}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/06-flujo-stopwait.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Control de Flujo}
+  \framesubtitle{Sliding Window}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/06-flujo-sliding.png}
+  \end{center}
+
+

@@ -1,0 +1,839 @@
+\frame{\titlepage}
+
+
+%---------------------------------------------------------------------
+/ Frame
+\frametitle{Contenidos}
+%\tableofcontents[currentsection]
+\tableofcontents
+
+
+
+%---------------------------------------------------------------------
+\section{Modos de Conexión}
+
+/ Frame
+  \frametitle{Capa de Red}
+  
+  Objetivo: transmisión de unidades de datos desde un nodo emisor
+  a un nodo receptor
+  
+  ul
+    li.fragment Unidad de datos: paquetes o datagramas
+    li.fragment Desafío: conseguir que los datagrams lleguen desde el nodo origen al nodo destino
+    li.fragment Arquitectura de enrutadores ({\em router}s)
+    li.fragment Algoritmos para determinar rutas (enrutamiento)
+  
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  
+  Establecer el camino de los datagramas es un problema antiguo
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-redderouters.png}
+  \end{center}
+  
+  Routers utilizando tablas para dirigir el tráfico entre distintas
+  porciones de la red (subredes)
+
+  Dos modelos de caminos: circuitos virtuales (orientado a conexión),
+  y redes de datagramas (sin conexión)
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  \framesubtitle{Circuitos Virtuales (CV)}
+  
+  ul
+    li.fragment Camino establecido antes de iniciar la transmisión
+    li.fragment Modelo de circuitos telefónicos
+    li.fragment Propiedades garantizables: ancho de banda, demora, QoS
+    li.fragment Paquetes usan número de circuito virtual en lugar de dirección de destino
+    li.fragment Estado de la conexión se mantiene a través de todos los {\em router}s
+    li.fragment Recursos dedicados
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  \framesubtitle{Circuitos Virtuales (CV)}
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-cv.png}
+  \end{center}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-cv-tabla.png}
+  \end{center}
+
+  Routers deben guardar estado de la conexión
+  ul
+    li.fragment Protocolo de establecimiento de camino antes de transmitir
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  \framesubtitle{Redes de datagramas}
+
+  No establece conexión
+  ul
+    li.fragment Encabezados deben incluir dirección de destino
+    li.fragment Routers deciden ``libremente'' por dónde redirigir cada paquete
+    li.fragment Paquetes de entre mismo par $\langle$origen, destino $\rangle$ puede seguir
+          distintos caminos
+    li.fragment Paquetes pueden llegar en orden distinto al que fueron enviados
+  
+  
+  
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  \framesubtitle{Redes de datagramas}
+
+  Muchas direcciones de destino posibles
+  ul
+    li.fragment Router utiliza rangos de direcciones
+  
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-datagrams-entries.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modos de Conexión}
+  \framesubtitle{Circuitos Virtuales vs. Red de datagramas}
+
+  Circuitos Virtuales
+  ul
+    li.fragment Usando en servicio telefónico, redes ATM
+    li.fragment Calidad de servicio (QoS) garantizada
+    li.fragment Conexión no se establece si no se pueden garantizar recursos
+    li.fragment Sensible a congestiones
+  
+  Redes de Datagramas
+  ul
+    li.fragment Usado en Internet
+    li.fragment Servicio ``elástico'' sin garantías de tiempo
+    li.fragment Sistema flexible que puede adaptar control de flujo, velocidad de transmisión, usar múltiples rutas
+    li.fragment Difícil garantizar recursos durante la comunicación
+  
+
+
+
+%---------------------------------------------------------------------
+\section{Direccionamiento IP y NAT}
+
+\subsection{IP y Fragmentación}
+
+/ Frame
+  \frametitle{Header IP}
+
+  IP: Internet Protocol
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-ip-header.png}
+  \end{center}
+    
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Fragmentación}
+
+  Enlaces poseen una MTU: {\em Maximum Transfer Unit}.
+  ul
+    li.fragment Tamaño máximo que puede ser transmitido en un enlace
+    li.fragment Paquetes pueden ser más grandes: son fragmentados y reensamblados
+    li.fragment Encabezado IP permite rearmarlos
+  
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/07-ip-fragments.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Fragmentación}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-ip-fragments-example.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+\subsection{Direccionamiento IP}
+
+/ Frame
+  \frametitle{Direcciones IP}
+
+  Identificador de 32-bit (IPv4) en notación {\em dotted-decimal}
+  
+  ul
+    li.fragment Identificador para interfaces (de host o de router)
+    li.fragment {\em Router} suele tener múltiples interfaces
+    li.fragment {\em Host} suelen tener sólo uan interfaz
+    li.fragment Dirección IP está asociada a una interfaz
+  
+
+  \begin{center}
+    146.155.13.45 = 10010010.10011011.00001101.00101101
+  \end{center}  
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+
+  Una {\bf subred} se define por un grupo de los bits más altos de una dirección IP
+  ul
+    li.fragment Bits más altos definen la subred
+    li.fragment Bits más bajos definen el {\em host}
+  
+  
+  Miembros de una misma subred pueden alcanzar sin necesitar un {\em router}
+  
+  \begin{center}
+    \includegraphics[width=6cm]{figs/07-ip-subnets.png}
+  \end{center}
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+  \framesubtitle{Subredes especiales}
+  
+  ul
+    li.fragment 0.0.0.0. Dirección del host actual (sólo sirve como origen)
+    li.fragment 127.0.0.0. Dirección {\em loopback}
+    li.fragment Sección de {\em host}=0. Dirección de la subred
+    li.fragment Sección de {\em host}=1. Dirección {\em broadcast} de la subred
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+  \framesubtitle{CIDR: Classless InterDomain Routing}
+
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-ip-subnets-clases.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+  \framesubtitle{CIDR: Classless InterDomain Routing}
+
+  Permite definir arbitrariamente porción de subred y de host
+  ul
+    li.fragment Formato: {\tt a.b.c.d/x}, donde {\tt x} es la cantidad de bits de la subred.
+    li.fragment Ejemplo: 146.155.13.0/24 indica la subred en que todas las direcciones empiezan con 146.155.13
+  
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-ip-subnets-cidr.png}
+  \end{center}
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+  \framesubtitle{Subredes especiales}
+
+  ul
+    li.fragment Red local: 0.0.0.0/8
+    li.fragment Red loopback: 127.0.0.0/8
+    li.fragment Redes privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+  
+
+  La cantidad de bits disponibles para el {\em host} determina la cantidad de {\em hosts} posible
+    
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/07-ip-subnets-2.png}
+  \end{center}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Direcciones IP y Subredes}
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/07-ip-subnets-3.png}
+  \end{center}
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DHCP}
+  \framesubtitle{Dynamic Host Configuration Protocol}
+  
+  ¿Como obtener una dirección?
+  ul
+    li.fragment Manualmente
+    li.fragment Ó vía DHCP
+  
+  
+  DHCP permite asignar direcciones IP dinámicamente dentro de una subred
+  ul
+    li.fragment Host envía mensaje broadcast: DHCP DISCOVER
+    li.fragment DHCP responde con mensaje: DHCP OFFER
+    li.fragment Host solicita dirección IP: DHCP REQUEST
+    li.fragment DHCP confirma solicitud: DHCP ACK
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DHCP}
+  \framesubtitle{Dynamic Host Configuration Protocol}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-dhcp.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{DHCP}
+  \framesubtitle{Dynamic Host Configuration Protocol}
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/07-dhcp-2.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{¿Cómo obtener direcciones IP}
+
+  ISP obtienen rangos de direcciones IP a través de ICANN
+  ul
+    li.fragment ICANN: Internet Corporation for Assigned Names and Numbers
+    ul
+      li.fragment Asigna rangos de direcciones
+      li.fragment Gestiona DNS
+      li.fragment Asigna puertos y servicios estándar
+    
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{¿Qué hacer con el término de las direcciones IP?}
+
+  Direcciones IPv4 tienen 32-bit: $2^{32}$ direcciones posibles, $\sim 4.3 \times 10^9$
+  ul
+    li.fragment Último rango top-level asignado en Febrero 2011
+    li.fragment Desde entonces se han recuperado rangos de direcciones
+  
+  Solución definitiva: migrar a IPv6
+  ul
+    li.fragment Direcciones de 128-bit: $2^{128}$ direcciones (es ¡mucho!)
+    li.fragment Notación: 8 grupos de 4 dígitos hexadecimales
+    li.fragment Ejemplo: 2001:0db8:85a3:0042:1000:8a2e:0370:7334
+    li.fragment Hasta Mayo 2014, el 96\% del tráfico usa IPv4
+  
+
+
+%---------------------------------------------------------------------
+\subsection{NAT}
+
+/ Frame
+  \frametitle{NAT}
+  \framesubtitle{Network Address Translation}
+
+  ¿Como comunicarse con nodos en un red privada (interna)?
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-nat-1.png}
+  \end{center}
+
+  ul
+    li.fragment Paquetes en la red interna tiene dirección de origen en 10.0.0.0/24
+    li.fragment Paquetes que salen de la red interna llevan dirección de origen
+          NAT IP: 138.76.29.7
+    li.fragment ¿Cómo se diferencian? \onslide<2->{Usando distinto puerto de origen}
+    li.fragment<3->16-bit para puerto: 65536 conexiones con sólo 1 IP
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{NAT}
+  \framesubtitle{Network Address Translation}
+
+  ¿Para qué?
+  ul
+    li.fragment Rango de direcciones internas se maneja localmente. No necesita ISP.
+    li.fragment Basta sólo una dirección externa: ahorro de direcciones
+    li.fragment No es posible llegar directamente desde la red pública a la red privada
+      ul
+        li.fragment Mentira: existe NAT Traversal
+        li.fragment Mayor seguridad
+      
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{NAT}
+  \framesubtitle{Network Address Translation}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-nat-2.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{NAT Traversal}
+  \framesubtitle{Solución estática}
+
+   ¿Cómo llegar a un nodo interno?
+   ul
+     li.fragment Routers deben configurar puertos externos para redirigir a direcciones internas\footnote{Recordar esto al hablar de {\em tunneling}}
+     li.fragment Ej: Toda la comunicación a 138.76.29.7:2500 será redirigida a 10.0.0.1:80
+   
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/07-nat-3.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{NAT Traversal}
+  \framesubtitle{Solución Plug and Play}
+  
+  Universal Plug and Play (UPnP), Internet Gateway Device (IGD) protocol
+  ul
+    li.fragment Permite configurar mapping de puertos a nodos internos dinámicamente
+    li.fragment Transparente para el nodo interno
+  
+  
+
+
+
+%---------------------------------------------------------------------
+\section{ICMP y IPv6}
+
+\subsection{ICMP}
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{ICMP}
+  \framesubtitle{Internet Control Message Protocol}
+  
+  ul
+    li.fragment Parte del {\em stack} TCP/IP
+    li.fragment Usado para mensajes de diagnóstico y control
+    li.fragment Usos principales: {\tt ping}, {\tt traceroute}
+    li.fragment Se envían dentro de paquetes IP, pero se tratan de manera especial
+  
+  Algunos tipos de mensajes ICMP
+  ul
+    li.fragment {\tt echo reply} (ping)
+    li.fragment {\tt dest. network unreachable}
+    li.fragment {\tt dest. host unreachable}
+    li.fragment {\tt dest. host unknown}
+    li.fragment {\tt echo request} (ping)
+    li.fragment {\tt router discovery}
+    li.fragment {\tt TTL expired}
+    li.fragment {\tt bad IP header}
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{ICMP}
+  %\framesubtitle{{\tt ping} y {\tt traceroute}}
+
+  {\tt ping}
+  ul
+    li.fragment Test de {\em reachability}
+    li.fragment {\tt echo request} + {\tt echo reply}
+    li.fragment Permite calcular {\em Round Trip Time}
+  
+  {\tt traceroute}
+  ul
+    li.fragment Envía una serie de mensajes {\tt Echo request} con TTL incremental
+    li.fragment Cada respuesta {\tt Time Exceeded} permite identificar routers intermedios
+    li.fragment Cuando se encuentra el destino, éste devuelve {\tt Echo Reply}
+  
+
+
+%---------------------------------------------------------------------
+\subsection{IPv6}
+
+/ Frame
+  \frametitle{IPv6}
+  
+  Direcciones 128-bit
+  ul
+    li.fragment $\sim 96\%$ del tráfico aún es IPv4
+    li.fragment Formato 8 grupos de 4 dígitos hexadecimales
+      ul
+        li.fragment {\tt 2001:0db8:85a3:0042:1000:8a2e:0370:7334}
+        li.fragment Loopback: {\tt 0000:0000:0000:0000:0000:0000:0000:0001}
+        li.fragment Abreviable a: {\tt ::1}
+        li.fragment Direcciones IPv4 anotables como: {\tt ::ffff:192.0.2.128}
+      
+  
+  
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-ipv6.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{IPv6}
+  \framesubtitle{Transición IPv4 a IPv6}
+
+  Transición no es inmediata
+  ul
+    li.fragment {\em Dual stack implementation}
+    li.fragment {\em Tunneling}
+       ul
+         li.fragment Tunneling permite utilizar routes IPv4 como intermediarios
+    	 li.fragment Paquetes IPv6 se transportan en campo de datos de IPv4
+       
+  
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-ipv6-tunnel.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+\section{Enrutamiento}
+
+%---------------------------------------------------------------------
+\subsection{Algoritmos de Enrutamiento}
+
+/ Frame
+  \frametitle{Algoritmos de Enrutamiento}
+
+  Objetivo: determinar {\bf el mejor} camino entre {\em router}s para llegar al destino
+  ul
+    li.fragment Modelado como un grafo, donde cada {\em router} es un nodo y sus conexiones con aristas
+    li.fragment ¿Qué significa el mejor camino?
+      ul
+        li.fragment Depende de la definición de {\em costo} de aristas
+        li.fragment Más corto, menos congestionado, mayor ancho de banda, \ldots
+      
+  
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/07-enrutamiento-grafo.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Tipos de algoritmos}
+
+  Conocimiento de la red
+  ul
+    li.fragment {\bf Global}. Nodos conocen la topología y costos de enlaces
+      ul
+        li.fragment Algoritmos que conocen {\em estado del enlace}
+      
+    li.fragment {\bf Decentralizados}. Nodos conocen a sus vecinos, y estados de esos enlaces
+      ul
+        li.fragment Se basan en intercambio de información con vecinos
+        li.fragment Algoritmos que conocen {\em vectores de distancia}
+      
+  
+  Dinamicidad
+  ul
+    li.fragment {\bf Estáticos}. Rutas con cambios poco frecuentes
+    li.fragment {\bf Dinámicos}. Se actualizan periódicamente en base a costos de enlace
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Algoritmos de Estado de Enlace}
+  \framesubtitle{{\em Link State} routing}
+  
+  ul
+    li.fragment Cada nodo envía su información de conectividad a sus vecinos
+    li.fragment Información se comunica a los demás vía {\em flooding}
+    li.fragment Cuando todos tiene información de la topología, cada uno calcula las rutas más cortas
+      ul
+        li.fragment Algoritmo de Dijkstra (1957)
+      
+  
+  
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-enrutamiento-grafo.png}
+  \end{center}
+
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Link State} routing}
+  \framesubtitle{Algoritmo de Dijkstra}
+
+  \begin{center}
+    \includegraphics[width=9cm]{figs/07-ls-dijkstra.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\em Link State} routing}
+
+  Rutas más cortas desde {\em u}
+  \begin{center}
+    \includegraphics[width=5cm]{figs/07-ls-u.png}
+  \end{center}
+  Tabla de ruteo de {\em u}
+  \begin{center}
+    \includegraphics[width=4cm]{figs/07-ls-route.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Algoritmo de Vectores de Distancia}
+
+  Basado en ecuación de Bellman-Ford
+  \[
+    d(x,y) = min_v\{c(x,v) + d(v,y)\}
+  \]
+  ul
+    li.fragment Cada nodo mantiene una tabla de la mejor ruta a sus vecinos
+    li.fragment Cada nodo comparte su tabla con sus vecinos
+    li.fragment Cuando la información se ha propagado a todos los nodos, cada uno conoce las mejores rutas
+    li.fragment Diferencia con LS: se propaga información de rutas, en lugar de enlaces
+  
+  Funciona de manera distribuida
+  ul
+    li.fragment Se gatilla ante cambios locales de costos
+    li.fragment Se gatilla al recibir mensajes de vecinos
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Algoritmo de Vectores de Distancia}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-dv.png}
+  \end{center}
+
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Algoritmo de Vectores de Distancia}
+  \framesubtitle{Count-to-Infinity}
+  
+  ul
+    li.fragment Las noticias buenas se propagan rápido
+    li.fragment Noticias malas pueden generar conteos infinitos
+  
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-dv-infinity.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Link State vs Distance Vector}
+  
+  Link State
+  ul
+    li.fragment $N$ nodos, $E$ enlaces: $O(NE)$ mensajes
+    li.fragment Ante errores, se propaga ausencia de enlace
+  
+  Distance Vector
+  ul
+    li.fragment Tiempo de convergencia indeterminado
+    li.fragment Ante errores, se propaga el error. Puede generar ciclos infinitos.
+  
+  
+
+%---------------------------------------------------------------------
+\subsection{Enrutamiento de Internet}
+
+/ Frame
+  \frametitle{Enrutamiento interno y externo}
+  
+  No es factible almacenar tablas para todos los routers de Internet
+  ul
+    li.fragment Internet se compone de {\em Sistemas Autónomos} (AS) interconectados
+    li.fragment Algoritmos intra-AS resuelven ruteo en un subconjunto de la red
+    li.fragment Algoritmos inter-AS ayudan a determinar {\em forwading tables} entre distintos AS
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{IGP: Interior Gateway Protocols}
+
+  Enrutamiento intra-AS
+  ul
+    li.fragment RIP: Routing Information Protocol
+    li.fragment OSPF: Open Shortest-Path First
+    li.fragment IGRP: Interior Gateway Routing Protocol (CISCO Propietary)
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{RIP: Routing Information Protocol}
+
+  Algoritmo de vector de distancias
+  ul
+    li.fragment Uno de los más antiguos (implementado en ARPANet)
+    li.fragment Métrica: número de saltos ({\em hops})
+    li.fragment Envía actualizaciones cada 30 segundos
+    li.fragment Mecanismos para evitar errores
+      ul
+        li.fragment Split Horizon: Evita propagación de rutas redundantes
+        li.fragment Poison reverse: Limita la cantidad de saltos. Más de 15 saltos se considera $\infty$
+        li.fragment Holddown: Evita actualizar rutas por un tiempo antes un aviso de {\em network unreachable}
+      
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{OSPF: Open Shortest-Path First}
+
+  Algoritmo del tipo {\em Link-State}
+  ul
+    li.fragment Muy similar a IS-IS (Interior System - Interior System)
+    li.fragment Anuncios transportados directamento en encabezados IP
+    li.fragment Permite propagar múltiples rutas con métricas para diferentes
+          tipos de medios
+    li.fragment Permite implementaciones jerárquicas
+  
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/07-ospf-jerarquico.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{BGP: Border Gateway Protocol}
+
+  Estándar de facto para comunicación Inter-AS
+  ul
+    li.fragment Permite conectar una subred anunciar su existencia a Internet
+    li.fragment Provee medios para:
+      ul
+        li.fragment Obtener información de {\em reachability} de otras subredes
+        li.fragment Propagar información de {\em reachability} a nodos internos
+        li.fragment Determinar buenas rutas o otras subredes
+      
+    li.fragment Parejas de routers (pares BGP) intercambian información de ruteo
+      ul
+        li.fragment Sesiones TCP semipermanentes (port 179)
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{BGP: Border Gateway Protocol}
+
+  Información se propaga a través de {\em prefijos de reachability}
+  ul
+    li.fragment Nodos guardan información de {\em reachability} en su tabla de reenvío
+    li.fragment Decisión se toma en basa a {\em reachability} y otros atributos
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/07-bgp.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{BGP: Border Gateway Protocol}
+
+  ul
+    li.fragment AS-PATH: ASs por los que ha pasado el prefijo
+    li.fragment NEXT-HOP: Router de destino del anuncio
+  
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-bgp-2.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{BGP: Border Gateway Protocol}
+
+  Routers pueden decidir aceptar o rechazar los anuncios de rutas
+  
+  Selección de rutas puede tomar múltiples criterios
+  ul
+    li.fragment Decisión política
+    li.fragment AS-PATH más corto
+    li.fragment Router NEXT-HOP más cercano
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{BGP: Border Gateway Protocol}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/07-bgp-rutas.png}
+  \end{center}
+
+  ISPs: A,B,C; Clientes: X,W,Y
+  ul
+    li.fragment $A$ anuncia a $B$ el camino $(A,W)$
+    li.fragment $B$ anuncia a $X$ el camino $(B,A,W)$
+    li.fragment ¿Debería $B$ anunciar a $C$ el camino $(B,A,W)$?
+      ul
+        li.fragment $B$ no obtiene beneficio por enrutar $(C,B,A,W)$
+        li.fragment $B$ quiere enrutar sólo a sus clientes
+        li.fragment $B$ quiere forzar a que $C$ deba enrutar hasta $W$ a través de $A$
+      
+  
+
+

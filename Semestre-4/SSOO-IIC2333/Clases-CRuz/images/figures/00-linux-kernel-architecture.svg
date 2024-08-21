@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="960"
+   height="540"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   viewBox="0 0 960 540"
+   sodipodi:docname="Simplified Structure of the Linux Kernel.svg">
+  <title
+     id="title4468">Simplified Structure of the Linux Kernel</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0466654"
+     inkscape:cx="565.33074"
+     inkscape:cy="257.20648"
+     inkscape:document-units="px"
+     inkscape:current-layer="boxes"
+     showgrid="false"
+     inkscape:snap-page="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Simplified Structure of the Linux Kernel</dc:title>
+        <dc:date>2016-02-20</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Shmuel Csaba Otto Traian Xerxes</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Shmuel Csaba Otto Traian Xerxes</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Andrew Stuart Tanenbaum</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:description>Illustrates three major components of the Linux kernel. Missing netfilter and nftables. Taken from &quot;Modern Operating Systems&quot; ISBN 0-13-359162-X</dc:description>
+        <dc:language>en-US</dc:language>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg</dc:identifier>
+        <dc:source>https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="boxes"
+     inkscape:groupmode="layer"
+     id="boxes"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:#d3d7cf;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4136"
+       width="949"
+       height="519"
+       x="5.5"
+       y="15.499988"
+       rx="15"
+       ry="15" />
+    <rect
+       style="opacity:1;fill:#f2b2b2;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4153"
+       width="189"
+       height="389"
+       x="760.5"
+       y="105.5"
+       rx="14.999999"
+       ry="15" />
+    <rect
+       style="opacity:1;fill:#5fbcd3;fill-opacity:1;stroke:#000000;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4151"
+       width="194"
+       height="389"
+       x="555.5"
+       y="105.5"
+       rx="15.000001"
+       ry="15" />
+    <rect
+       style="opacity:1;fill:#99E399;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4149"
+       width="534"
+       height="389"
+       x="10.5"
+       y="105.5"
+       rx="15.000001"
+       ry="15" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1.1352539"
+       y="-7.6000977"
+       id="text4251"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4253"
+         x="-1.1352539"
+         y="-7.6000977">by Shmuel Csaba Otto Traian Xerxes; GFDL 1.3 &amp; CC-BY-SA 4.0; 2016-02-20</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="boxes 1">
+    <rect
+       style="opacity:1;fill:#FFD42A;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4140"
+       width="899"
+       height="29"
+       x="30.5"
+       y="5.5"
+       rx="15"
+       ry="15" />
+    <rect
+       style="opacity:1;fill:#0071C5;fill-opacity:1;stroke:#000000;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4155"
+       width="799"
+       height="29"
+       x="80.5"
+       y="499.535"
+       rx="15"
+       ry="14.999999" />
+    <rect
+       style="opacity:1;fill:#eeeeec;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4278"
+       width="379.5"
+       height="44.5"
+       x="87.75"
+       y="110.25" />
+    <rect
+       y="170.18628"
+       x="14.25"
+       height="39.5"
+       width="169.5"
+       id="rect4393"
+       style="opacity:1;fill:#93ac9d;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#8dd35f;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4402"
+       width="169.5"
+       height="39.5"
+       x="192.75"
+       y="170.18628" />
+    <rect
+       style="opacity:1;fill:#5fd3bc;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4404"
+       width="169.5"
+       height="39.5"
+       x="371.25"
+       y="170.18628" />
+    <rect
+       style="opacity:1;fill:#93AC9D;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4406"
+       width="169.5"
+       height="89.5"
+       x="14.25"
+       y="395.25" />
+    <rect
+       y="395.25"
+       x="192.75"
+       height="89.5"
+       width="169.5"
+       id="use4408"
+       style="opacity:1;fill:#8dd35f;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="395.25"
+       x="371.25"
+       height="89.5"
+       width="169.5"
+       id="use4410"
+       style="opacity:1;fill:#5fd3bc;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="381.88879"
+       x="567.75"
+       height="94.5"
+       width="169.5"
+       id="rect4418"
+       style="opacity:1;fill:#d7eef4;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#f7e2de;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4430"
+       width="169.5"
+       height="94.5"
+       x="770.25"
+       y="382.75" />
+    <rect
+       style="opacity:1;fill:#f7e2de;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4432"
+       width="169.5"
+       height="94.5"
+       x="770.25"
+       y="252.75" />
+    <rect
+       style="opacity:1;fill:#f7e2de;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4434"
+       width="169.5"
+       height="94.5"
+       x="770.25"
+       y="122.75001" />
+    <rect
+       style="opacity:1;fill:#d7eef4;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4436"
+       width="169.5"
+       height="94.5"
+       x="567.75"
+       y="122.75001" />
+    <rect
+       style="opacity:1;fill:#d7eef4;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="use4438"
+       width="169.5"
+       height="94.5"
+       x="567.75"
+       y="252.75" />
+    <rect
+       y="299.92123"
+       x="371.25"
+       height="89.5"
+       width="169.5"
+       id="rect4440"
+       style="opacity:1;fill:#5FD3BC;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#5FD3BC;fill-opacity:1;stroke:#000000;stroke-width:0.49999997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4442"
+       width="169.5"
+       height="69.5"
+       x="371.25"
+       y="222.15709" />
+    <rect
+       y="256.87418"
+       x="192.75"
+       height="86.251625"
+       width="169.5"
+       id="rect4444"
+       style="opacity:1;fill:#8dd35f;fill-opacity:1;stroke:#000000;stroke-width:0.49999997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#93ac9d;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4456"
+       width="64.404327"
+       height="158.92691"
+       x="16.036583"
+       y="220.53654" />
+    <rect
+       style="opacity:1;fill:#8dd35f;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4245"
+       width="169.5"
+       height="29.5"
+       x="192.75"
+       y="222.15709" />
+    <rect
+       style="opacity:1;fill:#8dd35f;fill-opacity:1;stroke:#000000;stroke-width:0.49999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4247"
+       width="169.5"
+       height="38.926716"
+       x="192.75"
+       y="350.49451" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="text">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="279.6991"
+       y="26.207275"
+       id="text4143"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4145"
+         x="279.6991"
+         y="26.207275"><tspan
+   style="font-size:15px"
+   id="tspan4446">Linux kernel</tspan> SCI (System Call Interface)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4157"
+       y="520.93445"
+       x="253.58887"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="520.93445"
+         x="253.58887"
+         id="tspan4159"
+         sodipodi:role="line">IRQs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="617.91077"
+       y="520.24231"
+       id="text4161"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4163"
+         x="617.91077"
+         y="520.24231">Dispatcher</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4165"
+       y="74.759521"
+       x="277.39746"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="74.759521"
+         x="277.39746"
+         id="tspan4167"
+         sodipodi:role="line">I/O subsystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="651.97876"
+       y="52.615356"
+       id="text4169"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="651.97876"
+         y="52.615356"
+         id="tspan4177">Memory</tspan><tspan
+         sodipodi:role="line"
+         x="651.97876"
+         y="74.490356"
+         id="tspan4179">management</tspan><tspan
+         sodipodi:role="line"
+         x="651.97876"
+         y="96.365356"
+         id="tspan4344">subsystem</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4173"
+       y="52.615356"
+       x="854.47876"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="52.615356"
+         x="854.47876"
+         sodipodi:role="line"
+         id="tspan4181">Process</tspan><tspan
+         y="74.490356"
+         x="854.47876"
+         sodipodi:role="line"
+         id="tspan4183">management</tspan><tspan
+         y="96.365356"
+         x="854.47876"
+         sodipodi:role="line"
+         id="tspan4342">subsystem</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="855"
+       y="162.14478"
+       id="text4185"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4191"
+         sodipodi:role="line"
+         x="855"
+         y="162.14478">Signal</tspan><tspan
+         sodipodi:role="line"
+         x="855"
+         y="190.26978"
+         id="tspan4232">handling</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4193"
+       y="280.26306"
+       x="855"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="280.26306"
+         x="855"
+         sodipodi:role="line"
+         id="tspan4199">process/thread</tspan><tspan
+         y="308.38806"
+         x="855"
+         sodipodi:role="line"
+         id="tspan4223">creation &amp;</tspan><tspan
+         y="336.51306"
+         x="855"
+         sodipodi:role="line"
+         id="tspan4225">termination</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="854.26941"
+       y="408.36362"
+       id="text4201"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4207"
+         sodipodi:role="line"
+         x="854.26941"
+         y="408.36362"
+         style="font-size:15px;text-align:center;text-anchor:middle">Linux kernel</tspan><tspan
+         sodipodi:role="line"
+         x="854.26941"
+         y="434.58923"
+         id="tspan4214"
+         style="text-align:center;text-anchor:middle">Process</tspan><tspan
+         sodipodi:role="line"
+         x="854.26941"
+         y="462.71423"
+         id="tspan4383"
+         style="text-align:center;text-anchor:middle">Scheduler</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4234"
+       y="162.14478"
+       x="651.81335"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4238"
+         y="162.14478"
+         x="651.81335"
+         sodipodi:role="line">Virtual</tspan><tspan
+         y="190.26978"
+         x="651.81335"
+         sodipodi:role="line"
+         id="tspan4242">memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="651.75293"
+       y="278.08228"
+       id="text4244"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4248"
+         sodipodi:role="line"
+         x="651.75293"
+         y="278.08228">Paging</tspan><tspan
+         sodipodi:role="line"
+         x="651.75293"
+         y="306.20728"
+         id="tspan4262">page</tspan><tspan
+         sodipodi:role="line"
+         x="651.75293"
+         y="334.33228"
+         id="tspan4264">replacement</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4250"
+       y="423.11829"
+       x="652.47803"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="423.11829"
+         x="652.47803"
+         sodipodi:role="line"
+         id="tspan4254">Page</tspan><tspan
+         y="451.24329"
+         x="652.47803"
+         sodipodi:role="line"
+         id="tspan4258">cache</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="455.45068"
+       y="196.14355"
+       id="text4288"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4292"
+         sodipodi:role="line"
+         x="455.45068"
+         y="196.14355">File systems</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4296"
+       y="249.05186"
+       x="454.98926"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="249.05186"
+         x="454.98926"
+         sodipodi:role="line"
+         id="tspan4298">Generic</tspan><tspan
+         y="277.17688"
+         x="454.98926"
+         sodipodi:role="line"
+         id="tspan4336">block layer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="379.35938"
+       y="336.21295"
+       id="text4300"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4302"
+         sodipodi:role="line"
+         x="379.35938"
+         y="336.21295"
+         style="font-size:15px;text-align:start;text-anchor:start">Linux kernel</tspan><tspan
+         sodipodi:role="line"
+         x="379.35938"
+         y="362.43857"
+         id="tspan4304">I/O Scheduler</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4306"
+       y="420.26306"
+       x="455.93408"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4310"
+         y="420.26306"
+         x="455.93408"
+         sodipodi:role="line">Block</tspan><tspan
+         y="448.38806"
+         x="455.93408"
+         sodipodi:role="line"
+         id="tspan4334">device</tspan><tspan
+         y="476.51306"
+         x="455.93408"
+         sodipodi:role="line"
+         id="tspan4314">drivers</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4316"
+       y="198.32434"
+       x="277.31323"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="198.32434"
+         x="277.31323"
+         sodipodi:role="line"
+         id="tspan4318">Sockets</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="277.03308"
+       y="292.14478"
+       id="text4320"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4322"
+         sodipodi:role="line"
+         x="277.03308"
+         y="292.14478">Network</tspan><tspan
+         sodipodi:role="line"
+         x="277.03308"
+         y="320.26978"
+         id="tspan4324">protocols</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4326"
+       y="420.26306"
+       x="276.43982"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="420.26306"
+         x="276.43982"
+         sodipodi:role="line"
+         id="tspan4328">Network</tspan><tspan
+         id="tspan4330"
+         y="448.38806"
+         x="276.43982"
+         sodipodi:role="line">device</tspan><tspan
+         y="476.51306"
+         x="276.43982"
+         sodipodi:role="line"
+         id="tspan4332">drivers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="99.587769"
+       y="198.32434"
+       id="text4349"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4351"
+         sodipodi:role="line"
+         x="99.587769"
+         y="198.32434">Terminals</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4353"
+       y="420.26306"
+       x="98.379272"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="420.26306"
+         x="98.379272"
+         sodipodi:role="line"
+         id="tspan4355">Character</tspan><tspan
+         y="448.38806"
+         x="98.379272"
+         sodipodi:role="line"
+         id="tspan4357">device</tspan><tspan
+         y="476.51306"
+         x="98.379272"
+         sodipodi:role="line"
+         id="tspan4359">drivers</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4361"
+       y="40.383522"
+       x="-300.02197"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         y="40.383522"
+         x="-300.02197"
+         sodipodi:role="line"
+         id="tspan4363">Line</tspan><tspan
+         y="68.508522"
+         x="-300.02197"
+         sodipodi:role="line"
+         id="tspan4365">discipline</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="173.62976"
+       y="122.74535"
+       id="text4280"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="173.62976"
+         y="122.74535"
+         id="tspan4373"><tspan
+           id="tspan4377"
+           style="font-size:15px;text-align:start;text-anchor:start">Linux kernel</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="173.62976"
+         y="148.97096"
+         id="tspan4379">Virtual File System</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4232"
+       y="366.1749"
+       x="212.24487"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:15px;text-align:start;text-anchor:start"
+         y="366.1749"
+         x="212.24487"
+         sodipodi:role="line"
+         id="tspan4234">Linux kernel</tspan><tspan
+         y="384.9249"
+         x="212.24487"
+         sodipodi:role="line"
+         id="tspan4239"
+         style="font-size:15px">Packet Scheduler</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="277.13379"
+       y="241.90953"
+       id="text4241"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4243"
+         sodipodi:role="line"
+         x="277.13379"
+         y="241.90953"
+         style="font-size:15px">Netfilter / Nftables</tspan></text>
+  </g>
+</svg>

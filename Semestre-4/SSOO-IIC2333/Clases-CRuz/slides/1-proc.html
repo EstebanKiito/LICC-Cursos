@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>1 - Administración de Procesos</title><meta content="IIC2333 - Sistemas Operativos y Redes" name="description" /><meta name="author" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.min.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/white.min.css" id="theme" rel="stylesheet" /><link href="https://github.com/frederickf/presentable/raw/master/src/presentable.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.min.css" rel="stylesheet" /></head><body><div class="reveal"><div class="slides"><section><h2>Sistemas Operativos y Redes</h2><h1>1 - Administración de Procesos</h1><p>Semestre 2022-1<br/>Cristian Ruz - cruz@ing.puc.cl</p><p style="padding-top:4em;">Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile</p></section><section><h2>Procesos</h2><section></section><section><div>Un abstracción para un <i>programa en ejecución</i></div><div style="border:none; width:80%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">Proceso = Código (programa) + Recursos</blockquote><div>¿Qué recursos?</div><ul class="fragment" data-fragment-index="1" style="font-size:24px;"><li>Memoria, archivos</li><li>Sockets, dispositivos de I/O, bibliotecas</li><li>etc &hellip;</li></ul><br /><br /><div class="fragment" data-fragment-index="2"><b>Multiprogramación</b> permite mantener <b>múltiples procesos</b> en memoria.</div><ul class="fragment" data-fragment-index="2" style="font-size:24px;"><li>Un proceso en memoria está preparado para ser ejecutado</li></ul><br /><br /><div class="fragment" data-fragment-index="3">CPU puede "atenderlos" en algún orden (<i>scheduling</i>)</div><ul class="fragment" data-fragment-index="3" style="font-size:24px;"><li>Cuando los atiende "simultáneamente" tenemos <b>multitasking</b></li></ul></div><div style="border:none; width:20%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-internals-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section><div>Composición: ¿Qué hay en un Proceso?</div><div style="border:none; width:60%; vertical-align:middle; display:inline-block;"><ul style="font-size:28px;"><li><b>Código</b> (<code>.text</code>, información estática)</li><li><b>Datos</b> (<code>.data</code>): variables globales</li><li><b>Stack</b>. Cada item del stack representa un llamado a función (<i>call frame</i>), y contiene:</li><ul><li>Parámetros</li><li>Variables locales</li><li>Lugar de retorno (donde estaba la ejecución anterior, PC)</li></ul><li><b>Heap</b>. Memoria asignada dinámicamente (durante la ejecución)</li></ul></div><div style="border:none; width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-internals-proc1-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="repr"><div>Representación: ¿Cómo lo ve el Sistema Operativo?</div><blockquote style="background:#F4C7C3;"><b>Process Control Block (PCB)</b></blockquote><div style="border:none; width:65%; vertical-align:middle; display:inline-block;"><div>Sistema Operativo mantiene <b>Tabla de Procesos</b>.</div><div>Información de cada procesos almacenada en su PCB</div><ul class="fragment" style="font-size:28px;"><li>Estado</li><li>Identificador (PID, <i>Process ID</i>)</li><li>Program Counter (PC)</li><li>Registros de CPU: <em>estado de ejecución</em></li><li>Información de <em>scheduling</em>: prioridades, tipo de cola, &hellip;</li><li>Información de memoria: límites, tabla de páginas/segmentos, &hellip;</li><li>Contabilidad (<em>accounting</em>)</li><li>Información de I/O: archivos y dispositivos abiertos, &hellip;</li></ul><div class="fragment">PCB pueden tener mucha información. Miremos en <a href="https://github.com/torvalds/linux/blob/master/include/linux/sched.h" target="_blank"><code>include/linux/sched.h</code></a></div></div><div style="border:none; width:35%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-internals-pcb-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="states-inside"><div>Un proceso en ejecución puede cambiar de estado</div><ul><li><b>New       </b>: En creación</li><li><b>Running   </b>: En ejecución</li><li><b>Waiting   </b>: Esperando (I/O, signal)</li><li><b>Ready     </b>: Listo para ejecutar. Esperando asignación de CPU</li><li><b>Terminated</b>: Ejecución terminada</li></ul><img src="../images/figures/01-proc-states-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /></section><section id="repr-contextSwitch"><p>El cambio de procesos se conoce como <strong>Context Switch</strong></p><ul style="font-size:28px;"><li>Sistema Operativo actúa luego de una interrupción (<i>syscall</i>, <i>timer</i>, evento, &hellip;).</li><li>Sistema Operativo almacena estado de registros de P1 en PCB1. P1 queda "en pausa".</li><li>Sistema Operativo restaura estado de registros desde PCB2.</li><li>Proceso P2 continúa su ejecución.</li></ul><img src="../images/figures/01-proc-contextchange-opt.svg" width="90%" style="border:none; box-shadow:none;" alt="01 proc contextchange opt" /></section><section id="states-status"><p>¿Cómo averiguo el estado de un proceso?</p><p>Desde un terminal</p><pre><code class="hljs lang-bash">$ htop
+$ top
+$ ps aux</code></pre><p>Con un Administrador de Procesos</p><img src="../images/figures/01-taskman-linux.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="30%" /><div style="display:inline-block;">&nbsp; &nbsp; &nbsp; &nbsp; </div><img src="../images/figures/01-taskman-win.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="30%" /></section></section><section id="creation"><h2>Creando procesos</h2><section></section><section id="creation-0"><p>Creación de procesos: ¿el huevo o la gallina?</p><ul><li class="fragment"> ¿Quién crea un proceso?...     <span class="fragment"> otro proceso</span></li><li class="fragment"> ¿Quién crea ese otro proceso?  <span class="fragment"> otro proceso</span></li><li class="fragment"> ¿Quién crea ese otro proceso?  <span class="fragment"> otro proceso&hellip;</span></li></ul><p class="fragment">Durante la inicialización del <i>kernel</i> se crea un proceso "raíz", con PID=1</p><ul class="fragment"><li>Linux: <code>systemd</code>, <code>init</code>, <code>upstart</code></li><li>macOS: <code>launchd</code></li><li>Windows: <code>InitialSystemProcess</code>, <code>System</code></li></ul></section><section id="creation-tree"><p>Todos los procesos tienen un proceso padre, o madre (<i>parent</i>).</p><p>La relación de creación permite formar un <i>árbol de procesos</i></p><pre><code class="hljs">$ pstree --show-pids</code></pre><pre><code class="hljs">systemd(1)─┬─crond(572)───rsync(984)
+           ├─dbus-daemon(563)
+           ├─konsole(30672)───zsh(30675)───tmux(11098)
+           ├─systemd(756)─┬─ncmpcpp(759)
+           │              └─emacs(773)─┬─aspell(798)
+           │                           └─{gmain}(774)
+           ├─systemd-logind(573)
+           └─tmux(11100)─┬─zsh(9853)
+                         └─zsh(11221)───vim(13615)</code></pre></section><section id="creation-init"><p>Un proceso (<i>parent</i>) crea a otro proceso hijo (<i>child</i>)</p><div style="border:none; width:75%; vertical-align:middle; display:inline-block;"><div style="text-align:left">¿Quién sigue ejecutando? </div><ul style="font-size:28px; text-align:left;"><li><i>Parent</i> e <i>hijo</i> continúan ejecutando concurrentemente.</li><li>Ambos existen en la memoria del computador.</li><li>Cuál proceso continúa en estado <i>running</i> depende de la implementación. </li><br /><br /></ul><div style="text-align:left">¿Qué &quot;personalidad&quot; tiene el hijo? (código, espacio de direcciones)</div><ul style="font-size:28px; text-align:left;"><li>El hijo es un duplicado <a href="http://linux.die.net/man/2/fork" target="_blank">casi</a> exacto del padre</li><li>El hijo es un <b>nuevo proceso</b> (otro espacio de direcciones)</li><li>El hijo <b>copia</b> la memoria del padre a su nuevo espacio</li><li>El hijo continúa ejecutando en <b>la misma instrucción</b> que el padre: el retorno de <code>fork()</code></li></ul></div><div style="border:none; width:25%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-fork1-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="creation-syscalls"><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/fork" target="_blank"><code>fork()</code></a></blockquote><ul class="fragment"><li>Crea un nuevo proceso como <strong>copia</strong> del padre.</li><li>Ambos continúan ejecutando desde la instrucción de retorno de <code>fork()</code></li><li><code>fork()</code> retorna <code>PID</code> del hijo al padre, y retorna <code>0</code> al hijo</li></ul><br /><br /><div style="border:none; width:100%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-fork2-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="30%" /></div></section><section data-transition="fade" id="creation-fork-l-q"><p>¿Qué imprime este programa?</p><pre><code class="hljs lang-c">int a = 42;
+printf("Antes de fork()\n");
+pid_t child_pid = fork(); /* create new process */
+if (child_pid == 0) { /* child gets 0 */
+  a++;
+  printf("CHILD: a is %d\n", a); /* ??? */
+}
+else if(child_pid > 0) { /* parent gets the new pid */
+  printf("PARENT: child_pid is %d\n", child_pid);
+  printf("PARENT: a is %d\n", a); /* ??? */
+}</code></pre></section><section data-transition="fade" id="creation-fork-l-result"><p>¿Qué imprime este programa?</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c">int a = 42;
+printf("Antes de fork()\n");
+pid_t child_pid = fork(); /* create new process */
+if (child_pid == 0) { /* child gets 0 */
+  a++;
+  printf("CHILD: a is %d\n", a); /* ??? */
+}
+else if(child_pid > 0) { /* parent gets the new pid */
+  printf("PARENT: child_pid is %d\n", child_pid);
+  printf("PARENT: a is %d\n", a); /* ??? */
+}</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-fork3-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div><div style="border:none; width:100%; vertical-align:middle; display:inline-block;"></div><ul style="font-size:28px;"><li>El proceso PID 4601 empieza inmediatamente después de <code>fork()</code> con valor de retorno 0.</li><li>La memoria de PID 4601 es una copia de la que tenía PID 4592 al momento de ejecutar <code>fork()</code></li><li>Las líneas <code>PARENT</code> y <code>CHILD</code> pueden estar intercaladas.</li><li>El valor de <code>a</code> que imprime PID 4601 es siempre 43, y el que imprime PID 4592 es siempre 42.</li></ul></section><section data-transition="fade" id="creation-fork-loop-q"><p>¿Cuántos procesos se crean?</p><pre><code class="hljs lang-c">/* ... */
+for(int i=0; i<4; i++) {
+  fork();
+  printf("[%4d] %d\n", getpid(), i);
+}</code></pre></section><section data-transition="fade" id="creation-fork-loop-r"><p>¿Cuántos procesos se crean?</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c">/* ... */
+for(int i=0; i<4; i++) {
+  fork();
+  printf("[%4d] %d\n", getpid(), i);
+}</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-fork4-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/fork" target="_blank"><code>fork()</code></a></blockquote><ul style="font-size:28px;"><li>Crea un nuevo proceso como <strong>copia</strong> del padre.</li><li>Ambos continúan ejecutando desde la instrucción de retorno de <code>fork()</code></li><li><code>fork()</code> retorna <code>PID</code> del hijo al padre, y retorna <code>0</code> al hijo</li></ul><blockquote class="fragment" style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/execve" target="_blank"><code>exec()</code></a></blockquote><ul class="fragment" style="font-size:28px;"><li>Carga un binario en memoria <strong>reemplazando</strong> el código de quien lo llamó, e inicia su ejecución.</li><li>El programa nuevo se "roba" el proceso (la memoria se sobreescribe)</li></ul></section><section data-transition="fade" id="exec-fork-l-q"><p>¿Qué imprime este programa?</p><pre><code class="hljs lang-c">printf("Antes de fork()\n");
+pid_t child_pid = fork(); 
+if (child_pid == 0) { 
+  printf("CHILD: About to exec\n");
+  execlp("/bin/date","",NULL);
+  printf("CHILD: exec done"); /* not reached */
+}
+else if(child_pid > 0)
+  printf("PARENT: child_pid is %d\n", child_pid);</code></pre></section><section data-transition="fade" id="exec-fork-l-r"><p>¿Qué imprime este programa?</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c">printf("Antes de fork()\n");
+pid_t child_pid = fork(); 
+if (child_pid == 0) { 
+  printf("CHILD: About to exec\n");
+  execlp("/bin/date","",NULL);
+  printf("CHILD: exec done"); /* not reached */
+}
+else if(child_pid > 0)
+  printf("PARENT: child_pid is %d\n", child_pid);</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-exec1-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div><div style="border:none; width:100%; vertical-align:middle; display:inline-block;"></div><ul style="font-size:28px;"><li>El proceso PID 4601 se convierte en <code>/bin/date</code>. </li><li>La línea <code>CHILD: exec done</code> nunca se imprime (salvo que <code>exec</code> falle)</li><li><code>exec</code> <b>no retorna</b> (salvo si falla). Falla cuando no puede lanzar el proceso (ej: no encuentra el ejecutable)</li><li>El proceso PID 4601 sigue siendo hijo de PID 4592, pero ahora su código y memoria son distintos.</li><li>Tanto PID 4592 como PID 4601 siguen ejecutando concurrentemente</li></ul></section><section id="creation-fork-q"><p>¿Qué hacen estos programas? (*)</p><p><small>asumiendo que fork no falla</small></p><pre><code class="hljs lang-c">while(fork())
+  exec("date");
+/* ... */</code></pre><pre><code class="hljs lang-c">while(!fork())
+  exec("date");
+/* ... */</code></pre></section><section id="creation-wait"><div><b>Esperando a los hijos</b></div><div style="border:none; width:60%; vertical-align:middle; display:inline-block;"><p>Un flujo común de ejecución para lanzar un programa nuevo:</p><ul style="font-size:28px"><li>Proceso hace <code>fork()</code>, para que el hijo haga <code>exec()</code></li><li>Proceso padre puede crear más hijos,...</li><li>... o esperar que el hijo termine antes de lanzar otro programa</li></ul><p>Padre debe ser capaz de saber cuando algún hijo termina</p><ul style="font-size:28px;"><li>El padre conoce el <strong>pid</strong> del hijo (se lo da <code>fork()</code>)</li></ul></div><div style="border:none; width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-exec2-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="creation-wait-def"><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/fork" target="_blank"><code>fork()</code></a></blockquote><div>Clona el procesos (<b>copia</b> del padre)</div><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/execve" target="_blank"><code>exec()</code></a></blockquote><div>Reemplaza el proceso por otro (sobreescribe)</div><blockquote class="fragment" style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/wait" target="_blank"><code>wait()</code></a></blockquote><div class="fragment">Espera el término de un proceso hijo</div></section><section data-transition="fade" id="wait-exec-fork-l-q"><p>¿Qué imprime este programa?</p><pre><code class="hljs lang-c">printf("Antes de fork()\n");
+pid_t child_pid = fork(); 
+if (child_pid == 0) { 
+  printf("CHILD: About to exec\n");
+  execlp("/bin/date","",NULL);
+  printf("CHILD: exec done"); /* not reached */
+}
+else if(child_pid > 0) {
+  printf("PARENT: child_pid is %d\n", child_pid);
+  wait(NULL);
+}
+printf("PARENT: Child finished\n");</code></pre></section><section data-transition="fade" id="wait-exec-fork-l-r"><p>¿Qué imprime este programa?</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c">printf("Antes de fork()\n");
+pid_t child_pid = fork(); 
+if (child_pid == 0) { 
+  printf("CHILD: About to exec\n");
+  execlp("/bin/date","",NULL);
+  printf("CHILD: exec done"); /* not reached */
+}
+else if(child_pid > 0) {
+  printf("PARENT: child_pid is %d\n", child_pid);
+  wait(NULL);
+}
+printf("PARENT: Child finished\n");</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-exec3-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div><div style="border:none; width:100%; vertical-align:middle; display:inline-block;"></div><ul style="font-size:28px;"><li>El proceso PID 4592 se bloquea (estado <i>waiting</i>) hasta que su hijo termina. </li><li>Cuando el hijo termina, el sistema operativo mueve a PID 4592 de regreso a estado <i>ready</i></li><li>El proceso PID 4601 sigue siendo hijo de PID 4592, por lo tanto PID 4601 sabe cuando el hijo ha terminado</li></ul></section><section id="creation-shell"><div>Código simplificado de una <i>shell</i>:</div><img src="../images/figures/01-shell.png" style="background:none; box-shadow:none; vertical-align:middle;" width="75%" /></section></section><section id="termination"><h2>Terminando procesos</h2><section></section><section id="termination-0"><p>Todo proceso, al terminar su ejecución, ejecuta <code>exit()</code></p><div style="border:none; width:60%; vertical-align:middle; display:inline-block;"><ul style="font-size:28px;"><li>Proceso entrega un <em>código de retorno</em> (¿para qué?)</li><li>Sistema Operativo recupera todos los recursos asignados a ese proceso</li></ul><p>El código de retorno se utiliza para informar cómo resultó la ejecución</p><ul style="font-size:28px;"><li>También se le llama <i>código de error</i>.</li><li>Convención: <code>0</code> indica que terminó de manera normal (sin problemas)</li><li>Convención: $\neq$<code>0</code> se usa para indicar un problema (error, o situación especial)</li><li>La documentación del programa debería relacionar errores a códigos de retorno.</li></ul></div><div style="border:none; width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-exit1-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="termination-syscalls"><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/fork" target="_blank"><code>fork()</code></a></blockquote><div>Clona el procesos (<b>copia</b> del padre)</div><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/execve" target="_blank"><code>exec()</code></a></blockquote><div>Reemplaza el proceso por otro (sobreescribe)</div><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/wait" target="_blank"><code>wait()</code></a></blockquote><div>Espere el término de un proceso hijo</div><blockquote class="fragment" style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/exit" target="_blank"><code>exit()</code></a></blockquote><div class="fragment">Termina el proceso con un código de retorno dado, y lo entrega al padre</div></section><section id="termination-1"><p>El proceso padre puede recuperar el <i>exit code</i> del hijo</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c">printf("Antes de fork()\n");
+pid_t child_pid = fork(); 
+if (child_pid == 0) { 
+  printf("CHILD: running\n");
+  // ...
+  exit(9);
+}
+else if(child_pid > 0) {
+  printf("PARENT: child_pid is %d\n", child_pid);
+  wait(&status);
+}
+printf("PARENT: Child finished\n");
+printf("Exit status: %d\n", WEXITSTATUS(status));</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-exit2-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div><div style="font-size:28px;">La <i>syscall</i> <code>wait()</code> permite recibir un valor del hijo, desde donde se puede extraer el <i>exit code</i>.</div></section></section><section id="signals"><h2>Señales, huérfanos, y zombies</h2><section></section><section id="termination-signals"><div>Un proceso puede enviar <i>señales</i> (<a href="http://www.comptechdoc.org/os/linux/programming/linux_pgsignals.html" target="_blank"><b>signal</b></a>s) a otros procesos</div><blockquote style="background:#B7E1CD;">Syscall <a href="http://linux.die.net/man/2/kill" target="_blank"><code>kill()</code></a></blockquote><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><ul class="fragment" style="font-size:28px;"><li>Envía una <strong>señal</strong> a otro proceso (por defecto <em>SIGTERM</em>)</li><li><code>kill -l</code> permite ver las señales disponibles</li><li><code>SIGTERM</code> indica al proceso que debe terminar</li><li><code>SIGKILL</code> elimina al proceso de la tabla de procesos (sin piedad)</li></ul></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img class="fragment" src="../images/figures/01-signals.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="100%" /></div></section><section id="signals-martin"><div>El comando <a href="https://linux.die.net/man/1/killall"><code>killall</code></a> permite enviar una <code>signal</code> a un grupo de procesos.</div><div style="border:none; width:100%; vertical-align:middle; display:inline-block;"><a href="https://en.wikipedia.org/wiki/George_R._R._Martin"><img src="../images/figures/01-proc-grrmartin-killall.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="50%" /></a></div></section><section id="termination-q"><p>Si el padre muere, ¿deben morir los hijos?</p><ul class="fragment" style="font-size:28px;"><li>Sistema Operativo podría permitir (o no) que un hijo exista si el padre ha terminado.</li><li>Linux permite que procesos hijos sigan viviendo, aún cuando el padre haya terminado.</li><li>Sin embargo, <a href="http://unix.stackexchange.com/questions/158727/is-there-any-unix-variant-on-which-a-child-process-dies-with-its-parent" target="_blank">podría parecer que los hijos sí mueren</a>.</li></ul><blockquote class="fragment" style="background:#B7E1CD;">Procesos <b>huérfanos</b></blockquote><ul class="fragment" style="font-size:28px;"><li>Linux: Cuando un padre termina (<code>exit</code>) o muere (<code>kill</code>), sus hijos quedan <b>huérfanos</b> y pasan a ser hijos de <code>init</code></li><li>Sin embargo, <a href="http://unix.stackexchange.com/questions/158727/is-there-any-unix-variant-on-which-a-child-process-dies-with-its-parent" target="_blank">podría parecer que los hijos sí mueren</a> (las condiciones pueden ser complicadas).</li><li><code>init</code> hace <code>wait()</code> periódicamente por sus hijos.</li></ul><blockquote class="fragment" style="background:#B7E1CD;">Procesos <b>zombies</b></blockquote><ul class="fragment" style="font-size:28px;"><li>Linux: Cuando un proceso termina y su padre no hace <code>wait()</code>.</li><li>Proceso terminado no se borra inmediatamente de la tabla de procesos (pero tampoco ejecuta).</li><li>Proceso queda en estado <b>zombie</b> hasta que el padre hace <code>wait()</code>.</li></ul></section><section id="termination-r"><p>Huérfanos y zombies</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img class="fragment" data-fragment-index="1" src="../images/figures/01-proc-orphan-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="90%" /></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><img class="fragment" data-fragment-index="2" src="../images/figures/01-proc-zombie-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="80%" /></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><ul class="fragment" data-fragment-index="1" style="font-size:28px;"><li>P1 termina antes que P2</li><li>P2 pasa a ser hijo de <code>init</code></li><li><code>init</code> hace <code>wait()</code></li></ul></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><ul class="fragment" data-fragment-index="2" style="font-size:28px;"><li>P2 termina antes que P1</li><li>P1 no ha hecho <code>wait</code></li><li>No se puede eliminar el PCB de P2 hasta que P1 haga <code>wait</code></li><li>P2 queda zombie hasta que P1 hace <code>wait</code></li></ul></div></section><section id="termination-necromancy"><p>Creando un zombie</p><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre><code class="hljs lang-c" style="max-height:600px;">#include &lt;stdlib.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+int main () {
+  pid_t child_pid;
+
+  /* Create child*/
+  child_pid = fork ();
+  if (child_pid > 0) {
+    /* Parent process */
+    sleep (60);
+  }
+  else {
+    /*Child process. Exit immediately. */
+    exit (0);
+  }
+  return 0;
+}</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block; text-align:left;"><div>La <i>syscall</i> <a href="https://linux.die.net/man/3/sleep"><code>sleep()</code></a> duerme al proceso, pasándolo a estado <i>blocked</i> durante una cantidad definida de tiempo.</div></div></section><section id="termination-necromancy2"><p>Creando zombies</p><pre><code class="hljs lang-c" style="max-height:600px;">#include &lt;sys/wait.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+
+pid_t pids[10];
+void main() {
+
+  for (int i=9; i>=0; i--)
+    if ((pids[i]=fork()) == 0) { /* pid == 0, only child enters */
+       sleep(i+1);   /* Wait and terminate */
+       exit(0);
+    }
+
+  for (int i=9; i>=0; i--)       /* Only root process reaches */
+    waitpid(pids[i], NULL, 0);   /* First wait [9] is the longest */
+
+}</code></pre><div style="border:none; width:100%; vertical-align:middle; display:inline-block;">¿Por qué este código permite crear múltiples zombies? ¿Cuántos crea?</div></section></section><section id="scheduling"><h2>Scheduling</h2><section id="scheduling-init"><p><i>CPU Scheduling</i> a.k.a. Planificación de CPU</p><div style="width:60%; vertical-align:middle; display:inline-block;"><div data-fragment-index="1">Tenemos:</div><ul class="fragment" data-fragment-index="1" style="font-size:28px;"><li>Múltiples procesos en memoria (<i>multiprogramación</i>), ordenados en una tabla de PCBs</li><li>Algunos procesos en estado <i>ready</i> (listos para ejecutar)</li><li>CPU que puede atender <b>solo un proceso</b> a la vez</li></ul><br /><br /><div class="fragment" data-fragment-index="2">Y queremos:</div><ul class="fragment" data-fragment-index="2" style="font-size:28px;"><li><b><i>Multitasking</i></b>: asignar tiempo a múltiples procesos</li></ul></div><div style="width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-proc-internals-pcb-opt.svg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="80%" /></div><blockquote class="fragment" style="background:#B7E1CD;">Sistema Operativo debe elegir cuál de todos los procesos en estado <b>ready</b> debe ejecutar a continuación: <b>scheduling</b></blockquote></section><section><div>Responsable: <b>scheduler</b>, a.k.a.  <i>planificador</i></div><div><em>Scheduling</em> puede ser visto como un sistema de <em>manejo de colas</em></div><img src="../images/figures/01-3_06.pdf.png" width="50%" style="border:none; box-shadow:none;" alt="01 3 06.pdf" /></section><section><div>Distintos niveles de <i>scheduling</i> en el sistema operativo:</div><div style="width:50%; vertical-align:middle; display:inline-block;"><ul class="fragment"><li><b>Long-term Scheduler</b></li><ul style="text-align:left; font-size:28px;"><li>Admite procesos en la <em>cola ready</em>. </li><li>Determina el <strong>grado de multiprogramación</strong> (cantidad de procesos en memoria).</li></ul><li><b>Short-term Scheduler</b> (a.k.a. <b>dispatcher</b>)</li><ul style="text-align:left; font-size:28px;"><li>Selecciona un proceso de la cola <em>ready</em> para ejecutar.</li><li>Ejecuta el cambio de contexto</li></ul><li><b>Medium-term Scheduler</b></li><ul style="text-align:left; font-size:28px;"><li>Modifica temporalmente el grado de multiprogramación</li><li>Ejecuta <strong>swapping</strong> copiando memoria RAM a disco, y de disco a RAM.</li></ul></ul></div><img src="../images/figures/01-schedulers.gif" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="50%" /></section><section id="cpuSched-thrsh"><p>¿Y si estamos siempre haciendo <em>Scheduling</em> en vez de ejecutar programas?</p><div class="fragment"><em>Scheduling</em> es importante para <b>multitasking</b> &hellip; pero <em>scheduling</em> y <em>context switch</em> <strong>son sólo <em>overhead</em></strong></div><ul class="fragment" style="font-size:28px;"><li>¿Qué pasa si el <em>scheduler</em> o el <i>context switch</i> toman más tiempo de lo que toma el proceso?</li><li>¿Qué pasa si se le asigna poco tiempo a cada proceso?</li><li>¿Qué pasa si hay muchos procesos <em>ready</em>? (long-term scheduler)</li></ul><blockquote class="fragment" style="background:#B7E1CD;">Contención de procesos se refleja en <strong>thrashing</strong></blockquote><img class="fragment" src="../images/figures/01-thrashing.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /></section><section id="cpuSched-types"><h3>Modelo de ejecución de un proceso</h3><div>No todos los procesos se comportan igual. Alternan entre dos fases:</div><ul><li>Uso de CPU (<b>CPU-burst</b>)</li><li>Espera por I/O (<b>I/O-burst</b>)		</li></ul><div class="fragment">Procesos suelen estar dominados por una u otra etapa:</div><img class="fragment" src="../images/figures/01-processtypes.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="70%" /></section><section><div>El tiempo que gasta un proceso en espera influye en la utilización de CPU.</div><blockquote class="fragment" style="background:#F4C7C3;">Una CPU bajo el 100% está subutilizada.</blockquote><div class="fragment"><div>$p$ es el porcentaje de tiempo en espera por I/O. </div><div>$p^n$ probabilidad que $n$ procesos estén esperando por I/O.</div><div>Utilización de la CPU es $\text{CPU}_n = 1 - p^n$</div></div><img class="fragment" src="../images/figures/01-utilization.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /></section></section><section id="SchedTypes"><h2>Tipos de Scheduling</h2><section><div>Por tipo de interrupción</div><blockquote class="fragment" style="background:#B7E1CD;"><b>Preemptive</b> (expropiativo)</blockquote><div class="fragment">Utiliza interrupciones (ej: de reloj (<i>timer</i>)) para decidir cuando sacar a un proceso de ejecución.</div><blockquote class="fragment" style="background:#B7E1CD;"><b>Non-Preemptive</b> (colaborativo o no-expropiativo)</blockquote><div class="fragment"><div>Permite que un proceso ejecute hasta que:</div><ul><li>El proceso deja voluntariamente la CPU, ó</li><li>El proceso se bloquea en I/O, ó</li><li>El proceso termina</li></ul></div></section><section><div>Por objetivo:</div><div style="width:80%; vertical-align:middle; display:inline-block;"><blockquote class="fragment" style="background:#B7E1CD;">Batch Scheduling</blockquote><div class="fragment"><div>Trabajo por lotes. Sin interacción.</div><ul><li>Mantener la CPU lo más ocupada posible</li><li>Minimizar <i>turnaround time</i>: tiempo desde envío hasta término.</li><li>Maximizar <i>throughput</i>: número de trabajos por hora</li></ul></div><blockquote class="fragment" style="background:#B7E1CD;">Interactive Scheduling</blockquote><div class="fragment"><ul><li>Minimizar tiempo de respuesta</li><li>Satisfacer usuarios</li></ul></div><blockquote class="fragment" style="background:#B7E1CD;">Real time Scheduling</blockquote><div class="fragment"><ul><li>Alcanzar <i>deadlines</i></li><li>Tiempo de respuesta debe ser predecible</li></ul></div></div><div style="width:20%; vertical-align:middle; display:inline-block;"><blockquote class="fragment" style="background:#B7E1CD;">Para todos</blockquote><div class="fragment"><b>Fairness</b>. Que todos los procesos tengan un tiempo razonable de ejecución.</div></div></section></section><section id="SchedTypes"><h2>Algoritmo de Scheduling (Batch)</h2><section><h3>First-Come, First-Served (FCFS)</h3><div>Orden de llegada. Cola FIFO.</div><div class="fragment"><img src="../images/figures/01-fifo-table.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><img class="fragment" src="../images/figures/01-fifo-chart.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><div class="fragment">Turnaround time promedio: $109$</div></div><div class="fragment"><div>Si P2 hubiese llegado en $t=0$, y P1 hubiese llegado en $t=1$, entonces <br><i>turnaround time promedio</i> $\to$ <span class="fragment">$79$</div></div><br /><ul class="fragment"><li>Non-Preemptive</li><li>&#x1f44d; Simple</li><li>&#x1f44e; Poco predecible. <i>Convoy effect</i></li></ul></section><section><h3>Shortest Job First (SJF)</h3><div>El más corto primero</div><div class="fragment"><img src="../images/figures/01-sjf-table.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><img class="fragment" src="../images/figures/01-sjf-chart.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><div class="fragment">Turnaround time promedio: $49$</div></div><ul class="fragment"><li>&#x1f389; <b>Óptimo</b></li><li>&#x1f62d; No sabemos cuánto demora cada <i>CPU-burst</i></li><li>Versión preemptive: <b>Shortest Remaining Time Next</b>. Elige al que le queda menos tiempo.</li><li>&#x1f480; Potencial <b>inanición</b> (<i>starvation</i>) de procesos largos.</li></ul></section></section><section id="SchedTypes2"><h2>Algoritmo de Scheduling (Interactive)</h2><section><div>Métrica: <b>tiempo de respuesta</b> (<i>response time</i>).</div><div>Tiempo desde llegada (a la cola) hasta primera ejecución.</div><div class="fragment"><img src="../images/figures/01-rr-table.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><img class="fragment" src="../images/figures/01-rr-chart.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><ul class="fragment"><li>Turnaround time promedio: $9$</li><li>Response time promedio: $4$</li></ul></div></section><section><h3>Round-Robin (RR)</h3><div>Un turno (<i>quantum</i>, <i>time slice</i>) para cada uno.</div><div>Ejemplo con $q=1$</div><div class="fragment"><img src="../images/figures/01-rr-table2.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><img class="fragment" src="../images/figures/01-rr-chart2.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="40%" /><ul class="fragment"><li>Turnaround time promedio: $13.9$</li><li>Response time promedio: $0.9$</li></ul></div><ul class="fragment"><li>Con $n$ procesos, cada uno recibe $1/n$ de CPU. <b>Fair!</b> &#x2696;</li><li>Ningún proceso espera más de $(n-1)\times q$ para ejecutar</li><li>Altamente dependiente de la elección de $q$ (¿qué pasa si $q$ es muy pequeño o muy grande?)</li></ul></section><section><h3>Priority Scheduling</h3><div>Cada proceso tiene asociada una <strong>prioridad</strong></div><ul class="fragment"><li>Se atienden por orden de <strong>prioridad</strong></li><li>Prioridades iguales: FCFS ó RR</li><li>SJF es un <em>caso particular</em> de este algoritmo (¿por qué?)</li><li>Prioridades pueden ser estáticas o dinámicas</li><li>&#x1f480; <b>Starvation</b> de procesos con baja prioridad</li><li>&#x1f474; <b>Aging</b>: incrementar prioridad de procesos que llevan más tiempo</li></ul><div class="fragment"><a href="https://linux.die.net/man/2/nice"><code>nice</code></a> permite reducir la prioridad de un proceso (incrementa su <i>niceness</i>)</div></section><section><h3>Multilevel Feedback Queue (MLFQ)</h3><blockquote><a href="https://en.wikipedia.org/wiki/Fernando_J._Corbat%C3%B3">Fernando J. Corbató</a> (Turing Award 1990) et al. <b>"An Experimental Time-Sharing System"</b>, IFIPS 1962.</blockquote><div>Usado en CTSS (1962) y Multics (1965)</div><blockquote style="background:#B7E1CD;">Scheduler que optimize <i>turnaround time</i> (como SJF), pero minimizando <i>response time</i> (como RR)</blockquote><div>Múltiples colas con distinta prioridad</div><ul class="fragment"><li>R1. Si $\text{priority}(A) > \text{priority}(B))$, ejecutar $A$</li><li>R2. Si $\text{priority}(A) = \text{priority}(B))$, ejecutar $A$ y $B$ con RR</li><li>R3. Procesos entran en la cola con <b>mayor</b> prioridad</li><li>R4. Si un proceso usa su $q$ (acumulado en todos sus turnos), su prioridad se reduce</li><li>R5. Después de un tiempo $S$, todos los procesos se mueven a la cola con mayor prioridad</li></ul></section><section><h3>Multilevel Feedback Queue (MLFQ)</h3><img src="../images/figures/01-mlfq.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="30%" /><div>Base para schedulers de Windows y MacOSX</div><ul><li>R1. Si $\text{priority}(A) > \text{priority}(B))$, ejecutar $A$</li><li>R2. Si $\text{priority}(A) = \text{priority}(B))$, ejecutar $A$ y $B$ con RR</li><li>R3. Procesos entran en la cola con <b>mayor</b> prioridad</li><li>R4. Si un proceso usa su $q$ (acumulado en todos sus turnos), su prioridad se reduce</li><li>R5. Después de un tiempo $S$, todos los procesos se mueven a la cola con mayor prioridad</li></ul></section><section><h3>Otros ...</h3><ul><li><b>Lottery </b> (1994). Procesos reciben tickets </li><li><b>Fair Share</b> (1988). Tiempo compartido entre grupos de procesos (usuarios)</li><li><b>O(1)</b>. Dos colas de procesos. Activos y expirados. Linux 2.6, &lt; 2.6.23.</li><li><b>Completely Fair Scheduler (CFS)</b> (2007). Linux &ge; 2.6.23. Procesos ordenados por su <i>virtual runtime</i>, que se calcula a partir de <i>niceness</i>, prioridad y tiempo de ejecución. Utiliza un <i>red-black tree</i> para mantener el orden.</li><li><b>Brain Fuck Scheduler (BFS)</b> (2009). </li></ul></section></section><section id="SchedTypes3"><h2>Algoritmos de Scheduling (Real time)</h2><section><h3>Procesos Real Time</h3><ul><li>Poseen <i>deadlines</i> y periodos de ejecución</li><li>Sistema debe determinar si, dado <i>deadline</i> ($d$), periodo ($p$), y tiempo de ejecución ($t$),es capaz de incorporar el procesos a la ejecución.</li></ul><img src="../images/figures/01-rt-sched.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /></section><section><h3>Rate monotonic Scheduling</h3><img src="../images/figures/01-rt-sched-dead.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /><div>Cada proceso recibe prioridad: $\frac{t_i}{p_i}$</div><div>Con $P_1: \{p_1=50, t_1=20\}$, y $P_2: \{p_2=100, t_2=35\}$</div><img src="../images/figures/01-rt-sched-rtm.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /></section><section><h3>Earliest Deadline First Scheduling (EDF)</h3><div><i>Rate Monotonic Scheduling</i> es <b>estático</b>. Podría perder <i>deadlines</i></div><div>Con $P_1: \{p_1=50, t_1=25\}$, y $P_2: \{p_2=80, t_2=35\}$</div><img src="../images/figures/01-rt-sched-rtm-dead.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /></section><section><h3>Earliest Deadline First Scheduling (EDF)</h3><div><i>Earliest Deadline First Scheduling</i> es <b>dinámico</b>. Elige siempre el que tiene <i>deadline</i> más cercano.</div><div>Con $P_1: \{p_1=50, t_1=25\}$, y $P_2: \{p_2=80, t_2=35\}$</div><img src="../images/figures/01-rt-sched-edf.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="75%" /></section></section><section id="threads"><h2>Threads</h2><section id="threads-_init"><h2><em>Threads</em> y <em>Multicores</em></h2></section><section id="threads-init"><p><strong><em>Thread</em></strong>: Como un proceso, pero más liviano.</p><p class="fragment">Unidad básica de uso de CPU</p><ul class="fragment"><li> <em>Thread ID</em> (<strong>tid</strong>)</li><li> Program Counter</li><li> Registros</li><li> <em>Stack</em></li></ul><p class="fragment">El resto está compartido con otros <i>thread</i>s del mismo proceso.</p></section><section id="threads-mt"><p><em>Single-threading</em> vs <em>Multi-threading</em></p><p>Procesos pueden tener uno o más <em>threads</em></p><img src="../images/figures/01-4_01.pdf.png" width="60%" style="border:none; box-shadow:none;" alt="01 4 01.pdf" /></section><section id="threads-why"><blockquote style="background:#B7E1CD;">¿Para qué <i>threads</i>?</blockquote><div class="fragment" data-fragment-index="1">Procesos complejos deben atender múltiples tareas</div><ul class="fragment" data-fragment-index="1"><li>Programar con <i>thread</i>s puede hacer el código más simple</li><ul class="fragment" data-fragment-index="2"><li><em>Threads</em> pueden ejecutar distintas partes del código de un proceso</li><li>Apropiados para programación guiada por eventos</li></ul><li>Programar con <i>thread</i>s puede ayudar a paralelizar/distribuir tareas</li><ul class="fragment" data-fragment-index="3"><li>Cuidado. <i>Threads</i> no necesariamente ejecutan <b>al mismo tiempo</b>. </li><li>Solo en presencia de múltiples CPU (cores) podría haber real concurrencia</li><li>Un programa con mútiples <i>threads</i> <i>podría ser más lento</i></li></ul></ul><blockquote class="fragment" data-fragment-index="4" style="background:#B7E1CD;">Entonces, ¿crear <i>threads</i> o procesos?</blockquote><ul class="fragment" data-fragment-index="5"><li>Creación/destrucción de <i>threads</i> es sustancialmente más liviana que un proceso</li></ul></section><section id="threads-web-mt"><div><i>Multihreaded webserver</i> </div><img src="../images/figures/01-webserver-mt.png" width="40%" style="border:none; box-shadow:none;" alt="01 webserver mt" /><br /><img src="../images/figures/01-webserver-mt-threads.png" width="50%" style="border:none; box-shadow:none;" alt="01 webserver mt threads" /></section></section><section id="thread-models"><h2>Modelos de Threads</h2><section id="mt-dataModels"><p><i>Threads</i> surgen de separar el concepto de recursos y ejecución</p><ul class="fragment"><li><b>Procesos</b> agrupan recursos (y ejecución)</li><li><b>Threads</b> son solamente unidades de ejecución: <b>lightweight processes</b></li></ul><img src="../images/figures/01-threads-process-os.png" width="50%" style="border:none; box-shadow:none;" alt="01 threads process os" /></section><section><blockquote style="background:#B7E1CD;"><i>Threads</i> comparten</blockquote><ul class="fragment"><li>Espacio de memoria</li><li>Variables globales (sección <i>data</i>)</li><li>Archivos abiertos</li><li>Procesos Hijo</li><li>Alarmas pendiente</li><li>Señales y manejadores de señales</li><li>Información de <i>accountability</i></li></ul><blockquote style="background:#B7E1CD;"><i>Threads</i> <b>NO</b> comparten</blockquote><ul class="fragment"><li><i>Stack</i></li><li><i>Registros</i> (incluyendo PC)</li><li>Estado</li></ul><div>Información privada tiene que ver con <i>ejecución</i>. </div><div>Información compartida tiene que ver con <i>recursos</i></div></section><section><div>¿Cómo se mantienen múltiples <i>stacks</i>?</div><img src="../images/figures/01-threads-stacks.png" width="50%" style="border:none; box-shadow:none;" alt="01 threads stacks" /></section><section><blockquote style="background:#B7E1CD;">Funciones típicas de <i>threads</i></blockquote><ul><li><code>thread_create()</code></li><li><code>thread_exit()</code></li><li><code>thread_join()</code></li><li><code>thread_yield()</code></li></ul></section><section id="posix"><h3>POSIX Threads</h3><div>Estándar IEEE 1003.1c. Librería <code>pthreads</code></div><img src="../images/figures/01-pthreads.png" width="50%" style="border:none; box-shadow:none;" alt="01 pthreads" /><div>Ejemplo: <a href="../examples/pthreads1.c" target="_blank">POSIX Threads en acción</a></div><div>Ejemplo: <a href="../examples/pthreads2.c" target="_blank">POSIX Threads compartiendo memoria</a></div></section></section><section id="thread-impl"><h2>Implementación de threads</h2><section><div>Algunos aspectos no son obvios al diseñar un sistema de <i>multithreading</i></div><ul class="fragment"><li>Semántica de <code>fork()</code>, <code>exec</code></li><li>Señales: ¿quién las recibe?</li><li>Bloqueos: ¿quién se bloquea?</li></ul></section><section><div>Dos opciones</div><ul class="fragment"><li><b>User</b> space</li><li><b>Kernel</b> space</li><li><b>Hybrid</b> (ok, 3 opciones)</li></ul></section><section id="user"><h3>User space threads</h3><div style="width:70%; vertical-align:middle; display:inline-block;"><div class="fragment"><div>Implementados y manejados por una biblioteca de usuario</div><div>Kernel no ve <i>threads</i>. Solo ve procesos <i>single threaded</i></div></div><div class="fragment"><ul><li>&#x1f603; Portable. Implementable en cualquier S.O.</li><li>&#x1f603; <i>Context switch</i> y <i>scheduling</i> más rápido.</li><li>&#x1f603; Mejor escalabilidad (usa memoria del proceso)</li><li>&#x1f61e; Llamadas a <i>syscall</i>s pueden bloquear el proceso</li><li>&#x1f61e; Requiere <i>scheduling</i> cooperativo (no hay timers)</li><li>Piensen en su uso en <i>multithreaded web server</i></li><li>Implementaciones usan variante no-bloqueantes de algunas <i>syscall</i>s</li></ul></div></div><div style="width:30%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-user-threads.png" width="100%" style="border:none; box-shadow:none;" alt="01 user threads" /></div></section><section id="kernel"><h3>Kernel space threads</h3><div style="width:70%; vertical-align:middle; display:inline-block;"><div class="fragment"><div>Implementados y manejados nativamente por estructuras del kernel</div><div>No necesita bibliotecas de usuario</div><div><i>Syscall</i> manejados por el S.O.</div></div><div class="fragment"><ul><li>&#x1f603; No requiere bibliotecas. Soporte nativo.</li><li>&#x1f603; <i>Syscall</i>s no bloquean el proceso.</li><li>&#x1f61e; <i>Syscall</i>s más costosas. Requiere llamadas al kernel.</li><li>&#x1f61e; Escalabilidad limitada por el S.O.</li><li>&#x1f61e; Semántica de <code>fork()</code> no es clara.</li><li>&#x1f61e; Semántica de <code>signals</code> no es clara.</li></ul></div><div class="fragment">Implementaciones evitan crear y destruir <i>threads</i>. Kernel utiliza <i>thread pools</i> y reutiliza estructuras.</div></div><div style="width:30%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-kernel-threads.png" width="100%" style="border:none; box-shadow:none;" alt="01 kernel threads" /></div></section><section id="hybrid"><h3>Hybrid implementations</h3><div style="width:70%; vertical-align:middle; display:inline-block;"><div class="fragment"><div>Kernel threads <b>multiplexados</b> entre user threads</div><div>Kernel solo ve kernel threads</div><div>Varios user threads asignados a un kernel thread</div></div><div class="fragment"><ul><li>&#x1f603; Más livianos de crear</li><li>&#x1f603; <i>Syscall</i>s no bloquean el proceso.</li><li>&#x1f603; Escalable como los user threads</li></ul></div></div><div style="width:30%; vertical-align:middle; display:inline-block;"><img src="../images/figures/01-hybrid-threads.png" width="100%" style="border:none; box-shadow:none;" alt="01 hybrid threads" /></div></section></section><section id="synch-init"><h2>Sincronización</h2><section id="synch-init-init"></section><section id=""><p><strong><em>Threads</em></strong> como unidad básica de procesamiento</p><ul style="font-size:28px;"><li> <i>Threads</i> en un proceso comparten memoria</li><li> <i>Threads</i> son concurrentes (compiten por uso de CPU)</li><li> <i>Threads</i> en un sistema multicore pueden ejecutar en paralelo</li></ul><p class="fragment" data-fragment-index="1">Pero deben ser sincronizados... o puede pasar ...</p><div class="fragment" data-fragment-index="1">Ejemplo: <a href="../examples/pthreads2.c" target="_blank">POSIX Threads compartiendo memoria</a></div><div class="fragment" data-fragment-index="2"><img src="../images/figures/01-2problems.png" width="60%" style="border:none;" alt="01 2problems" /></div></section><section><h3>¿Qué ocurre en el programa?</h3><div>Vemos ...</div><pre><code class="hljs lang-c">counter = counter + 1</code></pre><div>Pero lo que se ejecuta es... (tip: <code>objdump -d &lt;ejecutable&gt;</code>)</div><pre><code class="hljs asm"> mov    0x60208c,%eax        
+ add    $0x1,%eax
+ mov    %eax,0x60208c        </code></pre></section><section><div><i>Thread A</i> ejecuta:</div><pre><code class="hljs asm"> mov    0x60208c,%eax        
+ add    $0x1,%eax
+ mov    %eax,0x60208c        </code></pre><div><i>Thread B</i> ejecuta:</div><pre><code class="hljs asm"> 						  mov    0x60208c,%eax        
+                                                  add    $0x1,%eax
+                                                  mov    %eax,0x60208c        </code></pre><div>En la práctica pueden ocurrir muchos <i>interleaving</i> (entremezclas):</div><a href="http://i.imgur.com/MS13CAb.gif"><pre><code class="hljs asm">mov    0x60208c,%eax ; eax = 10
+                                              mov    0x60208c,%eax ; eax = 10
+                                              add    $0x1,%eax     ; eax = 11
+                                              mov    %eax,0x60208c ; counter = 11, Write lost!!
+add    $0x1,%eax     ; eax = 11
+mov    %eax,0x60208c ; counter = 11   Dirty write :/</code></pre></a><div class="fragment">¿Podemos tener tan mala suerte para que ocurra <a href="https://www.reddit.com/r/Bitcoin/comments/1wtbiu/how_i_stole_roughly_100_btc_from_an_exchange_and">así</a>?</div></section><section><div>Esta situación ilustra una <b>race condition</b></div><blockquote class="fragment" style="background:#F4C7C3;"><b>Race Condition</b><br/> Situación en que la salida de una operación depende del orden temporal de sus operaciones internas, el cual no está bajo control del programador.</blockquote><p class="fragment">El resultado depende de la entremezcla (<em>interleaving</em>) de sus <em>threads</em></p><h5 class="fragment"><strong>Hay que evitarlas</strong></h5></section></section><section><h2>El Problema de la Sección Crítica</h2><section id="crS-def"><div>El segmento de código en que el <i>thread</i> accede a recursos compartidos se conoce como <strong>sección crítica</strong></div><blockquote class="fragment">Necesitamos un protocolo que <b>no permita</b> que dos o más <i>threads</i> se encuentren en su sección crítica al mismo tiempo</blockquote><pre class="fragment"><code class="hljs c">void mess_with_shared_things() {
+  entry();
+  /* do stuff with shared resources */
+  leave();
+
+  /* moar stuff */
+}</code></pre></section><section id="crS-solReqs"><p>Una solución al problema de la sección crítica (SC) debe cumplir:</p><blockquote class="fragment" style="background:#B7E1CD;"><b>Exclusión Mutua</b></blockquote><div class="fragment"><b>A lo más un</b> <i>thread</i> está en su SC.</div><blockquote class="fragment" style="background:#B7E1CD;"><b>Progreso</b></blockquote><div class="fragment"><b>Al menos un</b> <i>thread</i> puede entrar a su SC.</div><div class="fragment">Si ningún <i>thread</i> está en su SC, y hay <i>thread</i>s que desean entrar, entonces los que quieren entrar deben decidir quién entra, y decidirlo en un tiempo acotado.</div><blockquote class="fragment" style="background:#B7E1CD;"><b>Espera acotada</b> (ausencia de inanición)</blockquote><div class="fragment">Si un proceso quiere entrar a su SC, podrá hacerlo luego de una cantidad <b>finita</b> de tiempo.</div></section><section><div>Ejecución deseada:</div><img src="../images/figures/01-2processes.png" width="80%" style="border:none;" alt="01 2processes" /></section></section><section><h2>Algunas soluciones</h2><section><div>Atacar al problema de raíz: <b>Deshabilitar las interrupciones</b></div><ul class="fragment"><li>Problema ocurre cuando un <i>thread</i> es interrumpido</li><li>Si no hay interrupciones, no hay problema</li><li>¿Es suficiente?</li><li>¿Quién puede hacer esto?</li></ul></section><section id="sol1"><div>En el mundo del usuario estamos a merced de las interrupciones</div><div class="fragment"><b>Solución con variable compartida <code>lock</code></b></div><div class="fragment"><pre><code class="hljs lang-c">int lock = 0;  // 0==free, 1==busy</code></pre></div><div class="fragment">Código de cada <i>thread</i>:</div><div class="fragment"><pre><code class="hljs lang-c">while(TRUE) {
+    while(lock);     // busy waiting (spinlock)
+    lock = 1;
+    /* ... SC ... */
+    lock = 0;
+    /* ... out of SC ... */
+}</code></pre></div><div class="fragment">¿Problemas?</div></section><section id="sol2"><div><b>Solución con <code>turn</code></b>, para alternar entre dos <i>threads</i></div><div>Variable compartida <code>turn</code> determina quién puede entrar.</div><pre><code class="hljs lang-c">int turn = 1;  // o 0 ... </code></pre><div>Código para <i>thread</i> 0 y <i>thread</i> 1:</div><pre><code class="hljs lang-c">/* Thread 0 */                            /* Thread 1 */
+while(TRUE) {                             while(TRUE) {
+    while(turn != 0);                         while(turn != 1);
+    /* ... SC ... */                          /* ... SC ... */
+    turn = 1;                                 turn = 0;
+    /* ... out of SC ... */                   /* ... out of SC ... */
+}</code></pre><div>¿Cumple todas las condiciones?</div></section><section id="peterson"><div><b>Solución de G.L.Peterson, 1981</b> (no la primera, pero la más simple)</div><div>Variable compartida <code>turn</code> determina quién puede entrar.</div><pre><code class="hljs lang-c">int turn = 1;                 // o 0 ... 
+int flag[2] = {false, false}; // indica t_i está interesado en entrar</code></pre><div>Variable local <code>me</code> puede ser 0 ó 1</div><pre><code class="hljs c">int me = // ... 0 ó 1;    /* Peterson es para dos threads */
+int other = 1-me;
+while('o') {
+    flag[me] = true;  /* wants */
+    turn = other;
+    while(flag[other] && turn == other); /* wait */
+    /* ... SC ... */
+    flag[me] = false;
+    /* ... out of SC .../ */
+}</code></pre><div class="fragment">¿Cumple los requisitos? ¿Por qué? ¿Se puede demostrar?</div></section></section><section><h2>Sincronización por <i>hardware</i></h2><section><p>Soluciones por <em>software</em> dependen de que existan <strong>instrucciones atómicas</strong> provistas por el <em>hardware</em>.</p><pre><code class="hljs lang-c">int lock = 0;  // 0==free, 1==busy</code></pre><pre><code class="hljs c">while(TRUE) {
+    while (lock);
+    lock = 1;
+    /* Critical Section */
+    lock = 0;
+    /* ... */</code></pre><p class="fragment">Esto no era suficiente. ¿Qué instruccion(es) nos gustaría que fuese(n) atómica(s)?</p></section><section><p><code>test_and_set()</code> (TSL)</p><p>Algunas arquitecturas proveen instrucciones atómicas del tipo <code>test_and_set</code></p><p>La instrucción, que se ejecuta atómicamente, es equivalente a este código:</p><pre><code class="hljs c">bool SOFTWARE_test_and_set (bool *target) {
+    bool old_value = *target;
+    *target = true;
+
+    return old_value;
+}</code></pre><p class="fragment"> ¿Cómo usarlo?</p></section><section><div>Código equivalente a <code>test_and_set</code></div><pre><code class="hljs c">bool SOFTWARE_test_and_set (bool *target) {
+    bool old_value = *target;
+    *target = true;
+
+    return old_value;
+}</code></pre><div>Ahora se puede implementar la versión "ingenua"</div><pre><code class="hljs lang-c">bool lock = false;  // false==free, true==busy</code></pre><pre><code class="hljs c">while(true) {
+    /* ... ... ... */
+    while (test_and_set(&lock));
+    /* ... SC ... */
+    lock = false;
+    /* ... Out of SC ... */
+}</code></pre><div class="fragment">¿Cumple las propiedades?</div></section><section><div>Otra instrucción atómica <code>compare_and_swap()</code> (XCHG, CAS)</div><pre><code class="hljs c">bool SOFTWARE_compare_and_swap (int *value, int expected, int new_value) {
+  int previous = *value;
+
+  if(*value == expected)
+    *value = new_value;
+
+  return previous;
+}</code></pre><p class="fragment"> ¿Cómo usarlo?</p></section><section><div>Código equivalente a <code>compare_and_swap()</code></div><pre><code class="hljs c">int SOFTWARE_compare_and_swap (int *value, int expected, int new_value) {
+  int previous = *value;
+
+  if(*value == expected)
+    *value = new_value;
+
+  return previous;
+}</code></pre><div>Otra implementación simple, gracias a una instrucción atómica</div><pre><code class="hljs lang-c">int lock = 0;  // 0==free, 1==busy</code></pre><pre><code class="hljs c">while(true) {
+    /* ... ... ... */
+    while (compare_and_swap(&lock, 0, 1));
+    /* ... SC ... */
+    lock = 0;
+    /* ... Out of SC ... */
+}</code></pre><div class="fragment">¿Cumple las propiedades?</div></section><section id="hw-sync-n"><div>Sección crítica para <code>N</code> procesos</div><pre><code class="hljs lang-c">bool lock = false;  // false==free, true==busy
+bool waiting[N];    // todos inicializados en false</code></pre><div>Cada <i>thread</i> <code>i</code> ejecuta:</div><pre><code class="hljs lang-c" style="max-height:600px;">while('-') {
+  /* ... ... ... */
+  waiting[i] = key = true;          /* I'm waiting and it's locked */
+  while (waiting[i] && key)
+    key = test_and_set(&lock);
+  waiting[i] = false;               /* I'm no longer waiting */
+
+  /* ... ... SC ... ... */
+
+  j = (i+1)%N;                      /* Find waiting proc (clockwise circle) */
+  while((j != i) && !waiting[j])
+    j = ++j%N;
+  if(j == i)                          /* -Nobody was waiting */
+    lock = false;
+  else                                /* -proc_j should go (stop waiting) */
+    waiting[j] = false;
+  /* ... out of SC ... ... */'
+}</code></pre><p class="fragment">¿Cumplen con las propiedades de solución para sección crítica?</p></section><section><div>Soluciones anteriores son correctas &hellip;</div><div>Pero utilizan <b>busy waiting</b> (<i>espera ocupada</i>)</div><pre><code class="hljs lang-c">lock = true;     // false==free, true==busy
+while(lock);     // busy waiting, consume ciclos de CPU "esperando"
+/* enter */</code></pre><blockquote style="background:#B7E1CD;">Solo cuando se espera un tiempo de bloqueo muy corto, puede justificarse usar <i>busy waiting</i>. En este caso se le llama <b>spinlock</b></blockquote><div><b>Ejemplo:</b>Dos procesos con prioridades $H$ y $L$, $H>L$. </div><ul><li>$L$ ejecuta y toma un <i>lock</i> (está en su SC)</li><li>$H$ llega y <i>scheduler</i> (preemptive) ejecuta a $H$</li><li>$H$ hace <i>busy waiting</i></li><li>Mientras $H$ exista, $L$ no puede ejecutar ni salir de su SC &#x1f613;</li></ul></section></section><section id="abstractions"><h2>Abstracciones de Sincronización</h2><section id="abstractions-init"><p>En general no se usan directamente soluciones por <em>hardware</em></p><p>Se construyen <b>primitivas de <em>software</em></b> sobre ellas.</p></section></section><section id="Locks-init"><h2>Mutex Locks</h2><section><div>La más simple: <b>MUTual EXclusion locks</b> (<i>mutex locks</i>)</div><ul><li><code>Lock::acquire();</code> toma el <i>lock</i></li><li><code>Lock::release();</code> libera el <i>lock</i> (error si no está tomado)</li></ul><pre><code class="hljs c">struct Lock {
+  bool value = false; // false==free, true==busy
+}</code></pre><div>Implementación sin (mucho) <i>busy waiting</i></div><pre><code class="hljs c">void acquire() {     
+  while(test_and_set(&value))
+    thread_yield();            // otras implementaciones usan sleep() y colas de espera
+}
+void release() {
+  value = false;
+}</code></pre></section><section><div>Solución a Sección Crítica</div><pre><code class="hljs c">while(true) {
+    /* ... ... ... */
+    lock.acquire();
+    /* ... SC ... */
+    lock.release();
+    /* ... Out of SC ... */
+}</code></pre><div>Contador con acceso exclusivo</div><pre><code class="hljs c">struct Lock l; // compartido</code></pre><pre><code class="hljs c">/* ... ... ... */
+for(int i=0; i&lt;max; i++) {
+  l.acquire();
+  counter = counter + 1;
+  l.release();
+}</code></pre></section></section><section id="producer-consumer"><h2>Problema del productor-consumidor</h2><section><h3>Ó problema del <i>bounded-buffer</i></h3><ul><li>Un <i>buffer</i> circular de tamaño limitado $N$</li><li>Dos <i>threads</i>: productor (agrega) y consumidor (consume)</li><li>Todos los elementos producidos deben ser consumidos en orden</li></ul><div style="border:none; width:70%; vertical-align:middle; display:inline-block;"><pre><code class="hljs c">int stock = 0;
+T storage[N];</code></pre><pre><code class="hljs c">int in = 0;
+while('p') {
+    item = produce();
+    while (stock == N);  // Storage full 
+    storage[in] = item;
+    in = ++in%N;         // rotate index
+    stock++;
+}</code></pre><pre><code class="hljs c">int out = 0;
+while ('c') {
+    while(!stock);       // Wait for new items
+    item = storage[out];
+    out = ++out%N;       // rotate index
+    stock--;
+    consume(item);
+} /* ' */</code></pre></div><img src="../images/figures/01-ProdCons.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="25%" /></section><section><div>Podemos agregar locks en <i>stock</i></div><pre><code class="hljs c">int in = 0;
+while('p') {
+    item = produce();
+    while (stock == N);  // Storage full 
+    storage[in] = item;
+    in = ++in%N;         // rotate index
+    lock.acquire();
+    stock++;
+    lock.release();
+}</code></pre><pre><code class="hljs c">int out = 0;
+while ('c') {
+    while(!stock);       // Wait for new items
+    item = storage[out];
+    out = ++out%N;       // rotate index
+    lock.acquire();
+    stock--;
+    lock.release();
+    consume(item);
+} /* ' */</code></pre><div>¿Cómo eliminamos busy waiting?</div></section><section><ul><li><code>sleep()</code> se bloquea en cola <i>waiting</i></li><li><code>wakeup(t)</code> saca a <code>t</code> de la cola <i>waiting</i> (si está)</li></ul><pre><code class="hljs c">int in = 0;
+while('p') {
+    item = produce();
+    while (stock == N) sleep(); // Storage full 
+    storage[in] = item;
+    in = ++in%N;                // rotate index
+    lock.acquire();
+    stock++;
+    lock.release();
+    if(stock == 1) wakeup(consumer);
+}</code></pre><pre><code class="hljs c">int out = 0;
+while ('c') {
+    while(!stock) sleep();     // Wait for new items
+    item = storage[out];
+    out = ++out%N;             // rotate index
+    lock.acquire();
+    stock--;
+    lock.release();
+    if(stock == N-1) wakeup(producer);
+    consume(item);
+} /* ' */</code></pre><div>¿Problema? <span class="fragment">¿Si $C$ es interrumpido antes de dormir?</span></div></section></section><section id="semaphore"><h2>Semáforos </h2><section id="sema"><div>E.W.Dijkstra (1965) propone una nueva primitiva de sincronización: <b>semáforos</b>, y las introduce en Algol 68.</div><p><b>Semáforos</b> permiten un número limitado de <i>thread</i>s en una sección crítica.</p><div class="fragment"><dl><dt style="background:#B7E1CD;">Semáforo</dt><dd><p>Un semáforo <code>S</code> incluye un contador y dos operaciones:</p><ul><li class="fragment"><em>proberen</em> <code>P()</code> ó <code>wait()</code> ó <code>down()</code>. Intenta decrementar el valor.</li><li class="fragment"><em>verhogen</em> <code>V()</code> ó <code>signal()</code> ó <code>up()</code>. Incrementa el valor.</li></ul></dd></dl><p class="fragment">E.W.Dijkstra era holandés, pero si no saben holandés es más fácil recordar <code>Pedir</code>/<code>Votar</code></p></div></section><section><div>Implementación de semáforos</div><pre><code class="hljs c">struct semaphore{
+  int count;
+  struct Lock l;
+  struct process* slept = NULL;
+}</code></pre><div style="border:none; width:60%; vertical-align:middle; display:inline-block;"><pre><code class="hljs c">void init(c) {
+    count = c;
+}
+
+void P() {      /* wait: put into queue and sleep */
+  l.acquire();
+  while(count <= 0) {
+      /* code to add itself to 'slept' */ // /
+      l.release();
+      sleep();
+      l.acquire();
+  }
+  count--;
+  l.release();
+}</code></pre></div><div style="border:none; width:40%; vertical-align:middle; display:inline-block;"><pre><code class="hljs c">void V(S) {    /* signal */
+  l.acquire();
+  count++;
+  wakeup(/* first from 'slept' */); 
+  // plus, remove from queue
+  l.release();
+}</code></pre></div><div>Otras implementaciones usan <i>busy waiting</i> (para multiprocesadores)</div></section><section id="sem-bounded-buffer"><div>Bounded-buffer con semáforos</div><pre><code class="hljs c">struct lock l; int stock = 0; T storage[N];
+struct semaphore full;  full.init(0);
+struct semaphore empty; empty.init(N);</code></pre><pre><code class="hljs c">int in = 0;
+while('p') {
+    item = produce();
+    empty.P();            // Wait one empty slot. P=='wait'=='down'
+    l.acquire();
+    storage[in] = item;
+    in = ++in%N;                // rotate index
+    stock++;
+    lock.release();
+    full.V();             // One more full slot. V=='signal'=='up'
+}</code></pre><pre><code class="hljs c">int out = 0;
+while ('c') {
+    full.P()             // Wait one more item. P=='wait'=='down'
+    lock.acquire();
+    item = storage[out];
+    out = ++out%N;             // rotate index
+    stock--;
+    lock.release();
+    empty.V();           // One more empty slot. V=='signal'=='up'
+    consume(item);
+} </code></pre></section></section><section id="conditions"><h2>Variables de Condición (Condition Variables)</h2><section id="cond"><div>Semáforos sirven para controlar cantidad de accesos a una región protegida</div><div>Mecanismo consisten en bloquearse (<code>P()</code>) bajo una condición (contador negativo) y avisar o señalar (<code>V()</code>) que una condición se ha cumplido (contador mayor a 0)</div><blockquote class="fragment" style="background:#B7E1CD;">Variables de condición permitan bloquearse bajo condiciones arbitrarias.</blockquote><ul class="fragment"><li> <code>Condition::wait()</code> bloquea <strong>siempre</strong> el <em>thread</em></li><li> <code>Condition::signal()</code> despierta a un <em>thread</em> bloqueado, si lo hay</li></ul></section><section id="cond-bounded-buffer"><div>Bounded-buffer con <i>condition variables</i></div><pre><code class="hljs c">struct lock l; 
+struct condition condCons, condProd;
+int stock = 0; T storage[N];</code></pre><pre><code class="hljs c">int in = 0;
+while('p') {
+    item = produce();
+    l.acquire();                        // with mutex
+    while(stock == N) condProd.wait(l); // wait if full
+    storage[in] = item;  in = ++in%N;   // fill and rotate index
+    stock++;
+    condCons.signal();                  // signal new item for consumer
+    l.release();
+}</code></pre><pre><code class="hljs c">int out = 0;
+while ('c') {
+    l.acquire();
+    while(!stock) condCons.wait(l);     // wait if empty
+    item = storage[out]; out = ++out%N; // extract and rotate index
+    stock--;
+    condProd.signal();                  // signal new slot for producer
+    l.release();
+    consume(item);
+}</code></pre><i>Condition variables</i> utilizan un <i>lock</i> y lo liberan antes de bloquearse. </section></section><section id="readers-writers"><h2>Problema de los lectores y escritores</h2><section id="rw-problem"><h3>Readers-Writers</h3><div>Planteado por Courtois et al. (1971). Modela acceso a una base datos.</div><ul><li>Permitir acceso de $n$ lectores simultáneos, pero solamente 1 escritor</li></ul><pre><code class="hljs c">struct semaphore rw; rw.init(1); 
+struct semaphore mutex; mutex.init(1); 
+int readers = 0;        // leen o quieren leer</code></pre><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><div>Writers</div><pre><code class="hljs c">while('w') {
+    rw.P();
+    /* ... WRITE ... */
+    rw.V();
+}</code></pre></div><div style="border:none; width:50%; vertical-align:middle; display:inline-block;"><div>Readers</div><pre><code class="hljs c">while ('r') {
+    mutex.P();
+    readers += 1;
+    if(readers == 1)
+        rw.P();
+    mutex.V();
+    /* ... READ ... */
+    mutex.P();
+    readers -= 1;
+    if(readers == 0)
+        rw.V();
+    mutex.V();
+}</code></pre></div></section></section><section id="philosophers"><h2>Problema de los filósofos comensales</h2><section id="block-phi"><div>5 filósofos se pasan la vida en dos actividades: <em>comer</em> y <em>pensar</em></div><div><ul><li> Para comer deben tomar ambos palillos</li><li> Sólo pueden tomar un palillo a la vez</li></ul></div><div class="fragment" style="border:none; width:50%; vertical-align:middle; display:inline-block;"><div>Código para filósofo <code>i</code></div><pre><code class="hljs c">int left =  i;
+int right = (i+1)%N;           // N==5
+struct semaphore chopstick[N]; // inicializados en 1
+
+do {
+  chopstick[left].P();
+  chopstick[right].P();
+
+  /* eat */
+
+  chopstick[left].V();
+  chopstick[right].V();
+
+  /* philosophise */
+
+} while ('p');</code></pre></div><img src="../images/figures/01-5_13.pdf.png" style="background:none; border:none; box-shadow:none; vertical-align:middle;" width="25%" /></section><section id="block-phi-sem"><h3>Filósofos Comensales con Semáforos</h3><pre><code class="hljs c">int N = 5;
+enum {PHILOSOPHISE, HUNGRY, EATING} state[N];   /* free / waiting / using */
+struct lock l;
+struct semaphore philosopher[N]; // inicializados en 0</code></pre><div class="fragment" style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre class="stretch"><code class="hljs c">int left(i)  { return (i+N-1)%N; }
+int right(i) { return (i+1)%N; }
+
+void philosoph(int i) {
+    while(TRUE) {
+        think();
+        take_forks();
+        eat();
+        release_forks();
+    }
+}
+
+void take_forks(int i) {
+    l.acquire();
+    state[i] = HUNGRY;
+    try_forks(i);
+    l.release();
+    philosopher[i].P();
+}</code></pre></div><div class="fragment" style="border:none; width:50%; vertical-align:middle; display:inline-block;"><pre class="stretch"><code class="hljs c">void release_forks(int i) {
+    l.acquire();
+    state[i] = PHILOSOPHISE;
+    try_forks(left(i));
+    try_forks(right(i));
+    l.release();
+}
+
+void try_forks(int i) {
+    if(state[i] == HUNGRY && state[left(i)] != EATING 
+       && state[right] != EATING) {
+        state[i] = EATING;
+        philosopher[i].V();
+    }
+}</code></pre></div></section></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script><script>// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    width: 1600,
+    height: 900,
+
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    math: {
+        //mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        //Migrated. Check here: https://www.mathjax.org/cdn-shutting-down/
+        mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+        // config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        config: 'TeX-AMS-MML_HTMLorMML'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+
+    // Optional reveal.js plugins
+    dependencies: [
+
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+
+        // Markdown
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' );} },
+
+        // Highlight <code>
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Mathjax
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/math/math.min.js', async: true },
+
+        // Zoom
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.min.js', async: true },
+
+        // Speaker Notes
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.min.js', async: true }
+
+        // Title footer
+        //{ src: '/js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
+    ]
+});</script></body></html>

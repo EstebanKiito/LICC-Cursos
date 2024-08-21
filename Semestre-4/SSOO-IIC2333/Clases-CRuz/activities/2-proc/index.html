@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>Procesos</title><meta content="IIC2333 Sistemas Operativos y Redes, 2022-1" name="description" /><meta content="Cristian Ruz" name="author" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"><script src="../js/highlight.pack.js"></script><script src="../js/fairyDustCursor.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script><script src="js/countdown.min.js"></script><script>hljs.initHighlightingOnLoad();</script><style type="text/css">html {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+}
+pre code.hljs {
+  display: block;
+}
+code.hljs {
+  display: inline;
+}
+
+// Hover stuff
+code:hover>div {
+  display: block;
+}
+code>div {
+  display: none;
+}
+table {
+  margin: auto;
+  //border-collapse: separate;
+  //border-spacing: 0 0.1em;
+}
+tr.sep {
+  margin-top: 0.2em;
+}
+td {
+  min-width:4em;
+}
+td.r2 {
+  rowspan: 2;
+}
+td.full {
+  color: #ddd;
+  background-color: #282;
+}
+td.empty {
+  color: #ddd;
+  background-color: #333;
+}
+
+// Fix dl/ dd-dt
+dl.inline dd {
+  display: inline;
+  margin: 0;
+}
+dl.inline dd:after{
+  display: block;
+  content: '';
+}
+dl.inline dt{
+  display: inline-block;
+  min-width: 100px;
+}
+
+section {
+  padding-top: 2em;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0.4em;
+}
+.top {
+  padding-top: 0.2em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container > img {
+  align-content: center;
+}
+.container-col > img {
+  align-content: center;
+}
+body {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+  color: #000;
+
+}
+.card{
+  margin:auto;
+  float: left;
+  width: 12rem;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+
+}
+
+.row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}</style></head><body><a href="/"><header class="col-xs-8 col-md-10 col-md-offset-1"><br /><a href="https://www.youtube.com/watch?v=FGwevyxoycw"><img src="../../images/figures/logo1.gif" width="100%" /></a></header></a><div class="col-xs-12 col-md-8 col-md-offset-3"><div class="row"><div class="columm"><div class="card"><div class="card-title">⭐️ Sitio Canvas ⭐️</div><div class="card-title"><a href="https://cursos.canvas.uc.cl/courses/39207" class="btn btn-primary btn-sm" role="button">Ir</a> <!-- 2022-1 --></div></div></div><div class="columm"><div class="card"><div class="card-title">📈 Planilla de Notas 📈</div><div class="card-title"><a href="#" class="btn btn-primary btn-sm disabled" role="button">Ir</a></div></div></div></div></div><div class="col-xs-12 col-md-8 col-md-offset-2"><section class="top"><p>Los procesos son ejecuciones de los programas. Es usual ver un programa con muchos procesos, por ejemplo 'Chrome' usa varios (demasiados D:) procesos que entre todos se coordinan para hacer funcionar el navegador.</p><p>Con esto debería ser claro que un proceso es algo más que un programa (¿estrictamente más?).</p><p>Un proceso debe tener la memoria que usa el programa, saber que parte del programa se esta ejecutando, que archivos tiene abiertos y con que otros procesos se está comunicando <small>(es claro que los 100 procesos de Chrome se logran coordinar para que el navegador funcione)</small></p></section><article><section id="syscalls"><h2>Syscalls</h2><section id="sys-fork"><h3>Fork</h3><p>Fork es una <em>syscall</em> que permite crear procesos nuevos.</p><p>Como un programa "en blanco" debería terminar, el comportamiento más obvio que queda es que sea una copia casi exacta del programa actual <small>(si es exacta no vale la pena gastar recursos en ejecutarlo, ya que calcula y hace lo mismo)</small>.</p><p>Si consultamos el manual de fork (<code>man 2 fork</code>)</p><pre id="man-fork"><code class="hljs">FORK(2)                   Linux Programmer's Manual                   FORK(2)
+
+NAME
+      fork - create a child process
+
+SYNOPSIS
+      #include <unistd.h>
+
+      pid_t fork(void);
+
+DESCRIPTION
+      fork()  creates a new process by duplicating the calling process.  The
+      new process is referred to as the child process.  The calling  process
+      is referred to as the parent process.
+
+      The  child  process and the parent process run in separate memory spa‐
+      ces.  At the time of fork() both memory spaces have the same  content.
+      Memory  writes,  file  mappings  (mmap(2)), and unmappings (munmap(2))
+      performed by one of the processes do not affect the other.
+
+      The child process is an exact duplicate of the parent  process  except
+      for the following points:
+
+      *  The  child  has  its  own  unique process ID, and this PID does not
+         match the ID of any existing process group (setpgid(2)).
+
+      *  The child's parent process ID is the same as the  parent's  process
+      ...
+
+RETURN VALUE
+      On  success,  the  PID of the child process is returned in the parent,
+      and 0 is returned in the child.  On failure, -1  is  returned  in  the
+      parent, no child process is created, and errno is set appropriately.</code></pre><section id="sys-fork-sample"><p>Al leer el manual usualmente queremos saber,</p><ul><li>Dónde se declara la función (qué hay que #incluir)?.</li><li>Qué variantes existen y cuáles son los argumentos?.</li><li>Qué retorna la función?</li><li>Qué hace?</li></ul><p>Con eso podemos construir un programa de ejemplo,</p><pre><code class="hljs">int main(void) {
+
+  switch( fork() ) {
+    case -1:  /* Error */
+      perror("fork failed");
+      exit(1);
+
+
+    case 0:   /* Child */
+      printf("[%6d:%6d] I'm the  child process\n",  getppid(), getpid()  );
+      break;
+
+    default:  /* Parent */
+      printf("[%6d:%6d] I'm the parent process\n",  getppid(), getpid()  );
+  }
+
+  return 0 ;
+}</code></pre></section></section><section id="sys-wait"><h3>Wait</h3><p><code>wait(pid_t)</code> es una <em>syscall</em> que espera a un hijo en particular.</p><p>Se puede esperar al primero en terminar entregando <code>NULL</code>.</p><p>Muchas veces es necesario estar seguro que los hijos terminaron su trabajo antes de crear nuevos <small>(para no tener demasiados procesos)</small> o de terminar el trabajo.</p></section><section id="sys-exec"><h3>Exec</h3><p><code>exec</code> es una familia de <em>syscall</em> que permiten cambiar el programa que ejecuta el proceso.</p><p>Las distintas variantes se deben a las distintas maneras en las que se puede elegir el programa y sus argumentos.</p></section><section id="sys-exit"><h3>Exit</h3><p><code>exit(int)</code> es una <em>syscall</em> que inicia el término de un programa, liberando sus recursos y entregando el <em>código de error</em> al proceso padre.</p></section></section><section id="challenge"><h3>Desafío</h3><section id="challenge-intro"><p>Un posible uso de múltiples procesos es para resolver problemas del estilo <em>dividir y conquistar</em></p><p>Mergesort es un ejemplo de esa clase de problemas, como este curso no es de algoritmos y como falta ver algunos detalles resolverán una versión más simple.</p><pre><code class="hljs">int *arr, length;  /* (Shared) Array to sort and it's length */
+int K              /* Chunks to use (processor count)        */
+
+ sort(int *arr, int l, int s, int e);  /* Sorts the array slice [s,e)      */
+merge(int *arr, int l, int K);         /* New array from K (sorted) chunks */
+print(int *arr, int l);                /* Prints an array to stdout        */
+
+int main(int argc, char const* argv[]) {
+  /* TODO: sort on K independent chunks on DIFFERENT processes. */
+
+  for(int i=0; i!=K; i++)  /* Wait for K children */
+    wait(NULL);
+
+  print(  merge(arr, length, K), length  );
+  return 0;
+}</code></pre></section><section id="challenge-problem"><h5>El problema</h5><p>Finalmente, lo que interesa es que puedan crear y usar procesos sincronizando (sólo donde sea necesario), por lo que antes de ver cómo compartir información, vamos a ejercitar el manejo de procesos con fork.</p><p>Haga un programa que cree el siguiente árbol de procesos,</p><pre><code class="hljs">                        p0
+                      /    \
+                     /      \
+                   p1        p2
+                  /  \      /  \
+                p11  p12  p21  p22</code></pre><p>En que:</p><ul><li>La raíz debe esperar a todos los decendientes y ejecutar <code>date -u --rfc-3339=seconds</code></li><li>Las hojas deben usar <code>sleep(1)</code>, e imprimir <code>[PPID:PID]: terminating\n</code></li><li>Los otros nodos deben usar <code>sleep(1)</code>, e imprimir <code>[PPID:PID]: created process CPID\n</code> para cada hijo</li></ul><small>Hay una solución de 30 loc</small></section></section></article></div><footer><div class="col-xs-12 col-md-8 col-md-offset-2"><p style="padding-top:4em;">Profesor: 
+<br> Cristian Ruz cruz@ing.puc.cl</p><p>Ayudantes: 
+<br> Raul Alvarez, rsalvarez@uc.cl, Jefe Sistemas Operativos
+<br> Pablo Araneda, pharaneda@uc.cl, Ayud Sistemas Operativos
+<br> Por Fijar, fijar.por@uc.cl, Ayud Sistemas Operativos
+<!--<br> Florencia Ljubetic, mfljubetic@uc.cl, Ayud Sistemas Operativos
+<br> Álvaro Quintana, alvaroq@uc.cl, Ayud Sistemas Operativos
+<br> Felipe Arellano, fharellano@uc.cl, Jefe Redes-->
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes</p><p style="padding-top:2em;">IIC2333 Sistemas Operativos y Redes, Semestre 2022-1<br/>Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile<br/></p><img src="https://i.giphy.com/media/VOMvlxVHR7CF2/200.gif" style="width:220px" /><img src="../../images/figures/linux.gif" width="100%" /></div></footer><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script><script>opt = {
+  "delimiters": [
+    {left:   "$", right:   "$",  display: false},
+    {left:  "$$", right:  "$$",  display: true},
+    {left: "\\[", right: "\\]",  display: true},
+    {left: "\\(", right: "\\)",  display: false}
+  ]
+}
+renderMathInElement(document.body, opt);</script></body></html>

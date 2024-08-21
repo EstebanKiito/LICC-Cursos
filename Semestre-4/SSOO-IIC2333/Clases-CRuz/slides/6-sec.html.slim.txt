@@ -1,0 +1,356 @@
+\frame{\titlepage}
+
+%---------------------------------------------------------------------
+/ Frame
+\frametitle{Contenidos}
+%\tableofcontents[currentsection]
+\tableofcontents
+
+
+
+%---------------------------------------------------------------------
+\section{Protección}
+
+/ Frame
+  \frametitle{Objetivos de protección}
+  
+  Modo monitor/usuario es nivel de protección básico
+  
+  ul
+    li.fragment Sistemas multiusuario
+    li.fragment Accesos diferenciados
+  
+
+  Deseamos evitar daños al sistema por procesos {\em incorrectos}.
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Mecanismos y políticas}
+  
+  ul
+    li.fragment {\bf Políticas} definen comportamientos correctos/incorrectos
+      ul
+        li.fragment Usuarios no pueden modificar archivos de otros usuario
+        li.fragment Usuarios no deben poder modificar recursos (puertos, sockets)
+              de otros usuarios
+      
+    li.fragment {\bf Mecanismos} permiten verificar que se cumplan o no se cumplan
+          las políticas
+      ul
+        li.fragment Permitir ejecutar procesos como otro usuarios
+        li.fragment Establecer propietarios y permisos por archivo/recurso
+      
+  
+  
+
+
+%---------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{¿A quién otorgar privilegios?}
+
+  \begin{alertblock}{Principio del menor privilegio}
+    Cada proceso/usuario debe tener solamente la cantidad suficiente
+    de privilegios
+  \end{alertblock}
+
+  Objetivo es que cualquier falla de programa / syscall / estructuras,
+  provoque el menor daño posible.
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Dominios de protección}
+
+  \begin{block}{Dominios de protección}
+    Un dominio es una colección de {\em access rights}: 
+    tuplas $\langle {\tt object-name}, {\tt rights-set}  \rangle$
+  \end{block}
+
+  Procesos trabajan dentro de {\em dominios de protección}
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/04-14_01.pdf}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Dominios de protección}
+
+  Dominios de protección ¿cumplen principio de menores privilegios?
+  
+  ul
+    li.fragment Se necesita un {\bf mecanismo} de cambio de dominio
+  
+  
+  Modo dual monitor-usuario es un ejemplo de cambio de dominio (muy básico)
+  ul
+    li.fragment Sistemas multiusuario requieren más granularidad de privilegios
+    li.fragment Dominios pueden ser procesos, usuario, o procedimientos
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Dominios de protección: UNIX}
+
+  UNIX implementa dominios de protección como usuarios.
+  ul
+    li.fragment Cambiar de domino implica cambiar de usuario
+    li.fragment Implementación a través del sistema de archivos
+    li.fragment Cada archivo $F$ posee un propietario ({\em owner}) y un {\em domain bit}, 
+          también conocido como {\bf setuid bit}
+      ul
+        li.fragment Si {\bf setuid == 1}, owner$(F)==A$, y $B$ ejecuta $F$, entonces $F$ se ejecuta como el usuario $A$
+        li.fragment Si {\bf setuid == 0}, owner$(F)==A$, y $B$ ejecuta $F$, entonces $F$ se ejecuta como el usuario $B$
+        li.fragment Cambio temporal de {\em userID}
+        li.fragment ¿Para qué puede servir esto?
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Dominios de protección: MULTICS}
+
+  MULTICS implementa dominios como anillos.
+
+  Procesos en dominios internos tienen más privilegios que los externos.
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/04-14_02.pdf}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Matrices de acceso}
+
+  Filas representan dominios. Columnas representan objetos.
+
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/04-14_03.pdf}
+  \end{center}
+
+  Objeto nuevo implica columna nueva, administrada por su {\em owner}.
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Matrices de acceso: {\tt switch}}
+
+  {\tt switch} permite cambiar de dominio
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/04-14_04.pdf}
+  \end{center}
+  
+  {\tt switch(i,j)} permite cambiar de dominio {\tt i} a {\tt j}
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Matrices de acceso: {\tt copy}}
+
+  Algunos dominios permiten copiar ({\tt *}) atributos.
+
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/04-14_05.pdf}
+  \end{center}
+
+  Variantes:
+  ul
+    li.fragment copy
+    li.fragment transfer
+    li.fragment limited copy
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Matrices de acceso: {\tt owner}}
+
+  Atributo de {\tt owner} permite agregar y modificar atributos.
+
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/04-14_06.pdf}
+  \end{center}
+
+  
+
+
+
+
+
+%---------------------------------------------------------------------
+\section{Seguridad}
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Seguridad}
+  No basta con protegerse de los ataques internos... también hay ataques {\bf externos}.
+  
+  \begin{block}{Sistema seguro}
+    Un sistema es seguro si garantiza que sus recursos son accedidos y utilizados
+    bajo toda circunstancia.
+  \end{block}
+
+  ul
+    li.fragment {\bf Intruso}, {\bf cracker}. Personaje que intenta romper la seguridad.
+    li.fragment {\bf Threat}, {\bf amenaza}. Potencialidad de violación a la seguridad. Ej: descubrimiento de vulnerabilidad
+    li.fragment {\bf Ataque}. Intento de romper la seguridad.
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Seguridad: tipos de ataques}
+  ul
+    li.fragment {\bf Brecha de confidencialidad}. Lectura de datos secretos.
+    li.fragment {\bf Brecha de integridad}. Modificación de datos.
+    li.fragment {\bf Brecha de disponibilidad}. Ej: web defacement
+    li.fragment {\bf TOS. Theft of service}. Uso no autorizado de recursos.
+    li.fragment {\bf DOS. Denial of service}. Evitar uso del sistema.
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{{\bf Masquerading}, {\bf man-in-the-middle}}
+
+  \begin{center}
+    \includegraphics[width=5cm]{figs/04-15_01.pdf}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Niveles de seguridad}
+
+  ul
+    li.fragment {\bf Nivel físico}. Proteger acceso físico.
+    li.fragment {\bf Nivel humano}. Social engineering, phishing.
+    li.fragment {\bf Nivel de SO}. Accidental DOS. Stack overflow.
+    li.fragment {\bf Nivel de red}. Intercepción de comunicación.
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Programas maliciosos}
+
+  ul
+    li.fragment {\bf Trojan horse}. Login emulator. Spyware.
+    li.fragment {\bf Trap door}. Creado por el diseñador/programador/compilador.
+    li.fragment {\bf Logic bomb}. Código que se activa solo bajo ciertas circunstancia
+    li.fragment {\bf Stack/buffer overflow}. Aprovechan {\em bug}s del código.
+      \begin{enumerate}
+        li.fragment Provocar {\em overflow} de {\em input}, {\em linea de comando}, {\em buffer},
+              hasta hacer que quede código en el {\em stack}.
+        li.fragment Sobreescribir la dirección de retorno con la dirección del siguiente código.
+        li.fragment Reemplazar el código en el lugar apuntado, con código propio
+      \end{enumerate}
+  
+  
+
+%---------------------------------------------------------------------
+/ Frame[fragile]
+  \frametitle{Buffer overflow}
+  
+\begin{minted}[mathescape,numbersep=5pt,gobble=0,frame=lines,framesep=2mm,fontsize=\small,linenos=true]{c}
+#include <stdio.h>
+#define BUFFER SIZE 256int main(int argc, char *argv[]) {
+  char buffer[BUFFER SIZE];  if (argc < 2)    return -1;  else { 
+    strcpy(buffer,argv[1]); 
+    return 0;
+  }
+}
+
+\end{minted}
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Buffer overflow}
+
+  Stack frame
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/04-15_03.pdf}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame[fragile]
+  \frametitle{Buffer overflow}
+
+  ¿Qué hace este código?
+
+\begin{minted}[mathescape,numbersep=5pt,gobble=0,frame=lines,framesep=2mm,fontsize=\small,linenos=true]{c}
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  execvp("\bin\sh","\bin \sh", NULL);  return 0;
+}
+
+\end{minted}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Buffer overflow}
+
+  Ataque intenta modificar el {\em stack frame}
+  
+  \begin{center}
+    \includegraphics[width=7cm]{figs/04-15_04.pdf}
+  \end{center}
+
+  Ataque necesita conocer la dirección de {\tt buffer[0]}
+  
+  Al terminar, en lugar de ejecutar la {\tt return address}, ejecuta el código copiado.
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Virus}
+
+  Segmento de código agregar a código ``sano''. Al ejecutar el código infectado, se ejecuta 
+  el código del virus.
+
+  \begin{center}
+    \includegraphics[width=6cm]{figs/04-15_05.pdf}
+  \end{center}
+  
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Worms}
+
+  Código que aprovecha vulnerabilidades de sistema y red para autoreplicarse.
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/04-15_06.pdf}
+  \end{center}
+  
+  
+

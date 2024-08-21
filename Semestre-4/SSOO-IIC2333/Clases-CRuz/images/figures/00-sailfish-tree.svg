@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="807.70435"
+   height="390.54745"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Mer_and_mobile_operating_systems.svg">
+  <title
+     id="title7067">History Mobile Operating Systems</title>
+  <defs
+     id="defs2987">
+    <marker
+       inkscape:stockid="Arrow2Sstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Sstart"
+       style="overflow:visible">
+      <path
+         id="path4266"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(0.3,0,0,0.3,-0.69,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         id="path4269"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         id="path4248"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Send"
+       style="overflow:visible">
+      <path
+         id="path4251"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path4239"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path4378"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Send-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4251-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Send-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4251-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7366335"
+     inkscape:cx="337.93041"
+     inkscape:cy="187.81072"
+     inkscape:current-layer="layer1"
+     id="namedview2989"
+     showgrid="true"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:object-nodes="true"
+     units="mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1873"
+     inkscape:window-height="909"
+     inkscape:window-x="47"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2994"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="-137.29565px"
+       originy="-309.45253px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2991">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>History Mobile Operating Systems</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:date>2013-07-29</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Semsi Paco Virchow</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-137.29565,-44.094482)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Send)"
+       d="m 425.39764,211.747 0.46111,27.9845 218.73511,0.16865 L 645,269.09448"
+       id="path4230-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Send-5)"
+       d="m 365.39764,181.747 -33.72143,0.0442 0,70.54726"
+       id="path5258"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Send)"
+       d="m 645,329.09447 0,40.00003"
+       id="path4230-6-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 425.81528,104.62614 0.11405,24.7078"
+       id="path5472"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 735,104.09448 -0.20366,136.36441 -90.20248,-0.55874"
+       id="path5472-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 885,104.09448 886.82659,349.13844 645,349.09448"
+       id="path5472-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 330,314.09448 -101.35217,60"
+       id="path5891"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 330,314.09448 101.35217,60"
+       id="path6673"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 574.82719,104.67031 0.18171,135.57683"
+       id="path5472-0-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Send)"
+       d="m 274.82719,104.67031 -0.0895,24.66363 151.19164,0 -0.53169,22.41306"
+       id="path4230"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="writing"
+     transform="translate(-137.29565,-44.094482)">
+    <g
+       id="g4192"
+       transform="translate(-93.259217,20.603808)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="131.14319"
+         x="458.65686"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1-8" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98"
+         y="161.14319"
+         x="518.65686"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-95"
+           y="161.14319"
+           x="518.65686"
+           sodipodi:role="line">MeeGo</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-4"
+           y="177.18871"
+           x="518.65686"
+           sodipodi:role="line">(Nokia/Intel)</tspan></text>
+    </g>
+    <g
+       id="g4155"
+       transform="translate(-168.35714,-1.4728755)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="46.143185"
+         x="383.18433"
+         height="60"
+         width="120"
+         id="rect3172" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997"
+         y="76.143188"
+         x="443.18436"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001"
+           y="76.143188"
+           x="443.18436"
+           sodipodi:role="line">Maemo</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005"
+           y="92.188698"
+           x="443.18436"
+           sodipodi:role="line">(Nokia)</tspan></text>
+    </g>
+    <g
+       id="g4162"
+       transform="translate(-101.19965,-2.6687033)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="46.719013"
+         x="465.86328"
+         height="60"
+         width="120"
+         id="rect3172-7" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-4"
+         y="77.154266"
+         x="525.71094"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-9"
+           y="77.154266"
+           x="525.71094"
+           sodipodi:role="line">Moblin</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-5"
+           y="93.199776"
+           x="525.71094"
+           sodipodi:role="line">(Intel)</tspan></text>
+    </g>
+    <g
+       id="g4169"
+       transform="translate(-140.58901,0.15580569)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="44.514503"
+         x="655.4162"
+         height="60"
+         width="120"
+         id="rect3172-7-1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-9"
+         y="74.514503"
+         x="715.41614"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-1"
+           y="74.514503"
+           x="715.41614"
+           sodipodi:role="line">LiMo</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-2"
+           y="90.560013"
+           x="715.41614"
+           sodipodi:role="line">(Linux foundation</tspan><tspan
+           id="tspan3059"
+           style="font-size:10px"
+           y="103.06001"
+           x="715.41614"
+           sodipodi:role="line">/Samsung)</tspan></text>
+    </g>
+    <g
+       id="g4177"
+       transform="translate(23.052429,-3.6773872)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="47.77187"
+         x="801.94757"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-1"
+         y="77.771873"
+         x="861.94757"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-8"
+           y="77.771873"
+           x="861.94757"
+           sodipodi:role="line">Bada</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-25"
+           y="93.817383"
+           x="861.94757"
+           sodipodi:role="line">(Samsung)</tspan></text>
+    </g>
+    <g
+       id="g4199"
+       transform="translate(4.1918335,34.449326)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="234.64516"
+         x="580.80817"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1-2" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98-9"
+         y="264.64514"
+         x="640.80817"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-95-6"
+           y="264.64514"
+           x="640.80817"
+           sodipodi:role="line">Tizen</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-4-9"
+           y="280.69064"
+           x="640.80817"
+           sodipodi:role="line">(Intel/Samsung/</tspan><tspan
+           id="tspan3119"
+           style="font-size:10px"
+           y="293.19064"
+           x="640.80817"
+           sodipodi:role="line">Linux Foundation)</tspan></text>
+    </g>
+    <g
+       id="g4184"
+       transform="translate(-18.65683,87.951294)">
+      <rect
+         style="fill:#0000ff;fill-opacity:0.50165016"
+         y="166.14319"
+         x="288.65683"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1-2-8-7" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98-7"
+         y="196.14319"
+         x="348.65683"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-95-65"
+           y="196.14319"
+           x="348.65683"
+           sodipodi:role="line">mer</tspan><tspan
+           id="tspan4148"
+           style="font-size:10px"
+           y="212.18871"
+           x="348.65683"
+           sodipodi:role="line">(open source</tspan><tspan
+           style="font-size:10px"
+           y="224.68871"
+           x="348.65683"
+           sodipodi:role="line"
+           id="tspan3149">community) uses QT</tspan></text>
+    </g>
+    <g
+       id="g4207"
+       transform="translate(4.1918335,34.449326)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="334.64517"
+         x="580.80817"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1-2-8" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98-9-1"
+         y="364.64517"
+         x="640.80817"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:10px"
+           id="tspan3005-4-9-8"
+           y="364.64517"
+           x="640.80817"
+           sodipodi:role="line"><tspan
+             id="tspan3151"
+             style="font-size:24px">Tizen </tspan><tspan
+             id="tspan3159"
+             style="font-size:20px">2.0</tspan></tspan><tspan
+           style="font-size:10px"
+           y="380.69067"
+           x="640.80817"
+           sodipodi:role="line"
+           id="tspan3153">(Intel/Samsung/</tspan><tspan
+           id="tspan3119-7"
+           style="font-size:10px"
+           y="393.19067"
+           x="640.80817"
+           sodipodi:role="line">Linux Foundation)</tspan></text>
+    </g>
+    <g
+       id="g4223"
+       transform="translate(-16.0513,123.00934)">
+      <rect
+         style="fill:#20b721;fill-opacity:0.50196078"
+         y="251.08514"
+         x="153.34695"
+         height="60"
+         width="182.70435"
+         id="rect3172-7-1-1-2-8-7-7" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98-7-8"
+         y="281.08514"
+         x="244.69911"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-95-65-1"
+           y="281.08514"
+           x="244.69911"
+           sodipodi:role="line">Nemo Mobile</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-4-2-2"
+           y="297.13065"
+           x="244.69911"
+           sodipodi:role="line">(Open community)</tspan><tspan
+           id="tspan4150"
+           style="font-size:10px"
+           y="309.63065"
+           x="244.69911"
+           sodipodi:role="line">Linux kernel + mer + UI</tspan></text>
+    </g>
+    <g
+       id="g4215"
+       transform="translate(-19.375488,122.19504)">
+      <rect
+         style="fill:#20b721;fill-opacity:0.50196078"
+         y="251.89944"
+         x="359.37549"
+         height="60"
+         width="182.70435"
+         id="rect3172-7-1-1-2-8-7-7-0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-98-7-8-0"
+         y="281.89944"
+         x="450.72766"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-95-65-1-1"
+           y="281.89944"
+           x="450.72766"
+           sodipodi:role="line">Sailfish OS</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-4-2-2-6"
+           y="297.94495"
+           x="450.72766"
+           sodipodi:role="line">(Jolla)</tspan><tspan
+           id="tspan4152"
+           style="font-size:10px"
+           y="310.44495"
+           x="450.72766"
+           sodipodi:role="line">Linux kernel + mer + Jolla UI</tspan></text>
+    </g>
+    <g
+       id="g4177-7"
+       transform="translate(-131.5419,-3.6773872)">
+      <rect
+         style="fill:#373dff;fill-opacity:0.50196078"
+         y="47.77187"
+         x="801.94757"
+         height="60"
+         width="120"
+         id="rect3172-7-1-1-7" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-1-3"
+         y="77.771873"
+         x="861.94757"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px"
+           id="tspan3001-8-0"
+           y="77.771873"
+           x="861.94757"
+           sodipodi:role="line">SLP</tspan><tspan
+           style="font-size:10px"
+           id="tspan3005-25-8"
+           y="93.817383"
+           x="861.94757"
+           sodipodi:role="line">(Samsung)</tspan></text>
+    </g>
+  </g>
+</svg>

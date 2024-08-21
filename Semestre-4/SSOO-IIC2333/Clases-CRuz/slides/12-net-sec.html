@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>Seguridad en redes</title><meta content="IIC2333 - Sistemas Operativos y Redes" name="description" /><meta name="author" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.min.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/white.min.css" id="theme" rel="stylesheet" /><link href="https://github.com/frederickf/presentable/raw/master/src/presentable.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.min.css" rel="stylesheet" /></head><body><div class="reveal"><div class="slides"><section><h2>Sistemas Operativos y Redes</h2><h1>Seguridad en redes</h1><p>Semestre 2022-1<br/>Cristian Ruz - cruz@ing.puc.cl</p><p style="padding-top:4em;">Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile</p></section><section><h2>Seguridad en redes</h2><section><div style="width:40%; vertical-align:middle; display:inline-block;"><div style="text-align:left;">Tecnologías para proveer seguridad en un canal de comunicación</div><ul><li>TCP sobre SSL</li><li>IPSec</li><li>VPNs</li><li>Firewalls</li></ul></div><div style="width:60%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec1.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:60%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">TCP sobre SSL</blockquote><div style="text-align:left;">Protección en la capa de transporte</div><ul><li>SSL: Secure Sockets Layer</li><li>TLS: Transport Layer Security</li><li>Protocolo de capa de aplicación</li><li>Para efectos prácticos funciona en capa de transporte</li></ul></div><div style="width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec2.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:60%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">TCP sobre SSL</blockquote><div style="text-align:left;">Protección en la capa de transporte</div><ul><li a="">Handshake normal</li><li b="">Bob verifica que Alice es realmente Alice</li><li c="">Bob envía a Alice una Master Secret Key (MS)</li><li>Usando la MS, ambos generarán llaves simétricas para su sesión</li></ul></div><div style="width:40%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec3.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:40%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">IPSec y VPNs</blockquote><div style="text-align:left;">Protección en la capa de red</div><ul><li>Encriptación del <i>payload</i> antes de pasar a la Internet</li><li>Para <i>routers</i> fuera de la red privada, es un paquete IP regular</li><li>Entrada y salida de la VPN se hace en capa de red, en un <i>router</i> o en el <i>host</i></li></ul></div><div style="width:60%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec4.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:40%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">IPSec y VPNs</blockquote><div style="text-align:left;">Protección en la capa de red</div><ul><li>ESP: Encapsulation Security Payload</li><li>MAC: Message Authentication Code (para integridad)</li></ul></div><div style="width:60%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec5.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:50%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">Firewalls</blockquote><div style="text-align:left;">Protección operacional</div><ul><li>Combinación de <i>hardware</i> y <i>software</i></li><li>Todo el tráfico debe pasar por el <i>firewall</i></li><li>Solo el tráfico autorizado puede atravesar el <i>firewall</i></li><li>El <i>firewall</i> debe ser impenetrable sin autorización</li></ul></div><div style="width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec6.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:50%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">Firewalls</blockquote><div style="text-align:left;">Tres tipos de filtros:</div><ul><li>Filtros de paquetes</li><ul><li>IP, TCP, UDP, puertos, SYN, ACK, ICMP, ...</li></ul><li>Filtros con estado</li><ul><li>Para conexiones TCP. Ej: ACKs solo para conexiones establecidas</li></ul><li><i>Gateways</i> de aplicaciones</li><ul><li>Para usuarios autenticados en aplicaciones. </li></ul></ul></div><div style="width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec6.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section><section><div style="width:50%; vertical-align:middle; display:inline-block;"><blockquote style="background:#B7E1CD;">Firewalls</blockquote><div style="text-align:left;">IDS</div><ul><li>IDS: <i>Intrusion Detection System</i></li><li>Analizan comportamiento de secuencias de paquetes</li><ul><li>Port scan, TCP scan</li><li>DoS scan</li><li>Worms, viruses, app vulnerabilities</li></ul><li>Realizan DPS: <i>Deep Packet Inspection</i></li><li>DMZ: Zona desmilitarizada</li><ul><li>Acá se encuentran los servicios que necesitan comunicación con el exterior</li></ul></ul></div><div style="width:50%; vertical-align:middle; display:inline-block;"><img src="../images/figures/12-sec7.png" style="background:none; border:none; box-shadow:none;" width="100%" /></div></section></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script><script>// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    width: 1600,
+    height: 900,
+
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    math: {
+        //mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        //Migrated. Check here: https://www.mathjax.org/cdn-shutting-down/
+        mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+        // config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        config: 'TeX-AMS-MML_HTMLorMML'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+
+    // Optional reveal.js plugins
+    dependencies: [
+
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+
+        // Markdown
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' );} },
+
+        // Highlight <code>
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Mathjax
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/math/math.min.js', async: true },
+
+        // Zoom
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.min.js', async: true },
+
+        // Speaker Notes
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.min.js', async: true }
+
+        // Title footer
+        //{ src: '/js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
+    ]
+});</script></body></html>

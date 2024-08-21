@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>Sincronización</title><meta content="IIC2333 - Sistemas Operativos y Redes" name="description" /><meta name="author" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.min.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/white.min.css" id="theme" rel="stylesheet" /><link href="https://github.com/frederickf/presentable/raw/master/src/presentable.css" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.min.css" rel="stylesheet" /></head><body><div class="reveal"><div class="slides"><section><h2>Sistemas Operativos y Redes</h2><h1>Sincronización</h1><p>Semestre 2022-1<br/>Cristian Ruz - cruz@ing.puc.cl</p><p style="padding-top:4em;">Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile</p></section><section><h2>Sincronización de Procesos</h2></section><section><h2>Sincronización de Procesos</h2><section id="init"><p>Cosas buenas:</p><ul><li class="fragment"> Tener <em>concurrencia</em> y <em>paralelismo</em></li><li class="fragment"> Crear <em>threads</em> livianos sobre el mismo espacio de memoria (no necesita <em>syscall</em> de <em>shared memory</em>) </li></ul><p class="fragment"> Pero&hellip;</p><ul><li class="fragment"> Hay que coordinarlos (¿por qué?)</li></ul></section></section><section id="prod-cons"><h2>Regreso al Productor/Consumidor</h2><section id="prod-cons-sol"><p>Solución con <em>threads</em> productor y consumidor.</p><pre><code class="hljs c">size_t in=0, out=0;
+/* Shared data */
+size_t stock = 0;
+T storage[STORAGE_SIZE];</code></pre><pre><code class="hljs c">while ('v') {
+ item = produce();
+ while (stock == STORAGE_SIZE) {} /* Storage full */
+ storage[in] = item;
+
+ in = ++in%STORAGE_SIZE;  /* rotate index */
+ stock++;
+}</code></pre><pre><code class="hljs c">while (2333) {
+ while(!stock) {} /* Wait for new items */
+ item = storage[out];
+
+ out = ++out%STORAGE_SIZE;  /* rotate index */
+ stock--;
+ consume(item);
+}</code></pre></section><section id="prod-cons-sol-rc"><p>¿Qué podría salir mal?</p><div class="fragment"><p> Considere la secuencia:</p><pre><code class="hljs c">/* stock=10 */
+stock++;  /* Thread 1  */
+stock--;  /* Thread 2 */</code></pre></div><p class="fragment">Resultado esperado: <code>stock=10</code></p><p class="fragment">Pero también podría ocurrir <code>9</code> o <code>11</code> (what?)</p></section><section id="prod-cons-rc-asm"><p>¿Cómo se ejecutan los cálculos en hardware?</p><pre><code class="hljs asm">load r1, stock  ; r1 <= stock
+inc r1          ; (r1 += 1)
+store stock, r1 ; stock <= r1</code></pre><pre><code class="hljs asm">load r2, stock  ; r2 <= stock
+dec r2          ; (r2 -= 1)
+store stock, r2 ; stock <= r2</code></pre></section><section id="prod-cons-rc-asm-fail"><p>Podría ocurrir este orden de ejecución (<strike>Shit happens</strike> C'est la vie)</p><a href="http://i.imgur.com/MS13CAb.gif"><pre><code class="hljs asm">load r1, stock  ; r1 = 10
+                                  load r2, stock  ; r2 = 10
+                                  dec r2          ; r2 = 9
+                                  store stock, r2 ; stock = 9   Write lost!!
+inc r1          ; r1 = 11      Outdated!!
+store stock, r1 ; stock = 11   Dirty write :/</code></pre></a><p class="fragment">¿Podemos tener tan mala suerte para que ocurra a<a href="https://www.reddit.com/r/Bitcoin/comments/1wtbiu/how_i_stole_roughly_100_btc_from_an_exchange_and">sí</a>?</p></section><section id="rc"><dl><dt>Race Condition</dt><dd><p>Situación en que la salida de una operación depende del orden temporal de sus operaciones internas, el cual no está bajo control del programador.</p></dd></dl><p class="fragment">El resultado depende de la entremezcla (<em>interleaving</em>) de sus <em>threads</em></p><h5 class="fragment"><strong>Hay que evitarlas</strong></h5></section></section><section id="crS"><h2>El Problema de la Sección Crítica</h2><section id="crS-def"><p> Cada proceso tiene un segmento de código llamado <strong>sección crítica</strong></p><p class="fragment"> Allí el proceso puede acceder a los recursos compartidos</p></section><section id="crS-def_"><p> Objetivo:</p><blockquote class="fragment">Diseñar un protocolo que no permita que dos procesos se encuentren en su sección crítica al mismo tiempo</blockquote><pre class="fragment"><code class="hljs c">void mess_with_shared_things() {
+  entry();
+  /* do stuff with shared resources */
+  leave();
+
+  /* moar stuff */
+}</code></pre></section><section id="crS-solReqs"><p>Una solución al problema de la sección crítica (SC) debe cumplir 3 requisitos:</p><dl><dt class="fragment">Exclusión Mutua</dt><dd class="fragment"><p><em>A lo más un</em> proceso está en su SC.</p></dd><dt class="fragment">Progreso</dt><dd class="fragment"><p><em>Al menos alguien puede entrar</em>.</p><p>Si ningún proceso está en su SC, y hay procesos que desean entrar, entonces los que quieren entrar deben decidir quién entra, y decidirlo en un tiempo acotado.</p></dd><dt class="fragment">Espera acotada</dt><dd class="fragment"><p><em>Ausencia de inanición</em>. Si un proceso quiere entrar a su SC, podrá hacerlo luego de una cantidad finita de turnos.</p></dd></dl></section></section><section id="sols"><h2>Algunas soluciones al problema de la sección crítica</h2></section><section id="peterson"><div class="left"><pre><code class="hljs c">size_t me = //?;                  /* Peterson */
+size_t other = 1-me;
+do {
+  flag[me] = true;  /* 'wants' */
+  turn = other;
+
+  while(flag[other] && turn == other); {}
+  /* Critical Section */
+  flag[me] = false;
+
+  /* ... */
+} while('o');</code></pre></div><section id="peterson"><h2>Solución de Peterson</h2></section><section id="peterson-init"><div class="right"><p>Solución para 2 procesos (Gary L. Peterson, 1981)</p></div><div class="right"><p class="fragment">Variables compartidas: <code>int turn; boolean flag[2];</code></p><p class="fragment">¿En qué valor se inicializan <code>turn</code> y <code>flag</code>?</p></div></section><section id="peterson-a"><div class="right"><p>¿Cumple los requisitos?</p></div></section><section id="peterson-a-me"><div class="right"><p><strong>Exclusión Mutua</strong></p><ul><li class="fragment"> $P_i$ puede entrar solamente si <code>flag[j]==false</code> ó <code>turn == i</code></li><li class="fragment"> Si $P_i$ y $P_j$ se encuentran ambos en la SC, entonces <code>flag[i]==flag[j]==true</code></li><li class="fragment"> <code>flag[i]==true</code> $\Rightarrow$ <code>turn=j</code></li><li class="fragment"> <code>flag[j]==true</code> $\Rightarrow$ <code>turn=i</code></li><li class="fragment"> Pero <code>i</code>$\neq$<code>j</code>, por lo tanto no pueden estar ambos en su SC</li></ul></div></section><section id="peterson-a-p"><div class="right"><p><strong>Progreso</strong></p><ul><li class="fragment"> Si $P_i$ desea entrar a su SC, sólo puede estar detenido en el loop (busy-wait)</li><li class="fragment"> Entonces se cumple <code>flag[j]==true</code> y <code>turn==j</code></li><li class="fragment"> Si $P_j$ no desea entrar a su SC, entonces <code>flag[j]==false</code></li><li class="fragment"> Si $P_j$ desea entrar, entonces <code>turn==i</code> ó <code>turn==j</code></li><li class="fragment"> En cualquier caso, uno de los que quiere entrar, entra </li></ul></div></section><section id="peterson-a-ea"><div class="right"><p><strong>Espera acotada</strong></p><ul><li class="fragment"> Si $P_i$ desea entrar y está esperando, entonces <code>flag[i]==true</code>, <code>flag[j]==true</code> y <code>turn==j</code></li><li class="fragment"> En cuanto $P_j$ sale, establece <code>flag[j]=false</code>, y $P_i$ puede entrar (si empieza a ejecutar)</li><li class="fragment"> Si $P_j$ intenta entrar inmediatamente, deberá establecer <code>flag[j]=true</code> y <code>turn=i</code>.</li><li class="fragment"> Se cumple entonces <code>flag[i]==true</code>, <code>flag[j]==true</code>, y <code>turn=i</code>, con lo que $P_j$ no puede entrar.    </li><li class="fragment"> Por lo tanto después de, a lo más, 1 turno, $P_i$ puede entrar (espera acotada)</li></ul></div></section></section><section id="hwSync"><h2>Sincronización por <em>hardware</em></h2><section id="hwSync_"><p>Soluciones por <em>software</em> dependen de que existan <strong>instrucciones atómicas</strong> por <em>hardware</em>:</p><p class="fragment">Una solución más sencilla:</p><pre class="fragment"><code class="hljs c">lock = true;
+while (!lock);
+/* Critical Section */
+lock = false;
+/* ... */</code></pre><p class="fragment">¿Basta con esto?</p></section><section id="hwSync-ts"><p><code>test_and_set()</code></p><p class="fragment">Algunas arquitecturas proveen instrucciones atómicas del tipo <code>test_and_set</code></p><div class="fragment"><p> La instrucción es equivalente a:</p><pre><code class="hljs c">_Bool SOFTWARE_test_and_set (_Bool *target) {
+ _Bool old_value = *target;
+ *target = true;
+
+ return old_value;
+}</code></pre></div><p class="fragment">¿Y si no hay soporte en la CPU?</p><ul><li class="fragment"> Se puede usar deshabilitando las interrupciones momentáneamente.</li></ul><p class="fragment"> ¿Cómo usarlo?</p></section><section id="hwSync-ts_sample"><pre class="fragment"><code class="hljs c">_Bool lock;
+/* ... */
+while (test_and_set(&lock));
+/* Critical Section */
+lock = false;
+
+/* ... */</code></pre></section><section id="hwSync-cas"><p>Otra instrucción atómica: <code>compare_and_swap</code></p><pre class="fragment"><code class="hljs c">_Bool SOFTWARE_compare_and_swap (int *value, int expected, int new_value) {
+  int previous = *value;
+
+  if(*value == expected)
+    *value = new_value;
+
+  return previous;
+}</code></pre><p class="fragment"> ¿Cómo usarlo?</p></section><section id="hwSync-cas-sample"><pre><code class="hljs c">do {
+  while (compare_and_swap(&lock, 0, 1));
+  /* Critical Section */
+
+  lock = 0;
+  /* ... */
+} while('~');</code></pre></section><section id="sync-correctness"><pre style="heigth=80%;max-heigth=80%;"><code class="hljs c" style="heigth=80%;max-heigth=80%;">do {
+  waiting[i] = key = true;          /* "I'm waiting and it's locked" */
+  while (waiting[i] && key)
+    key = test_and_set(&lock);
+  waiting[i] = false;               /* "I'm no longer waiting" */
+  /* Critical Section */
+
+  j = (i+1)%N;                      /* Find waiting proc (clockwise circle) */
+  while((j != i) && !waiting[j])
+    j = ++j%N;
+  if(j == i)                          /* -Nobody was waiting */
+    lock = false;
+  else                                /* -proc_j shold go (stop waiting) */
+    waiting[j] = false;
+  /* ...  */
+} while('-');   /* "Here I go again (on my own)" */</code></pre><p class="fragment">Estos algoritmos ¿cumplen con las propiedades de solución para sección crítica?</p></section></section><section id="abstractions"><h2>Abstracciones de Sincronización</h2><section id="abstractions-init"><p>En general no se usan directamente soluciones por <em>hardware</em> sino que &hellip;</p><p class="fragment">Se construyen primitivas de <em>software</em> sobre ellas.</p><p class="fragment">Encapsulan la sincronización.</p><ul><li class="fragment">Algunas agregan mejoras para ciertas situaciones.</li><li class="fragment">Pero a veces el costo de la mejora supera lo ganado.</li></ul></section></section><section id="abstractions-locks"><h3>Locks</h3><section id="abstractions-locks-init"><p class="fragment">La más simple</p><div class="fragment"><p><strong>Mutex Lock</strong> (<strong>mut</strong>ual <strong>ex</strong>clusion)</p><ul><li class="fragment"><code>Lock::acquire()</code></li><li class="fragment"><code>Lock::release()</code></li></ul></div><pre class="fragment"><code class="hljs c">void acquire() {     /* (Using HW support or disabling INTs) */
+  while(!available); /* busy wait */
+  available = false;
+}
+
+void release() {
+  available = true;
+}</code></pre></section><section id="abstractions-locks-sample"><pre class="fragment"><code class="hljs c">do {
+  acquire();
+  /* Critical Section */
+  release();
+  /* ... */
+
+} while('o');</code></pre></section></section><section id="abstractions-locks"><h3>Semáforos</h3><section id="sema"><p>En ocasiones se quiere un acceso acotado, pero mayor a 1</p><div class="fragment"><dl><dt>Semáforo</dt><dd><p>Un semáforo <code>S</code> incluye un contador y dos operaciones:</p><ul><li class="fragment"><em>proberen</em> <code>P()</code> ó <code>wait</code>. Intenta decrementar el valor.</li><li class="fragment"><em>verhogen</em> <code>V()</code> ó <code>signal</code>. Incrementa el valor.</li></ul></dd></dl><p class="fragment">E. Dijkstra era Holandés, pero si no saben holandés es más fácil recordar <code>Pedir</code>/'<code>Votar</code>'</p></div><pre class="fragment"><code class="hljs c">void P(S) {  /* wait (Using HW support or disabling INTs) */
+  while(S <= 0); /* busy wait */
+  S--;
+}
+void V(S) {  /* signal */
+  S++;
+}</code></pre></section><section id="sema-1"><p>¿Cuándo es adecuado?</p><p class="fragment">Cuando se quiere compartir múltiples recursos</p><p class="fragment"><em>¿Y si simplemente uso un lock por cada uno?</em></p><ul><li class="fragment">Cada cliente debería intentar pedir todos.</li><li class="fragment">Puede que obtenga más de los que necesita.</li><li class="fragment">O que espere por recursos que no necesita.</li></ul><p class="fragment">Con un semáforo se tiene una interfaz única para todos los recursos.</p><p class="fragment">Ejemplos:</p><ul><li class="fragment">Biblioteca: Un semáforo agrupa las copias de libros o salas.</li><li class="fragment">WebServers: Limitar la concurrencia para que los requests en los que se invierte tiempo no den timeout.</li><li class="fragment">Supermercados: Cola 'rápida' con varias cajas.</li></ul></section><section id="sema-sample"><pre><code class="hljs c">Semaphore* S = sema_new(K);
+do {
+  P(S);
+  /* Critical Section */
+  V(S);
+  /* ... */
+} while (1);</code></pre></section></section><section id="no-busy-wait"><h2><strike>Busy Wait</strike></h2><section id="no-busy-wait_"><p>Las Implementaciones propuestas de <em>Lock</em> y <em>Semaphore</em> usan <strong>busy waiting</strong></p><p class="fragment">Eso es malo<span class="fragment">, <strong>muy malo</strong></span></p><p class="fragment">Desperdicia ciclos de CPU</p><p class="fragment">¿Alternativas?</p><ul><ul class="fragment">usar una cola de espera.</ul></ul></section><section id="no-busy-wait-sema"><p>Semáforo sin <em>busy waiting</em></p><pre class="fragment"><code class="hljs c">typedef struct {
+  int value;
+  Queue<pid_t> queue;  /* (C++ notation. C needs a void* queue or a type defined by the preprocessor) */
+} Semaphore;</code></pre><p class="fragment">Necesitamos soporte del SO para manipular procesos.</p><ul><li class="fragment"> <code>block()</code> que libera la CPU.</li><li class="fragment"> <code>wake(p)</code> que despierta al proceso <code>p</code>.</li></ul><pre class="fragment"><code class="hljs c">P(Semaphore *s) {  /* wait */
+  s->value--;
+  if(s->value < 0) {
+    queue_push(s->queue, currentProcess() );
+    block();
+  }
+}
+
+V(Semaphore *s) {  /* signal */
+  s->value++;
+  wake( queue_pop(s->queue) );
+}</code></pre></section></section><section id="block-problems"><h2>Problemas clásicos de sincronización</h2><section id="block-problems_"><p>Ahora que la espera no desperdicia CPU revisemos algunos problemas.</p></section></section><section id="block-prodCons-sema"><p>Semáforos para el buffer acotado</p><section id="block-prodCons_sema-data"><p>¿Cómo lo solucionamos con semáforos?</p><p class="fragment">Variables compartidas:</p><pre class="fragment"><code class="hljs c">Item buffer[BUFFER_SIZE];
+Semaphore missing(BUFFER_SIZE);
+Semaphore pending(0);
+
+Semaphore mutex(1);     /* (lock?) */</code></pre></section><section id="block-prodCons_sema-procs"><pre><code class="hljs c">do {
+  wait(missing);
+  wait(mutex);
+
+  buffer[in] = produce();  /* Store new Item */
+  in = ++in%BUFFER_SIZE;   /* Advance save target */
+
+  signal(mutex);
+  signal(pending);
+} while(1);</code></pre><pre><code class="hljs c">do {
+  wait(pending);
+  wait(mutex);
+
+  consume(  buffer[out]  );  /* Use Item */
+  out = ++out%BUFFER_SIZE;   /* Target next item */
+
+  signal(mutex);
+  signal(missing);
+} while(2);</code></pre><p class="fragment"> ¿Qué pasa si se pide el mutex antes?</p></section></section><section id="block-rw"><p>Semáforos para los lectores y escritores</p><section id="block-rw_"><p>La sección crítica suele exigir <strong>solo un</strong> <em>thread</em> en ella.</p><p class="fragment"> ¿Y si solo permitimos lecturas?  <span class="fragment"> OK, entonces $n$ lectores simultáneos                  </span></p><p class="fragment"> ¿Y si alguien quiere escribir?   <span class="fragment"> Entonces, que solo <strong>uno</strong> pueda escribir </span></p><p class="fragment"> Condiciones distintas para cada rol</p><dl class="fragment"><dt>Problema de lectores y escritores</dt><dd><ul><li class="fragment">Permitir acceso de $n$ lectores simultáneos, pero solamente 1 escritor</li><li class="fragment">Variantes:</li><ul><li class="fragment">lectores ilimitados</li><li class="fragment">escritores con prioridad</li></ul></ul></dd></dl></section><section id="block-rw-shared"><p>Variables compartidas</p><pre class="fragment"><code class="hljs c">int reading=0;
+Semaphore rw_mutex(1);
+Semaphore mutex(1);</code></pre></section><section id="block-rw-procs"><pre class="fragment"><code class="hljs c">do {
+  wait(rw_mutex);
+  /* write */
+  signal(rw_mutex);
+} while('w');</code></pre><pre class="fragment"><code class="hljs c">do {
+  wait(mutex);
+  reading++;
+  if(reading == 1)
+    wait(rw_mutex);
+      signal(mutex);
+
+  /* read */
+
+  wait(mutex);
+  reading--;
+  if(read_count == 0)
+    signal(rw_mutex);
+      signal(mutex);
+} while('r');</code></pre></section></section><section id="block-phi"><p>Problema de los filósofos comensales</p><section id="block-phi_"><p>5 filósofos se pasan la vida en dos actividades: <em>comer</em> y <em>pensar</em></p><ul><li class="fragment"> Para comer deben tomar ambos palillos</li><li class="fragment"> Sólo pueden tomar un palillo a la vez</li></ul><img src="../images/figures/01-5_13.pdf.png" style="float:right;" alt="01 5 13.pdf" /></section><section id="block-phi_-procs"><pre class="fragment"><code class="hljs c">int  left =  i;
+int right = (i+1)%N;
+Semaphore chopstick[N];
+
+do {
+  wait(chopstick[ left]);
+  wait(chopstick[right]);
+
+  /* eat */
+
+  signal(chopstick[ left]);
+  signal(chopstick[right]);
+
+  /* philosophise */
+
+} while ('p');</code></pre><p class="fragment"> ¿Funciona? ¿Para 2? ¿3?</p></section><section id="block-phi_-dl"><p>Un uso poco cuidadoso cuando hay más de 1 recurso puede traer otro enemigo.</p><p class="fragment"><strong>deadlock</strong> (<strong>bloqueo mutuo</strong>)</p><pre class="fragment"><code class="hljs c">/* Shared */
+Semaphore a,b;  /* Lock fails too */
+
+/* Proc1 */       /* Proc 2 */
+P(a);             P(b);
+P(b);             P(a);
+/* ... */         /* ... */
+V(a);             V(b);
+V(b);             V(a);</code></pre><p class="fragment">Ambos piden <code>a</code> y <code>b</code>, los usan y luego los devuelven.</p><p class="fragment">¿Pero qué pasa si ambos ejecutan su primer <code>wait</code> al mismo tiempo?</p><p class="fragment">Es aún peor si internamente se usa <em>busy-wait</em> en vez de <code>block</code>.</p><p class="fragment">¿Cómo se soluciona esto? ¿Se puede?</p><p class="fragment">¿Bastará con mejores abstracciones?</p></section></section><section id="block-mon"><h2>Monitores</h2><section id="block-mon-init"><p>Construcción de sincronización de (más) alto nivel</p><ul><li class="fragment"> Provee métodos que permiten controlar el acceso exclusivo</li><li class="fragment"> Utiliza <strong>variables de condición</strong>, que tiene dos operaciones</li><ul><li class="fragment"> <code>Condition::wait()</code>   bloquea <strong>siempre</strong> el <em>thread</em></li><li class="fragment"> <code>Condition::signal()</code> despierta a un <em>thread</em> bloqueado, si lo hay</li></ul><li class="fragment"> No son iguales a semáforos (pero pueden implementarse con ellos)</li></ul><p class="fragment">¿Semántica para <code>signal()</code>?</p><ul><li class="fragment"> <strong>Signal-and-continue</strong>: el <em>caller</em> continúa ejecutando (Java, C#).</li><li class="fragment"> <strong>Signal-and-wait</strong>:     el <em>caller</em> se bloquea inmediatamente. <span class="fragment">¿Sirve?</span></li></ul></section><section id="block-mon-phi"><p>Filósofos Comensales Monitoreados</p><pre class="stretch"><code class="hljs c">monitor DiningPhilosophers {
+  enum {PHILOSOPHISE, HUNGRY, EATING} state[N];   /* free / waiting / using */
+
+  condition philosopher[N];
+  int left  = (N+i-1)%N;  /* -5%2 ? */
+  int right = (  i+1)%N;
+
+  void take(int i) {
+    state[i] = HUNGRY;
+    check(i);
+    if(state[i] != EATING)
+      philosopher[i].wait();
+  }
+
+  void release(int i) {
+    state[i] = PHILOSOPHISE;
+    check( left);
+    check(right);
+  }
+
+  void check(int i) {
+    if( state[ left] != EATING &&
+        state[right] != EATING &&
+        state[    i] == HUNGRY )
+      state[i] = EATING;
+      philosopher[i].signal();
+    }
+  }
+}</code></pre></section><section id="block-mon-phi-procs"><p>La implementación de cada filósofo se reduce a:</p><pre class="fragment"><code class="hljs c">do {
+  FilosofosComensales.take(i);
+  /* eat */
+  FilosofosComensales.release(i);
+  /* philosophise */
+} while('p');</code></pre><p class="fragment"> ¿Cómo deben inicializarse los estados?</p><p class="fragment"> ¿Cumple todas las condiciones del problema de la sección crítica?</p></section><section id="block-mon-impl"><p>Monitores usando semáforos</p><pre class="fragment"><code class="hljs c">struct monitor {
+  Semaphore mutex(1);
+
+  int nextCount = 0;
+  Semaphore next(0);  /* Queue */
+
+  struct condition {
+    Semaphore conditionSem(0); /* para bloquearse en la condicion */
+    int count = 0;             /* cuantos esperan en la condicion */
+    wait();
+    signal();
+  };
+};</code></pre></section><section id="block-mon-impl"><p><code>condition.wait()</code>:   <em>thread</em> se bloquea incondicionalmente</p><p><code>condition.signal()</code>: despierta a algún <em>thread</em> bloqueado, si lo hay</p><pre class="fragment"><code class="hljs c">condition.wait() {
+  count++;
+  if(nextCount > 0)
+    signal(next);
+  else
+    signal(mutex);
+  wait(conditionSem);
+  count--;
+}</code></pre><pre class="fragment"><code class="hljs c">condition.signal() {
+  if(count > 0) {
+    nextCount++;
+    signal(conditionSem);
+    wait(next);
+    nextCount--;
+  }
+}</code></pre><p class="fragment">Esta implementación utiliza la semántica <em>signal-and-wait</em>.</p></section></section><section id="synch-mid-summary"><h3>Hasta ahora: Sincronización</h3><section id="synch-summary_"><ul><li class="fragment"> Necesidad de sincronizar <em>thread</em> que "compiten por datos"</li><li class="fragment"> Problema de la sección crítica:</li><ul><li class="fragment"> Exclusión mutua, progreso, espera acotada</li></ul><li class="fragment"> Primitivas básicas de sincronización:</li><ul><li class="fragment"> <em>Hardware</em>: TaS, CaS</li><li class="fragment"> <em>Software</em>: Locks, semáforos</li></ul><li class="fragment"> Estructuras de mayor nivel</li><ul><li class="fragment"> Monitores</li></ul></ul></section></section><section id="deadlocks"><h2><em>Deadlocks</em></h2><section id="deadlocks_"><p>Hemos visto situaciones de <em>bloqueo mutuo</em> (<em>deadlock</em>)</p><ul><li class="fragment"> Cuando los filósofos toman los palillos de a uno</li><li class="fragment"> Cuando los procesos toman <em>locks</em> o <em>semáforos</em> en distinto orden</li></ul></section><section id="dl-transit"><blockquote class="fragment">Ley 18290: Ley de Tránsito.
+
+Título XI. Derecho preferente de paso.
+Artículo 143:</blockquote><blockquote class="fragment">Todo vehículo que se aproxime a un cruce deberá hacerlo a velocidad razonable y prudente, deteniéndose si fuere necesario, y el de la izquierda cederá el paso al vehículo que se acerque al cruce por la derecha, el que tendrá derecho preferente de paso.</blockquote><blockquote class="fragment">El conductor del vehículo de la izquierda reiniciará la marcha e ingresará a la intersección sólo cuando se asegure que no hay riesgos de accidente, en atención a la distancia, visibilidad y velocidad de los otros vehículos que se aproximen por la derecha.</blockquote></section><section id="dl-transit-1"><p>También se les llama <em>interbloqueo</em></p><img src="../images/figures/01-cruces.png" alt="01 cruces" /></section><section id="dl-transit-whyyyyy"><p>&hellip; u otros nombres menos favorables</p><img src="../images/figures/01-abrazomortal.jpg" alt="01 abrazomortal" /><h2 class="fragment">#NOT!!</h2></section><section id="dl-codeSample"><p>Puede verse así:</p><pre><code class="hljs c">/* Proc1 */       /* Proc 2 */
+wait(a);
+                  wait(b);
+wait(b);
+/*  =( */
+                  wait(a);
+                  /*  =( */
+
+/* ... */         /* ... */
+release(a);       release(b);
+release(b);       release(a);</code></pre></section><section id="dl-rlSample"><p>O así:</p><img src="../images/figures/01-cruce-gridlock.jpg" alt="01 cruce gridlock" /></section><section id="dl-init"><p>¿Cuándo se producen?</p><p class="fragment">Cuando hay <strong>competencia por recursos</strong></p><p class="fragment">Modelo:</p><ul><li class="fragment"> Cantidad finita de recursos y de procesos</li><li class="fragment"> Distintas clases de recursos (CPU, dispositvo I/O,&hellip;)</li><li class="fragment"> Cada proceso ejecuta en algún momento estos pasos:</li><ul><li class="fragment"> <strong>Solicitar</strong> recursos (<em>request</em>)</li><li class="fragment"> <strong>Utilizar</strong> recurso (<em>use</em>)</li><li class="fragment"> <strong>Liberar</strong> recurso (<em>release</em>)</li></ul></ul></section><section id="dl-nc"><p>Condiciones <em>necesarias</em></p><ul><li class="fragment"><strong>Exclusión mutua</strong>           Existe al menos un recurso <strong>no compartible</strong></li><li class="fragment"><strong>Hold and Wait</strong>             Un proceso debe poseer el recurso y esperar otro recurso</li><li class="fragment"><strong>Ausencia de expropiación</strong>  Los recursos sólo pueden ser liberados voluntariamente</li><li class="fragment"><strong>Espera circular</strong>           Conjunto $\{P_0, P_1,\cdots, P_n\}$ tal que $P_i$ espera a $P_{(i+1)\%N}$</li></ul></section></section><section id="resourceGraph"><h2>Grafo de Asignación de Recursos</h2><section id="resourceGraph-def"><p>Herramienta para determinar la ocurrencia de <em>deadlocks</em></p><p class="fragment">Grafo dirigido $G=(V,E)$</p><ul><li class="fragment">$V = P \cup R$</li><ul class="fragment"><li>$P=\{P_1, P_2,\cdots , P_n\}$ son los procesos activos</li><li>$R=\{R_1, R_2,\cdots , R_m\}$ son clases de recursos en el sistema</li></ul><li class="fragment">$E$:</li><ul><li class="fragment">$P_i \to R_j$:   solicitud, $P_i$ está esperando un recurso de clase $R_j$</li><li class="fragment">$R_j \to P_i$:  asignación, Recurso clase $R_j$ ha sido asignado a $P_i$</li></ul></ul></section><section id="resourceGraph-sample"><img src="../images/figures/01-7_01.pdf.png" width="25%" alt="01 7 01.pdf" /><p><em>¿Deadlock?</em>&hellip; <span class="fragment">No (¿por qué?)</span></p></section><section id="resourceGraph-dlCond"><p>Condición de <em>deadlock</em></p><p class="fragment"> Si en el grafo de asignación de recursos:</p><ul><li class="fragment"> No hay ciclos $\to$ no hay <em>deadlock</em></li><li class="fragment"> Hay ciclos $\to$ <strong>puede</strong> haber <em>deadlock</em></li></ul><p class="fragment"> ¿Y si hay una sola instancia de cada clase de recurso?</p><p class="fragment"> Ciclo $\Leftrightarrow$ <em>deadlock</em></p></section><section id="resourceGraph-dl-sample-dl-1"><img src="../images/figures/01-7_01.pdf.png" width="25%" alt="01 7 01.pdf" /><p class="fragment"> $P_3$ solicita $R_2$</p></section><section id="resourceGraph-dl-sample-dl-2"><img src="../images/figures/01-7_02.pdf.png" width="25%" alt="01 7 02.pdf" /><p class="fragment"> ¡<em>Deadlock</em>!</p></section><section id="resourceGraph-dl-sample-nodl"><img src="../images/figures/01-7_03.pdf.png" width="25%" alt="01 7 03.pdf" /><p class="fragment"> ¡Ciclo!<span class="fragment">&hellip; pero sin <em>deadlock</em></span></p></section></section><section id="dl_handling"><h2>¿Como manejar <em>deadlock</em>s?</h2><section id="dl_handling-"><p>Tres alternativas:</p><ul><li class="fragment"> Prevenir o evitar llegar a un estado de <em>deadlock</em></li><li class="fragment"> Permitir el <em>deadlock</em>, detectarlo, y tomar medidas</li><div class="fragment"><li> Ignorarlo</li><img src="../images/figures/01-avestruces.jpg" alt="01 avestruces" /></div></ul></section></section><section id="dl_prev"><h2>¿Como evitar <em>deadlocks</em>?</h2></section><section id="dl_prev"><h2>Prohibición de <em>deadlocks</em></h2><section id="dl_prev-"><p>Se puede asegurar que al menos una de las condiciones <strong>no se cumpla</strong></p></section><section id="dl_prev-pol-1"><ul><li class="fragment"> <strong>Impedir "Exclusión mutua"</strong>. Que todos los recursos sean compartibles.</li><li class="fragment"> <strong>Impedir  "Hold-and-wait" </strong>. No ejecutar mientras no se tengan todos los recursos:</li><ul class="fragment"><li>procesos deben solicitar todos los recursos antes de ejecutar</li><li>o bien, no permitir solicitudes a procesos que ya tengan recursos asignados</li></ul><ul><li class="fragment"> -Posible subutilización de recursos</li><li class="fragment"> -Posible inanición</li></ul></ul></section><section id="dl_prev-pol-2"><ul><li class="fragment"> <strong>Impedir "No expropiación"</strong>. Permitir expropiación.
+ |  Si el proceso tiene recursos, solicita más y no se pueden asignar, entonces
+ |  debe liberar los que ya tiene.</li><ul><li class="fragment"> O bien, quitarle los que otro proceso necesita</li><li class="fragment"> Aplicable a recursos cuyo estado se puede recuperar</li></ul><li class="fragment"> <strong>Impedir ``Espera circular''</strong>. Que todos los recursos deban ser solicitados en el mismo orden.</li><ul><li class="fragment"> ¿Por qué esto es suficiente?</li><li class="fragment"> -La regla debe ser respetada por el programador</li><li class="fragment"> FreeBSD incluye objetos <em>witness</em> que verifican este orden.</li></ul></ul></section></section><section id="dl_prev"><h2>Prevención de <em>deadlocks</em></h2><section id="dl_prev-alg-1"><p>Solución algorítmica</p><p class="fragment"> En lugar de impedir alguna condición "políticamente", tomar la acción justo antes que ocurra el <em>deadlock</em>.</p><p class="fragment"> Require examinar dinámicamente el grafo de asignación de recursos</p><ul><li class="fragment"> Cada procesos debe especificar la cantidad máxima de recursos que puede pedir</li><ul><li class="fragment"> Pero esta puede no ser conocida antes de la ejecución</li><li class="fragment"> Y saber cuántos recursos va a pedir un programa es indecidible en general (HALTING).</li></ul></ul></section><section id="dl_prev-alg-2-safeState"><p><strong>Estado seguro</strong> (<em>safe state</em>)</p><blockquote class="fragment">Un estado es seguro si el sistema puede satisfacer las necesidades de todos los procesos en algún orden, y evitar el <em>deadlock</em>.
+
+Para un conjunto ordenado de procesos $\{P_1, P_2,\cdot, P_n\}$, el estado es seguro
+si cada proceso $P_i$ puede satisfacer su demanda máxima usando los recursos que tiene,
+y los que tienen los procesos $P_j$, $j<i$.
+
+Es decir, si el uso de recursos es serializable.</blockquote></section><section id="dl_prev-alg-3"><p>$deadlock(S) \rightarrow \not safe(S)</p><ul><li class="fragment"> Un estado de <em>deadlock</em> es <em>inseguro</em></li><li class="fragment"> No todo estado <em>inseguro</em> es estado de <em>deadlock</em></li></ul><img src="../images/figures/01-7_06.pdf.png" alt="01 7 06.pdf" /><p class="fragment"> La política es mantenerse siempre en estados seguros</p></section><section id="dl_prev-alg-4-example"><p>Ejemplo: $P=\{P_0,P_1,P_2\}$, $R=\{R_0\}$, $|R_0|=12$</p><p>Solicitud máxima: $S_M=\{10,4,9\}$</p><p>Solicitud actual: $S_a=\{5,2,2\}$</p><br /><p>¿Está el sistema en un estado seguro?</p><p class="fragment"> Sí, ya que existe la secuencia $\langle P_1, P_0, P_2 \rangle$</p><p class="fragment"> ¿Y si a $P_2$ se le asigna un recurso más?  <span class="fragment"><strong>¡Estado inseguro!</strong> (¿por qué?)</span></p></section></section><section id="dl_prev-alg-bankersAlg"><h2> El algoritmo del banquero (E. Dijkstra, 1977)</h2><section id="dl_prev-alg-bankersAlg_"><p>Analogía: el banquero entrega dinero de manera que pueda satisfacer a todos sus clientes</p><ul><li class="fragment"> Cada proceso declara su demanda máxima para cada (clase de) recurso.</li><li class="fragment"> El algoritmo sólo asigna recursos si puede mantenerse en un estado seguro</li></ul><p class="fragment">Estructuras: $m$ recursos, $n$ procesos</p><ul class="fragment"><li class="fragment"> <code>Available[m]</code>, cantidad disponible para cada recurso</li><li class="fragment"> <code>Max[n][m]</code>, máxima demanda para cada proceso.</li><ul><li class="fragment"> <code>Max[i][j]=k</code>: $P_i$ puede solicitar hasta $k$ instancias de $R_j$</li></ul><li class="fragment"> <code>Allocation[n][m]</code>, cantidades asignadas a cada proceso.</li><ul><li class="fragment"> <code>Allocation[i][j]=k</code>: $P_i$ tiene $k$ instancias de $R_j$</li></ul><li class="fragment"> <code>Need[n][m]</code>, solicitud potencial para cada proceso</li><ul><li class="fragment"> <code>Need[i][j]=k</code>: $P_i$ podría pedir hasta $k$ instancias de $R_j$</li><li class="fragment"> <code>Need[i][j] == Max[i][j] - Allocation[i][j]</code></li></ul></ul></section><section id="dl_prev-alg-bankersAlg2"><p>¿Cómo saber si estamos en un estado seguro?</p><pre><code class="hljs c">int Work[m] = Available;
+bool Finish[n] = FALSE;
+
+/* encontrar indice i tal que Finish[i]==FALSE y Need[i] <= Work */
+while(existe i tal que (!Finish[i] && Need[i] <= Work)) {
+  Work += Allocation[i];
+  Finish[i] = TRUE;
+}
+
+for(int i=0;i < n;i++) {
+  if(!Finish[i])
+    return UNSAFE;
+}
+return SAFE;</code></pre><p>Tiempo de ejecución: <span class="fragment">$O(m \times n^2)$</span></p></section><section id="dl_prev-alg-bankersAlg3"><p>¿Cómo determinar si es posible hacer una asignación de recursos?</p><p><code>Request[i]</code>, solicitud de $P_i$</p><pre class="fragment"><code class="hljs c">assert(Request[i] <= Need[i]); /** no puede pedir mas de lo que declara **/
+if(Request[i] <= Available) {
+  /** Simula una asignacion **/
+  Available = Available - Request[i];
+  Allocation[i] = Allocation[i] + Request[i];
+  Need[i] = Need[i] - Request[i];
+  if(safetyAlgorithm() == SAFE) { /** el de la slide anterior **/
+    return ALLOCATED;
+  }
+  else {
+    /** deshacer la asignacion **/
+    return WAIT;
+  }
+}
+else {
+  return WAIT;
+}</code></pre></section><section id="dl_prev-alg-bankersAlg4"><p>Ejemplo: $P=\{P_0,P_1,P_2,P_3,P_4\}, R=\{R_A,R_B,R_C\}$</p><p>Ejemplo: $|R_A|=10$, $|R_B|=5$, $|R_C|=7$</p><p>Estado actual:</p><table border="1"><tr><td><table border="5"><tr><td>ALLOC</td><td>A</td><td>B</td><td>C</td></tr><tr><td>$P_0$</td><td>0</td><td>1</td><td>0</td></tr><tr><td>$P_1$</td><td>2</td><td>0</td><td>0</td></tr><tr><td>$P_2$</td><td>3</td><td>0</td><td>2</td></tr><tr><td>$P_3$</td><td>2</td><td>1</td><td>1</td></tr><tr><td>$P_4$</td><td>0</td><td>0</td><td>2</td></tr></table></td><td><table border="1"><tr><td>MAX</td><td>A</td><td>B</td><td>C</td></tr><tr><td>$P_0$</td><td>7</td><td>5</td><td>3</td></tr><tr><td>$P_1$</td><td>3</td><td>2</td><td>2</td></tr><tr><td>$P_2$</td><td>9</td><td>0</td><td>2</td></tr><tr><td>$P_3$</td><td>2</td><td>2</td><td>2</td></tr><tr><td>$P_4$</td><td>4</td><td>3</td><td>3</td></tr></table></td><td><table border="1"><tr><td>NEED</td><td>A</td><td>B</td><td>C</td></tr><tr><td>$P_0$</td><td>7</td><td>4</td><td>3</td></tr><tr><td>$P_1$</td><td>1</td><td>2</td><td>2</td></tr><tr><td>$P_2$</td><td>6</td><td>0</td><td>0</td></tr><tr><td>$P_3$</td><td>0</td><td>1</td><td>1</td></tr><tr><td>$P_4$</td><td>4</td><td>3</td><td>1</td></tr></table></td></tr></table><p>Available $={3,3,2}$	</p><p>El estado actual es <strong>safe</strong>, ¿por qué? <span class="fragment">$\langle P_1,P_3,P_4,P_2,P_0 \rangle$</span></p><ul class="fragment"><li class="fragment"> Ejecutar <em>request</em> de $P_1$: <code>Request[1]={1,0,2}</code></li><li class="fragment"> Ejecutar <em>request</em> de $P_4$: <code>Request[4]={3,3,0}</code></li><li class="fragment"> Ejecutar <em>request</em> de $P_0$: <code>Request[0]={0,2,0}</code></li></ul></section></section><section id="detectDeadlock1"><h2>Detectar <em>deadlock</em></h2><section id="detect1"><p>Si no se toma ninguna acción previa, pueden ocurrir <em>deadlocks</em></p><p>Se necesita:</p><ul><li>Algoritmo para detectar <em>deadlocks</em></li><li>Algoritmo para resolver <em>deadlocks</em></li></ul><p>Costo de detectar ciclos en grafo de asignación de $n$ procesos: $O(n^2)$</p><img src="../images/figures/01-7_09.pdf.png" width="40%" alt="01 7 09.pdf" /></section><section id="detect2"><p>Algoritmo de detección de <em>deadlock</em> basado en el banquero</p><p>$m$ recursos, $n$ procesos</p><ul><li><code>Available[m]</code>, cantidad disponible para cada recurso</li><li><code>Allocation[n][m]</code>, cantidades asignadas a cada proceso.</li><ul><li> <code>Allocation[i][j]=k</code>: $P_i$ tiene $k$ instancias de $R_j$</li></ul><li><code>Request[n][m]</code>, solicitud actual para cada proceso</li><ul><li> <code>Request[i][j]=k</code>: $P_i$ solicita $k$ instancias de $R_j$</li></ul></ul></section><section id="detect3"><p>Detección de <em>deadlock</em></p><pre><code class="hljs c">/** Deadlock detection algorithm **/
+int Work[m] = Available; bool Finish[n];
+for(i = 0;i < n; i++)
+  if(Allocation[i] != 0) Finish[i] = FALSE;
+  else                   Finish[i] = TRUE;
+/** encontrar indice i tal que Finish[i]==FALSE y Request[i] <= Work **/
+while(existe i tal que (!Finish[i] && Request[i] <= Work)) {
+  Work = Work + Allocation[i];
+  Finish[i] = TRUE;
+}
+/** todos pueden terminar? **/
+for(i = 0;i < n; i++)
+  if(Finish[i] == FALSE) return DEADLOCKED;
+return NOT_DEADLOCKED;</code></pre><p>Todos los procesos para los cuales <code>Finish[i]==FALSE</code> están en <em>deadlock</em></p><p>Tiempo de ejecución: $O(m \times n^2)$</p></section><section id="detect4"><p>Ejemplo: $P=\{P_0,P_1,P_2,P_3,P_4\}, R=\{R_A,R_B,R_C\}$</p><p>Estado actual: $|R_A|=10, |R_B|=5, |R_C|=7$</p><table><tr><td><table><tr><td>ALLOC</td><td>A</td><td>B</td><td>C</td></tr><tr><td>$P_0$</td><td>0</td><td>1</td><td>0</td></tr><tr><td>$P_1$</td><td>2</td><td>0</td><td>0</td></tr><tr><td>$P_2$</td><td>3</td><td>0</td><td>3</td></tr><tr><td>$P_3$</td><td>2</td><td>1</td><td>1</td></tr><tr><td>$P_4$</td><td>0</td><td>0</td><td>2</td></tr></table></td><td><table><tr><td>REQ</td><td>A</td><td>B</td><td>C</td></tr><tr><td>$P_0$</td><td>0</td><td>0</td><td>0</td></tr><tr><td>$P_1$</td><td>2</td><td>0</td><td>2</td></tr><tr><td>$P_2$</td><td>0</td><td>0</td><td>0</td></tr><tr><td>$P_3$</td><td>1</td><td>0</td><td>0</td></tr><tr><td>$P_4$</td><td>0</td><td>0</td><td>2</td></tr></table></td></tr></table><p>Available $=\{0,0,0\}$</p><p>El estado actual es <strong>NOT DEADLOCKED</strong>, ¿por qué? <span class="fragment">$\langle P_0,P_2,P_3,P_1,P_4 \rangle$</span></p><ul><li class="fragment">Ejecutar <em>request</em> de $P_2$: <code>Request[2]={0,0,1}</code></li></ul></section><section id="detect5"><h3>Recuperación ante <em>deadlock</em>s</h3><p>OK, hemos detectado el <em>deadlock</em> (so what?)</p><p class="fragment">Dos caminos&hellip;</p><ul><li class="fragment"><strong>Matar un proceso</strong> ¿Cuál?</li><ul><li class="fragment">Todos (solución drástica)</li><li class="fragment">Uno a la vez hasta resolver el <em>deadlock</em></li><ul><li class="fragment"> Criterio 1: La cantidad mínima</li><li class="fragment"> Criterio 2: El de menor ``costo''</li></ul></ul><li class="fragment"><strong>Expropiar recursos</strong></li><ul><li class="fragment"> ¿A quién?</li><li class="fragment"> <strong>Rollback</strong></li></ul></ul></section></section><section id="summary"><h2> Administración de Procesos</h2><section id="summary_"><p> ¿Qué debemos recordar?</p><ul><li class="fragment"> Procesos: programa+recursos, administrados por el S.O. mediante <em>syscall</em>s</li><li class="fragment"> <em>Threads</em>: unidad básica de ejecución visible al programador o al S.O.</li><li class="fragment"> Sincronización de <em>threads</em> permite que puedan ejecutar eficientemente, sin bloquearse, y sin provocar inconsistencias en los datos compartidos</li><li class="fragment"> Algoritmos de <em>scheduling</em> permiten seleccionar eficientemente el próximo proceso/<em>thread</em> a ejecutar</li><li class="fragment"> Se debe evitar caer en situación de <em>bloqueo mutuo</em></li></ul></section></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.min.js"></script><script>// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    width: 1600,
+    height: 900,
+
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    math: {
+        //mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        //Migrated. Check here: https://www.mathjax.org/cdn-shutting-down/
+        mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+        // config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        config: 'TeX-AMS-MML_HTMLorMML'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+
+    // Optional reveal.js plugins
+    dependencies: [
+
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+
+        // Markdown
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' );} },
+
+        // Highlight <code>
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Mathjax
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/math/math.min.js', async: true },
+
+        // Zoom
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.min.js', async: true },
+
+        // Speaker Notes
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.min.js', async: true }
+
+        // Title footer
+        //{ src: '/js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
+    ]
+});</script></body></html>

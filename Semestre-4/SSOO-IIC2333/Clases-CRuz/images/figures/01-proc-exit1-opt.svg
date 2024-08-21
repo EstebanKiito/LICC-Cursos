@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="71.261mm" height="59.333mm" version="1.1" viewBox="0 0 71.260995 59.332584" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker2406" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406-0" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(4.8355 -27.925)">
+  <g>
+   <text x="8.1197891" y="30.169554" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="8.1197891" y="30.169554">P1</tspan></text>
+   <text x="48.616657" y="36.854374" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="48.616657" y="36.854374">P2</tspan></text>
+   <rect transform="scale(1,-1)" x="-4.6355" y="-56.035" width="29.596" height="23.905" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="37.132" y="-54.669" width="29.094" height="11.291" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="-2.3965511" y="36.931149" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-2.3965511" y="36.931149">pid_t p = fork();</tspan><tspan x="-2.3965511" y="40.458927">if (p == 0) {</tspan><tspan x="-2.3965511" y="43.986706">  ...</tspan><tspan x="-2.3965511" y="47.514481">}</tspan><tspan x="-2.3965511" y="51.042259">else if (p &gt; 0) {</tspan><tspan x="-2.3965511" y="54.570038">  wait(NULL);</tspan></text>
+  </g>
+  <path d="m25.14 41.285 11.062-.000345" fill="none" marker-end="url(#marker2406)" stroke="#000" stroke-width=".26458px"/>
+  <g>
+   <text x="38.349297" y="36.401981" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="38.349297" y="38.850754"/><tspan x="38.349297" y="42.378532">pid_t p = fork();</tspan><tspan x="38.349297" y="45.906311">if (p == 0) {</tspan><tspan x="38.349297" y="49.43409">  exec(command);</tspan></text>
+   <rect transform="scale(1,-1)" x="37.132" y="-75.659" width="29.094" height="21.167" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="44.699295" y="60.214493" fill="#000000" font-family="Calibri" font-size="2.8222px" font-style="italic" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="44.699295" y="60.214493">Código de</tspan></text>
+   <text x="45.228462" y="62.860329" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="45.228462" y="62.860329">command</tspan></text>
+   <rect transform="scale(1,-1)" x="-4.3395" y="-87.058" width="29.261" height="11.182" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="-0.78208452" y="78.755821" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-0.78208452" y="78.755821">}</tspan><tspan x="-0.78208452" y="82.2836">...</tspan></text>
+  </g>
+  <g>
+   <path d="m37.132 75.659-12.324-.000345" fill="none" marker-end="url(#marker2406-0)" stroke="#000" stroke-width=".26458px"/>
+   <g>
+    <path d="m10.497 56.047v19.829" fill="none" stroke="#556b2f" stroke-dasharray="4, 0.5" stroke-width=".5"/>
+    <text x="11.954631" y="68.786552" fill="#556b2f" font-family="Calibri" font-size="2.8222px" font-style="italic" letter-spacing="0px" stroke="#556b2f" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="11.954631" y="68.786552">waiting</tspan></text>
+    <text x="23.111254" y="74.13784" fill="#000000" font-family="Consolas" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="23.111254" y="74.13784">exit(0)</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>

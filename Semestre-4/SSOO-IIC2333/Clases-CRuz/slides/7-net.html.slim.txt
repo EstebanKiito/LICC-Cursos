@@ -1,0 +1,842 @@
+\frame{\titlepage}
+
+%---------------------------------------------------------------------
+/ Frame
+\frametitle{Contenidos}
+%\tableofcontents[currentsection]
+\tableofcontents
+
+
+
+%---------------------------------------------------------------------
+\section{Introducción}
+
+\subsection{Motivación}
+
+/ Frame
+  \frametitle{Los caminos de las redes}
+
+  ¿Qué pasa cuando hacemos {\em click} en un enlace del {\em browser}?
+  
+  ul
+    li.fragment<2-> Evento de {\em hardware}
+    li.fragment<2-> Interrupción para el Sistema Operativo
+    li.fragment<2-> Evento entregado a proceso {\em browser}
+    li.fragment<3-> Proceso {\em browser} interpreta el evento
+    li.fragment<3-> Proceso {\em browser} descubre que necesita obtener un {\em recurso}
+    li.fragment<3-> Recurso es solicitado mediante {\em syscall} al Sistema Operativo
+  
+
+  \onslide<4->{¿Y después?}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Infraestructura de Redes}
+
+  \begin{block}{Objetivo}
+    Permitir que un proceso se {\bf comunique} con otro
+  \end{block}
+  
+  ul
+    li.fragment ¿Dónde se encuentra el otro proceso?
+      ul
+        li.fragment Si se encuentra en la misma máquina: {\em pipe}, {\em shared memory}
+        li.fragment Si no, S.O. debe utilizar el sistema de Entrada/Salida
+      
+    li.fragment ¿Qué medio utilizar para el envío? (Cable, aire, \ldots)
+      ul
+        li.fragment ¿Cómo expresar un mensaje en ese medio? Problema Físico
+      
+    li.fragment ¿Cómo se envía información por un medio de red?
+      ul
+        li.fragment ¿Cómo se transmite el mensaje? ¿Se manda completo?
+      
+    li.fragment ¿A quién se le transmite el mensaje?
+      ul
+        li.fragment ¿Hay sólo un receptor? ¿lo estoy ``gritando'' a todos?
+      
+    li.fragment ¿Cómo se encuentra el destinatario?
+      ul
+        li.fragment Destinatario debe tener una dirección ``única''
+        li.fragment ¿Cómo ``encaminar'' el mensaje?
+      
+    li.fragment El destinatario, ¿está dispuesto a recibir el mensaje?
+      ul
+        li.fragment Comunicación debe seguir un orden: {\em protocolo}
+      
+  
+
+
+
+%---------------------------------------------------------------------
+\subsection{Aplicaciones de Redes}
+
+/ Frame
+  \frametitle{¿Para qué hacer que dos procesos se comuniquen?}
+
+  Más que nunca, aplicaciones para comunicación de procesos {\em remotos}
+  ul
+    li.fragment {\bf Compartir recursos}. Muy tradicional.
+      ul
+        li.fragment Recursos: impresoras, discos, archivos, ciclos de CPU
+        li.fragment Acceso a recursos {\em escasos} que no se encuentran {\em geográficamente} cerca
+        li.fragment Modelo {\bf cliente-servidor}
+      
+  
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-clientserver.png}
+  \end{center}
+  
+  ul
+    li.fragment WWW, Email, Telefonía IP, documentos compartidos, \ldots
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{¿Para qué hacer que dos procesos se comuniquen?}
+
+  \begin{quote}
+    There is no reason for any individual to have a computer in his home
+    \begin{flushright}Ken Olsen, president of DEC, 1977\end{flushright}
+  \end{quote}
+
+  ul
+    li.fragment Múltiples puntos de acceso de información. Ser cliente {\bf Y} servidor
+    li.fragment Modelo {\bf peer-to-peer}
+  
+  \begin{center}
+    \includegraphics[width=5cm]{figs/05-peertopeer.png}
+  \end{center}
+  ul
+    li.fragment Recursos decentralizados: BitTorrent
+    li.fragment Grafos de comunicación: redes sociales
+    li.fragment Mensajería instantánea
+    li.fragment {\em Streaming}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{¿Para qué hacer que dos procesos se comuniquen?}
+
+  Comunicación móvil
+  ul
+    li.fragment<2-> Conexiones esporádicas: hotspots inalámbricos
+    li.fragment<3-> Comunicación por cercanía: RFID
+    li.fragment<4-> Mensajería móvil: SMS
+    li.fragment<5-> Sistema de ubicación geográfica: GPS
+    li.fragment<6-> Redes de sensores
+    li.fragment<7-> Dispositivos {\em wearable}
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Riesgos y amenazas}
+
+  ul
+    li.fragment ¿Cómo viaja la información?
+      ul
+        li.fragment ¿Está bien que cualquier persona puede verla?
+        li.fragment {\em Cookies} y {\em profiling} de usuarios
+      
+    li.fragment Confiabilidad de la información
+      ul
+        li.fragment Ataques de ingeniería social: {\em phishing}
+        li.fragment Protocolos de seguridad
+      
+    li.fragment Autentificación de clientes
+      ul
+        li.fragment ¿Humano o {\em bot}?: CAPTCHA
+        li.fragment Transmisión de información sensible
+      
+    li.fragment Amenazas al desempeño
+      ul
+        li.fragment Denegación de servicio distribuida (DDOS)
+        li.fragment {\em Botnets}
+      
+    li.fragment Aspectos legales
+      ul
+        li.fragment Leyes de neutralidad
+        li.fragment Leyes de ``protección'' de {\em copyright}
+      
+  
+  
+
+%---------------------------------------------------------------------
+\section{Conceptos de {\em Hardware}}
+
+\subsection{Definiciones}
+
+/ Frame
+  \frametitle{Elementos de red}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-definiciones.png}
+  \end{center}
+
+
+
+
+%---------------------------------------------------------------------
+\subsection{Redes por tecnología de transmisión} 
+
+/ Frame
+  \frametitle{Primeros conceptos de red}
+  \framesubtitle{Tecnología de transmisión}
+
+  {\bf ¿A quién se transmite la información?}
+  ul
+    li.fragment {\bf Broadcast}: todos la reciben
+    li.fragment {\bf Punto a punto}: solo emisor y destinatario
+  
+  
+  \begin{center}
+    \includegraphics[width=2cm]{figs/05-wally1.png}
+    \includegraphics[width=7cm]{figs/05-wally2.png}
+  \end{center}
+    
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Tecnología de transmisión}
+  \framesubtitle{Broadcast}
+
+  ul
+    li.fragment Todos reciben el mensaje
+    li.fragment Receptores observan el campo destinatario y descartan o procesan el mensaje
+  
+  
+  Casos:
+  ul
+    li.fragment Comunicación {\em wireless}
+    li.fragment Llamando a alguien en una multitud
+    li.fragment Transmisión de televisión análoga
+   
+  
+  {\bf Multicast}
+  ul
+    li.fragment Transmisión a un subconjunto de máquinas
+   
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Tecnología de transmisión}
+  \framesubtitle{Broadcast}
+
+  {\bf Broadcast} es utilizado cuando hay solo un {\em canal} de comunicación
+
+  Protocolos dinámicos para utilizar el canal único
+  ul
+    li.fragment Token ring: turnos de transmisión
+    li.fragment Aloha: precursor de {\em ethernet}
+    li.fragment CSMA-CD: {\em ethernet}
+  
+  
+  Protocolos estáticos
+  ul
+    li.fragment Multiplexión por tiempo
+    li.fragment Multiplexión por frecuencia
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Tecnología de transmisión}
+  \framesubtitle{Punto a punto}
+
+  {\bf Unicast}
+  ul
+    li.fragment Mensaje se subdivide en {\bf paquetes}
+    li.fragment Paquetes se envían al destinatario a través de intermediarios,
+          formando una ruta de comunicación
+          ul
+            li.fragment ¿Cómo encontrar la ruta? Protocolos de ruteo
+            li.fragment ¿En qué orden enviar los paquetes? Protocolos de transporte
+          
+    li.fragment ¿Cómo asignar el canal de comunicación?
+      ul
+        li.fragment Full-duplex. Ambos leen y escriben al mismo tiempo.
+        li.fragment Half-duplex. Sólo uno lee y escribe a la vez.
+      
+  
+
+
+
+%---------------------------------------------------------------------
+\subsection{Redes por tamaño}
+
+/ Frame
+  \frametitle{Tamaño de la red}
+  \framesubtitle{(Network) Size {\em matters}}
+
+  ul
+    li.fragment PAN: {\em Personal Area Network}
+    li.fragment LAN: {\em Local Area Network}
+    li.fragment MAN: {\em Metropolitan Area Network}
+    li.fragment WAN: {\em Wide Area Network}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{PAN: Personal Area Network}
+%  \framesubtitle{(Network) Size {\em matters}}
+
+  Comunicación a distancia de una persona,
+  usando tecnologías de corto alcance
+  ul
+    li.fragment Ejemplo: {\em Bluetooth}, {\em RFID}
+      ul
+        li.fragment {\em Master} habla con teclado, {\em mouse}, {\em handsfree}
+        li.fragment Conexión por acercamiento: {\em tag}, tarjeta BIP
+      
+  
+  
+  \begin{center}
+    \includegraphics[width=5cm]{figs/05-pan.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{LAN: Local Area Network}
+
+  Recursos compartidos a nivel de oficinas o edificios
+
+  ul
+    li.fragment Medios basados en cables de cobre o fibra óptica
+    li.fragment Tamaño conocido permite acotar tiempos de transmisión
+    li.fragment Velocidades: 100Mbps, 1Gbps, 10Gbps
+    li.fragment Topología común: punto a punto
+    li.fragment Estándar IEEE 802.3: {\bf Ethernet}
+    li.fragment {\bf Switch}: dispositivo que dirige paquetes entre dispositivos conectados
+    
+  \begin{center}
+    \includegraphics[width=5cm]{figs/05-wiredlan.png}
+  \end{center}
+    
+  
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{LAN: Local Area Network}
+  \framesubtitle{{\em Ethernet} clásica}
+  
+  ul
+    li.fragment Topología clásica: broadcast
+    li.fragment Acceso al medio: ante colisiones cada dispositivo espera un tiempo {\em random}
+    li.fragment {\bf Hub}: concentrador. Dispositivo que recibe paquetes y reenvía a todos los dispositivos
+          conectados. Topología de bus.
+  
+  Es posible subdividir un LAN entre redes más pequeñas
+  ul
+    li.fragment Tráfico de una LAN puede pasar a otra solamente a través de un punto
+    li.fragment {\bf Virtual LAN} o {\bf VLAN}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{LAN: Local Area Network}
+  \framesubtitle{Wireless LAN}
+
+  {\bf WLAN}
+  
+  ul
+    li.fragment Comunicación vía {\em broadcast}
+    li.fragment Comunicación a través de dispositivo: {\bf Access Point}, {\bf Wireless Router}, {\bf Base Station}
+    li.fragment Standard de acceso: IEEE 802.11 (WiFi)
+    li.fragment Velocidad: desde 6Mbps (802.11a), 54Mbps (802.11g), 150Mbps (802.11n), 866Mbps (802.11ac)
+    li.fragment Rango: $\sim 70m$ indoor, $\sim 250m$ outdoor
+  
+
+  \begin{center}
+    \includegraphics[width=4cm]{figs/05-wirelesslan.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{MAN: Metropolitan Area Network}
+
+  ul
+    li.fragment Redes de televisión por cable
+    li.fragment Standard: IEEE 802.6 DQDB ($\sim 30$km, $34$-$155$Mbps)
+    li.fragment Standard: IEEE 802.16 Wireless MAN (WiMax)
+    li.fragment Velocidades: $37\sim 219Mbps$ downstream, $17\sim 140Mbps$ upstream
+    li.fragment Velocidad límite depende de la distancia (inversamente proporcional)
+    li.fragment Rango: kms
+  
+
+  \begin{center}
+    \includegraphics[width=7cm]{figs/05-man.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{WAN: Wide Area Network}
+
+  Rango de países o continentes
+  ul
+    li.fragment Conexión de {\bf hosts} a grandes distancias
+    li.fragment Organizada en subredes
+  
+  Elementos:
+  ul
+    li.fragment Líneas de transmisión: cables de cobre, fibra óptica, ondas de radio
+    li.fragment {\bf Router}: dispositivo que permite conectar dos o más subredes
+    li.fragment Subredes pueden ser redes de diferentes tecnologías
+    li.fragment {\em Interredes}: redes compuestas.
+      ul
+        li.fragment {\bf Internet} es un ejemplo
+      
+  
+  Ejemplos wireless:
+  ul
+    li.fragment Redes satelitales
+    li.fragment Redes de celulares (ya en su 4ta generación)
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{WAN: Wide Area Network}
+
+  Modelo general. Compañía con oficinas en diferentes lugares geográficos
+  \begin{center}
+    \includegraphics[width=9cm]{figs/05-wan1.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{WAN: Wide Area Network}
+
+  {\bf Virtual Private Network} (VPN)
+  ul
+    li.fragment Formaciones de subredes privadas sobre WAN existentes
+    li.fragment Ventaja: virtualización (flexibilidad)
+    li.fragment Desventaja: virtualización (calidad de enlace)
+  
+
+  \begin{center}
+    \includegraphics[width=9cm]{figs/05-wan2.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{WAN: Wide Area Network}
+  
+  Subredes operadas por diferentes compañías
+  ul
+    li.fragment Operador se llama {\bf ISP}: {\bf Internet Service Provider}
+    li.fragment Operador permite acceso a su red a clientes
+  
+  
+  \begin{center}
+    \includegraphics[width=9cm]{figs/05-wan3.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+\subsection{Topologías}
+
+/ Frame
+  \frametitle{Topologías}
+
+  Diferentes topologías para conectar nodos/hosts
+  
+  \begin{center}
+    \includegraphics[width=9cm]{figs/05-topologias.png}
+  \end{center}
+  
+
+
+%---------------------------------------------------------------------
+\section{Conceptos de {\em Software}}
+
+\subsection{Jerarquías de protocolos}
+
+/ Frame
+  \frametitle{Jerarquías de protocolos}
+
+  Concepto original: comunicación es problema de {\em hardware}
+  \onslide<2->{\ldots {\bf pero ya no}}
+   
+  ul
+    li.fragment<3-> Redes actuales se construyen en capas
+    li.fragment<3-> Capas solicitan servicios a niveles inferiores y ofrecen servicios a niveles superiores
+    li.fragment<3-> Capas del mismo nivel se comunican a través {\bf protocolos}
+  
+  
+  \onslide<4->{
+  \begin{block}{Protocolo}
+    Contrato de comunicación entre distintas partes acerca de la manera
+    en que se producirá la comunicación
+  \end{block}
+  }
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Jerarquías de protocolos}
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-layers.png}
+  \end{center}
+
+  Una instanciación de este modelo se refiere a un {\bf stack de protocolos}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Jerarquías de protocolos}
+  
+  Mensajes pueden ser modificados en cada capa, agregando {\em headers}
+  o modificando todo el mensajes.
+  
+  \begin{center}
+    \includegraphics[width=7cm]{figs/05-translations.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+\subsection{Servicios y protocolos}
+
+/ Frame
+  \frametitle{¿Servicios o protocolos?}
+
+  {\bf Servicio}: conjunto de primitivas que ofrecen servicios
+  
+  {\bf Protocolo}: conjunto de reglas para intercambio y de paquetes y comunicación
+  
+  \begin{center}
+    \includegraphics[width=7cm]{figs/05-servicioprotocolo.png}
+  \end{center}
+
+  {\bf Importante}: protocolo puede ser cambiado sin afectar al servicio  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Un servicio de comunicación}
+  
+  Servicio de comunicación basado en Berkeley Sockets
+  
+  ul
+    li.fragment {\tt LISTEN}: bloquea esperando conexión
+    li.fragment {\tt CONNECT}: establece conexión con un {\em peer}
+    li.fragment {\tt ACCEPT}: acepta conexión desde un {\em peer}
+    li.fragment {\tt RECEIVE}: bloquea esperando un mensaje
+    li.fragment {\tt SEND}: envía un mensaje al {\em peer}
+    li.fragment {\tt DISCONNECT}: cierra conexión
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Un protocolo de comunicación}
+
+  Protocolo de comunicación
+  ul
+    li.fragment Server ejecuta {\tt LISTEN}
+    li.fragment Client ejecuta {\tt CONNECT} especificando dirección del servidor
+      ul
+        li.fragment SO envía paquete y bloquea al client esperando respuesta
+      
+    li.fragment SO recibe paquete, busca algún proceso que haya hecho {\tt LISTEN}, copia paquete y desbloquea
+    li.fragment Server puede decidir si acepta la conexión haciendo {\tt ACCEPT}
+      ul
+        li.fragment SO server envía mensajes de aceptación a client
+        li.fragment SO client recibe mensaje y desbloquea a proceso client
+      
+    li.fragment Proceso client y server quedan conectados y puede enviarse mensajes
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Un protocolo de comunicación}
+
+  ul
+    li.fragment Server ejecuta {\tt RECEIVE} para esperar mensajes
+    li.fragment Client ejecuta {\tt SEND} para enviar mensajes
+    li.fragment Client finaliza comunicación con {\tt DISCONNECT}
+  
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-ejemploprotocolo.png}
+  \end{center}
+
+  Por supuesto, éste es el {\em happy-path}
+
+
+%---------------------------------------------------------------------
+\section{Modelos de referencia}
+
+\subsection{Modelo OSI}
+
+/ Frame
+  \frametitle{Modelo OSI}
+
+  Estándar ISO {\bf OSI} ({\bf Open Systems Interface})
+  ul
+    li.fragment Propuesto en 1983 por Day y Zimmerman
+    li.fragment Revisado en 1995
+    li.fragment Es un {\bf modelo de referencia}
+      ul
+        li.fragment Define responsabilidades para cada capa
+        li.fragment No define estándares ni protocolos
+        li.fragment No establece implementaciones
+      
+  
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modelo OSI}
+  \framesubtitle{Oh, sí, oh, sí}
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-osi.png}
+  \end{center}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modelo OSI}
+  \framesubtitle{¿Qué hace cada nivel?}
+
+  ul
+    li.fragment {\bf Capa Física}. Transmisión de {\bf bits} en canal de comunicación.
+      ul
+        li.fragment Tiempo de transmisión, frecuencia de transmisición, codificación
+      
+    li.fragment {\bf Capa de Enlace} ({\em data link}). Transmisión secuencial de grupos de bits: {\bf frames}
+          de manera que lleguen sin errores.
+      ul
+        li.fragment Control de velocidad de transmisión.
+        li.fragment Control de acceso al medio (MAC)
+      
+    li.fragment {\bf Capa de Red} ({\em network}). Transmisión de paquetes de datos entre nodos de la red.
+      ul
+        li.fragment ¿Cómo encontrar al destinatario? Direccionamiento
+        li.fragment ¿Qué ruta deben seguir los paquetes para llegar?
+      
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modelo OSI}
+  \framesubtitle{¿Qué hace cada nivel?}
+
+  ul
+    li.fragment {\bf Capa de Transporte}. Transmisión del mensajes solicitados desde la fuentel espacio al destinatario
+      ul
+        li.fragment Orden y velocidad de transmisión de paquetes (control de flujo)
+        li.fragment ¿Cómo asegurar que todos los paquetes hayan llegado?
+        li.fragment Connection-oriented vs connection-less
+      
+    li.fragment {\bf Capa de Sesión}. Mantenimiento de sesiones, turnos de transmisión, sincronización
+    li.fragment {\bf Capa de Presentación}. Definición de sintaxis y semántica de datos a transmitir.
+    li.fragment {\bf Capa de Aplicación}. Protocolos de comunicación entre procesos para objetivos específicos
+      ul
+        li.fragment HTTP, FTP, SSH, SMTP, IMAP, XMPP, DNS, TELNET, DHCP, \ldots
+      
+  
+
+
+%---------------------------------------------------------------------
+\subsection{Modelo TCP/IP}
+
+/ Frame
+  \frametitle{Modelo TCP/IP}
+
+  Originado como {\em stack} de protocolos para ARPANET, proyecto de investigación del DoD (Department of Defense, USA)
+  ul
+    li.fragment Propuesto por Vinton Cerf y Robert E. Kahn, 1974
+    li.fragment Estandarizado en 1989
+  
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-tcpip.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modelo TCP/IP}
+
+  ul
+    li.fragment {\bf Link layer}. Incluye funciones de capas OSI 1 y 2.
+      ul
+        li.fragment Inyección de paquetes de capa superior a algún medio de transmisión .
+        li.fragment También llamado {\em host-to-network}. Poco especificada.
+      
+    li.fragment {\bf Internet layer} (interred). Transmisión de paquetes entre redes.
+      ul
+        li.fragment Protocolo IP. Internet Protocol.
+        li.fragment Protocolo ICMP. Internet Control Message Protocol.
+      
+    li.fragment {\bf Transport layer}. Transmisión de mensajes entre fuente y destinatario.
+      ul
+        li.fragment TCP. Transmission Control Protocol. Connection-oriented.
+        li.fragment UDP. User Datagram Protocol. Connectionless.
+      
+    li.fragment {\bf Application Layer}. Equivalente a capas 5,6 y 7 de OSI.
+      ul
+        li.fragment Protocolos de aplicaciones visibles para el usuario.
+        li.fragment Conexiones a través de {\em sockets}.
+        li.fragment Servicios estandarizados en {\em well-known} ports por {\bf IANA} (Internet Assigned Numbers Authority)
+      
+  
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Modelo TCP/IP}
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-protocolstcpip.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Mensajes}
+
+  Mensajes van adquiriendo {\em header}s en cada capa
+  
+  \begin{center}
+    \includegraphics[width=9cm]{figs/05-mensajes.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Mensajes}
+
+  {\em Header} TCP
+
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-headertcp.png}
+  \end{center}
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Mensajes}
+
+  {\em Header} IP
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-headerip.png}
+  \end{center}
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Mensajes}
+
+  Paquete 802.11
+
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-header80211.png}
+  \end{center}
+  
+  
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Redes: Internet}
+
+  \begin{center}
+    \includegraphics[width=11cm]{figs/05-internet.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Redes: Internet}
+
+  \url{http://www.submarinecablemap.com/}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Redes: Telefonía Móvil}
+
+  ul
+    li.fragment 1G. AMPS (Advanced Mobile Phone System). Análogo, 1982.
+    li.fragment 2G. GSM (Global System for Mobile Communications) 1991.
+    li.fragment 3G. Voz digital + banda ancha de datos, 2001.
+      ul
+        li.fragment UMTS (Universal Mobile Telecommunications Systems)
+              a.k.a. WCDMA (Wideband Code Division Multiple Access)
+        li.fragment $\sim 14$Mbps {\em downlink}, $\sim 6$Mbps {\em uplink}
+        li.fragment Recurso escaso: espectro de frecuencias
+        li.fragment Celdas adyacentes usan frecuencias distintas
+      
+  
+  
+  \begin{center}
+    \includegraphics[width=8cm]{figs/05-mobile1.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Redes: Telefonía Móvil}
+
+  Arquitectura
+  ul
+    li.fragment RNC, Radio Network Controller
+    li.fragment PSTN, Public Switched Telephone Network
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-mobile2.png}
+  \end{center}
+
+
+
+%---------------------------------------------------------------------
+/ Frame
+  \frametitle{Redes: Telefonía Móvil}
+  \framesubtitle{Handover $\neq$ hangover}
+
+  Redes móviles tienen el desafío del {\bf handover}
+  ul
+    li.fragment {\bf Hard handover}. Desconectarse de una celda antes de conectarse a la siguiente.
+    li.fragment {\bf Soft handover}. Mantener la conexión hasta encontrar otra celda.
+  
+  \begin{center}
+    \includegraphics[width=10cm]{figs/05-mobile3.png}
+  \end{center}
+
+

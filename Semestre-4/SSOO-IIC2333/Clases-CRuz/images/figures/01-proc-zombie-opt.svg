@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="73.907mm" height="49.613mm" version="1.1" viewBox="0 0 73.906823 49.613442" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker3012" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker2406-0" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(7.4813 -31.02)">
+  <g>
+   <text x="5.4739547" y="35.461224" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="5.4739547" y="35.461224">P1</tspan></text>
+   <text x="48.616657" y="36.854374" fill="#000000" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="48.616657" y="36.854374">P2</tspan></text>
+   <rect transform="scale(1,-1)" x="-7.2813" y="-78.235" width="29.596" height="40.813" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="37.132" y="-54.502" width="29.094" height="11.123" rx="0" ry="0" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="-5.0423846" y="41.693653" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-5.0423846" y="41.693653">pid_t p = fork();</tspan><tspan x="-5.0423846" y="45.221432">if (p == 0) {</tspan><tspan x="-5.0423846" y="48.74921">  ...</tspan><tspan x="-5.0423846" y="52.276985">}</tspan><tspan x="-5.0423846" y="55.804764">...</tspan><tspan x="-5.0423846" y="59.332542">...</tspan><tspan x="-5.0423846" y="62.860321">...</tspan><tspan x="-5.0423846" y="66.3881">...</tspan><tspan x="-5.0423846" y="69.915878">wait(&amp;status);</tspan><tspan x="-5.0423846" y="73.443657">...</tspan><tspan x="-5.0423846" y="76.971428">exit(0);</tspan></text>
+  </g>
+  <g>
+   <path d="m22.315 41.285 14.708-.000345" fill="none" marker-end="url(#marker2406)" stroke="#000" stroke-width=".26458px"/>
+   <text x="38.349297" y="36.401981" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="38.349297" y="38.850754"/><tspan x="38.349297" y="42.378532">pid_t p = fork();</tspan><tspan x="38.349297" y="45.906311">if (p == 0) {</tspan><tspan x="38.349297" y="49.43409">  ...</tspan><tspan x="38.349297" y="52.961868">  exit(code);</tspan></text>
+   <path d="m36.602 53.434-6.4158-.000345" fill="none" marker-end="url(#marker2406-0)" stroke="#000" stroke-width=".26458px"/>
+  </g>
+  <g font-family="Calibri" letter-spacing="0px" stroke-width="0" word-spacing="0px">
+   <g font-size="2.8222px" font-style="italic">
+    <text x="-1.0589572" y="80.607071" fill="#556b2f" stroke="#556b2f" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="-1.0589572" y="80.607071">P1 terminated</tspan></text>
+    <text x="45.106842" y="32.815392" fill="#000000" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="45.106842" y="32.815392">Parent: P1</tspan></text>
+    <text x="48.200996" y="57.18161" fill="#556b2f" stroke="#556b2f" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="48.200996" y="57.18161">P2  zombie</tspan></text>
+    <text x="34.921993" y="56.67939" fill="#000000" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1" xml:space="preserve"><tspan x="34.921993" y="56.67939">Parent</tspan><tspan x="34.921993" y="59.501614">has not</tspan><tspan x="34.921993" y="62.323833">waited</tspan></text>
+   </g>
+   <text x="26.184191" y="54.432053" fill="#000000" font-size="3.5278px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="26.184191" y="54.432053">¿?</tspan></text>
+  </g>
+  <g stroke="#556b2f">
+   <path d="m51.679 54.502v14.892" fill="none" stroke-dasharray="3.19999999, 0.4" stroke-width=".4"/>
+   <path d="m58.895 69.183h-14.23" fill="none" stroke-width=".4"/>
+   <text x="43.438492" y="71.469124" fill="#556b2f" font-family="Calibri" font-size="2.8222px" font-style="italic" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="43.438492" y="71.469124">P2 terminated</tspan></text>
+  </g>
+  <g>
+   <path d="m31.295 69.309-13.279-.000345" fill="none" marker-end="url(#marker3012)" stroke="#000" stroke-width=".26458px"/>
+   <text x="24.596689" y="68.719566" fill="#000000" font-family="Consolas" font-size="2.8222px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="24.596689" y="68.719566">exit(code)</tspan></text>
+   <path d="m31.041 54.502v14.892" fill="none" stroke="#000" stroke-dasharray="0.4, 0.4" stroke-width=".4"/>
+  </g>
+ </g>
+</svg>

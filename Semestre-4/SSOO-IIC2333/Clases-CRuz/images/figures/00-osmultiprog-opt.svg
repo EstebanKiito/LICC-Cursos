@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="72.522mm" height="77.933mm" version="1.1" viewBox="0 0 72.521728 77.932687" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker1920" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="Arrow2Mend" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-19.505 -44.71)">
+  <g>
+   <rect transform="scale(1,-1)" x="20.005" y="-88.708" width="19.802" height="12.267" rx="1" ry="1" fill="#6495ed" stroke="#4169e1" stroke-linecap="round" stroke-linejoin="round">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <g font-family="Calibri" letter-spacing="0px" stroke-width="0" word-spacing="0px">
+    <text x="22.628578" y="82.905693" fill="#f0ffff" font-size="8.4667px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="22.628578" y="82.905693" stroke-width="0">CPU<tspan x="22.628578" y="82.905693" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/></tspan></text>
+    <text x="52.880466" y="122.1678" fill="#000000" font-size="8.4667px" stroke="#000000" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="122.1678" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0x000</tspan></text>
+    <text x="66.988396" y="47.516804" fill="#000000" font-size="4.2333px" stroke="#000000" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="66.988396" y="47.516804" fill="#696969" font-family="Calibri" font-weight="bold">Memoria</tspan></text>
+   </g>
+   <rect transform="scale(1,-1)" x="60.782" y="-122.39" width="30.988" height="70.958" fill="#dcdcdc" stroke="#696969" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <rect transform="scale(1,-1)" x="60.782" y="-122.29" width="30.988" height="13.683" fill="#ff7f50" stroke="#a0522d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.26857" y="114.51648" fill="#f0ffff" font-family="Calibri" font-size="3.5278px" letter-spacing="0px" stroke-width="0" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.26857" y="114.51648" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">Sistema</tspan><tspan x="76.26857" y="118.04426" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">Operativo</tspan></text>
+   <text x="52.880466" y="53.376122" fill="#000000" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke="#000000" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="53.376122" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0xFFF</tspan></text>
+  </g>
+  <g>
+   <rect transform="scale(1,-1)" x="60.796" y="-108.61" width="30.975" height="10.183" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 1</tspan></text>
+  </g>
+  <g transform="translate(0 -10.054)">
+   <rect transform="scale(1,-1)" x="60.796" y="-108.61" width="30.975" height="10.183" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 2</tspan></text>
+  </g>
+  <g transform="translate(0 -20.108)">
+   <rect transform="scale(1,-1)" x="60.796" y="-108.61" width="30.975" height="10.183" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 3</tspan></text>
+  </g>
+  <g transform="translate(0 -30.163)">
+   <rect transform="scale(1,-1)" x="60.796" y="-108.61" width="30.975" height="10.183" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="3.5278px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 4</tspan></text>
+  </g>
+  <g fill="#000000" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke="#000000" stroke-width="0" word-spacing="0px">
+   <text x="52.880466" y="108.40948" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="108.40948" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0x300</tspan></text>
+   <text x="52.880466" y="98.355331" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="98.355331" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0x500</tspan></text>
+   <text x="52.880466" y="88.301155" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="88.301155" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0x700</tspan></text>
+   <text x="52.880466" y="78.246979" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="78.246979" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0x900</tspan></text>
+   <text x="52.880466" y="68.192802" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%" xml:space="preserve"><tspan x="52.880466" y="68.192802" font-family="Calibri" font-size="2.8222px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0xB00</tspan></text>
+  </g>
+  <path d="m32.083 96.283v6.9393l26.419 6e-5" fill="none" marker-end="url(#Arrow2Mend)" stroke="#000" stroke-width=".265"/>
+  <path d="m59.064 92.579-16.548-3.9058" fill="none" marker-end="url(#marker1920)" stroke="#000" stroke-width=".26458px"/>
+  <g transform="translate(-44.403 -14.242)">
+   <rect transform="scale(1,-1)" x="73.289" y="-105.7" width="5.8422" height="3.6458" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="2.1167px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 1</tspan></text>
+  </g>
+  <g transform="translate(-24.63 -10.012)">
+   <rect transform="scale(1,-1)" x="73.289" y="-105.7" width="5.8422" height="3.6458" fill="#8fbc8f" stroke="#556b2f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".51326">
+    <desc>dfsdfsdfsdf</desc>
+   </rect>
+   <text x="76.417313" y="104.40332" fill="#f0ffff" font-family="Calibri" font-size="8.4667px" letter-spacing="0px" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:3.52777767px" xml:space="preserve"><tspan x="76.417313" y="104.40332" font-family="Calibri" font-size="2.1167px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:20.0000003%">job 2</tspan></text>
+  </g>
+  <text x="29.815369" y="93.478439" fill="#000000" font-family="Calibri" font-size="2.1167px" letter-spacing="0px" stroke="#000000" stroke-width="0" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:7.9000026%" xml:space="preserve"><tspan x="29.815369" y="93.478439" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:7.9000026%">disk</tspan><tspan x="29.815369" y="95.483978" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:7.9000026%">read</tspan></text>
+ </g>
+</svg>

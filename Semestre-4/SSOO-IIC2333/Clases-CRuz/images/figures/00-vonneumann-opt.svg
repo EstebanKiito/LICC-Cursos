@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="124.66mm" height="66.944mm" version="1.1" viewBox="0 0 124.66169 66.944389" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker32521" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker32349" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker31631" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker31471" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker30993" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker30845" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker30343" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker30207" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker29609" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker29485" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker29013" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker28901" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker22241" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker22117" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker21973" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="marker21861" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker18594" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width="1pt"/>
+  </marker>
+  <marker id="marker17934" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-31.249 -10.282)">
+  <g>
+   <rect x="31.749" y="10.782" width="29.205" height="29.205" rx="3" ry="3" fill="#bdb76b" stroke="#808000" stroke-linecap="round" stroke-linejoin="round"/>
+   <text x="41.089802" y="27.386093" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="41.089802" y="27.386093" fill="#ffffff" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">CPU</tspan></text>
+   <rect x="78.051" y="10.782" width="29.205" height="29.205" rx="3" ry="3" fill="#bdb76b" stroke="#808000" stroke-linecap="round" stroke-linejoin="round"/>
+   <text x="80.125946" y="27.390743" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="80.125946" y="27.390743" fill="#ffffff" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">MEMORY</tspan></text>
+   <rect x="126.21" y="10.782" width="29.205" height="29.205" rx="3" ry="3" fill="#bdb76b" stroke="#808000" stroke-linejoin="round"/>
+  </g>
+  <g>
+   <path d="m97.71 39.8 0.18709 31.398" fill="#cd853f" fill-rule="evenodd" marker-end="url(#marker31631)" marker-start="url(#marker31471)" stroke="#cd853f" stroke-width=".8"/>
+   <text x="136.56613" y="27.227962" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="136.56613" y="27.227962" fill="#ffffff" font-family="Calibri" font-size="6.35px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">I/O</tspan></text>
+   <path d="m93.595 39.987v22.231" fill="#cd853f" fill-rule="evenodd" marker-end="url(#marker21973)" marker-start="url(#marker21861)" stroke="#cd853f" stroke-width=".8"/>
+  </g>
+  <g>
+   <rect x="31.749" y="54.174" width="122.94" height="5.8194" rx="2" ry="2" fill="#bdb76b" stroke="#808000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6"/>
+   <text x="81.613953" y="58.740055" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="81.613953" y="58.740055" fill="#ffffff" font-family="Calibri" font-size="4.9389px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Control Bus</tspan></text>
+   <rect x="31.749" y="62.64" width="122.94" height="5.8194" rx="2" ry="2" fill="#bdb76b" stroke="#808000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6"/>
+   <text x="81.095467" y="67.201904" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="81.095467" y="67.201904" fill="#ffffff" font-family="Calibri" font-size="4.9389px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Address Bus</tspan></text>
+   <rect x="31.749" y="71.107" width="122.94" height="5.8194" rx="2" ry="2" fill="#bdb76b" stroke="#808000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6"/>
+   <text x="84.282349" y="75.554024" fill="#ffffff" font-family="sans-serif" font-size="3.9688px" letter-spacing="0px" stroke-width=".26458px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="84.282349" y="75.554024" fill="#ffffff" font-family="Calibri" font-size="4.9389px" stroke-width=".26458px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Data Bus</tspan></text>
+  </g>
+  <g fill="#cd853f" fill-rule="evenodd" stroke="#cd853f" stroke-width=".8">
+   <path d="m139.36 40.694 0.31397 13.635" marker-end="url(#marker17934)" marker-start="url(#marker18594)"/>
+   <path d="m144.92 39.987v21.483" marker-end="url(#marker32521)" marker-start="url(#marker32349)"/>
+   <path d="m149.04 39.8v30.837" marker-end="url(#marker22241)" marker-start="url(#marker22117)"/>
+   <path d="m88.031 40.694 0.31397 13.635" marker-end="url(#marker29013)" marker-start="url(#marker28901)"/>
+   <path d="m43.581 40.694 0.31397 13.635" marker-end="url(#marker29609)" marker-start="url(#marker29485)"/>
+   <path d="m49.145 39.987v22.231" marker-end="url(#marker30993)" marker-start="url(#marker30845)"/>
+   <path d="m53.26 39.8 0.18709 31.398" marker-end="url(#marker30343)" marker-start="url(#marker30207)"/>
+  </g>
+ </g>
+</svg>

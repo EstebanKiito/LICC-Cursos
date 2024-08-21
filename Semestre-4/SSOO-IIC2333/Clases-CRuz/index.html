@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>IIC2333 Sistemas Operativos y Redes</title><meta content="IIC2333 Sistemas Operativos y Redes, 2022-1" name="description" /><meta content="Cristian Ruz" name="author" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"><script src="../js/highlight.pack.js"></script><script src="../js/fairyDustCursor.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script><script src="js/countdown.min.js"></script><script>hljs.initHighlightingOnLoad();</script><style type="text/css">html {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+}
+pre code.hljs {
+  display: block;
+}
+code.hljs {
+  display: inline;
+}
+
+// Hover stuff
+code:hover>div {
+  display: block;
+}
+code>div {
+  display: none;
+}
+table {
+  margin: auto;
+  //border-collapse: separate;
+  //border-spacing: 0 0.1em;
+}
+tr.sep {
+  margin-top: 0.2em;
+}
+td {
+  min-width:4em;
+}
+td.r2 {
+  rowspan: 2;
+}
+td.full {
+  color: #ddd;
+  background-color: #282;
+}
+td.empty {
+  color: #ddd;
+  background-color: #333;
+}
+
+// Fix dl/ dd-dt
+dl.inline dd {
+  display: inline;
+  margin: 0;
+}
+dl.inline dd:after{
+  display: block;
+  content: '';
+}
+dl.inline dt{
+  display: inline-block;
+  min-width: 100px;
+}
+
+section {
+  padding-top: 2em;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0.4em;
+}
+.top {
+  padding-top: 0.2em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container > img {
+  align-content: center;
+}
+.container-col > img {
+  align-content: center;
+}
+body {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+  color: #000;
+
+}
+.card{
+  margin:auto;
+  float: left;
+  width: 12rem;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+
+}
+
+.row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}</style></head><body><a href="/"><header class="col-xs-8 col-md-10 col-md-offset-1"><br /><a href="https://www.youtube.com/watch?v=FGwevyxoycw"><img src="images/figures/logo1.gif" width="100%" /></a></header></a><div class="col-xs-12 col-md-8 col-md-offset-3"><div class="row"><div class="columm"><div class="card"><div class="card-title">⭐️ Sitio Canvas ⭐️</div><div class="card-title"><a href="https://cursos.canvas.uc.cl/courses/39207" class="btn btn-primary btn-sm" role="button">Ir</a> <!-- 2022-1 --></div></div></div><div class="columm"><div class="card"><div class="card-title">📈 Planilla de Notas 📈</div><div class="card-title"><a href="#" class="btn btn-primary btn-sm disabled" role="button">Ir</a></div></div></div></div></div><div class="col-xs-12 col-md-8 col-md-offset-2"><article><section id="slides"><h3>📚 Material de Clases 📚</h3><ul><li>▶️ Videos</li><ul><li><a href="https://www.youtube.com/playlist?list=PLVTkEjeczcER2aOMHPIfaHCpTx61iKsoV">Playlist</a></li></ul><li> 🖥 Sistemas Operativos</li><ul><li><a href="slides/0-os.html">Sistemas Operativos</a></li><li><a href="slides/1-proc.html">Procesos</a></li><li><a href="slides/1-proc.html#/scheduling-init">Scheduling</a></li><li><a href="slides/1-proc.html#/threads-_init">Threads</a></li><li><a href="slides/1-proc.html#/synch-init-init">Sincronización</a></li><li><a href="slides/4-mem.html">Memoria</a></li><li><a href="slides/5-disk.html">Archivos</a></li></ul><li> 🌐 Redes </li><ul><li><a href="slides/7-net.html">Redes</a></li><li><a href="slides/11-net-app.html">Capa Aplicación</a></li><li><a href="slides/10-net-tp.html">Capa Transporte</a></li><li><a href="slides/9-net-routing.html">Capa Red</a></li><li><a href="slides/8.5-net-link.html">Capa Enlace</a></li><li><a href="slides/12-net-sec.html">Seguridad</a></li></ul></ul></section><section id="utiles"><h3>🤔 Artículos útiles 🤔</h3><ul><li><a href="activities/0-init/">Preparación de una máquina virtual</a></li><li><a href="activities/history.html">Evolución de los sistemas operativos</a></li><li><a href="https://github.com/cruz/iic2333-course">Git para este sitio web</a></li></ul></section></article><script>var countdown1 = new Countdown({
+  selector: '.timerT1',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+  //dateStart: new Date('2013/12/25 12:00'),
+  dateEnd: new Date('Aug 28, 2019 14:00:00')
+});
+var countdown2 = new Countdown({
+  selector: '.timerT2',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+  //dateStart: new Date('2013/12/25 12:00'),
+  dateEnd: new Date('Sept 9, 2019 14:00:00')
+});
+var countdownT3 = new Countdown({
+  selector: '.timerT3',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+  //dateStart: new Date('2013/12/25 12:00'),
+  dateEnd: new Date('Jun 19, 2019 14:00:00')
+});
+var countdownT4 = new Countdown({
+  selector: '.timerT4',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s&nbsp;",
+  //dateStart: new Date('2013/12/25 12:00'),
+  dateEnd: new Date('Jun 30, 2019 14:00:00')
+});
+
+var countdownP1 = new Countdown({
+  selector: '.timerP1',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s&nbsp;",
+  dateEnd: new Date('Oct 07, 2019 13:59:59')
+});
+
+ var countdownP2 = new Countdown({
+  selector: '.timerP2',
+  msgAfter: "Se acabó.",
+  msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s&nbsp;",
+  dateEnd: new Date('Nov 18, 2019 14:00:00')
+});
+
+
+ var countdownAC01 = new Countdown({
+   selector: '.timerAC01',
+   msgAfter: "Se acabó",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 03, 2019 08:30:00')
+ });
+
+ var countdownAC02 = new Countdown({
+   selector: '.timerAC02',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 03, 2019 08:30:00')
+ });
+
+ var countdownAC03 = new Countdown({
+   selector: '.timerAC03',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 03, 2019 08:30:00')
+ });
+
+ var countdownAC04 = new Countdown({
+   selector: '.timerAC04',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 03, 2019 08:30:00')
+ });
+
+ var countdownAC05 = new Countdown({
+   selector: '.timerAC05',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 03, 2019 08:30:00')
+ });
+
+ var countdownAC06 = new Countdown({
+   selector: '.timerAC06',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 10, 2019 08:30:00')
+ });
+
+ var countdownAC07 = new Countdown({
+   selector: '.timerAC07',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 10, 2019 08:30:00')
+ });
+
+ var countdownAC07 = new Countdown({
+   selector: '.timerAC08',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Dec 26, 2019 13:00:00')
+ });
+
+ var countdownEdX = new Countdown({
+   selector: '.timerEdX',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Jul 08, 2019 14:00:00')
+ });
+
+ var countdownI1 = new Countdown({
+   selector: '.timerI1',
+   msgAfter: "Empezó",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Apr 6, 2018 18:30:00')
+ });
+
+ var countdownRecI1 = new Countdown({
+   selector: '.timerRecI1',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('May 11, 2018 23:59:59')
+ });
+
+ var countdownRecI2 = new Countdown({
+   selector: '.timerRecI2',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Jun 15, 2018 23:59:59')
+ });
+
+ var countdownRecI3 = new Countdown({
+   selector: '.timerRecI3',
+   msgAfter: "Se acabó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Nov 27, 2017 12:00:00')
+ });
+
+ var countdownI2 = new Countdown({
+   selector: '.timerI2',
+   msgAfter: "Empezó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('May 8, 2018 18:30:00')
+ });
+
+ var countdownMT = new Countdown({
+   selector: '.timerMT',
+   msgAfter: "Empezó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Oct 1, 2018 18:30:00')
+ });
+
+ var countdownI3 = new Countdown({
+   selector: '.timerI3',
+   msgAfter: "Empezó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Jun 05, 2018 18:30:00')
+ });
+
+ var countdownEX = new Countdown({
+   selector: '.timerEX',
+   msgAfter: "Empezó.",
+   msgPattern: "⏱ {days} días, {hours}h {minutes}m {seconds}s",
+   //dateStart: new Date('2013/12/25 12:00'),
+   dateEnd: new Date('Dec 09, 2019 23:59:49')
+ });</script></div><footer><div class="col-xs-12 col-md-8 col-md-offset-2"><p style="padding-top:4em;">Profesor: 
+<br> Cristian Ruz cruz@ing.puc.cl</p><p>Ayudantes: 
+<br> Raul Alvarez, rsalvarez@uc.cl, Jefe Sistemas Operativos
+<br> Pablo Araneda, pharaneda@uc.cl, Ayud Sistemas Operativos
+<br> Por Fijar, fijar.por@uc.cl, Ayud Sistemas Operativos
+<!--<br> Florencia Ljubetic, mfljubetic@uc.cl, Ayud Sistemas Operativos
+<br> Álvaro Quintana, alvaroq@uc.cl, Ayud Sistemas Operativos
+<br> Felipe Arellano, fharellano@uc.cl, Jefe Redes-->
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes</p><p style="padding-top:2em;">IIC2333 Sistemas Operativos y Redes, Semestre 2022-1<br/>Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile<br/></p><img src="https://i.giphy.com/media/VOMvlxVHR7CF2/200.gif" style="width:220px" /><img src="images/figures/linux.gif" width="100%" /></div></footer><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script><script>opt = {
+  "delimiters": [
+    {left:   "$", right:   "$",  display: false},
+    {left:  "$$", right:  "$$",  display: true},
+    {left: "\\[", right: "\\]",  display: true},
+    {left: "\\(", right: "\\)",  display: false}
+  ]
+}
+renderMathInElement(document.body, opt);</script></body></html>

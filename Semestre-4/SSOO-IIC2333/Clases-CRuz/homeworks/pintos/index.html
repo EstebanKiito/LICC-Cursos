@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="es"><head><!--[if IE]><!--Get a real browser!--><![endif]--><!--Do NOT read this file, the source is available--><meta charset="utf-8" /><title>Pintos</title><meta content="IIC2333 Sistemas Operativos y Redes, 2022-1" name="description" /><meta content="Cristian Ruz" name="author" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"><script src="../js/highlight.pack.js"></script><script src="../js/fairyDustCursor.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script><script src="js/countdown.min.js"></script><script>hljs.initHighlightingOnLoad();</script><style type="text/css">html {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+}
+pre code.hljs {
+  display: block;
+}
+code.hljs {
+  display: inline;
+}
+
+// Hover stuff
+code:hover>div {
+  display: block;
+}
+code>div {
+  display: none;
+}
+table {
+  margin: auto;
+  //border-collapse: separate;
+  //border-spacing: 0 0.1em;
+}
+tr.sep {
+  margin-top: 0.2em;
+}
+td {
+  min-width:4em;
+}
+td.r2 {
+  rowspan: 2;
+}
+td.full {
+  color: #ddd;
+  background-color: #282;
+}
+td.empty {
+  color: #ddd;
+  background-color: #333;
+}
+
+// Fix dl/ dd-dt
+dl.inline dd {
+  display: inline;
+  margin: 0;
+}
+dl.inline dd:after{
+  display: block;
+  content: '';
+}
+dl.inline dt{
+  display: inline-block;
+  min-width: 100px;
+}
+
+section {
+  padding-top: 2em;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0.4em;
+}
+.top {
+  padding-top: 0.2em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container > img {
+  align-content: center;
+}
+.container-col > img {
+  align-content: center;
+}
+body {
+  font-family: sans-serif !important;
+  background-color: #FFFFE0;
+  color: #000;
+
+}
+.card{
+  margin:auto;
+  float: left;
+  width: 12rem;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+
+}
+
+.row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}</style></head><body><a href="/"><header class="col-xs-8 col-md-10 col-md-offset-1"><br /><a href="https://www.youtube.com/watch?v=FGwevyxoycw"><img src="../../images/figures/logo1.gif" width="100%" /></a></header></a><div class="col-xs-12 col-md-8 col-md-offset-3"><div class="row"><div class="columm"><div class="card"><div class="card-title">⭐️ Sitio Canvas ⭐️</div><div class="card-title"><a href="https://cursos.canvas.uc.cl/courses/39207" class="btn btn-primary btn-sm" role="button">Ir</a> <!-- 2022-1 --></div></div></div><div class="columm"><div class="card"><div class="card-title">📈 Planilla de Notas 📈</div><div class="card-title"><a href="#" class="btn btn-primary btn-sm disabled" role="button">Ir</a></div></div></div></div></div><div class="col-xs-12 col-md-8 col-md-offset-2"><article><section class="top" id="intro"><p><em>Pintos</em> es un sistema operativo de x86 diseñado para aprender, por lo que es muy simple con respecto a otros, tiene pocas funcionalidades, pero es "pequeño".</p><p>La <a href="http://web.stanford.edu/class/cs140/projects/pintos/pintos.html">Documentación Oficial</a> en general es de gran ayuda, aunque hay que leerla recordando que las tareas oficiales difieren de las nuestras.</p><section id="overview"><h4>Overview</h4><p>En el curso usamos un fork del proyecto original, con algunos cambios para simplificar el build-system.</p><h4>Código</h4><p>El código fuente se encuentra en <tt>src/</tt>. Tiene varios directorios.</p><section id="structure1"><p>Los más relevantes para las tareas son,</p><dl><dt><tt>threads/</tt></dt><dd> Código de threading. Aquí se implementa es Scheduling y manejo de procesos.</dd><dt><tt>userprog/</tt></dt><dd> Acá está el <em>Program Loader</em> y el código para soportar programas de usuario, como excepciones y <em>syscalls</em>.</dd><dt><tt>examples/</tt></dt><dd> Programas de usuario para agregar al disco duro.</dd><dt><tt>vm/</tt></dt><dd> Acá es donde estaría el manejo de Memoria Virtual (si tubiera uno).</dd><dt><tt>filesys/</tt></dt><dd> Código del Sistema de Archivos. Es la sección encargada de poder montar y usar discos duros. Funciona, pero de manera muy primitiva.</dd><dt><tt>tests/</tt></dt><dd> Tests para las tareas estandar de Pintos.  Muchas veces se pueden adaptar para probar otras cosas.</dd></dl></section><section id="structure2"><p>Estos son más internos, pero no por eso menos relevantes.</p><dl><dt><tt>devices/</tt></dt><dd> Código para manejar dispositivos externos (I/O), como el teclado, disco duro y el timer.</dd><dt><tt>lib/</tt></dt><dd><p>Un subconjunto de libc, la librería estándar de C. Los programas de usuario usarán esta implementación, no la usual (que todos creen que es casi parte del compilador).</p><p>Los headers de aquí se pueden importar tanto en el kernel como en los programas de usuario con <code>#include &lt;<small>...</small>&gt;</code>.  You should have little need to modify this code.</p></dd><dt><tt>lib/kernel/</tt></dt><dd> Un subconjunto de libc que sólo usa el Kernel. Lo más importante son algunas estructuras de datos (listas, y tablas de hash), y algunos algoritmos (sort).</dd><dt><tt>lib/user/</tt></dt><dd> Un subconjunto de libc que sólo usan los programas de usuario.</dd></dl></section><section id="navigation"><h5>Navegación</h5><p>Aunque pintos intente ser minimal, de todas maneras tiene bastante código, por lo que es bueno poder navegar dentro de el con algo de ayuda del editor en vez de tener que leer todo.</p><dl><dt>Tags</dt><dd> Pueden crear índices de los símbolos con <tt>ctags</tt>, <tt>etags</tt>, o <tt>cscope</tt>.
+ Luego, con la mayoría de los editores podrán ir a las definiciones (y volver) fácilmente.</dd><dt>clang_complete</dt><dd> Si tienen clang y sus herramientas, podrán autocompletar si tienen plugins adecuados.</dd></dl><section id="textEditors"><h6>Editores de Texto</h6><p>En general, usar un IDE para pintos es más complicado, ya que los IDEs asumen que se va a compilar contra la librería estándar de c/c++, por lo que configurarlos bien se vuelve casi más complicado que configurar un editor de texto.</p><p>Los editores de texto que les pueden funcionar bien son,</p><dl><dt> Emacs</dt><dd> Se recomienda usar <a href="spacemacs.org">spacemacs</a> como configuración inicial. Basta agregar el <em>layer</em> <tt>c-c++</tt>.</dd><dt> Vim / Neovim</dt><dd> Pueden comenzar desde 0, o usando <a href="http://vim.spf13.com/">vim-spf13</a> o la configuración de <a href="https://github.com/amix/vimrc">amix</a>.</dd><dt> Atom</dt><dd> Si instalan los plugins de <a href="https://atom.io/packages/language-c">c</a> y <a href="https://atom.io/packages/autocomplete-clang">clang</a> debería funcionarles bastante bien.</dd><dt> Sublime</dt><dd> Prácticamente ya no está en desarrollo, pero todavía les puede ser útil.</dd></dl><p>Tanto Emacs, como vim/neovim son editores muy flexibles, pero su curva de aprendizaje es alta. Atom parece ser el editor <em>noob-friendly</em> más flexible.</p></section></section><section id="navigation"><h5>Build</h5><p>Originalmente existe un <tt>Makefile</tt> por cada directorio de <tt>src/</tt>.
+Pero en el fork del curso se agregó uno en <tt>/</tt> que compila en orden los directorios necesarios para usar <tt>threads/</tt> y <tt>userprog/</tt>. El makefile es bastante sencillo, así que si quieren saber algo de él, leanlo.</p><p>Luego de compilar y moverse al directorio adecuado dentro de <tt>src/</tt>, pueden ejecutar pintos con comandos de esta forma,</p><pre><code class="hljs bash">../utils/pintos $FlagsScript -- $FlagsKernel</code></pre><p>Es importante que separen los flags de los del kernel con "<code> -- </code>", tal como aparece allí!</p><p>Por ejemplo</p><pre><code class="hljs bash">../utils/pintos -- -q run "testName"
+../utils/pintos -s --no-vga -T15 -- -q -wf=6 run "priority-preempt"</code></pre><p>Flags</p><ul><li>Script</li><ul><li><tt>-s</tt> Mostrar el output en la consola (default)</li><li><tt>--no-vga</tt> No mostrar la ventana del emulador</li><li><tt>-Tk</tt> Matar al emulador si tarda más de k segundos en terminar.</li></ul><li>Kernel</li><ul><li><tt>-q</tt> Apagar el SO luego de ejecutar.</li><li><tt>-wf=6</tt> Usar Waterfall scheduling con 6 colas.</li><li><tt>run testName</tt> Ejecutar el test luego de bootear.</li></ul></ul></section></section></section></article></div><footer><div class="col-xs-12 col-md-8 col-md-offset-2"><p style="padding-top:4em;">Profesor: 
+<br> Cristian Ruz cruz@ing.puc.cl</p><p>Ayudantes: 
+<br> Raul Alvarez, rsalvarez@uc.cl, Jefe Sistemas Operativos
+<br> Pablo Araneda, pharaneda@uc.cl, Ayud Sistemas Operativos
+<br> Por Fijar, fijar.por@uc.cl, Ayud Sistemas Operativos
+<!--<br> Florencia Ljubetic, mfljubetic@uc.cl, Ayud Sistemas Operativos
+<br> Álvaro Quintana, alvaroq@uc.cl, Ayud Sistemas Operativos
+<br> Felipe Arellano, fharellano@uc.cl, Jefe Redes-->
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes
+<br> Por Fijar, fijar.por@uc.cl, Ayud Redes</p><p style="padding-top:2em;">IIC2333 Sistemas Operativos y Redes, Semestre 2022-1<br/>Departamento de Ciencia de la Computación<br/>Pontificia Universidad Católica de Chile<br/></p><img src="https://i.giphy.com/media/VOMvlxVHR7CF2/200.gif" style="width:220px" /><img src="../../images/figures/linux.gif" width="100%" /></div></footer><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script><script>opt = {
+  "delimiters": [
+    {left:   "$", right:   "$",  display: false},
+    {left:  "$$", right:  "$$",  display: true},
+    {left: "\\[", right: "\\]",  display: true},
+    {left: "\\(", right: "\\)",  display: false}
+  ]
+}
+renderMathInElement(document.body, opt);</script></body></html>
