@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 4 — Demo DOM & JavaScript</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+    }
+
+    /* ── Panel izquierdo: UI ── */
+    .ui-panel {
+      padding: 24px;
+      overflow-y: auto;
+      border-right: 2px solid #e2e8f0;
+    }
+
+    .ui-panel h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+
+    .ui-panel .subtitle {
+      font-size: 0.875rem;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    /* ── Sección ── */
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 12px;
+      height: 3px;
+      border-radius: 2px;
+      background: #3b82f6;
+    }
+
+    /* ── Controles ── */
+    .controls {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"], select {
+      padding: 8px 12px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      background: white;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus, select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    input[type="text"] { flex: 1; min-width: 180px; }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    button:active { transform: scale(0.97); }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+    }
+    .btn-primary:hover { background: #2563eb; }
+
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+    }
+    .btn-danger:hover { background: #dc2626; }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .btn-secondary:hover { background: #cbd5e1; }
+
+    .btn-success {
+      background: #22c55e;
+      color: white;
+    }
+    .btn-success:hover { background: #16a34a; }
+
+    /* ── Product cards ── */
+    #product-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .product-card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+    }
+
+    .product-card .info { flex: 1; }
+    .product-card .name { font-weight: 600; font-size: 0.95rem; }
+
+    .product-card .details {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .product-card .price {
+      font-weight: 700;
+      color: #059669;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+
+    .product-card .delete-btn {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      background: #fee2e2;
+      color: #dc2626;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .product-card .delete-btn:hover { background: #fecaca; }
+
+    .out-of-stock {
+      opacity: 0.5;
+      border-style: dashed;
+    }
+
+    .out-of-stock .price { color: #94a3b8; text-decoration: line-through; }
+
+
+    /* ── Demo box (classList/style) ── */
+    .demo-box {
+      width: 100%;
+      height: 60px;
+      border-radius: 10px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #475569;
+      transition: all 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .demo-box.active {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .demo-box.rounded {
+      border-radius: 30px;
+    }
+
+    .demo-box.shadow {
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    /* ── Panel derecho: JS ── */
+    .js-panel {
+      background: #1e293b;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .js-panel-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .js-panel-header h2 {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .js-panel-header .run-btn {
+      padding: 6px 14px;
+      background: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .js-panel-header .run-btn:hover { background: #16a34a; }
+
+    #code-editor {
+      flex: 1;
+      padding: 16px 20px;
+      font-family: 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      background: transparent;
+      color: #e2e8f0;
+      border: none;
+      outline: none;
+      resize: none;
+      tab-size: 2;
+    }
+
+    .console-panel {
+      border-top: 1px solid #334155;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .console-header {
+      padding: 8px 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .console-header button {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      background: #334155;
+      color: #94a3b8;
+      border-radius: 4px;
+    }
+
+    #console-output {
+      padding: 0 20px 12px;
+      font-family: 'Fira Code', 'SF Mono', monospace;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    #console-output .log-line {
+      padding: 2px 0;
+      color: #a5f3fc;
+    }
+
+    #console-output .error-line {
+      color: #fca5a5;
+    }
+
+    #console-output .info-line {
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    /* ── Snippet buttons ── */
+    .snippets {
+      padding: 12px 20px;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .snippets button {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      background: #334155;
+      color: #94a3b8;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .snippets button:hover { background: #475569; color: #e2e8f0; }
+  </style>
+</head>
+<body>
+
+<!-- ════════ PANEL IZQUIERDO: UI ════════ -->
+<div class="ui-panel">
+  <h1 id="page-title">Tienda IIC2182</h1>
+  <div class="subtitle">Demo interactiva — Clase 4: DOM & JavaScript</div>
+
+  <!-- Sección 1: querySelector & contenido -->
+  <div class="section">
+    <div class="section-title">1. querySelector & contenido</div>
+    <div class="controls">
+      <input type="text" id="title-input" placeholder="Cambiar titulo...">
+      <button class="btn-primary" id="change-title-btn">Cambiar</button>
+    </div>
+  </div>
+
+  <!-- Sección 2: classList & estilos -->
+  <div class="section">
+    <div class="section-title">2. classList & estilos</div>
+    <div id="style-demo-box" class="demo-box">Demo Box</div>
+    <div class="controls">
+      <button class="btn-primary" id="toggle-active">Toggle active</button>
+      <button class="btn-secondary" id="toggle-rounded">Toggle rounded</button>
+      <button class="btn-secondary" id="toggle-shadow">Toggle shadow</button>
+      <button class="btn-danger" id="reset-box">Reset</button>
+    </div>
+  </div>
+
+  <!-- Sección 3: Productos (createElement, innerHTML, eventos) -->
+  <div class="section">
+    <div class="section-title">3. Productos — filtrar, ordenar, eventos</div>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Buscar producto...">
+      <select id="sort-select">
+        <option value="name">Nombre</option>
+        <option value="price-asc">Precio ↑</option>
+        <option value="price-desc">Precio ↓</option>
+        <option value="stock">Stock</option>
+      </select>
+      <button class="btn-success" id="add-product-btn">+ Agregar</button>
+    </div>
+    <div id="product-list"></div>
+  </div>
+
+</div>
+
+<!-- ════════ PANEL DERECHO: JS ════════ -->
+<div class="js-panel">
+  <div class="js-panel-header">
+    <h2>JavaScript Console</h2>
+    <button class="run-btn" id="run-btn">Run (Ctrl+Enter)</button>
+  </div>
+
+  <div class="snippets">
+    <button data-snippet="querySelector">querySelector</button>
+    <button data-snippet="textContent">textContent</button>
+    <button data-snippet="classList">classList</button>
+    <button data-snippet="createElement">createElement</button>
+    <button data-snippet="addEventListener">addEventListener</button>
+    <button data-snippet="delegation">delegation</button>
+    <button data-snippet="renderList">render lista</button>
+    <button data-snippet="destructuring">destructuring</button>
+    <button data-snippet="spread">spread</button>
+    <button data-snippet="dataset">dataset</button>
+  </div>
+
+  <textarea id="code-editor" spellcheck="false">// Escribe JavaScript aqui y presiona Run (Ctrl+Enter)
+// Los cambios se aplican al panel izquierdo en tiempo real
+
+// Ejemplo: seleccionar y modificar el titulo
+const title = document.querySelector('#page-title');
+console.log('Titulo actual:', title.textContent);
+</textarea>
+
+  <div class="console-panel">
+    <div class="console-header">
+      <span>Console</span>
+      <button id="clear-console">Clear</button>
+    </div>
+    <div id="console-output"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+// DATOS
+// ══════════════════════════════════════════════════════════
+const products = [
+  { id: 1, name: 'Teclado Mecanico',   price: 29990,  stock: 5,  category: 'perifericos' },
+  { id: 2, name: 'Monitor 4K',         price: 189990, stock: 0,  category: 'pantallas' },
+  { id: 3, name: 'Mouse Inalambrico',  price: 14990,  stock: 12, category: 'perifericos' },
+  { id: 4, name: 'Webcam HD',          price: 49990,  stock: 3,  category: 'camaras' },
+  { id: 5, name: 'Auriculares USB',    price: 39990,  stock: 8,  category: 'audio' },
+  { id: 6, name: 'Hub USB-C',          price: 24990,  stock: 0,  category: 'perifericos' },
+];
+
+let nextId = 7;
+
+// ══════════════════════════════════════════════════════════
+// RENDER PRODUCTOS
+// ══════════════════════════════════════════════════════════
+function renderProducts() {
+  const query = document.querySelector('#search').value.toLowerCase();
+  const sortBy = document.querySelector('#sort-select').value;
+
+  let filtered = products.filter(p =>
+    p.name.toLowerCase().includes(query)
+  );
+
+  // Ordenar
+  switch (sortBy) {
+    case 'name':
+      filtered = [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case 'price-asc':
+      filtered = [...filtered].sort((a, b) => a.price - b.price);
+      break;
+    case 'price-desc':
+      filtered = [...filtered].sort((a, b) => b.price - a.price);
+      break;
+    case 'stock':
+      filtered = [...filtered].sort((a, b) => b.stock - a.stock);
+      break;
+  }
+
+  const container = document.querySelector('#product-list');
+  container.innerHTML = filtered.map(p => `
+    <div class="product-card ${p.stock === 0 ? 'out-of-stock' : ''}" data-id="${p.id}">
+      <div class="info">
+        <div class="name">${p.name}</div>
+        <div class="details">${p.category} · Stock: ${p.stock}</div>
+      </div>
+      <div class="price">$${p.price.toLocaleString('es-CL')}</div>
+      ${p.stock === 0
+        ? `<span style="font-size:0.75rem;color:#94a3b8">Agotado</span>`
+        : ''
+      }
+      <button class="delete-btn" data-id="${p.id}">X</button>
+    </div>
+  `).join('');
+}
+
+
+// ══════════════════════════════════════════════════════════
+// EVENT LISTENERS
+// ══════════════════════════════════════════════════════════
+
+// 1. Cambiar titulo
+document.querySelector('#change-title-btn').addEventListener('click', () => {
+  const input = document.querySelector('#title-input');
+  if (input.value.trim()) {
+    document.querySelector('#page-title').textContent = input.value;
+    input.value = '';
+  }
+});
+
+// 2. classList demos
+document.querySelector('#toggle-active').addEventListener('click', () => {
+  document.querySelector('#style-demo-box').classList.toggle('active');
+});
+
+document.querySelector('#toggle-rounded').addEventListener('click', () => {
+  document.querySelector('#style-demo-box').classList.toggle('rounded');
+});
+
+document.querySelector('#toggle-shadow').addEventListener('click', () => {
+  document.querySelector('#style-demo-box').classList.toggle('shadow');
+});
+
+document.querySelector('#reset-box').addEventListener('click', () => {
+  const box = document.querySelector('#style-demo-box');
+  box.classList.remove('active', 'rounded', 'shadow');
+  box.style.cssText = '';
+  box.textContent = 'Demo Box';
+});
+
+// 3. Filtrar y ordenar productos
+document.querySelector('#search').addEventListener('input', renderProducts);
+document.querySelector('#sort-select').addEventListener('change', renderProducts);
+
+// 4. Eliminar producto
+document.querySelector('#product-list').addEventListener('click', (e) => {
+  const deleteBtn = e.target.closest('.delete-btn');
+  if (deleteBtn) {
+    const id = Number(deleteBtn.dataset.id);
+    const idx = products.findIndex(p => p.id === id);
+    if (idx !== -1) {
+      products.splice(idx, 1);
+      renderProducts();
+    }
+  }
+});
+
+// 5. Agregar nuevo producto
+document.querySelector('#add-product-btn').addEventListener('click', () => {
+  const name = prompt('Nombre del producto:');
+  if (!name) return;
+  const price = Number(prompt('Precio:') || 0);
+  const stock = Number(prompt('Stock:') || 0);
+
+  products.push({
+    id: nextId++,
+    name,
+    price,
+    stock,
+    category: 'nuevo',
+  });
+  renderProducts();
+});
+
+// ══════════════════════════════════════════════════════════
+// CONSOLA PERSONALIZADA
+// ══════════════════════════════════════════════════════════
+const consoleOutput = document.querySelector('#console-output');
+
+function addLog(text, className = 'log-line') {
+  const line = document.createElement('div');
+  line.className = className;
+  line.textContent = typeof text === 'object' ? JSON.stringify(text, null, 2) : String(text);
+  consoleOutput.appendChild(line);
+  consoleOutput.parentElement.scrollTop = consoleOutput.parentElement.scrollHeight;
+}
+
+// Override console.log para mostrar en nuestra consola
+const _log = console.log;
+const _error = console.error;
+const _warn = console.warn;
+
+console.log = (...args) => {
+  _log(...args);
+  addLog(args.map(a => typeof a === 'object' ? JSON.stringify(a) : String(a)).join(' '));
+};
+
+console.error = (...args) => {
+  _error(...args);
+  addLog(args.join(' '), 'error-line');
+};
+
+console.warn = (...args) => {
+  _warn(...args);
+  addLog('⚠ ' + args.join(' '), 'error-line');
+};
+
+document.querySelector('#clear-console').addEventListener('click', () => {
+  consoleOutput.innerHTML = '';
+});
+
+// ══════════════════════════════════════════════════════════
+// CODE EDITOR — ejecutar codigo
+// ══════════════════════════════════════════════════════════
+const editor = document.querySelector('#code-editor');
+
+function runCode() {
+  const code = editor.value;
+  addLog('> Ejecutando...', 'info-line');
+  try {
+    eval(`(function() {\n${code}\n})()`);
+  } catch (err) {
+    addLog(err.message, 'error-line');
+  }
+}
+
+document.querySelector('#run-btn').addEventListener('click', runCode);
+editor.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    runCode();
+  }
+  // Tab inserta 2 espacios
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const start = editor.selectionStart;
+    const end = editor.selectionEnd;
+    editor.value = editor.value.substring(0, start) + '  ' + editor.value.substring(end);
+    editor.selectionStart = editor.selectionEnd = start + 2;
+  }
+});
+
+// ══════════════════════════════════════════════════════════
+// SNIPPETS
+// ══════════════════════════════════════════════════════════
+const snippets = {
+  querySelector: `// querySelector — seleccionar elementos
+const title = document.querySelector('#page-title');
+console.log('Titulo:', title.textContent);
+
+const cards = document.querySelectorAll('.product-card');
+console.log('Productos visibles:', cards.length);
+
+const firstPrice = document.querySelector('.product-card .price');
+console.log('Primer precio:', firstPrice?.textContent);`,
+
+  textContent: `// textContent & innerHTML
+const title = document.querySelector('#page-title');
+
+// Cambiar texto (seguro)
+title.textContent = 'Tienda Actualizada';
+console.log('Nuevo titulo:', title.textContent);
+
+// innerHTML — puede incluir HTML
+// title.innerHTML = 'Tienda <em>Premium</em>';`,
+
+  classList: `// classList — agregar/quitar clases CSS
+const box = document.querySelector('#style-demo-box');
+
+box.classList.add('active');
+console.log('Tiene active?', box.classList.contains('active'));
+
+box.classList.toggle('rounded');
+console.log('Clases:', [...box.classList].join(', '));`,
+
+  createElement: `// createElement — crear nuevos elementos
+const card = document.createElement('div');
+card.className = 'product-card';
+card.innerHTML = \`
+  <div class="info">
+    <div class="name">Producto Nuevo</div>
+    <div class="details">creado con JS</div>
+  </div>
+  <div class="price">$9.990</div>
+\`;
+
+const list = document.querySelector('#product-list');
+list.appendChild(card);
+console.log('Producto agregado al DOM');`,
+
+  addEventListener: `// addEventListener — escuchar eventos
+const searchInput = document.querySelector('#search');
+
+// Mostrar lo que se escribe en tiempo real
+searchInput.addEventListener('input', (e) => {
+  console.log('Buscando:', e.target.value);
+});
+
+console.log('Listener agregado al input de busqueda');
+console.log('Escribe algo en el campo de busqueda...');`,
+
+  delegation: `// Event Delegation — un listener para muchos elementos
+const list = document.querySelector('#product-list');
+
+list.addEventListener('click', (e) => {
+  const card = e.target.closest('.product-card');
+  if (!card) return;
+
+  const name = card.querySelector('.name').textContent;
+  console.log('Click en:', name, '(ID:', card.dataset.id + ')');
+});
+
+console.log('Delegation configurado en #product-list');
+console.log('Haz click en cualquier producto...');`,
+
+  renderList: `// Renderizar lista desde datos
+const misDatos = [
+  { name: 'Item A', value: 100 },
+  { name: 'Item B', value: 200 },
+  { name: 'Item C', value: 300 },
+];
+
+const html = misDatos
+  .map(d => \`<div>\${d.name}: $\${d.value}</div>\`)
+  .join('');
+
+console.log('HTML generado:');
+console.log(html);
+
+// Patron: datos.filter().map().join('')
+const filtrado = misDatos
+  .filter(d => d.value > 150)
+  .map(d => d.name);
+console.log('Filtrados (>150):', filtrado);`,
+
+  destructuring: `// Destructuring — extraer valores
+const product = { name: 'Teclado', price: 29990, stock: 5 };
+
+// Object destructuring
+const { name, price, stock } = product;
+console.log(name, price, stock);
+
+// Con renombre
+const { name: productName, stock: qty } = product;
+console.log('Nombre:', productName, 'Cantidad:', qty);
+
+// Array destructuring
+const [first, second, ...rest] = [10, 20, 30, 40, 50];
+console.log('First:', first, 'Rest:', rest);`,
+
+  spread: `// Spread — copiar y combinar sin mutar
+const product = { name: 'Teclado', price: 29990 };
+
+// Copiar y actualizar
+const updated = { ...product, price: 24990 };
+console.log('Original:', product.price); // 29990
+console.log('Updated:', updated.price);  // 24990
+
+// Combinar objetos
+const defaults = { theme: 'light', lang: 'es' };
+const prefs = { lang: 'en' };
+const config = { ...defaults, ...prefs };
+console.log('Config:', config);
+
+// Arrays
+const arr = [1, 2, 3];
+const newArr = [...arr, 4, 5];
+console.log('Original:', arr);
+console.log('Nuevo:', newArr);`,
+
+  dataset: `// data-* attributes
+const cards = document.querySelectorAll('.product-card');
+cards.forEach(card => {
+  console.log('ID:', card.dataset.id);
+});
+
+// Escribir data attributes
+const firstCard = document.querySelector('.product-card');
+if (firstCard) {
+  firstCard.dataset.highlighted = 'true';
+  console.log('Dataset:', { ...firstCard.dataset });
+}`,
+};
+
+document.querySelector('.snippets').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  const key = btn.dataset.snippet;
+  if (snippets[key]) {
+    editor.value = snippets[key];
+    addLog(`Snippet "${key}" cargado — presiona Run`, 'info-line');
+  }
+});
+
+// ══════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════
+renderProducts();
+addLog('Demo lista — usa los snippets o escribe tu propio codigo', 'info-line');
+</script>
+</body>
+</html>
