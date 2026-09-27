@@ -1,7 +1,12 @@
-<h1><b> LICC-Cursos   </b><img src="https://media.giphy.com/media/j2pOGeGYKe2xCCKwfi/giphy.gif" width="80"></h1>
-
 <div align="center">
- <img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" width="200">
+  <h1><b> LICC-Cursos (Ahora con plataforma web!!!)   </b><img src="https://media.giphy.com/media/j2pOGeGYKe2xCCKwfi/giphy.gif" width="80"></h1>
+
+  <a href="https://www.studylicc.com" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Visita_la_Pagina-www.studylicc.com-2ea44f?style=for-the-badge" alt="Sitio Web" />
+  </a>
+  <br><br>
+
+  <img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" width="200">
 </div>
 
 <br>
