@@ -1,0 +1,2 @@
+Podría funcionar mejor?
+Recordar que el modo 'w' sobre escribe lo existente!

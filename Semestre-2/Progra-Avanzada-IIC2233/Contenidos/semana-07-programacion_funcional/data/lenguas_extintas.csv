@@ -1,0 +1,2309 @@
+﻿id,Name in English,Countries,Country codes,Degree of endangerment,Number of speakers
+0,South Italian,Italy,ITA,Vulnerable,75000000
+1,Sicilian,Italy,ITA,Vulnerable,50000000
+2,Low Saxon,Germany;Denmark;Netherlands;Poland;Russian Federation,DEU;DNK;NLD;POL;RUS,Vulnerable,48000000
+3,Belarusian,Belarus;Latvia;Lithuania;Poland;Russian Federation;Ukraine,BRB;LVA;LTU;POL;RUS;UKR,Vulnerable,40000000
+4,Lombard,Italy;Switzerland,ITA;CHE,Definitely endangered,35000000
+5,Romani,Albania;Germany;Austria;Belarus;Bosnia and Herzegovina;Bulgaria;Croatia;Estonia;Finland;France;Greece;Hungary;Italy;Latvia;Lithuania;The former Yugoslav Republic of Macedonia;Netherlands;Poland;Romania;United Kingdom of Great Britain and Northern Ireland;Russian Federation;Slovakia;Slovenia;Switzerland;Czech Republic;Turkey;Ukraine;Serbia;Montenegro,ALB;DEU;AUT;BRB;BIH;BGR;HRV;EST;FIN;FRA;GRC;HUN;ITA;LVA;LTU;MKD;NLD;POL;ROU;GBR;RUS;SVK;SVN;CHE;CZE;TUR;UKR;SRB;MNE,Definitely endangered,35000000
+6,Yiddish (Israel),Israel,ISR,Definitely endangered,30000000
+7,Gondi,India,IND,Vulnerable,27137900
+8,Limburgian-Ripuarian,Germany;Belgium;Netherlands,DEU;BEL;NLD,Vulnerable,26000000
+9,Quechua of Southern Bolivia,Bolivia (Plurinational State of),BOL,Vulnerable,23000000
+10,Kumaoni,India;Nepal,IND;NPL,Vulnerable,20037830
+11,Aymara,Bolivia (Plurinational State of);Chile;Peru,BOL;CHL;PER,Vulnerable,20000000
+12,Emilian-Romagnol,Italy;San Marino,ITA;SMR,Definitely endangered,20000000
+13,Piedmontese,Italy,ITA,Definitely endangered,20000000
+14,Venetan,Croatia;Italy;Slovenia,HRV;ITA;SVN,Vulnerable,20000000
+15,Zazaki,Turkey,TUR,Vulnerable,20000000
+16,Kurux (India),India,IND,Vulnerable,17514890
+17,Tamajeq,Niger,NER,Vulnerable,17500000
+18,Tulu,India,IND,Vulnerable,17227680
+19,Kangdi,India,IND,Definitely endangered,17000000
+20,Scots,United Kingdom of Great Britain and Northern Ireland,GBR,Vulnerable,15000000
+21,Torlak,Albania;Bulgaria;The former Yugoslav Republic of Macedonia;Romania;Serbia,ALB;BGR;MKD;ROU;SRB,Vulnerable,15000000
+22,West Flemish,Belgium;France;Netherlands,BEL;FRA;NLD,Vulnerable,15000000
+23,Bashkir,Russian Federation,RUS,Vulnerable,13797270
+24,Chechen,Russian Federation,RUS,Vulnerable,13318440
+25,Chuvash,Russian Federation,RUS,Vulnerable,13253820
+26,Meithei,India,IND,Vulnerable,12500000
+27,Tamang,India;Nepal,IND;NPL,Vulnerable,11966390
+28,Quechua of Cuzco,Peru,PER,Vulnerable,11150000
+29,Eastern Slovak,Slovakia;Ukraine,SVK;UKR,Vulnerable,10000000
+30,Ligurian,France;Italy;Monaco,FRA;ITA;MCO,Definitely endangered,10000000
+31,Rusyn,Hungary;Poland;Romania;Slovakia;Ukraine,HUN;POL;ROU;SVK;UKR,Vulnerable,10000000
+32,Talysh,Azerbaijan;Iran (Islamic Republic of),AZE;IRN,Vulnerable,10000000
+33,Kui,India,IND,Vulnerable,9162220
+34,Khasi,India,IND,Vulnerable,9120000
+35,Bodo,India,IND,Vulnerable,9000000
+36,Campidanese,Italy,ITA,Definitely endangered,9000000
+37,K'iche' (Guatemala),Guatemala,GTM,Vulnerable,8905960
+38,Quechua of Ayacucho,Peru,PER,Definitely endangered,8500000
+39,Newar,Nepal,NPL,Definitely endangered,8254580
+40,Mon,Myanmar;Thailand,MMR;THA,Vulnerable,8000000
+41,Tamaceq,Mali,MLI,Definitely endangered,8000000
+42,Avar,Russian Federation,RUS,Vulnerable,7848400
+43,Mundari,India,IND,Vulnerable,7500000
+44,Welsh,United Kingdom of Great Britain and Northern Ireland,GBR,Vulnerable,7500000
+45,Angika,India;Nepal,IND;NPL,Vulnerable,7408920
+46,Q'eqchi' (Guatemala),Guatemala,GTM,Vulnerable,7161010
+47,Picard,Belgium;France,BEL;FRA,Severely endangered,7000000
+48,Kokborok,Bangladesh;India,BGD;IND,Vulnerable,6950000
+49,Basque,Spain;France,ESP;FRA,Vulnerable,6600000
+50,Kabard-Cherkes,Russian Federation;Turkey,RUS;TUR,Vulnerable,6500000
+51,Mandeali,India,IND,Definitely endangered,6119300
+52,Friulian,Italy,ITA,Definitely endangered,6000000
+53,Quechua of Ancash and Huánuco,Peru,PER,Definitely endangered,6000000
+54,Walloon,Belgium;France;Luxembourg,BEL;FRA;LUX,Definitely endangered,6000000
+55,Mising,India,IND,Definitely endangered,5500000
+56,Ossete,Georgia;Russian Federation,GEO;RUS,Vulnerable,5500000
+57,Mizo,India,IND,Vulnerable,5290000
+58,Dargwa,Russian Federation,RUS,Vulnerable,5035230
+59,Aromanian,Albania;Bulgaria;Greece;The former Yugoslav Republic of Macedonia;Serbia,ALB;BGR;GRC;MKD;SRB,Definitely endangered,5000000
+60,Brahui,Iran (Islamic Republic of);Pakistan;Afghanistan,IRN;PAK;AFG,Vulnerable,5000000
+61,Languedocian,France,FRA,Severely endangered,5000000
+62,Lezgian,Azerbaijan;Russian Federation,AZE;RUS,Vulnerable,5000000
+63,Mahasui,India,IND,Definitely endangered,4960240
+64,Magar,Nepal,NPL,Definitely endangered,4893830
+65,Udmurt,Russian Federation,RUS,Definitely endangered,4638370
+66,Huasteca Náhuatl,Mexico,MEX,Vulnerable,4631830
+67,Kumyk,Russian Federation,RUS,Vulnerable,4581210
+68,Yakut,Russian Federation,RUS,Vulnerable,4562880
+69,Karbi,India,IND,Vulnerable,4200000
+70,Eastern Mari,Russian Federation,RUS,Definitely endangered,4142110
+71,Ingush,Russian Federation,RUS,Vulnerable,4053430
+72,Erzya,Russian Federation,RUS,Definitely endangered,4000000
+73,Ho,India,IND,Vulnerable,4000000
+74,Judezmo (Israel),Israel,ISR,Severely endangered,4000000
+75,Lalo,China,CHN,Vulnerable,4000000
+76,Limousin,France,FRA,Severely endangered,4000000
+77,Logudorese,Italy,ITA,Definitely endangered,4000000
+78,Mapuche (Chile),Chile,CHL,Definitely endangered,4000000
+79,Central Náhuatl,Mexico,MEX,Vulnerable,3955810
+80,Moselle Franconian,Germany;Belgium;France;Luxembourg,DEU;BEL;FRA;LUX,Vulnerable,3900000
+81,Bantawa,Nepal,NPL,Vulnerable,3710560
+82,Santa,China,CHN,Vulnerable,3600000
+83,Mingrelian,Georgia,GEO,Definitely endangered,3500000
+84,West Frisian,Netherlands,NLD,Vulnerable,3500000
+85,Gurung,Nepal,NPL,Definitely endangered,3389250
+86,Guajiro,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Vulnerable,3185000
+87,Karachay-Balkar,Russian Federation,RUS,Vulnerable,3027480
+88,Adyge,Iraq;Israel;Jordan;The former Yugoslav Republic of Macedonia;Russian Federation;Syrian Arab Republic;Turkey,IRQ;ISR;JOR;MKD;RUS;SYR;TUR,Vulnerable,3000000
+89,Buryat (Trans-Baikal),Russian Federation,RUS,Definitely endangered,3000000
+90,Kurru,India,IND,Definitely endangered,3000000
+91,Kuvi,India,IND,Definitely endangered,3000000
+92,Limbu,India;Nepal,IND;NPL,Definitely endangered,3000000
+93,Moroccan Judeo-Arabic (Israel),Israel,ISR,Definitely endangered,3000000
+94,Plautdietsch,Ukraine,UKR,Definitely endangered,3000000
+95,Pontic Greek,Armenia;Georgia;Greece;Russian Federation;Turkey;Ukraine,ARM;GEO;GRC;RUS;TUR;UKR,Definitely endangered,3000000
+96,Quichua (Cotopaxi;Tungurahua and Chimborazo),Ecuador,ECU,Definitely endangered,3000000
+97,Waxiang,China,CHN,Vulnerable,3000000
+98,Oyrat,China;Kyrgyzstan;Mongolia,CHN;KGZ;MNG,Definitely endangered,2800000
+99,Garhwali,India,IND,Vulnerable,2795000
+100,Bade,Nigeria,NGA,Vulnerable,2500000
+101,Breton,France,FRA,Severely endangered,2500000
+102,Gascon,Spain;France,ESP;FRA,Definitely endangered,2500000
+103,Phula (China),China,CHN,Vulnerable,2500000
+104,Sora,India,IND,Vulnerable,2500000
+105,Konyak,India,IND,Vulnerable,2480000
+106,Ao,India,IND,Vulnerable,2430000
+107,Tuvan,China;Mongolia;Russian Federation,CHN;MNG;RUS,Vulnerable,2427540
+108,Nafusi,Libyan Arab Jamahiriya,LBY,Severely endangered,2400000
+109,Suret,Armenia;Iran (Islamic Republic of);Iraq;Syrian Arab Republic;Turkey,ARM;IRN;IRQ;SYR;TUR,Definitely endangered,2400000
+110,Malto,India,IND,Definitely endangered,2249260
+111,Khowar,Pakistan,PAK,Vulnerable,2228000
+112,Maiya,Pakistan,PAK,Vulnerable,2200000
+113,Komi,Russian Federation,RUS,Definitely endangered,2173160
+114,Alpine Provençal,France;Italy,FRA;ITA,Definitely endangered,2000000
+115,Gallo,France,FRA,Severely endangered,2000000
+116,Gera,Nigeria,NGA,Vulnerable,2000000
+117,Irula,India,IND,Vulnerable,2000000
+118,Kharia,India,IND,Vulnerable,2000000
+119,Khorasani Turk,Iran (Islamic Republic of),IRN,Vulnerable,2000000
+120,Korku,India,IND,Vulnerable,2000000
+121,Moksha,Russian Federation,RUS,Definitely endangered,2000000
+122,Western Armenian (Middle East),Iraq;Lebanon;Syrian Arab Republic,IRQ;LBN;SYR,Definitely endangered,2000000
+123,Western Cham,Cambodia,KHM,Vulnerable,2000000
+124,Tshangla,Bhutan;China;India,BTN;CHN;IND,Vulnerable,1930000
+125,Thado,India,IND,Vulnerable,1910000
+126,Gagauz (Bessarabia),Republic of Moldova;Ukraine,MDA;UKR,Definitely endangered,1800000
+127,Kului,India,IND,Definitely endangered,1707700
+128,Adi,China;India,CHN;IND,Vulnerable,1700000
+129,Lhota,India,IND,Vulnerable,1700000
+130,Nyishi,India,IND,Vulnerable,1700000
+131,Ngäbere (Panama),Panama,PAN,Vulnerable,1691300
+132,Kodagu,India,IND,Definitely endangered,1661870
+133,Corsican,France;Italy,FRA;ITA,Definitely endangered,1600000
+134,Dzongkha,Bhutan,BTN,Vulnerable,1600000
+135,Kalmyk,Russian Federation,RUS,Definitely endangered,1536020
+136,Lak,Russian Federation,RUS,Vulnerable,1533730
+137,Asturian-Leonese,Spain;Portugal,ESP;PRT,Definitely endangered,1500000
+138,Latgalian,Latvia;Russian Federation,LVA;RUS,Vulnerable,1500000
+139,Provençal,France,FRA,Severely endangered,1500000
+140,Rabha,India,IND,Vulnerable,1500000
+141,Tamzabit,Algeria,DZA,Vulnerable,1500000
+142,Sherpa,China;India;Nepal,CHN;IND;NPL,Vulnerable,1436930
+143,Tangkhul,India,IND,Vulnerable,1420000
+144,Badaga,India,IND,Definitely endangered,1345140
+145,Angami,India,IND,Vulnerable,1320000
+146,Laz,Georgia;Turkey,GEO;TUR,Definitely endangered,1300000
+147,Tabasaran,Russian Federation,RUS,Vulnerable,1283910
+148,Chambeali,India,IND,Definitely endangered,1265890
+149,Abkhaz,Georgia;Russian Federation;Turkey,GEO;RUS;TUR,Vulnerable,1250000
+150,Phom,India,IND,Vulnerable,1230000
+151,Kolami,India,IND,Definitely endangered,1218550
+152,Navajo,United States of America,USA,Vulnerable,1200000
+153,Sassarese,Italy,ITA,Definitely endangered,1200000
+154,Tamahaq (Algeria),Algeria,DZA,Vulnerable,1200000
+155,Konda,India,IND,Definitely endangered,1185970
+156,Sierra Totonac,Mexico,MEX,Severely endangered,1183670
+157,Jaunsari,India,IND,Definitely endangered,1147330
+158,Dimasa,India,IND,Vulnerable,1120000
+159,Ladakhi,China;India,CHN;IND,Vulnerable,1050000
+160,Salar,China,CHN,Vulnerable,1045030
+161,Simi,India,IND,Vulnerable,1040000
+162,Phurhepecha,Mexico,MEX,Vulnerable,1029880
+163,Crimean Tatar (Crimea),Ukraine,UKR,Severely endangered,1000000
+164,Dagur (Nonni),China,CHN,Definitely endangered,1000000
+165,Francoprovençal,France;Italy;Switzerland,FRA;ITA;CHE,Definitely endangered,1000000
+166,Gallurese,Italy,ITA,Definitely endangered,1000000
+167,Mapuche (Argentina),Argentina,ARG,Severely endangered,1000000
+168,Mehri,Oman;Yemen,OMN;YEM,Definitely endangered,1000000
+169,Ordos,China,CHN,Definitely endangered,1000000
+170,Quechua of Northern Bolivia,Bolivia (Plurinational State of),BOL,Vulnerable,1000000
+171,Suba,Kenya;United Republic of Tanzania,KEN;TZA,Vulnerable,1000000
+172,Garífuna (Honduras),Honduras,HND,Vulnerable,980000
+173,Embera (Colombia),Colombia,COL,Vulnerable,950000
+174,Kabui,India,IND,Vulnerable,950000
+175,Shughni,Tajikistan;Afghanistan,TJK;AFG,Vulnerable,950000
+176,Permyak,Russian Federation,RUS,Definitely endangered,943280
+177,Poqomchi',Guatemala,GTM,Vulnerable,929410
+178,Yimchungru,India,IND,Vulnerable,920000
+179,Nogay (Caucasus),Russian Federation,RUS,Definitely endangered,900200
+180,Heiban,Sudan,SDN,Vulnerable,900000
+181,Quichua (Cañar and Azuay),Ecuador,ECU,Severely endangered,900000
+182,Mezquital Otomí,Mexico,MEX,Definitely endangered,887890
+183,Burushaski,Pakistan,PAK,Vulnerable,870000
+184,Chokri,India,IND,Vulnerable,840000
+185,Sangtam,India,IND,Vulnerable,840000
+186,Achi',Guatemala,GTM,Vulnerable,826400
+187,Yem,Ethiopia,ETH,Vulnerable,816130
+188,Mao,India,IND,Vulnerable,810000
+189,Arbëresh,Italy,ITA,Definitely endangered,800000
+190,Lari,Iran (Islamic Republic of),IRN,Definitely endangered,800000
+191,Páez,Colombia,COL,Definitely endangered,800000
+192,Quechua of Santiago del Estero,Argentina,ARG,Definitely endangered,800000
+193,Svan,Georgia,GEO,Definitely endangered,800000
+194,Tai Daeng,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Vulnerable,800000
+195,Taznatit,Algeria,DZA,Severely endangered,800000
+196,Wakhi,China;Pakistan;Tajikistan;Afghanistan,CHN;PAK;TJK;AFG,Definitely endangered,750000
+197,Bishnupriya Manipuri Creole,Bangladesh;India,BGD;IND,Vulnerable,728990
+198,Acheron,Sudan,SDN,Severely endangered,700000
+199,Maori,New Zealand,NZL,Vulnerable,700000
+200,Tai Neua,Lao People's Democratic Republic,LAO,Vulnerable,700000
+201,Bhadravahi,India;Pakistan,IND;PAK,Definitely endangered,669180
+202,Kinnauri,India,IND,Definitely endangered,650970
+203,Gallo-Sicilian,Italy,ITA,Definitely endangered,650000
+204,Kurux (Bangladesh),Bangladesh,BGD,Vulnerable,650000
+205,Tz'utujil,Guatemala,GTM,Definitely endangered,632370
+206,Chamorro,Guam (U.S.A.),GUM,Vulnerable,625000
+207,Ashaninka (Peru),Peru,PER,Vulnerable,624680
+208,Chang,India,IND,Vulnerable,620000
+209,Kuna (Panama),Panama,PAN,Vulnerable,617030
+210,Churahi,India,IND,Definitely endangered,611990
+211,Nruanghmei,India,IND,Vulnerable,610000
+212,Rengma,India,IND,Vulnerable,610000
+213,Faroese,Faroe Islands,FRO,Vulnerable,600000
+214,Northern Tujia,China,CHN,Severely endangered,600000
+215,Torwali,Pakistan,PAK,Definitely endangered,600000
+216,Chuj (Guatemala),Guatemala,GTM,Vulnerable,590480
+217,Kachari,India,IND,Definitely endangered,590000
+218,Scottish Gaelic,United Kingdom of Great Britain and Northern Ireland,GBR,Definitely endangered,585520
+219,Kashubian,Poland,POL,Severely endangered,530000
+220,Khakas,Russian Federation,RUS,Definitely endangered,522170
+221,Parji,India,IND,Critically endangered,512160
+222,Arvanitika,Greece,GRC,Severely endangered,500000
+223,Buryat (Cis-Baikal),Russian Federation,RUS,Severely endangered,500000
+224,Buryat (Manchuria),China;Mongolia,CHN;MNG,Definitely endangered,500000
+225,Cuona Menba,Bhutan;China;India,BTN;CHN;IND,Vulnerable,500000
+226,Eastern Cham,Viet Nam,VNM,Definitely endangered,500000
+227,Hmar,India,IND,Vulnerable,500000
+228,Huzhu Monguor,China,CHN,Severely endangered,500000
+229,Paite,India,IND,Vulnerable,500000
+230,Quichua (Imbabura),Ecuador,ECU,Definitely endangered,500000
+231,Soqotri,Yemen,YEM,Severely endangered,500000
+232,Southern Altay,Russian Federation,RUS,Definitely endangered,500000
+233,Turoyo,Syrian Arab Republic;Turkey,SYR;TUR,Severely endangered,500000
+234,Võro-Seto,Estonia;Russian Federation,EST;RUS,Definitely endangered,500000
+235,West Greenlandic,Greenland (Kingdom of Denmark),GRL,Vulnerable,500000
+236,Western Armenian (Turkey),Turkey,TUR,Definitely endangered,500000
+237,Zaramo,United Republic of Tanzania,TZA,Definitely endangered,500000
+238,Papantla Totonac,Mexico,MEX,Definitely endangered,497480
+239,Wancho,India,IND,Vulnerable,490000
+240,Bhumji,India,IND,Vulnerable,470000
+241,Cosung (China),China,CHN,Definitely endangered,470000
+242,Cosung (Viet Nam),Viet Nam,VNM,Definitely endangered,470000
+243,Baheng (China),China,CHN,Vulnerable,450000
+244,Lumun,Sudan,SDN,Definitely endangered,450000
+245,Quichua (Loja),Ecuador,ECU,Severely endangered,450000
+246,Chamling,Nepal,NPL,Definitely endangered,440930
+247,Irish,Ireland;United Kingdom of Great Britain and Northern Ireland,IRL;GBR,Definitely endangered,440000
+248,Reshe,Nigeria,NGA,Vulnerable,440000
+249,Sierra Otomí,Mexico,MEX,Vulnerable,434680
+250,Phuthi,Lesotho,LSO,Definitely endangered,430000
+251,Rarotongan,Cook Islands,COK,Vulnerable,430000
+252,Khalaj,Iran (Islamic Republic of),IRN,Vulnerable,421000
+253,Dungan,Kazakhstan;Kyrgyzstan,KAZ;KGZ,Definitely endangered,410000
+254,Kheza,India,IND,Vulnerable,410000
+255,Jola-Kassa,Senegal,SEN,Vulnerable,408500
+256,Satār,Nepal,NPL,Vulnerable,402600
+257,Guaraní Boliviano,Argentina;Bolivia (Plurinational State of),ARG;BOL,Vulnerable,400000
+258,Gutob,India,IND,Vulnerable,400000
+259,Kheng,Bhutan,BTN,Vulnerable,400000
+260,Laro,Sudan,SDN,Definitely endangered,400000
+261,Minyong,India,IND,Vulnerable,400000
+262,Mru,Myanmar,MMR,Severely endangered,400000
+263,Quechua of Cajatambo;Pasco and northern Junín,Peru,PER,Severely endangered,400000
+264,Quichua (Napo),Ecuador,ECU,Definitely endangered,400000
+265,Tangsa,India,IND,Vulnerable,400000
+266,Awajun,Peru,PER,Vulnerable,390000
+267,Khiamngan,India,IND,Vulnerable,380000
+268,Ngile,Sudan,SDN,Severely endangered,380000
+269,Phunoi,Lao People's Democratic Republic,LAO,Vulnerable,373110
+270,Maram,India,IND,Vulnerable,370000
+271,Western Mari,Russian Federation,RUS,Severely endangered,368220
+272,Chepang,Nepal,NPL,Vulnerable,368070
+273,Chontal Tabasco,Mexico,MEX,Severely endangered,365140
+274,Muji,China,CHN,Definitely endangered,365000
+275,Akatek (Guatemala),Guatemala,GTM,Vulnerable,357630
+276,Huichol,Mexico,MEX,Vulnerable,357240
+277,Romansh,Switzerland,CHE,Definitely endangered,350950
+278,Apatani,India,IND,Vulnerable,350000
+279,Galo,India,IND,Vulnerable,350000
+280,Korwa,India,IND,Vulnerable,350000
+281,Shuar chicham,Ecuador,ECU,Definitely endangered,350000
+282,Ticuna,Brazil;Colombia;Peru,BRA;COL;PER,Definitely endangered,350000
+283,Wanka Quechua,Peru,PER,Severely endangered,350000
+284,Sikuani,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Vulnerable,346140
+285,Jakaltek (Guatemala),Guatemala,GTM,Definitely endangered,340380
+286,Liangmai,India,IND,Vulnerable,340000
+287,Zeme,India,IND,Vulnerable,340000
+288,Highland Mazatec,Mexico,MEX,Vulnerable,338590
+289,Thangmi,Nepal,NPL,Definitely endangered,335000
+290,Nocte,India,IND,Vulnerable,330000
+291,Mayo,Mexico,MEX,Critically endangered,328690
+292,Lauje,Indonesia,IDN,Vulnerable,320000
+293,Danuwar,Nepal,NPL,Severely endangered,318490
+294,Sirmaudi,India,IND,Critically endangered,311440
+295,Abaza,Russian Federation;Turkey,RUS;TUR,Definitely endangered,310000
+296,Koch,India,IND,Definitely endangered,310000
+297,Amis,China,CHN,Vulnerable,300000
+298,Biak,Indonesia,IDN,Vulnerable,300000
+299,Bumthang,Bhutan,BTN,Vulnerable,300000
+300,Burgenland Croatian,Austria;Hungary;Slovakia,AUT;HUN;SVK,Definitely endangered,300000
+301,Dzhidi,Iran (Islamic Republic of),IRN,Definitely endangered,300000
+302,Judeo-Berber (Israel),Israel,ISR,Severely endangered,300000
+303,Kham,Nepal,NPL,Definitely endangered,300000
+304,Ladin,Italy,ITA,Definitely endangered,300000
+305,Lepcha,Bhutan;India;Nepal,BTN;IND;NPL,Definitely endangered,300000
+306,Maonan,China,CHN,Vulnerable,300000
+307,Mok (Myanmar;Thailand),Myanmar;Thailand,MMR;THA,Definitely endangered,300000
+308,Moro,Sudan,SDN,Definitely endangered,300000
+309,Mulam,China,CHN,Vulnerable,300000
+310,North Saami,Finland;Norway;Russian Federation;Sweden,FIN;NOR;RUS;SWE,Definitely endangered,300000
+311,Quechua of Cajamarca,Peru,PER,Severely endangered,300000
+312,Quichua (Pastaza),Ecuador,ECU,Definitely endangered,300000
+313,Rushani,Tajikistan;Afghanistan,TJK;AFG,Definitely endangered,300000
+314,Tialo,Indonesia,IDN,Vulnerable,300000
+315,Tidikelt,Algeria,DZA,Critically endangered,300000
+316,Toba,Argentina,ARG,Definitely endangered,300000
+317,Tundra Nenets,Russian Federation,RUS,Definitely endangered,300000
+318,Wuse,China,CHN,Vulnerable,300000
+319,Agul,Russian Federation,RUS,Definitely endangered,293990
+320,Rutul,Azerbaijan;Russian Federation,AZE;RUS,Definitely endangered,293830
+321,Bateri,Pakistan,PAK,Definitely endangered,290000
+322,Mzieme,India,IND,Vulnerable,290000
+323,Ghale,Nepal,NPL,Vulnerable,289890
+324,Sierra Popoluca,Mexico,MEX,Vulnerable,287000
+325,Kurux (Nepal),Nepal,NPL,Vulnerable,286150
+326,Deori,India,IND,Definitely endangered,280000
+327,Soyaltepec Mazatec,Mexico,MEX,Vulnerable,275240
+328,Sibe,China,CHN,Severely endangered,270000
+329,Isthmus Náhuatl,Mexico,MEX,Vulnerable,266320
+330,Sunwar,Nepal,NPL,Vulnerable,266110
+331,Mancagne,Senegal,SEN,Vulnerable,264500
+332,Gadaba,India,IND,Critically endangered,262620
+333,Banat Bulgarian,Romania;Serbia,ROU;SRB,Definitely endangered,250000
+334,Csángó Hungarian,Romania,ROU,Severely endangered,250000
+335,Koda,India,IND,Vulnerable,250000
+336,Minhe Monguor,China,CHN,Definitely endangered,250000
+337,Olonetsian,Finland;Russian Federation,FIN;RUS,Definitely endangered,250000
+338,Saek,Lao People's Democratic Republic;Thailand,LAO;THA,Definitely endangered,250000
+339,Sioux,United States of America,USA,Vulnerable,250000
+340,Tamazight (Beni Iznassen),Morocco,MAR,Definitely endangered,250000
+341,Tsakhur,Azerbaijan;Russian Federation,AZE;RUS,Definitely endangered,250000
+342,Warao,Guyana;Venezuela (Bolivarian Republic of),GUY;VEN,Definitely endangered,250000
+343,Majhi,Nepal,NPL,Severely endangered,246640
+344,Jone,China,CHN,Definitely endangered,240000
+345,Andi,Russian Federation,RUS,Definitely endangered,237290
+346,Guambiano,Colombia,COL,Definitely endangered,234620
+347,Anal,India,IND,Vulnerable,230000
+348,Hawrami,Iran (Islamic Republic of);Iraq,IRN;IRQ,Definitely endangered,230000
+349,Juang,India,IND,Definitely endangered,230000
+350,Tiwa,India,IND,Definitely endangered,230000
+351,Embera (Panama),Panama,PAN,Vulnerable,224850
+352,Ediamat,Guinea-Bissau,GNB,Vulnerable,220250
+353,Mara,India,IND,Definitely endangered,220000
+354,Maring,India,IND,Vulnerable,220000
+355,Polci cluster,Nigeria,NGA,Definitely endangered,220000
+356,Sarikoli,China,CHN,Definitely endangered,220000
+357,Krongo,Sudan,SDN,Definitely endangered,216880
+358,Ashtiani,Iran (Islamic Republic of),IRN,Definitely endangered,210000
+359,Khunsari,Iran (Islamic Republic of),IRN,Definitely endangered,210000
+360,Semnani,Iran (Islamic Republic of),IRN,Definitely endangered,210000
+361,Plains Cree,Canada,CAN,Vulnerable,209330
+362,Aluo,China,CHN,Definitely endangered,200000
+363,Bru,Thailand,THA,Definitely endangered,200000
+364,Cho-ca-nga-ca-kha,Bhutan,BTN,Definitely endangered,200000
+365,Crimean Tatar (Dobruja),Bulgaria;Romania,BGR;ROU,Severely endangered,200000
+366,Dhimal,Nepal,NPL,Severely endangered,200000
+367,Griko (Salento),Italy,ITA,Severely endangered,200000
+368,Kaiowá Guarani,Brazil,BRA,Vulnerable,200000
+369,Karelian (Karelia),Finland;Russian Federation,FIN;RUS,Definitely endangered,200000
+370,Khoirao,India,IND,Vulnerable,200000
+371,Manchad,India,IND,Vulnerable,200000
+372,Mariupolitan Greek,Ukraine,UKR,Severely endangered,200000
+373,Pemon (Venezuela),Guyana;Venezuela (Bolivarian Republic of),GUY;VEN,Vulnerable,200000
+374,Tacenwit,Algeria,DZA,Vulnerable,200000
+375,Western Neo-Aramaic,Syrian Arab Republic,SYR,Definitely endangered,200000
+376,Yaghnobi,Tajikistan,TJK,Definitely endangered,200000
+377,Yeyi,Botswana,BWA,Definitely endangered,200000
+378,Boro,,,Definitely endangered,198780
+379,Sorbian,Germany,DEU,Definitely endangered,195000
+380,Biete,India,IND,Definitely endangered,190000
+381,Hrangkhol,India,IND,Vulnerable,190000
+382,Terena,Brazil,BRA,Severely endangered,190000
+383,Kati,Pakistan;Afghanistan,PAK;AFG,Definitely endangered,187000
+384,Kulung,Nepal,NPL,Vulnerable,186860
+385,Kaingang,Brazil,BRA,Definitely endangered,185000
+386,Lowland Mazatec,Mexico,MEX,Vulnerable,183890
+387,Vafsi,Iran (Islamic Republic of),IRN,Definitely endangered,180000
+388,Bassari,Senegal,SEN,Vulnerable,179100
+389,Bayot,Senegal,SEN,Vulnerable,171500
+390,Pochuri,India,IND,Vulnerable,170000
+391,Tamahaq (Libya),Libyan Arab Jamahiriya,LBY,Definitely endangered,170000
+392,Swampy Cree,Canada,CAN,Vulnerable,166850
+393,Koraga,India,IND,Critically endangered,166650
+394,Oyda,Ethiopia,ETH,Vulnerable,165970
+395,Pangvali,India,IND,Critically endangered,162850
+396,Shipibo-Conibo,Peru,PER,Definitely endangered,160850
+397,Amba,Uganda,UGA,Vulnerable,160000
+398,Tsez,Russian Federation,RUS,Definitely endangered,153560
+399,Bonan,China,CHN,Definitely endangered,150000
+400,Chrau,Viet Nam,VNM,Definitely endangered,150000
+401,Dari,Iran (Islamic Republic of),IRN,Definitely endangered,150000
+402,Dzala,Bhutan,BTN,Vulnerable,150000
+403,Ersu,China,CHN,Definitely endangered,150000
+404,Gangte,India,IND,Definitely endangered,150000
+405,Gurdu-Mbaaru,Nigeria,NGA,Severely endangered,150000
+406,Ha-lung Tibetan,Nepal,NPL,Definitely endangered,150000
+407,Hlersu,China,CHN,Vulnerable,150000
+408,Kwama,Ethiopia,ETH,Vulnerable,150000
+409,Lavua,Thailand,THA,Definitely endangered,150000
+410,Macushi (Brazil),Brazil,BRA,Vulnerable,150000
+411,Nahali,India,IND,Definitely endangered,150000
+412,Naluo,China,CHN,Vulnerable,150000
+413,O'odham (Akimel),United States of America,USA,Definitely endangered,150000
+414,O'odham (Tohono),United States of America,USA,Definitely endangered,150000
+415,Paiwan,China,CHN,Vulnerable,150000
+416,Rao,China,CHN,Definitely endangered,150000
+417,Semai,Malaysia,MYS,Severely endangered,150000
+418,Shatt,Sudan,SDN,Severely endangered,150000
+419,Siwi,Egypt,EGY,Definitely endangered,150000
+420,Tagargrent,Algeria,DZA,Severely endangered,150000
+421,Totoli,Indonesia,IDN,Vulnerable,150000
+422,Aruaco,Colombia,COL,Vulnerable,147990
+423,Yakkha,Nepal,NPL,Critically endangered,146480
+424,Kuruba,India,IND,Critically endangered,146130
+425,Tuamotuan,French Polynesia (France),PYF,Definitely endangered,144000
+426,Katla,Sudan,SDN,Definitely endangered,142080
+427,Garífuna (Belize),Belize,BLZ,Vulnerable,140610
+428,Thulung,Nepal,NPL,Definitely endangered,140340
+429,Bawm,Bangladesh;India,BGD;IND,Definitely endangered,140000
+430,Guajajara,Brazil,BRA,Vulnerable,140000
+431,Niuean,Niue,NIU,Definitely endangered,140000
+432,Uhunduni,Indonesia,IDN,Vulnerable,140000
+433,Gusilay,Senegal,SEN,Vulnerable,139500
+434,Xavante,Brazil,BRA,Vulnerable,133030
+435,Dondo,Indonesia,IDN,Vulnerable,130000
+436,Nalu,Guinea,GIN,Definitely endangered,130000
+437,Tagoi,Sudan,SDN,Severely endangered,130000
+438,Karko,Sudan,SDN,Definitely endangered,129860
+439,San Mateo del Mar Huave,Mexico,MEX,Vulnerable,126670
+440,Q'eqchi' (Belize),Belize,BLZ,Vulnerable,123660
+441,Kadaru,Sudan,SDN,Definitely endangered,123600
+442,Mazatlán Mazatec,Mexico,MEX,Vulnerable,123400
+443,Badiaranke,Guinea,GIN,Severely endangered,122050
+444,Alune,Indonesia,IDN,Vulnerable,120000
+445,Bangani,India,IND,Critically endangered,120000
+446,Chamalal,Russian Federation,RUS,Definitely endangered,120000
+447,Chru,Viet Nam,VNM,Vulnerable,120000
+448,Hill Miri,India,IND,Definitely endangered,120000
+449,Jinuo,China,CHN,Definitely endangered,120000
+450,Muya,China,CHN,Vulnerable,120000
+451,Samei,China,CHN,Severely endangered,120000
+452,Tajio,Indonesia,IDN,Vulnerable,120000
+453,Tobada',Indonesia,IDN,Extinct,120000
+454,Yaqui (Mexico),Mexico,MEX,Vulnerable,118060
+455,Ch'orti' (Guatemala),Guatemala,GTM,Definitely endangered,117340
+456,Filomeno Mata Totonac,Mexico,MEX,Vulnerable,117100
+457,Komo,Ethiopia;Sudan,ETH;SDN,Definitely endangered,115000
+458,Tuwuli,Ghana,GHA,Vulnerable,114000
+459,Idu,China;India,CHN;IND,Definitely endangered,111010
+460,Kari'ña (Venezuela),Venezuela (Bolivarian Republic of),VEN,Severely endangered,110000
+461,Machiguenga,Peru,PER,Definitely endangered,110000
+462,Piaroa (Venezuela),Venezuela (Bolivarian Republic of),VEN,Vulnerable,110000
+463,Tuvaluan,Tuvalu,TUV,Definitely endangered,110000
+464,Waunana (Colombia),Colombia,COL,Vulnerable,110000
+465,Noon,Senegal,SEN,Vulnerable,109250
+466,Sampang,Nepal,NPL,Vulnerable,108100
+467,Central Alaskan Yupik (2),United States of America,USA,Vulnerable,104000
+468,Central Alaskan Yupik (Nuniak Island),United States of America,USA,Vulnerable,104000
+469,Bukiyip,Papua New Guinea,PNG,Vulnerable,103040
+470,Saparua,Indonesia,IDN,Definitely endangered,102160
+471,Darai,Nepal,NPL,Severely endangered,102100
+472,Bandial,Senegal,SEN,Vulnerable,101250
+473,Bongo,Sudan,SDN,Definitely endangered,100840
+474,Northwestern Tarahumara,Mexico,MEX,Vulnerable,100310
+475,Algherese Catalan,Italy,ITA,Definitely endangered,100000
+476,Aragonese,Spain,ESP,Definitely endangered,100000
+477,Baima,China,CHN,Vulnerable,100000
+478,Bukharic,Uzbekistan,UZB,Definitely endangered,100000
+479,Bunun,China,CHN,Vulnerable,100000
+480,Burunge,United Republic of Tanzania,TZA,Vulnerable,100000
+481,Chayahuita,Peru,PER,Definitely endangered,100000
+482,Cherokee (Oklahoma),United States of America,USA,Definitely endangered,100000
+483,Dalecarlian,Sweden,SWE,Definitely endangered,100000
+484,Huitoto (Colombia;Peru),Colombia;Peru,COL;PER,Definitely endangered,100000
+485,Hulaula (Israel),Israel,ISR,Severely endangered,100000
+486,Karang,Chad,TCD,Vulnerable,100000
+487,Karelian (Tver),Russian Federation,RUS,Definitely endangered,100000
+488,Karone,Senegal,SEN,Vulnerable,100000
+489,Kryz,Azerbaijan,AZE,Severely endangered,100000
+490,Kurripako (Colombia;Venezuela),Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Definitely endangered,100000
+491,Kurtöp,Bhutan,BTN,Vulnerable,100000
+492,Lamgang,India,IND,Critically endangered,100000
+493,Miqie,China,CHN,Definitely endangered,100000
+494,Mojo,Bolivia (Plurinational State of),BOL,Definitely endangered,100000
+495,Muot,India,IND,Critically endangered,100000
+496,Naiki,India,IND,Critically endangered,100000
+497,Ñandeva Guarani,Brazil,BRA,Vulnerable,100000
+498,Ngwaba,Nigeria,NGA,Severely endangered,100000
+499,North Frisian,Germany,DEU,Severely endangered,100000
+500,Northern Khanty,Russian Federation,RUS,Definitely endangered,100000
+501,Nyah Kur,Thailand,THA,Definitely endangered,100000
+502,Nyenkha,Bhutan,BTN,Vulnerable,100000
+503,Orang Hulu,Malaysia,MYS,Definitely endangered,100000
+504,Otoro,Sudan,SDN,Severely endangered,100000
+505,Solon,China,CHN,Definitely endangered,100000
+506,Southern Tujia,China,CHN,Severely endangered,100000
+507,Taba,Indonesia,IDN,Vulnerable,100000
+508,Talu,China,CHN,Vulnerable,100000
+509,Tamazight (Tunisia),Tunisia,TUN,Severely endangered,100000
+510,Tayal,China,CHN,Vulnerable,100000
+511,Temein,Sudan,SDN,Severely endangered,100000
+512,Temiar,Malaysia,MYS,Definitely endangered,100000
+513,Vidunda,United Republic of Tanzania,TZA,Vulnerable,100000
+514,Kogui,Colombia,COL,Vulnerable,99110
+515,Paloor,Senegal,SEN,Vulnerable,96800
+516,Choctaw (Louisiana),United States of America,USA,Vulnerable,95000
+517,Choctaw (Mississipi),United States of America,USA,Vulnerable,95000
+518,Choctaw (Oklahoma),United States of America,USA,Vulnerable,95000
+519,Gawar-Bati,Pakistan;Afghanistan,PAK;AFG,Definitely endangered,95000
+520,Taruang,China;India;Myanmar,CHN;IND;MMR,Vulnerable,93320
+521,Khaling,Nepal,NPL,Definitely endangered,92880
+522,Nunavimmiutitut,Canada,CAN,Vulnerable,91050
+523,Woods Cree,Canada,CAN,Vulnerable,90950
+524,Phula (Viet Nam),Viet Nam,VNM,Definitely endangered,90460
+525,Dol-po,Nepal,NPL,Definitely endangered,90000
+526,Helong,Indonesia,IDN,Severely endangered,90000
+527,Lisela,Indonesia,IDN,Vulnerable,90000
+528,Motuo Menba,China;India,CHN;IND,Definitely endangered,90000
+529,Panamahka,Nicaragua,NIC,Vulnerable,90000
+530,Zuni,United States of America,USA,Vulnerable,90000
+531,Mopán (Belize),Belize,BLZ,Severely endangered,89800
+532,Tulishi,Sudan,SDN,Severely endangered,86280
+533,Central Cuicatec,Mexico,MEX,Vulnerable,86210
+534,Ts'amay,Ethiopia,ETH,Definitely endangered,86210
+535,Phalura,Pakistan,PAK,Definitely endangered,86000
+536,Ixcatlán Mazatec,Mexico,MEX,Vulnerable,85930
+537,Patla-Chicontla Totonac,Mexico,MEX,Severely endangered,85900
+538,Toram,Chad,TCD,Severely endangered,84560
+539,Dene,Canada,CAN,Vulnerable,81950
+540,Micmac (Massachusetts),United States of America,USA,Definitely endangered,81450
+541,Argobba,Ethiopia,ETH,Critically endangered,80000
+542,Austral dialects,French Polynesia (France),PYF,Definitely endangered,80000
+543,Belanda Bor,Sudan,SDN,Definitely endangered,80000
+544,Feroge,Sudan,SDN,Vulnerable,80000
+545,Inga,Colombia,COL,Severely endangered,80000
+546,Kanga,Sudan,SDN,Severely endangered,80000
+547,Lajia,China,CHN,Definitely endangered,80000
+548,Lakha,Bhutan,BTN,Definitely endangered,80000
+549,Mbya Guarani (Paraguay),Paraguay,PRY,Definitely endangered,80000
+550,Mundurukú,Brazil,BRA,Vulnerable,80000
+551,Ojibwe,United States of America,USA,Severely endangered,80000
+552,Quichua (Salasaca),Ecuador,ECU,Definitely endangered,80000
+553,Rongpo,India,IND,Vulnerable,80000
+554,Sanyi,China,CHN,Severely endangered,80000
+555,Temuan,Malaysia,MYS,Severely endangered,80000
+556,Tingal,Sudan,SDN,Definitely endangered,80000
+557,Wampis,Peru,PER,Vulnerable,80000
+558,Wunai Bunu,China,CHN,Definitely endangered,80000
+559,Yanesha,Peru,PER,Severely endangered,80000
+560,Pana,Burkina Faso,BFA,Definitely endangered,78000
+561,Macushi (Guyana),Guyana,GUY,Vulnerable,77500
+562,Chukchi,Russian Federation,RUS,Severely endangered,77420
+563,Awa Cuaiquer,Colombia,COL,Critically endangered,75000
+564,Lishana Deni (Israel),Israel,ISR,Severely endangered,75000
+565,Central Pame,Mexico,MEX,Vulnerable,73990
+566,Puinave,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Definitely endangered,73770
+567,Mebengokre,Brazil,BRA,Vulnerable,72660
+568,Tunebo,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Definitely endangered,72310
+569,Quechua of Peruvian Amazonia,Peru,PER,Vulnerable,72000
+570,Asur,India,IND,Definitely endangered,70000
+571,Bashkardi,Iran (Islamic Republic of),IRN,Definitely endangered,70000
+572,Burji,Kenya,KEN,Vulnerable,70000
+573,Choyi,China,CHN,Definitely endangered,70000
+574,Gazi,Iran (Islamic Republic of),IRN,Definitely endangered,70000
+575,Guichong,China,CHN,Vulnerable,70000
+576,Natanzi,Iran (Islamic Republic of),IRN,Severely endangered,70000
+577,Nayini,Iran (Islamic Republic of),IRN,Severely endangered,70000
+578,Parya,Uzbekistan;Tajikistan;Afghanistan,UZB;TJK;AFG,Severely endangered,70000
+579,Segeju,United Republic of Tanzania,TZA,Severely endangered,70000
+580,Sivandi,Iran (Islamic Republic of),IRN,Definitely endangered,70000
+581,Soi,Iran (Islamic Republic of),IRN,Definitely endangered,70000
+582,Tucano (Brazil),Brazil,BRA,Vulnerable,70000
+583,Wapishana (Guyana),Guyana,GUY,Vulnerable,70000
+584,Yulu,Central African Republic;Democratic Republic of the Congo;Sudan,CAF;ZAI;SDN,Vulnerable,70000
+585,Zhaba,China,CHN,Vulnerable,70000
+586,Sakapultek,Guatemala,GTM,Definitely endangered,69730
+587,Chara,Ethiopia,ETH,Vulnerable,69320
+588,Kosraean,Micronesia (Federated States of);Nauru,FSM;NRU,Severely endangered,69000
+589,Waunana (Panama),Panama,PAN,Severely endangered,68820
+590,San Francisco del Mar Huave,Mexico,MEX,Critically endangered,68740
+591,Northern East Cree,Canada,CAN,Vulnerable,68700
+592,Micmac (Canada),Canada,CAN,Vulnerable,68500
+593,Northern Tepehuán,Mexico,MEX,Definitely endangered,68020
+594,Miju,China;India,CHN;IND,Vulnerable,67000
+595,Bussa,Ethiopia,ETH,Vulnerable,66240
+596,Beli,Sudan,SDN,Definitely endangered,66000
+597,Chesu,China,CHN,Definitely endangered,66000
+598,Thuri,Sudan,SDN,Vulnerable,66000
+599,Karata,Russian Federation,RUS,Definitely endangered,65740
+600,Saulteau,Canada,CAN,Vulnerable,65580
+601,Kumāle,Nepal,NPL,Severely endangered,65330
+602,Dimme,Ethiopia,ETH,Vulnerable,65010
+603,Chiquitano (Bolivia),Bolivia (Plurinational State of),BOL,Definitely endangered,65000
+604,Tumtum,Sudan,SDN,Severely endangered,65000
+605,Bezhta,Russian Federation,RUS,Definitely endangered,64610
+606,Thakali,Nepal,NPL,Vulnerable,64410
+607,Dongotono,Sudan,SDN,Vulnerable,62190
+608,Mawé,Brazil,BRA,Vulnerable,62190
+609,Shor,Russian Federation,RUS,Severely endangered,62100
+610,Oji-Cree,Canada,CAN,Vulnerable,61100
+611,Keiga,Sudan,SDN,Severely endangered,60720
+612,Ampibabo Lauje,Indonesia,IDN,Vulnerable,60000
+613,Cashinahua (Brazil),Brazil,BRA,Vulnerable,60000
+614,Geji cluster,Nigeria,NGA,Severely endangered,60000
+615,Mbya Guarani (Brazil),Brazil,BRA,Vulnerable,60000
+616,Moklen,Myanmar;Thailand,MMR;THA,Definitely endangered,60000
+617,Nauruan,Nauru,NRU,Severely endangered,60000
+618,Nheengatu / Yeral (Brazil),Brazil,BRA,Severely endangered,60000
+619,Parachi,Afghanistan,AFG,Definitely endangered,60000
+620,Quechua of San Martín,Peru,PER,Severely endangered,60000
+621,Sawkna,Libyan Arab Jamahiriya,LBY,Critically endangered,60000
+622,Sulung,China;India,CHN;IND,Definitely endangered,60000
+623,Tindi,Russian Federation,RUS,Definitely endangered,60000
+624,Western Apache,United States of America,USA,Definitely endangered,60000
+625,Yanomami (Brazil),Brazil,BRA,Vulnerable,60000
+626,Yazgulami,Tajikistan,TJK,Severely endangered,60000
+627,Chantyal,Nepal,NPL,Definitely endangered,59120
+628,Mortlockese,Micronesia (Federated States of),FSM,Definitely endangered,59040
+629,Baníwa do Içana,Brazil;Colombia;Venezuela (Bolivarian Republic of),BRA;COL;VEN,Vulnerable,58110
+630,Akawaio (Guyana;Venezuela),Guyana;Venezuela (Bolivarian Republic of),GUY;VEN,Definitely endangered,58000
+631,Akhvakh,Russian Federation,RUS,Definitely endangered,57930
+632,Veps,Russian Federation,RUS,Severely endangered,57530
+633,Qikiqtaaluk nigiani,Canada,CAN,Vulnerable,57400
+634,Sipakapense,Guatemala,GTM,Definitely endangered,56870
+635,Bribri (Costa Rica),Costa Rica,CRI,Vulnerable,56470
+636,Bainouk-Gunyaamolo,Senegal,SEN,Vulnerable,56350
+637,Kwatay,Senegal,SEN,Severely endangered,56250
+638,Baheng (Viet Nam),Viet Nam,VNM,Vulnerable,55690
+639,Dameli,Pakistan,PAK,Severely endangered,55000
+640,Sak (Bangladesh),Bangladesh,BGD,Severely endangered,55000
+641,Yidgha,Pakistan,PAK,Definitely endangered,55000
+642,Southeastern Tarahumara,Mexico,MEX,Vulnerable,54060
+643,Chimané,Bolivia (Plurinational State of),BOL,Vulnerable,53000
+644,Dilling,Sudan,SDN,Definitely endangered,52950
+645,San Dionisio del Mar Huave,Mexico,MEX,Definitely endangered,51650
+646,Lafofa,Sudan,SDN,Severely endangered,51400
+647,Akeu,Lao People's Democratic Republic;Myanmar;Thailand,LAO;MMR;THA,Definitely endangered,50000
+648,Anung (China),China,CHN,Critically endangered,50000
+649,Bagvalal,Russian Federation,RUS,Definitely endangered,50000
+650,Bambassi,Ethiopia,ETH,Definitely endangered,50000
+651,Barí,Colombia,COL,Vulnerable,50000
+652,Bartangi,Tajikistan,TJK,Severely endangered,50000
+653,Bokar,China;India,CHN;IND,Vulnerable,50000
+654,Brokpa,Bhutan,BTN,Definitely endangered,50000
+655,Creek,United States of America,USA,Definitely endangered,50000
+656,Cubeo (Colombia),Colombia,COL,Vulnerable,50000
+657,Dagur (Hailar),China,CHN,Definitely endangered,50000
+658,Damal,Indonesia,IDN,Vulnerable,50000
+659,Dhaiso,United Republic of Tanzania,TZA,Definitely endangered,50000
+660,Gorum,India,IND,Definitely endangered,50000
+661,Guarayu,Bolivia (Plurinational State of),BOL,Definitely endangered,50000
+662,Gutnish,Sweden,SWE,Definitely endangered,50000
+663,Hopi,United States of America,USA,Vulnerable,50000
+664,Ilue,Nigeria,NGA,Critically endangered,50000
+665,Jibbali,Oman,OMN,Severely endangered,50000
+666,Kalasha,Pakistan,PAK,Severely endangered,50000
+667,Kami,United Republic of Tanzania,TZA,Severely endangered,50000
+668,Kathu,China,CHN,Definitely endangered,50000
+669,Khojki,Oman,OMN,Severely endangered,50000
+670,Khwe,Namibia,NAM,Definitely endangered,50000
+671,Kom,India,IND,Definitely endangered,50000
+672,Korandje,Algeria,DZA,Severely endangered,50000
+673,Lachi,Viet Nam,VNM,Definitely endangered,50000
+674,Mak,China,CHN,Definitely endangered,50000
+675,Manihiki,Cook Islands,COK,Definitely endangered,50000
+676,Megleno-Romanian,Greece;The former Yugoslav Republic of Macedonia,GRC;MKD,Severely endangered,50000
+677,Molise Croatian,Italy,ITA,Severely endangered,50000
+678,Moroccan Judeo-Arabic (Morocco),Morocco,MAR,Severely endangered,50000
+679,Namuyi,China,CHN,Vulnerable,50000
+680,Padoe,Indonesia,IDN,Vulnerable,50000
+681,Patamona (Guyana),Guyana,GUY,Vulnerable,50000
+682,Pu,India,IND,Critically endangered,50000
+683,Pume,Venezuela (Bolivarian Republic of),VEN,Definitely endangered,50000
+684,Singpho,India,IND,Definitely endangered,50000
+685,Turi,India,IND,Definitely endangered,50000
+686,Udi (Azerbaijan),Azerbaijan,AZE,Severely endangered,50000
+687,Yecuana (Venezuela),Venezuela (Bolivarian Republic of),VEN,Vulnerable,50000
+688,Jirel,Nepal,NPL,Definitely endangered,49190
+689,Dolgan,Russian Federation,RUS,Definitely endangered,48650
+690,Tsum,Nepal,NPL,Definitely endangered,47860
+691,Taroko,China,CHN,Vulnerable,47500
+692,Kivallirmiutut,Canada,CAN,Vulnerable,46750
+693,Zapotec of Petapa,Mexico,MEX,Definitely endangered,46130
+694,Dungmali,Nepal,NPL,Definitely endangered,46090
+695,Saryg Yugur,China,CHN,Severely endangered,46000
+696,Qikiqtaaluk uannangani,Canada,CAN,Vulnerable,45500
+697,Afitti,Sudan,SDN,Severely endangered,45120
+698,Nomatsiguenga,Peru,PER,Severely endangered,45000
+699,Piapoko,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Definitely endangered,45000
+700,Tokelauan,Tokelau,TKL,Severely endangered,45000
+701,Wotu,Indonesia,IDN,Vulnerable,45000
+702,Wambule,Nepal,NPL,Vulnerable,44710
+703,Southern East Cree,Canada,CAN,Vulnerable,44550
+704,Arbore,Ethiopia,ETH,Definitely endangered,44410
+705,Ebang,Sudan,SDN,Severely endangered,44120
+706,Tafi,Ghana,GHA,Vulnerable,44000
+707,Puma,Nepal,NPL,Severely endangered,43100
+708,Gyele,Cameroon;Equatorial Guinea,CMR;GNQ,Definitely endangered,42800
+709,Bwisi,Congo;Gabon,COG;GAB,Definitely endangered,42480
+710,Eastern Montagnais,Canada,CAN,Vulnerable,41800
+711,Atikamekw,Canada,CAN,Vulnerable,41550
+712,Acoma-Laguna,United States of America,USA,Definitely endangered,40000
+713,Aka,India;Sudan,IND;SDN,Definitely endangered,40000
+714,Baga Manduri,Guinea,GIN,Definitely endangered,40000
+715,Baga Sitemu,Guinea,GIN,Severely endangered,40000
+716,Botlikh,Russian Federation,RUS,Definitely endangered,40000
+717,Bunan,India,IND,Definitely endangered,40000
+718,Cashinahua (Peru),Peru,PER,Definitely endangered,40000
+719,Cha'palaa,Ecuador,ECU,Definitely endangered,40000
+720,Evenki (Manchuria),China,CHN,Severely endangered,40000
+721,Gazhuo,China,CHN,Definitely endangered,40000
+722,Godoberi,Russian Federation,RUS,Definitely endangered,40000
+723,Kari'ña (Guyana;Suriname),Guyana;Suriname,GUY;SUR,Severely endangered,40000
+724,Lishan Didan (Israel),Israel,ISR,Severely endangered,40000
+725,Napu,Indonesia,IDN,Vulnerable,40000
+726,Rahambuu,Indonesia,IDN,Vulnerable,40000
+727,Shingsaba,China;Nepal,CHN;NPL,Vulnerable,40000
+728,Sinkiang Dagur,China,CHN,Definitely endangered,40000
+729,Taa,Botswana,BWA,Definitely endangered,40000
+730,Tennet,Sudan,SDN,Vulnerable,40000
+731,Wapishana (Brazil),Brazil,BRA,Definitely endangered,40000
+732,Yagua,Peru,PER,Definitely endangered,40000
+733,Yanomám,Brazil,BRA,Vulnerable,40000
+734,Yanomami (Venezuela),Venezuela (Bolivarian Republic of),VEN,Vulnerable,40000
+735,Younuo Bunu,China,CHN,Definitely endangered,40000
+736,Zenaga (Mauritania),Mauritania,MRT,Severely endangered,40000
+737,Baghati,India,IND,Critically endangered,39760
+738,Bharmauri,India,IND,Definitely endangered,39760
+739,Uspantek,Guatemala,GTM,Vulnerable,39710
+740,Khang Quang Lam,Viet Nam,VNM,Severely endangered,39210
+741,Konni,Ghana,GHA,Vulnerable,38000
+742,Tocho,Sudan,SDN,Severely endangered,38000
+743,Nupri,Nepal,NPL,Definitely endangered,37760
+744,Ayoreo,Bolivia (Plurinational State of),BOL,Definitely endangered,37000
+745,Moyon,India,IND,Definitely endangered,37000
+746,Utsat,China,CHN,Definitely endangered,37000
+747,Nayi,Ethiopia,ETH,Vulnerable,36560
+748,Mussau-Emira,Papua New Guinea,PNG,Definitely endangered,36510
+749,Narim,Sudan,SDN,Definitely endangered,36230
+750,Garífuna (Guatemala),Guatemala,GTM,Vulnerable,35640
+751,Nachiring,Nepal,NPL,Severely endangered,35530
+752,Eastern Popoloc,Mexico,MEX,Vulnerable,35440
+753,Nding,Sudan,SDN,Critically endangered,35130
+754,Anung (Myanmar),Myanmar,MMR,Severely endangered,35000
+755,Camsá,Colombia,COL,Definitely endangered,35000
+756,Crow,United States of America,USA,Definitely endangered,35000
+757,Sak (Myanmar),Myanmar,MMR,Vulnerable,35000
+758,Shwai,Sudan,SDN,Critically endangered,35000
+759,Wano,Indonesia,IDN,Definitely endangered,35000
+760,Northwestern Ojibwe,Canada,CAN,Vulnerable,34650
+761,Bakpinka,Nigeria,NGA,Critically endangered,34160
+762,Morokodo,Sudan,SDN,Severely endangered,34000
+763,Eloxochitlán Mazatec,Mexico,MEX,Vulnerable,33840
+764,Menik,Senegal,SEN,Definitely endangered,33750
+765,Teribe (Panama),Panama,PAN,Definitely endangered,33050
+766,Tima,Sudan,SDN,Severely endangered,33050
+767,Mursi,Ethiopia,ETH,Vulnerable,32780
+768,Pendau,Indonesia,IDN,Vulnerable,32000
+769,Ayautla Mazatec,Mexico,MEX,Vulnerable,31920
+770,Yucatec,Belize,BLZ,Definitely endangered,31550
+771,Eastern Tlapanec,Mexico,MEX,Vulnerable,30880
+772,Juhur (Caucasus),Azerbaijan;Russian Federation,AZE;RUS,Definitely endangered,30160
+773,Awjila,Libyan Arab Jamahiriya,LBY,Severely endangered,30000
+774,Baleasang,Indonesia,IDN,Definitely endangered,30000
+775,Benga,Gabon;Equatorial Guinea,GAB;GNQ,Definitely endangered,30000
+776,Besoa,Indonesia,IDN,Vulnerable,30000
+777,Boni,Kenya,KEN,Definitely endangered,30000
+778,Bonjo,Congo,COG,Severely endangered,30000
+779,Brokshat,India,IND,Definitely endangered,30000
+780,Budukh,Azerbaijan,AZE,Severely endangered,30000
+781,East Greenlandic,Greenland (Kingdom of Denmark),GRL,Definitely endangered,30000
+782,Eastern Khanty,Russian Federation,RUS,Definitely endangered,30000
+783,Fyem,Nigeria,NGA,Severely endangered,30000
+784,Geta?,India,IND,Severely endangered,30000
+785,Gura,Nigeria,NGA,Severely endangered,30000
+786,Harsusi,Oman,OMN,Definitely endangered,30000
+787,Hozo,Ethiopia,ETH,Definitely endangered,30000
+788,Jemez,United States of America,USA,Vulnerable,30000
+789,Kamara,Ghana,GHA,Definitely endangered,30000
+790,Kapingamarangi,Micronesia (Federated States of),FSM,Severely endangered,30000
+791,Koitabu,Papua New Guinea,PNG,Vulnerable,30000
+792,Kuk,Cameroon,CMR,Definitely endangered,30000
+793,Lai,China,CHN,Definitely endangered,30000
+794,Lishanid Noshan (Israel),Israel,ISR,Severely endangered,30000
+795,Lude,Russian Federation,RUS,Severely endangered,30000
+796,Mbya Guarani (Argentina;Uruguay),Argentina;Uruguay,ARG;URY,Severely endangered,30000
+797,Mohawk (Akwesasne;St. Regis),United States of America,USA,Definitely endangered,30000
+798,Nanay,China;Russian Federation,CHN;RUS,Severely endangered,30000
+799,Panare,Venezuela (Bolivarian Republic of),VEN,Vulnerable,30000
+800,Pilagá,Argentina,ARG,Vulnerable,30000
+801,Pitjantjatjara,Australia,AUS,Vulnerable,30000
+802,Pukur,Guinea,GIN,Definitely endangered,30000
+803,Rotuman,Fiji,FJI,Vulnerable,30000
+804,Savi,Pakistan;Afghanistan,PAK;AFG,Definitely endangered,30000
+805,Sherdukpen,India,IND,Vulnerable,30000
+806,Shira Yugur,China,CHN,Severely endangered,30000
+807,Takahanyilang,India,IND,Critically endangered,30000
+808,U,China,CHN,Definitely endangered,30000
+809,Ulithian,Micronesia (Federated States of),FSM,Severely endangered,30000
+810,Waima'a,Timor-Leste,TLS,Definitely endangered,30000
+811,Warlpiri,Australia,AUS,Vulnerable,30000
+812,Yukpa,Venezuela (Bolivarian Republic of),VEN,Vulnerable,30000
+813,Western Montagnais,Canada,CAN,Vulnerable,29800
+814,Waiwai (Brazil),Brazil,BRA,Vulnerable,29160
+815,Jersey French,United Kingdom of Great Britain and Northern Ireland,GBR,Severely endangered,28740
+816,Bahing,Nepal,NPL,Definitely endangered,27650
+817,Stoney,Canada,CAN,Vulnerable,27650
+818,Southwestern Tepehuan,Mexico,MEX,Vulnerable,27560
+819,Northern Mansi,Russian Federation,RUS,Severely endangered,27460
+820,Bisu,Myanmar;Thailand,MMR;THA,Definitely endangered,27400
+821,Wari,Brazil,BRA,Definitely endangered,27210
+822,Pakan,China,CHN,Definitely endangered,27000
+823,Yami,China,CHN,Vulnerable,27000
+824,Ko,Sudan,SDN,Critically endangered,26830
+825,Yuracaré,Bolivia (Plurinational State of),BOL,Definitely endangered,26750
+826,Aimol,India,IND,Critically endangered,26430
+827,Kohi,Nepal,NPL,Vulnerable,26410
+828,Chatino of the western lowlands,Mexico,MEX,Definitely endangered,26400
+829,Bolo,Angola,ANG,Definitely endangered,26270
+830,Logol,Sudan,SDN,Severely endangered,26000
+831,Sila,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Definitely endangered,26000
+832,Pisaflores Tepehua,Mexico,MEX,Vulnerable,25780
+833,Xerente,Brazil,BRA,Severely endangered,25690
+834,Bribri (Panama),Panama,PAN,Severely endangered,25210
+835,Achuar,Ecuador;Peru,ECU;PER,Definitely endangered,25000
+836,Bai,Sudan,SDN,Definitely endangered,25000
+837,Banka,Mali,MLI,Definitely endangered,25000
+838,Culina (Peru),Peru,PER,Definitely endangered,25000
+839,Gadang,Chad,TCD,Definitely endangered,25000
+840,Khinalug,Azerbaijan,AZE,Severely endangered,25000
+841,Laomian (China),China,CHN,Definitely endangered,25000
+842,Laomian (Myanmar),Myanmar,MMR,Definitely endangered,25000
+843,Lhokpu,Bhutan,BTN,Definitely endangered,25000
+844,Martuwangka,Australia,AUS,Vulnerable,25000
+845,Mayoruna (Peru),Peru,PER,Vulnerable,25000
+846,Pingelapese,Micronesia (Federated States of),FSM,Severely endangered,25000
+847,Rapanui,Chile,CHL,Severely endangered,25000
+848,Remo,India,IND,Severely endangered,25000
+849,Roshorvi,Tajikistan,TJK,Severely endangered,25000
+850,Sanglechi,Tajikistan;Afghanistan,TJK;AFG,Severely endangered,25000
+851,Semelai,Malaysia,MYS,Severely endangered,25000
+852,Urak Lawoi (Malaysia),Malaysia,MYS,Definitely endangered,25000
+853,Urak Lawoi (Thailand),Thailand,THA,Definitely endangered,25000
+854,Zirenkel,Chad,TCD,Definitely endangered,25000
+855,Vumbu,Gabon,GAB,Definitely endangered,24600
+856,Mopán (Guatemala),Guatemala,GTM,Severely endangered,24550
+857,Cuiba,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Severely endangered,24450
+858,Raji,Nepal,NPL,Severely endangered,24130
+859,Highland Chontal,Mexico,MEX,Severely endangered,24100
+860,Yasa,Cameroon;Equatorial Guinea,CMR;GNQ,Definitely endangered,24010
+861,Bumbita Arapesh,Papua New Guinea,PNG,Vulnerable,23530
+862,Mang (China),China,CHN,Definitely endangered,23000
+863,Mang (Viet Nam),Viet Nam,VNM,Definitely endangered,23000
+864,Tlachichilco Tepehua,Mexico,MEX,Definitely endangered,22340
+865,Blackfoot (Canada),Canada,CAN,Definitely endangered,22000
+866,Jaya,Chad,TCD,Severely endangered,22000
+867,Karipuna do Amapá,Brazil,BRA,Vulnerable,22000
+868,Kulfa,Chad,TCD,Definitely endangered,22000
+869,Krahô,Brazil,BRA,Vulnerable,21840
+870,Kristang,Malaysia,MYS,Severely endangered,21500
+871,Yine,Peru,PER,Definitely endangered,21500
+872,North Alaskan Inupiaq (Kotzebue Sound),United States of America,USA,Severely endangered,21440
+873,North Alaskan Inupiaq (North Slope),United States of America,USA,Severely endangered,21440
+874,Seward Peninsula Inupiaq (King Island),United States of America,USA,Critically endangered,21440
+875,Seward Peninsula Inupiaq (Little Diomede Island),United States of America,USA,Critically endangered,21440
+876,Seward Peninsula Inupiaq (Norton Sound),United States of America,USA,Critically endangered,21440
+877,Katukína-Kanamarí,Brazil,BRA,Vulnerable,21000
+878,Tiwi,Australia,AUS,Vulnerable,21000
+879,Zaozou,China,CHN,Vulnerable,21000
+880,Ngäbere (Costa Rica),Costa Rica,CRI,Definitely endangered,20410
+881,Aiton,India,IND,Severely endangered,20000
+882,Anindilyakwa,Australia,AUS,Vulnerable,20000
+883,Apurinã,Brazil,BRA,Definitely endangered,20000
+884,Arrernte,Australia,AUS,Vulnerable,20000
+885,Ashkun,Afghanistan,AFG,Definitely endangered,20000
+886,Ata,Philippines,PHL,Critically endangered,20000
+887,Athpahariya,Nepal,NPL,Definitely endangered,20000
+888,Ava-Guaraní,Argentina,ARG,Definitely endangered,20000
+889,Bayso,Ethiopia,ETH,Definitely endangered,20000
+890,Birhor,India,IND,Critically endangered,20000
+891,Boano,Indonesia,IDN,Vulnerable,20000
+892,Bori,China;India,CHN;IND,Definitely endangered,20000
+893,Chepya,Lao People's Democratic Republic,LAO,Definitely endangered,20000
+894,Chilisso,Pakistan,PAK,Severely endangered,20000
+895,Culina (Brazil),Brazil,BRA,Vulnerable,20000
+896,Damana,Colombia,COL,Definitely endangered,20000
+897,Duguza,Nigeria,NGA,Definitely endangered,20000
+898,Galibi Marworno,Brazil,BRA,Vulnerable,20000
+899,Gats'ama - Ganjule - Harro,Ethiopia,ETH,Definitely endangered,20000
+900,Gebe,Indonesia,IDN,Vulnerable,20000
+901,Ghadames,Libyan Arab Jamahiriya,LBY,Vulnerable,20000
+902,Griko (Calabria),Italy,ITA,Severely endangered,20000
+903,Huilliche,Chile,CHL,Critically endangered,20000
+904,Ik,Uganda,UGA,Severely endangered,20000
+905,Jangshung,India,IND,Definitely endangered,20000
+906,Jero,Nepal,NPL,Vulnerable,20000
+907,Kari'ña (French Guyana),French Guiana (France),GUF,Definitely endangered,20000
+908,Kona,Nigeria,NGA,Severely endangered,20000
+909,Koreguaje,Colombia,COL,Definitely endangered,20000
+910,Koryak,Russian Federation,RUS,Severely endangered,20000
+911,Kota,India,IND,Critically endangered,20000
+912,Logorik,Sudan,SDN,Critically endangered,20000
+913,Lule Saami,Norway;Sweden,NOR;SWE,Severely endangered,20000
+914,Luro,India,IND,Critically endangered,20000
+915,Mambai,Chad,TCD,Severely endangered,20000
+916,Milang,India,IND,Definitely endangered,20000
+917,Mocoví,Argentina,ARG,Definitely endangered,20000
+918,Momuna,Indonesia,IDN,Vulnerable,20000
+919,Mpi,Thailand,THA,Definitely endangered,20000
+920,Muda,China,CHN,Vulnerable,20000
+921,Munji,Afghanistan,AFG,Severely endangered,20000
+922,Nguon,Viet Nam,VNM,Vulnerable,20000
+923,Nheengatu / Yeral (Venezuela),Venezuela (Bolivarian Republic of),VEN,Severely endangered,20000
+924,Nihali,India,IND,Critically endangered,20000
+925,Nyishangba,Nepal,NPL,Definitely endangered,20000
+926,Ottawa (Walpole Island),Canada;United States of America,CAN;USA,Severely endangered,20000
+927,Prasun,Afghanistan,AFG,Definitely endangered,20000
+928,Rukai,China,CHN,Vulnerable,20000
+929,Sáliba,Colombia;Venezuela (Bolivarian Republic of),COL;VEN,Severely endangered,20000
+930,Sangkong,China,CHN,Vulnerable,20000
+931,Sarwa,Chad,TCD,Definitely endangered,20000
+932,Shoshoni (Idaho),United States of America,USA,Severely endangered,20000
+933,Shoshoni (Nevada),United States of America,USA,Severely endangered,20000
+934,Shoshoni (Wyoming),United States of America,USA,Severely endangered,20000
+935,Tai Phake,India,IND,Severely endangered,20000
+936,Tamazight (Arzew),Algeria,DZA,Critically endangered,20000
+937,Tanglang,China,CHN,Vulnerable,20000
+938,Tchitchege,Gabon,GAB,Definitely endangered,20000
+939,Tinan,China;India,CHN;IND,Definitely endangered,20000
+940,Tsafiki,Ecuador,ECU,Definitely endangered,20000
+941,Ukhwejo,Central African Republic,CAF,Severely endangered,20000
+942,Urarina,Peru,PER,Vulnerable,20000
+943,Ushojo,Pakistan,PAK,Definitely endangered,20000
+944,Waigali,Afghanistan,AFG,Definitely endangered,20000
+945,Waotededo,Ecuador,ECU,Vulnerable,20000
+946,Wotapuri-Katarqalai,Afghanistan,AFG,Definitely endangered,20000
+947,Wutun,China,CHN,Definitely endangered,20000
+948,Candoshi,Peru,PER,Definitely endangered,19000
+949,Hupda (Brazil),Brazil,BRA,Vulnerable,19000
+950,Kendeje,Chad,TCD,Definitely endangered,18590
+951,Hunzib,Russian Federation,RUS,Definitely endangered,18390
+952,Tchumbuli,Benin,BEN,Critically endangered,18380
+953,Cashibo-Cacataibo,Peru,PER,Definitely endangered,18000
+954,Grass Koiari,Papua New Guinea,PNG,Vulnerable,18000
+955,Isirawa,Indonesia,IDN,Vulnerable,18000
+956,Lanoh,Malaysia,MYS,Critically endangered,18000
+957,Lemolang,Indonesia,IDN,Vulnerable,18000
+958,Nila (Seram Island),Indonesia,IDN,Definitely endangered,18000
+959,Shixing,China,CHN,Definitely endangered,18000
+960,Chuj (Mexico),Mexico,MEX,Critically endangered,17710
+961,Darma,India;Nepal,IND;NPL,Definitely endangered,17610
+962,Kung,Cameroon,CMR,Severely endangered,17500
+963,Lokono (Guyana),Guyana;Venezuela (Bolivarian Republic of),GUY;VEN,Critically endangered,17500
+964,Byangsi,India;Nepal,IND;NPL,Definitely endangered,17340
+965,Pasing,Lao People's Democratic Republic,LAO,Definitely endangered,17320
+966,Yamphu,Nepal,NPL,Definitely endangered,17220
+967,Andio,Indonesia,IDN,Vulnerable,17000
+968,Cheyenne (Montana),United States of America,USA,Definitely endangered,17000
+969,Kumzari,Oman,OMN,Severely endangered,17000
+970,Quechua of Yauyos,Peru,PER,Critically endangered,17000
+971,Bainouk-Samik,Senegal,SEN,Severely endangered,16850
+972,Côông,Viet Nam,VNM,Definitely endangered,16760
+973,Dogrib,Canada,CAN,Vulnerable,16750
+974,Upland Yuman,United States of America,USA,Vulnerable,16500
+975,Eastern Cuicatec,Mexico,MEX,Vulnerable,16410
+976,Tamazight (Ait Rouadi),Morocco,MAR,Extinct,16370
+977,Woleaian,Micronesia (Federated States of),FSM,Severely endangered,16310
+978,Huehuetla Tepehua,Mexico,MEX,Definitely endangered,16030
+979,Kadiwéu,Brazil,BRA,Definitely endangered,16000
+980,Southern Tiwa (Isleta Pueblo),United States of America,USA,Definitely endangered,16000
+981,Southern Tiwa (Sandia Pueblo),United States of America,USA,Definitely endangered,16000
+982,Tewa (Arizona),United States of America,USA,Definitely endangered,16000
+983,Tewa (New Mexico),United States of America,USA,Severely endangered,16000
+984,ǁGana,Botswana,BWA,Vulnerable,15500
+985,Akwáwa,Brazil,BRA,Vulnerable,15480
+986,Chiquihuitlán Mazatec,Mexico,MEX,Definitely endangered,15020
+987,Apinajé,Brazil,BRA,Vulnerable,15000
+988,Bashkarik,Pakistan,PAK,Severely endangered,15000
+989,Chintang,Nepal,NPL,Severely endangered,15000
+990,Forest Nenets,Russian Federation,RUS,Severely endangered,15000
+991,Hupda (Colombia),Colombia,COL,Definitely endangered,15000
+992,Jah Hut,Malaysia,MYS,Severely endangered,15000
+993,Jeri,Côte d'Ivoire,CIV,Severely endangered,15000
+994,Jonkor Bourmataguil,Chad,TCD,Severely endangered,15000
+995,K'emant,Ethiopia,ETH,Severely endangered,15000
+996,Kanashi,India,IND,Definitely endangered,15000
+997,Karajá,Brazil,BRA,Vulnerable,15000
+998,Karelian (Tikhvin),Russian Federation,RUS,Severely endangered,15000
+999,Kendem,Cameroon,CMR,Severely endangered,15000
+1000,Khamba,China;India,CHN;IND,Definitely endangered,15000
+1001,Mayoruna (Brazil),Brazil,BRA,Vulnerable,15000
+1002,Mescalero-Chiricahua Apache (New Mexico),United States of America,USA,Definitely endangered,15000
+1003,Numao Bunu,China,CHN,Definitely endangered,15000
+1004,Orang Seletar,Malaysia,MYS,Severely endangered,15000
+1005,Palenque Creole,Colombia,COL,Definitely endangered,15000
+1006,Pyuma,China,CHN,Vulnerable,15000
+1007,Saaroa,China,CHN,Critically endangered,15000
+1008,Saluan,Indonesia,IDN,Vulnerable,15000
+1009,Semaq Beri,Malaysia,MYS,Critically endangered,15000
+1010,Talodi,Sudan,SDN,Critically endangered,15000
+1011,Wayana (Suriname),Suriname,SUR,Vulnerable,15000
+1012,Wik Mungkan,Australia,AUS,Vulnerable,15000
+1013,Natsilingmiutut,Canada,CAN,Vulnerable,14550
+1014,Movima,Bolivia (Plurinational State of),BOL,Severely endangered,14520
+1015,Ngombe,Central African Republic,CAF,Definitely endangered,14500
+1016,Cinta Larga,Brazil,BRA,Vulnerable,14400
+1017,Dupaninan Agta,Philippines,PHL,Vulnerable,14000
+1018,Tese,Sudan,SDN,Critically endangered,14000
+1019,Bororo,Brazil,BRA,Definitely endangered,13900
+1020,Puluwat,Micronesia (Federated States of),FSM,Severely endangered,13640
+1021,Kanela Rankokamekra,Brazil,BRA,Vulnerable,13370
+1022,Saba,Chad,TCD,Definitely endangered,13350
+1023,Kurripako (Brazil),Brazil,BRA,Vulnerable,13320
+1024,Guernsey French,United Kingdom of Great Britain and Northern Ireland,GBR,Severely endangered,13270
+1025,Paafang,Micronesia (Federated States of),FSM,Severely endangered,13180
+1026,Chɨlɨng,Nepal,NPL,Definitely endangered,13140
+1027,Cypriot Arabic,Cyprus,CYP,Severely endangered,13000
+1028,Palikur (Brazil),Brazil,BRA,Vulnerable,13000
+1029,Sanenyo,India,IND,Critically endangered,13000
+1030,Tecóatl Mazatec,Mexico,MEX,Vulnerable,13000
+1031,Ozomatlán Totonac,Mexico,MEX,Critically endangered,12760
+1032,Kāgate,Nepal,NPL,Definitely endangered,12730
+1033,Maxakali,Brazil,BRA,Vulnerable,12710
+1034,Murik,Papua New Guinea,PNG,Vulnerable,12560
+1035,Pengo,India,IND,Critically endangered,12540
+1036,Marúbo,Brazil,BRA,Vulnerable,12520
+1037,Aivilingmiutut,Canada,CAN,Vulnerable,12450
+1038,Besme,Chad,TCD,Severely endangered,12280
+1039,Oirata,Indonesia,IDN,Definitely endangered,12210
+1040,Lohorung,Nepal,NPL,Severely endangered,12070
+1041,Harakmbut,Peru,PER,Definitely endangered,12060
+1042,Buyang,China,CHN,Severely endangered,12000
+1043,Mah Meri,Malaysia,MYS,Severely endangered,12000
+1044,Manjui,Argentina;Bolivia (Plurinational State of);Paraguay,ARG;BOL;PRY,Definitely endangered,12000
+1045,Te'un (Seram Island),Indonesia,IDN,Definitely endangered,12000
+1046,Tsou,China,CHN,Vulnerable,12000
+1047,Ujir,Indonesia,IDN,Definitely endangered,12000
+1048,White Gelao (China),China,CHN,Severely endangered,12000
+1049,Northern Algonquin,Canada,CAN,Vulnerable,11800
+1050,Akawaio (Brazil),Brazil,BRA,Vulnerable,11700
+1051,Huehuetlán Mazatec,Mexico,MEX,Vulnerable,11690
+1052,Trio (Brazil),Brazil,BRA,Vulnerable,11560
+1053,Savo,Solomon Islands,SLB,Definitely endangered,11470
+1054,Tektitek,Guatemala,GTM,Definitely endangered,11440
+1055,Fwâi,New Caledonia (France),NCL,Vulnerable,11310
+1056,Waimirí-Atroarí,Brazil,BRA,Vulnerable,11200
+1057,Guayabero,Colombia,COL,Definitely endangered,11180
+1058,Fagauvea (Northern),New Caledonia (France),NCL,Vulnerable,11070
+1059,Fagauvea (Southern),New Caledonia (France),NCL,Vulnerable,11070
+1060,Fania,Chad,TCD,Severely endangered,11000
+1061,Ubi,Chad,TCD,Severely endangered,11000
+1062,Warnang,Sudan,SDN,Severely endangered,11000
+1063,Itzá,Guatemala,GTM,Critically endangered,10940
+1064,Koireng,India,IND,Critically endangered,10560
+1065,Chipaya,Bolivia (Plurinational State of),BOL,Definitely endangered,10500
+1066,Mokilese,Micronesia (Federated States of),FSM,Critically endangered,10500
+1067,Toda,India,IND,Critically endangered,10060
+1068,Adabe,Timor-Leste,TLS,Vulnerable,10000
+1069,Alutor,Russian Federation,RUS,Severely endangered,10000
+1070,Arapaho (Wyoming),United States of America,USA,Severely endangered,10000
+1071,Beeke,Democratic Republic of the Congo,ZAI,Severely endangered,10000
+1072,Blackfoot (United States of America),United States of America,USA,Definitely endangered,10000
+1073,Bohtan Neo-Aramaic,Georgia;Russian Federation,GEO;RUS,Severely endangered,10000
+1074,Bola,China,CHN,Definitely endangered,10000
+1075,Bong'om,Kenya,KEN,Definitely endangered,10000
+1076,Bora,Colombia;Peru,COL;PER,Vulnerable,10000
+1077,Central Siberian Yupik (St. Lawrence Island),United States of America,USA,Definitely endangered,10000
+1078,Chali,Bhutan,BTN,Definitely endangered,10000
+1079,Cherokee (North Carolina),United States of America,USA,Severely endangered,10000
+1080,Cocama-Cocamilla (Peru),Peru,PER,Severely endangered,10000
+1081,Dair,Sudan,SDN,Severely endangered,10000
+1082,Dakpa,Bhutan;India,BTN;IND,Definitely endangered,10000
+1083,Dampelas,Indonesia,IDN,Definitely endangered,10000
+1084,Danaw,Myanmar,MMR,Critically endangered,10000
+1085,Ega,Côte d'Ivoire,CIV,Severely endangered,10000
+1086,El Hugeirat,Sudan,SDN,Severely endangered,10000
+1087,Faghani,Solomon Islands,SLB,Vulnerable,10000
+1088,Fongoro,Chad,TCD,Severely endangered,10000
+1089,Gambiri,Afghanistan,AFG,Severely endangered,10000
+1090,Gongduk,Bhutan,BTN,Vulnerable,10000
+1091,Gorap,Indonesia,IDN,Definitely endangered,10000
+1092,Guugu Yimidhirr,Australia,AUS,Vulnerable,10000
+1093,Gyem,Nigeria,NGA,Critically endangered,10000
+1094,Habu,Timor-Leste,TLS,Vulnerable,10000
+1095,Hawaiian,United States of America,USA,Critically endangered,10000
+1096,Hértevin,Turkey,TUR,Critically endangered,10000
+1097,Hu,China,CHN,Definitely endangered,10000
+1098,Hualapai,United States of America,USA,Vulnerable,10000
+1099,Hung,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Definitely endangered,10000
+1100,Inkhokvari,Russian Federation,RUS,Definitely endangered,10000
+1101,Ishkashimi,Tajikistan,TJK,Severely endangered,10000
+1102,Iyive,Cameroon,CMR,Severely endangered,10000
+1103,Jiongnai Bunu,China,CHN,Definitely endangered,10000
+1104,Kaande,Gabon,GAB,Severely endangered,10000
+1105,Kaco',Cambodia,KHM,Definitely endangered,10000
+1106,Kadu,Myanmar,MMR,Severely endangered,10000
+1107,Kairui-Midiki,Timor-Leste,TLS,Vulnerable,10000
+1108,Kari,Democratic Republic of the Congo,ZAI,Severely endangered,10000
+1109,Kayabi,Brazil,BRA,Vulnerable,10000
+1110,Khowa,India,IND,Definitely endangered,10000
+1111,Kodeoha,Indonesia,IDN,Vulnerable,10000
+1112,Kujarge,Chad,TCD,Definitely endangered,10000
+1113,Kukatja,Australia,AUS,Vulnerable,10000
+1114,Kuot,Papua New Guinea,PNG,Vulnerable,10000
+1115,Lokono (Suriname),French Guiana (France);Suriname,GUF;SUR,Severely endangered,10000
+1116,Mahongwe,Gabon,GAB,Severely endangered,10000
+1117,May,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Definitely endangered,10000
+1118,Mbara,Chad,TCD,Severely endangered,10000
+1119,Mech,India,IND,Severely endangered,10000
+1120,Mòcheno,Italy,ITA,Definitely endangered,10000
+1121,Naueti,Timor-Leste,TLS,Vulnerable,10000
+1122,North Greenlandic,Greenland (Kingdom of Denmark),GRL,Definitely endangered,10000
+1123,Ormuri,Pakistan;Afghanistan,PAK;AFG,Definitely endangered,10000
+1124,Paiter,Brazil,BRA,Vulnerable,10000
+1125,Pareci,Brazil,BRA,Definitely endangered,10000
+1126,Pasi,India,IND,Definitely endangered,10000
+1127,Resian,Italy,ITA,Definitely endangered,10000
+1128,Sach,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Definitely endangered,10000
+1129,Sake,Gabon,GAB,Severely endangered,10000
+1130,Saterlandic,Germany,DEU,Severely endangered,10000
+1131,She,China,CHN,Critically endangered,10000
+1132,Shumashti,Afghanistan,AFG,Severely endangered,10000
+1133,Sighu,Gabon,GAB,Severely endangered,10000
+1134,Sobei,Indonesia,IDN,Definitely endangered,10000
+1135,Thavung (Laos),Lao People's Democratic Republic;Thailand,LAO;THA,Definitely endangered,10000
+1136,Tirma,Sudan,SDN,Critically endangered,10000
+1137,Tombelala,Indonesia,IDN,Vulnerable,10000
+1138,Toto,India,IND,Critically endangered,10000
+1139,Trio (Suriname),Suriname,SUR,Vulnerable,10000
+1140,Tum,Lao People's Democratic Republic,LAO,Definitely endangered,10000
+1141,Tuotomb,Cameroon,CMR,Severely endangered,10000
+1142,Yatê,Brazil,BRA,Severely endangered,10000
+1143,Zaiwa,China;India,CHN;IND,Definitely endangered,10000
+1144,Zay,Ethiopia,ETH,Severely endangered,10000
+1145,Zenaga (Western Sahara),Western Sahara,ESH,Critically endangered,10000
+1146,|Gui,Botswana,BWA,Vulnerable,10000
+1147,ǁAni,Botswana,BWA,Definitely endangered,10000
+1148,Ka'apór,Brazil,BRA,Vulnerable,9910
+1149,Hadza,United Republic of Tanzania,TZA,Vulnerable,9750
+1150,Kunwinjku,Australia,AUS,Vulnerable,9740
+1151,Bakairi,Brazil,BRA,Vulnerable,9500
+1152,Drubea,New Caledonia (France),NCL,Vulnerable,9460
+1153,Namonuito,Micronesia (Federated States of),FSM,Severely endangered,9440
+1154,Hya,Cameroon;Nigeria,CMR;NGA,Severely endangered,9400
+1155,Machineri (Brazil),Brazil,BRA,Vulnerable,9370
+1156,South Slavey,Canada,CAN,Definitely endangered,9200
+1157,Wajãpi,Brazil,BRA,Vulnerable,9050
+1158,Mewahang,Nepal,NPL,Severely endangered,9040
+1159,Awapit,Ecuador,ECU,Severely endangered,9000
+1160,Chimila,Colombia,COL,Severely endangered,9000
+1161,Kua,Botswana,BWA,Definitely endangered,9000
+1162,Njalgulgule,Sudan,SDN,Severely endangered,9000
+1163,Pech,Honduras,HND,Severely endangered,9000
+1164,Rikbaktsa,Brazil,BRA,Severely endangered,9000
+1165,Caac,New Caledonia (France),NCL,Vulnerable,8900
+1166,Inuinnaqtun,Canada,CAN,Definitely endangered,8900
+1167,Voh-Koné dialects,New Caledonia (France),NCL,Definitely endangered,8780
+1168,Kuna (Colombia),Colombia,COL,Severely endangered,8760
+1169,Dení,Brazil,BRA,Vulnerable,8750
+1170,Tarao,India,IND,Critically endangered,8700
+1171,Santa María del Mar Huave,Mexico,MEX,Severely endangered,8620
+1172,Nukuoro,Micronesia (Federated States of),FSM,Definitely endangered,8600
+1173,Kumak,New Caledonia (France),NCL,Vulnerable,8470
+1174,Pukapukan,Cook Islands,COK,Definitely endangered,8400
+1175,Lola,Indonesia,IDN,Vulnerable,8300
+1176,Ashaninka (Brazil),Brazil,BRA,Vulnerable,8130
+1177,Ottawa (Canada),Canada;United States of America,CAN;USA,Severely endangered,8100
+1178,Bati,Cameroon,CMR,Severely endangered,8000
+1179,Chorote Iyojwa'ja,Argentina;Paraguay,ARG;PRY,Severely endangered,8000
+1180,Eman,Cameroon,CMR,Severely endangered,8000
+1181,Isu,Cameroon,CMR,Severely endangered,8000
+1182,Jamamadí,Brazil,BRA,Vulnerable,8000
+1183,Javaé,Brazil,BRA,Definitely endangered,8000
+1184,Nubaca,Cameroon,CMR,Severely endangered,8000
+1185,Piaroa (Colombia),Colombia,COL,Definitely endangered,8000
+1186,Taos,United States of America,USA,Definitely endangered,8000
+1187,Taulil,Papua New Guinea,PNG,Vulnerable,8000
+1188,Tuyuca (Brazil),Brazil,BRA,Vulnerable,8000
+1189,Kaike,Nepal,NPL,Definitely endangered,7940
+1190,Kildin Saami,Russian Federation,RUS,Severely endangered,7870
+1191,Ese eja,Bolivia (Plurinational State of);Peru,BOL;PER,Definitely endangered,7820
+1192,Central Cagayan Agta,Philippines,PHL,Vulnerable,7790
+1193,Jaqaru,Peru,PER,Severely endangered,7500
+1194,Waiwai (Suriname),Suriname,SUR,Critically endangered,7500
+1195,Laal,Chad,TCD,Critically endangered,7490
+1196,Ulcha,Russian Federation,RUS,Critically endangered,7320
+1197,Jawe,New Caledonia (France),NCL,Vulnerable,7290
+1198,Maslam,Cameroon;Chad,CMR;TCD,Severely endangered,7230
+1199,Nambiquara do Sul,Brazil,BRA,Vulnerable,7210
+1200,North Slavey,Canada,CAN,Definitely endangered,7200
+1201,Gitksan,Canada,CAN,Severely endangered,7100
+1202,A'ingae / Cofan (Ecuador),Ecuador,ECU,Definitely endangered,7000
+1203,Animere,Ghana,GHA,Critically endangered,7000
+1204,Batek,Malaysia,MYS,Critically endangered,7000
+1205,Enggano,Indonesia,IDN,Vulnerable,7000
+1206,Indri,Sudan,SDN,Severely endangered,7000
+1207,Kalaw Lagaw Ya,Australia,AUS,Definitely endangered,7000
+1208,Lakon,Vanuatu,VUT,Vulnerable,7000
+1209,Mok (China),China,CHN,Definitely endangered,7000
+1210,Ngaanyatjarra,Australia,AUS,Vulnerable,7000
+1211,Piratapuya (Brazil),Brazil,BRA,Severely endangered,7000
+1212,Mountain Guarijío,Mexico,MEX,Vulnerable,6960
+1213,Nivkh (Sakhalin),Russian Federation,RUS,Severely endangered,6880
+1214,Krikati,Brazil,BRA,Vulnerable,6820
+1215,Dakota,Canada,CAN,Definitely endangered,6750
+1216,Carrier,Canada,CAN,Severely endangered,6600
+1217,Kasanga,Guinea-Bissau,GNB,Critically endangered,6500
+1218,Wanano / Kotiria (Brazil),Brazil,BRA,Vulnerable,6500
+1219,Eastern Ojibwe,Canada,CAN,Severely endangered,6200
+1220,Yuhup (Brazil),Brazil,BRA,Vulnerable,6170
+1221,Akum,Cameroon;Nigeria,CMR;NGA,Critically endangered,6000
+1222,Blablanga,Solomon Islands,SLB,Definitely endangered,6000
+1223,Bubia,Cameroon,CMR,Severely endangered,6000
+1224,Chickasaw,United States of America,USA,Severely endangered,6000
+1225,Desano (Brazil),Brazil,BRA,Definitely endangered,6000
+1226,Faetar,Italy,ITA,Definitely endangered,6000
+1227,Hixkaryána,Brazil,BRA,Vulnerable,6000
+1228,Hoava,Solomon Islands,SLB,Vulnerable,6000
+1229,Hodi,Venezuela (Bolivarian Republic of),VEN,Vulnerable,6000
+1230,Iñapari,Peru,PER,Critically endangered,6000
+1231,Koke,Chad,TCD,Severely endangered,6000
+1232,Kowiai,Indonesia,IDN,Vulnerable,6000
+1233,Kuikuro,Brazil,BRA,Vulnerable,6000
+1234,Laiyolo,Indonesia,IDN,Definitely endangered,6000
+1235,Mo'da,Sudan,SDN,Critically endangered,6000
+1236,Northern Selkup,Russian Federation,RUS,Severely endangered,6000
+1237,Penrhyn,Cook Islands,COK,Severely endangered,6000
+1238,Pintupi,Australia,AUS,Vulnerable,6000
+1239,Piratapuya (Colombia),Colombia,COL,Critically endangered,6000
+1240,Siona / Secoya (Ecuador),Ecuador,ECU,Severely endangered,6000
+1241,Sonsorol,Palau,PLW,Severely endangered,6000
+1242,Teanu,Solomon Islands,SLB,Definitely endangered,6000
+1243,Yaminahua (Brazil),Brazil,BRA,Vulnerable,6000
+1244,Andoke,Colombia,COL,Severely endangered,5970
+1245,Orowe,New Caledonia (France),NCL,Definitely endangered,5870
+1246,Mosetén,Bolivia (Plurinational State of),BOL,Severely endangered,5850
+1247,Norfolk-Pitcairn (Norfolk),Norfolk Island (Australia),NFK,Definitely endangered,5800
+1248,Nunatsiavummiutut,Canada,CAN,Definitely endangered,5750
+1249,Shuswap,Canada,CAN,Definitely endangered,5700
+1250,Xaragure,New Caledonia (France),NCL,Vulnerable,5660
+1251,Tapirapé,Brazil,BRA,Vulnerable,5640
+1252,Lacandón,Mexico,MEX,Critically endangered,5630
+1253,Chilcotin,Canada,CAN,Definitely endangered,5600
+1254,Chácobo,Bolivia (Plurinational State of),BOL,Definitely endangered,5500
+1255,Gao,Solomon Islands,SLB,Vulnerable,5500
+1256,Geme,Central African Republic,CAF,Critically endangered,5500
+1257,Karore,Papua New Guinea,PNG,Vulnerable,5500
+1258,Yuhup (Colombia),Colombia,COL,Definitely endangered,5500
+1259,Hinukh,Russian Federation,RUS,Definitely endangered,5480
+1260,Anuki,Papua New Guinea,PNG,Definitely endangered,5420
+1261,Imeraguen,Mauritania,MRT,Definitely endangered,5340
+1262,Narpa,Nepal,NPL,Definitely endangered,5330
+1263,Akatek (Mexico),Mexico,MEX,Vulnerable,5320
+1264,Naskapi,Canada,CAN,Vulnerable,5250
+1265,Archi,Russian Federation,RUS,Definitely endangered,5240
+1266,Yawanawá,Brazil,BRA,Vulnerable,5190
+1267,Raute,Nepal,NPL,Severely endangered,5180
+1268,Seri,Mexico,MEX,Vulnerable,5180
+1269,Western Popoloc,Mexico,MEX,Severely endangered,5160
+1270,Yaqui (United States of America),United States of America,USA,Definitely endangered,5100
+1271,Kalapalo,Brazil,BRA,Vulnerable,5060
+1272,Nganasan,Russian Federation,RUS,Severely endangered,5050
+1273,Jakaltek (Mexico),Mexico,MEX,Severely endangered,5040
+1274,Aheu,Lao People's Democratic Republic,LAO,Definitely endangered,5000
+1275,Amahuaca,Peru,PER,Severely endangered,5000
+1276,Anfillo,Ethiopia,ETH,Critically endangered,5000
+1277,Baniva,Venezuela (Bolivarian Republic of),VEN,Severely endangered,5000
+1278,Bataan Ayta,Philippines,PHL,Definitely endangered,5000
+1279,Bats,Georgia,GEO,Severely endangered,5000
+1280,Black Mountain,Bhutan,BTN,Definitely endangered,5000
+1281,Busoa,Indonesia,IDN,Vulnerable,5000
+1282,Chong,Cambodia;Thailand,KHM;THA,Severely endangered,5000
+1283,Domaaki,Pakistan,PAK,Severely endangered,5000
+1284,Havasupai,United States of America,USA,Definitely endangered,5000
+1285,Kensiw (Thailand),Thailand,THA,Severely endangered,5000
+1286,Khmin,China,CHN,Vulnerable,5000
+1287,Khvarshi,Russian Federation,RUS,Definitely endangered,5000
+1288,Laghuu,Viet Nam,VNM,Definitely endangered,5000
+1289,Laha (Lao Cai),Viet Nam,VNM,Definitely endangered,5000
+1290,Laha (Son La),Viet Nam,VNM,Definitely endangered,5000
+1291,Majera,Cameroon,CMR,Critically endangered,5000
+1292,Maliseet-Passamaquoddy,United States of America,USA,Severely endangered,5000
+1293,Mikasuki,United States of America,USA,Vulnerable,5000
+1294,Mlomp,Senegal,SEN,Critically endangered,5000
+1295,Onin,Indonesia,IDN,Vulnerable,5000
+1296,Ormu,Indonesia,IDN,Vulnerable,5000
+1297,Palikur (French Guyana),French Guiana (France),GUF,Severely endangered,5000
+1298,Pemon (Brazil),Brazil,BRA,Vulnerable,5000
+1299,Quechua of Chachapoyas,Peru,PER,Critically endangered,5000
+1300,Seke,Nepal,NPL,Vulnerable,5000
+1301,Siona / Secoya (Colombia),Colombia,COL,Critically endangered,5000
+1302,South Saami,Norway;Sweden,NOR;SWE,Severely endangered,5000
+1303,Taikat,Indonesia,IDN,Definitely endangered,5000
+1304,Taloki,Indonesia,IDN,Definitely endangered,5000
+1305,Tamki,Chad,TCD,Critically endangered,5000
+1306,Tawahka,Honduras,HND,Severely endangered,5000
+1307,Thavung (Thailand),Thailand,THA,Severely endangered,5000
+1308,Tomadino,Indonesia,IDN,Definitely endangered,5000
+1309,Toratán,Indonesia,IDN,Definitely endangered,5000
+1310,Tunisian Judeo-Arabic (Tunisia),Tunisia,TUN,Critically endangered,5000
+1311,Ute (Colorado;Ute Mountain),United States of America,USA,Severely endangered,5000
+1312,Walmajarri,Australia,AUS,Definitely endangered,5000
+1313,Warekena (Venezuela),Venezuela (Bolivarian Republic of),VEN,Severely endangered,5000
+1314,Boguru,Democratic Republic of the Congo;Sudan,ZAI;SDN,Critically endangered,4940
+1315,Pukobyê,Brazil,BRA,Vulnerable,4940
+1316,Wali,Sudan,SDN,Critically endangered,4870
+1317,Gavião do Pará,Brazil,BRA,Vulnerable,4760
+1318,Malecite,Canada;United States of America,CAN;USA,Definitely endangered,4750
+1319,Ninam (Brazil),Brazil,BRA,Vulnerable,4660
+1320,Zoró,Brazil,BRA,Vulnerable,4640
+1321,Sanema (Brazil),Brazil,BRA,Vulnerable,4620
+1322,Ixtenco Otomí,Mexico,MEX,Severely endangered,4610
+1323,Ottawa (Michigan),United States of America,USA,Critically endangered,4590
+1324,Kanela Apaniekra,Brazil,BRA,Vulnerable,4580
+1325,Satawal,Micronesia (Federated States of),FSM,Severely endangered,4580
+1326,Chatino of Zacatepec,Mexico,MEX,Definitely endangered,4530
+1327,Demisa,Indonesia,IDN,Definitely endangered,4500
+1328,Koasati (Louisiana),United States of America,USA,Definitely endangered,4500
+1329,Koasati (Texas),United States of America,USA,Definitely endangered,4500
+1330,Nanti,Peru,PER,Vulnerable,4500
+1331,Shabo,Ethiopia,ETH,Severely endangered,4500
+1332,Sharanahua,Peru,PER,Severely endangered,4500
+1333,Siona  Secoya (Peru),Peru,PER,Definitely endangered,4500
+1334,Tolomako,Vanuatu,VUT,Definitely endangered,4500
+1335,Enawenê-Nawê,Brazil,BRA,Vulnerable,4450
+1336,Valle Nacional Chinantec,Mexico,MEX,Definitely endangered,4420
+1337,Gavião de Rondônia,Brazil,BRA,Vulnerable,4360
+1338,Tabasco Náhuatl,Mexico,MEX,Critically endangered,4340
+1339,Sera,Papua New Guinea,PNG,Severely endangered,4320
+1340,Yecuana (Brazil),Brazil,BRA,Vulnerable,4300
+1341,Moose Cree,Canada,CAN,Vulnerable,4050
+1342,Tlahuica,Mexico,MEX,Severely endangered,4050
+1343,Katukina do Acre,Brazil,BRA,Severely endangered,4040
+1344,Abai Sungai,Malaysia,MYS,Definitely endangered,4000
+1345,Barasana (Colombia),Colombia,COL,Critically endangered,4000
+1346,Beezen,Cameroon,CMR,Severely endangered,4000
+1347,Buga,Sudan,SDN,Critically endangered,4000
+1348,Cheyenne (Oklahoma),United States of America,USA,Severely endangered,4000
+1349,Cimbrian,Italy,ITA,Definitely endangered,4000
+1350,Cobiana,Guinea-Bissau;Senegal,GNB;SEN,Critically endangered,4000
+1351,Dagur (Amur),China,CHN,Critically endangered,4000
+1352,Dahalo,Kenya,KEN,Severely endangered,4000
+1353,Émérillon,French Guiana (France),GUF,Severely endangered,4000
+1354,Gagauz (Maritime),Bulgaria;Romania,BGR;ROU,Severely endangered,4000
+1355,Hijuk,Cameroon,CMR,Critically endangered,4000
+1356,Hobyot,Oman;Yemen,OMN;YEM,Severely endangered,4000
+1357,Inari Saami,Finland,FIN,Severely endangered,4000
+1358,Istriot,Croatia,HRV,Severely endangered,4000
+1359,Kalao,Indonesia,IDN,Definitely endangered,4000
+1360,Kamaiurá,Brazil,BRA,Vulnerable,4000
+1361,Kickapoo (Kansas),United States of America,USA,Severely endangered,4000
+1362,Kickapoo (Oklahoma),United States of America,USA,Severely endangered,4000
+1363,Kickapoo (Texas),United States of America,USA,Severely endangered,4000
+1364,Kiowa,United States of America,USA,Severely endangered,4000
+1365,Koroni,Indonesia,IDN,Definitely endangered,4000
+1366,Lamongse,India,IND,Critically endangered,4000
+1367,Ndunda,Nigeria,NGA,Severely endangered,4000
+1368,Northern Paiute (Nevada),United States of America,USA,Definitely endangered,4000
+1369,Pupeo,China,CHN,Definitely endangered,4000
+1370,Rapa,French Polynesia (France),PYF,Severely endangered,4000
+1371,Red Gelao (China),China,CHN,Critically endangered,4000
+1372,Sengseng,Papua New Guinea,PNG,Vulnerable,4000
+1373,Sirionó,Bolivia (Plurinational State of),BOL,Severely endangered,4000
+1374,Talondo,Indonesia,IDN,Definitely endangered,4000
+1375,Yaminahua (Bolivia;Peru),Bolivia (Plurinational State of);Peru,BOL;PER,Severely endangered,4000
+1376,Sanema (Venezuela),Venezuela (Bolivarian Republic of),VEN,Vulnerable,3930
+1377,Pirahã,Brazil,BRA,Vulnerable,3890
+1378,Yerong,China,CHN,Severely endangered,3800
+1379,A'ingae / Cofan (Colombia),Colombia,COL,Severely endangered,3790
+1380,Halkomelem,Canada;United States of America,CAN;USA,Severely endangered,3750
+1381,Yudja,Brazil,BRA,Vulnerable,3620
+1382,Kisêdjê,Brazil,BRA,Vulnerable,3510
+1383,Auye,Indonesia,IDN,Vulnerable,3500
+1384,Awyi,Indonesia,IDN,Vulnerable,3500
+1385,Bierebo,Vanuatu,VUT,Vulnerable,3500
+1386,Fayu,Indonesia,IDN,Vulnerable,3500
+1387,Labo,Vanuatu,VUT,Vulnerable,3500
+1388,Myky,Brazil,BRA,Vulnerable,3500
+1389,Nadëb,Brazil,BRA,Definitely endangered,3500
+1390,Taje,Indonesia,IDN,Critically endangered,3500
+1391,Tenharim,Brazil,BRA,Severely endangered,3500
+1392,Mako,Venezuela (Bolivarian Republic of),VEN,Critically endangered,3450
+1393,Barām,Nepal,NPL,Critically endangered,3420
+1394,Ikpeng,Brazil,BRA,Vulnerable,3420
+1395,Araweté,Brazil,BRA,Vulnerable,3390
+1396,Northern Pame,Mexico,MEX,Definitely endangered,3370
+1397,Thompson,Canada,CAN,Severely endangered,3350
+1398,Serili,Indonesia,IDN,Vulnerable,3280
+1399,Kaningara,Papua New Guinea,PNG,Vulnerable,3270
+1400,Misantla Totonac,Mexico,MEX,Critically endangered,3250
+1401,Nemi,New Caledonia (France),NCL,Definitely endangered,3250
+1402,Nambiquara do Norte,Brazil,BRA,Vulnerable,3230
+1403,Matís,Brazil,BRA,Vulnerable,3220
+1404,Wauja,Brazil,BRA,Vulnerable,3210
+1405,Benggoi,Indonesia,IDN,Definitely endangered,3200
+1406,Karitiana,Brazil,BRA,Vulnerable,3200
+1407,Apalai,Brazil,BRA,Vulnerable,3170
+1408,Kwak'wala,Canada;United States of America,CAN;USA,Critically endangered,3150
+1409,Tilung,Nepal,NPL,Definitely endangered,3100
+1410,Opuuo,Ethiopia,ETH,Critically endangered,3070
+1411,Panará,Brazil,BRA,Vulnerable,3060
+1412,Aka,India,IND,Critically endangered,3000
+1413,Bakole,Cameroon,CMR,Critically endangered,3000
+1414,Bathari,Oman,OMN,Critically endangered,3000
+1415,Brokkat,Bhutan,BTN,Definitely endangered,3000
+1416,Duwet,Papua New Guinea,PNG,Vulnerable,3000
+1417,Faire Atta,Philippines,PHL,Severely endangered,3000
+1418,Green Gelao (China),China,CHN,Critically endangered,3000
+1419,Green Gelao (Viet Nam),Viet Nam,VNM,Critically endangered,3000
+1420,Guatuso,Costa Rica,CRI,Severely endangered,3000
+1421,Gupapuyngu,Australia,AUS,Vulnerable,3000
+1422,Istro-Romanian,Croatia,HRV,Severely endangered,3000
+1423,Jicarilla Apache,United States of America,USA,Severely endangered,3000
+1424,Kandas,Papua New Guinea,PNG,Vulnerable,3000
+1425,Kangjia,China,CHN,Severely endangered,3000
+1426,Kaxarari,Brazil,BRA,Critically endangered,3000
+1427,Kwansu,Indonesia,IDN,Vulnerable,3000
+1428,Legenyem,Indonesia,IDN,Vulnerable,3000
+1429,Mandaic,Iran (Islamic Republic of);Iraq,IRN;IRQ,Critically endangered,3000
+1430,Mangareva,French Polynesia (France),PYF,Severely endangered,3000
+1431,Mani,Guinea;Sierra Leone,GIN;SLE,Critically endangered,3000
+1432,Maniq,Thailand,THA,Definitely endangered,3000
+1433,Mono,Cameroon,CMR,Critically endangered,3000
+1434,Northern Paiute (Oregon),United States of America,USA,Critically endangered,3000
+1435,Phong,Lao People's Democratic Republic,LAO,Definitely endangered,3000
+1436,Shanenawa,Brazil,BRA,Vulnerable,3000
+1437,Sissano,Papua New Guinea,PNG,Critically endangered,3000
+1438,Skolt Saami,Finland;Norway;Russian Federation,FIN;NOR;RUS,Severely endangered,3000
+1439,Tarpia,Indonesia,IDN,Severely endangered,3000
+1440,Tause,Indonesia,IDN,Vulnerable,3000
+1441,Thaayorre,Australia,AUS,Definitely endangered,3000
+1442,Tlingit (United States of America),United States of America,USA,Critically endangered,3000
+1443,Tol,Honduras,HND,Critically endangered,3000
+1444,Tsakonian,Greece,GRC,Critically endangered,3000
+1445,Ute (Utah),United States of America,USA,Severely endangered,3000
+1446,Vedda,Sri Lanka,LKA,Definitely endangered,3000
+1447,Vera'a,Vanuatu,VUT,Definitely endangered,3000
+1448,Warapu,Papua New Guinea,PNG,Severely endangered,3000
+1449,Waru,Indonesia,IDN,Definitely endangered,3000
+1450,Yawarana,Venezuela (Bolivarian Republic of),VEN,Severely endangered,3000
+1451,Yimas,Papua New Guinea,PNG,Severely endangered,3000
+1452,Tilapa Otomí,Mexico,MEX,Severely endangered,2920
+1453,Paumarí,Brazil,BRA,Severely endangered,2900
+1454,Wayana (Brazil),Brazil,BRA,Vulnerable,2880
+1455,Achagua,Colombia,COL,Severely endangered,2830
+1456,Guajá,Brazil,BRA,Vulnerable,2830
+1457,Maniwaki Algonquin,Canada,CAN,Severely endangered,2800
+1458,Alabama,United States of America,USA,Definitely endangered,2750
+1459,Cocopa (Arizona),United States of America,USA,Severely endangered,2750
+1460,Miltu,Chad,TCD,Critically endangered,2720
+1461,Arara do Pará,Brazil,BRA,Vulnerable,2710
+1462,Kaki Ae,Papua New Guinea,PNG,Vulnerable,2660
+1463,Nisga'a,Canada,CAN,Severely endangered,2650
+1464,Bosilewa,Papua New Guinea,PNG,Vulnerable,2500
+1465,Caquinte Campa,Peru,PER,Definitely endangered,2500
+1466,Gwich'in (Canada),Canada,CAN,Severely endangered,2500
+1467,Kaibobo,Indonesia,IDN,Definitely endangered,2500
+1468,Kaiep,Papua New Guinea,PNG,Vulnerable,2500
+1469,Kaiy,Indonesia,IDN,Vulnerable,2500
+1470,Laji,China,CHN,Critically endangered,2500
+1471,Lehali,Vanuatu,VUT,Vulnerable,2500
+1472,Lillooet,Canada,CAN,Severely endangered,2500
+1473,Löyöp,Vanuatu,VUT,Vulnerable,2500
+1474,Nyangumarta,Australia,AUS,Vulnerable,2500
+1475,Pear,Cambodia,KHM,Severely endangered,2500
+1476,Ruc,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Definitely endangered,2500
+1477,Sause,Indonesia,IDN,Severely endangered,2500
+1478,Texistepecan,Mexico,MEX,Severely endangered,2500
+1479,Winnebago (Nebraska),United States of America,USA,Severely endangered,2500
+1480,Winnebago (Wisconsin),United States of America,USA,Severely endangered,2500
+1481,Zapotec of San Bartolo Yautepec,Mexico,MEX,Severely endangered,2460
+1482,North Alaskan Inupiaq (Canada),Canada,CAN,Severely endangered,2400
+1483,Waiwai (Guyana),Guyana,GUY,Vulnerable,2400
+1484,As,Indonesia,IDN,Vulnerable,2300
+1485,Siglitun,Canada,CAN,Severely endangered,2300
+1486,K'iche' (Mexico),Mexico,MEX,Definitely endangered,2260
+1487,Paipai,Mexico,MEX,Severely endangered,2260
+1488,Garuwahi,Papua New Guinea,PNG,Definitely endangered,2250
+1489,Picuris,United States of America,USA,Vulnerable,2250
+1490,Neku,New Caledonia (France),NCL,Severely endangered,2210
+1491,Tiri,New Caledonia (France),NCL,Definitely endangered,2210
+1492,Danisi,Botswana,BWA,Critically endangered,2200
+1493,Emplawas,Indonesia,IDN,Definitely endangered,2200
+1494,Musom,Papua New Guinea,PNG,Definitely endangered,2190
+1495,Pwaamèi,New Caledonia (France),NCL,Definitely endangered,2190
+1496,Karo,Brazil,BRA,Vulnerable,2080
+1497,Cocopa (Mexico),Mexico,MEX,Definitely endangered,2060
+1498,Korúbo,Brazil,BRA,Vulnerable,2050
+1499,Aja,Sudan,SDN,Critically endangered,2000
+1500,Antakirinya,Australia,AUS,Definitely endangered,2000
+1501,Bana,Lao People's Democratic Republic,LAO,Severely endangered,2000
+1502,Baras,Indonesia,IDN,Severely endangered,2000
+1503,Batak,Philippines,PHL,Definitely endangered,2000
+1504,Birri,Central African Republic,CAF,Critically endangered,2000
+1505,Bonggo,Indonesia,IDN,Severely endangered,2000
+1506,Central Siberian Yupik (Chukotka),Russian Federation,RUS,Severely endangered,2000
+1507,Che Wong,Malaysia,MYS,Definitely endangered,2000
+1508,Defaka,Nigeria,NGA,Critically endangered,2000
+1509,Doga,Papua New Guinea,PNG,Definitely endangered,2000
+1510,Dorig,Vanuatu,VUT,Definitely endangered,2000
+1511,Emae,Vanuatu,VUT,Vulnerable,2000
+1512,Erokwanas,Indonesia,IDN,Vulnerable,2000
+1513,Gowro,Pakistan,PAK,Severely endangered,2000
+1514,Hayu,Nepal,NPL,Critically endangered,2000
+1515,Hidatsa,United States of America,USA,Definitely endangered,2000
+1516,Ingrian,Russian Federation,RUS,Severely endangered,2000
+1517,Iwaidja,Australia,AUS,Vulnerable,2000
+1518,Kadai,Indonesia,IDN,Definitely endangered,2000
+1519,Kao,Indonesia,IDN,Definitely endangered,2000
+1520,Karo,Ethiopia,ETH,Critically endangered,2000
+1521,Kelo,Sudan,SDN,Critically endangered,2000
+1522,Kokota,Solomon Islands,SLB,Vulnerable,2000
+1523,Koneraw,Indonesia,IDN,Vulnerable,2000
+1524,Koroshi,Iran (Islamic Republic of),IRN,Critically endangered,2000
+1525,Magori,Papua New Guinea,PNG,Vulnerable,2000
+1526,Maung,Australia,AUS,Vulnerable,2000
+1527,Mehináku,Brazil,BRA,Vulnerable,2000
+1528,Moghol,Afghanistan,AFG,Critically endangered,2000
+1529,Ningalami,Afghanistan,AFG,Severely endangered,2000
+1530,Northern Alta,Philippines,PHL,Severely endangered,2000
+1531,Numbani,Papua New Guinea,PNG,Vulnerable,2000
+1532,Ongamo,Kenya,KEN,Critically endangered,2000
+1533,Orejón,Peru,PER,Severely endangered,2000
+1534,Pacific Gulf Yupik,United States of America,USA,Severely endangered,2000
+1535,Pipil,El Salvador,SLV,Critically endangered,2000
+1536,Saisiyat,China,CHN,Severely endangered,2000
+1537,Sauk-Fox,United States of America,USA,Critically endangered,2000
+1538,Sepa,Papua New Guinea,PNG,Vulnerable,2000
+1539,Shark Bay,Vanuatu,VUT,Vulnerable,2000
+1540,Southern Chocho,Mexico,MEX,Severely endangered,2000
+1541,Töitschu,Italy,ITA,Severely endangered,2000
+1542,|Xaise,Botswana,BWA,Critically endangered,2000
+1543,Beaver,Canada,CAN,Definitely endangered,1950
+1544,Nootka,Canada,CAN,Severely endangered,1850
+1545,Tipai (Mexico),Mexico,MEX,Severely endangered,1840
+1546,Uru-eu-au-au,Brazil,BRA,Vulnerable,1830
+1547,Eastern Chocho,Mexico,MEX,Severely endangered,1810
+1548,Bahonsuai,Indonesia,IDN,Definitely endangered,1800
+1549,Bedoanas,Indonesia,IDN,Vulnerable,1800
+1550,Jarawára,Brazil,BRA,Vulnerable,1800
+1551,Keder,Indonesia,IDN,Severely endangered,1800
+1552,Straits Salish,Canada;United States of America,CAN;USA,Severely endangered,1800
+1553,Zo'é,Brazil,BRA,Vulnerable,1770
+1554,Central Ojibwe,Canada,CAN,Definitely endangered,1750
+1555,Kuurinji,Australia,AUS,Definitely endangered,1750
+1556,Mwatebu,Papua New Guinea,PNG,Definitely endangered,1660
+1557,Zazao,Solomon Islands,SLB,Critically endangered,1660
+1558,Pije,New Caledonia (France),NCL,Severely endangered,1610
+1559,Aweti,Brazil,BRA,Vulnerable,1600
+1560,Koro,Vanuatu,VUT,Definitely endangered,1600
+1561,Meriam Mir,Australia,AUS,Definitely endangered,1600
+1562,Onjab,Papua New Guinea,PNG,Vulnerable,1600
+1563,Tsimshian,Canada,CAN,Critically endangered,1600
+1564,Chihuahua Lower Pima,Mexico,MEX,Definitely endangered,1590
+1565,Kaska,Canada,CAN,Severely endangered,1550
+1566,Aikana,Brazil,BRA,Definitely endangered,1500
+1567,Aleut (Eastern),United States of America,USA,Critically endangered,1500
+1568,Aleut (Western),United States of America,USA,Severely endangered,1500
+1569,Amblong,Vanuatu,VUT,Definitely endangered,1500
+1570,Arguni,Indonesia,IDN,Vulnerable,1500
+1571,Assiniboine (United States of America),United States of America,USA,Critically endangered,1500
+1572,Baki,Vanuatu,VUT,Vulnerable,1500
+1573,Cacua,Colombia,COL,Severely endangered,1500
+1574,Camarines Norte Agta,Philippines,PHL,Severely endangered,1500
+1575,Cubeo (Brazil),Brazil,BRA,Definitely endangered,1500
+1576,Gwich'in (United States of America),United States of America,USA,Severely endangered,1500
+1577,Hiw,Vanuatu,VUT,Definitely endangered,1500
+1578,Katxuyana-Xikuyána,Brazil,BRA,Vulnerable,1500
+1579,Ket,Russian Federation,RUS,Severely endangered,1500
+1580,Koyukon,United States of America,USA,Critically endangered,1500
+1581,Malmariv,Vanuatu,VUT,Vulnerable,1500
+1582,Mt. Iraya Agta,Philippines,PHL,Definitely endangered,1500
+1583,Ocaina (Peru),Peru,PER,Critically endangered,1500
+1584,Papapana,Papua New Guinea,PNG,Definitely endangered,1500
+1585,Quechan,United States of America,USA,Definitely endangered,1500
+1586,Southern Ayta,Philippines,PHL,Critically endangered,1500
+1587,Tundra Yukagir,Russian Federation,RUS,Critically endangered,1500
+1588,Tupari,Brazil,BRA,Definitely endangered,1500
+1589,Wari,Indonesia,IDN,Definitely endangered,1500
+1590,Yavapai,United States of America,USA,Severely endangered,1500
+1591,Mlabri,Lao People's Democratic Republic;Thailand,LAO;THA,Definitely endangered,1490
+1592,Negidal,Russian Federation,RUS,Critically endangered,1470
+1593,Suarmin,Papua New Guinea,PNG,Definitely endangered,1450
+1594,Kickapoo (Mexico),Mexico,MEX,Critically endangered,1440
+1595,Wab,Papua New Guinea,PNG,Vulnerable,1420
+1596,Motocintlec,Mexico,MEX,Critically endangered,1410
+1597,Dengalu,Papua New Guinea,PNG,Definitely endangered,1400
+1598,Dimbong,Cameroon,CMR,Critically endangered,1400
+1599,Kunbarlang,Australia,AUS,Severely endangered,1400
+1600,Machineri (Bolivia),Bolivia (Plurinational State of),BOL,Severely endangered,1400
+1601,Taworta,Indonesia,IDN,Vulnerable,1400
+1602,ǂHoa,Botswana,BWA,Critically endangered,1400
+1603,Handuri,India,IND,Critically endangered,1380
+1604,Suruahá,Brazil,BRA,Vulnerable,1360
+1605,Kutenai,Canada;United States of America,CAN;USA,Severely endangered,1350
+1606,Nauna,Papua New Guinea,PNG,Vulnerable,1300
+1607,Okanagan,Canada;United States of America,CAN;USA,Definitely endangered,1300
+1608,Piu,Papua New Guinea,PNG,Definitely endangered,1300
+1609,Ocaina (Colombia),Colombia,COL,Severely endangered,1260
+1610,Yuki,Bolivia (Plurinational State of),BOL,Severely endangered,1250
+1611,Asurini do Xingu,Brazil,BRA,Vulnerable,1240
+1612,Nahukwa,Brazil,BRA,Definitely endangered,1240
+1613,Aputai,Indonesia,IDN,Critically endangered,1200
+1614,Budibud,Papua New Guinea,PNG,Vulnerable,1200
+1615,Capanahua,Peru,PER,Severely endangered,1200
+1616,Dâw,Brazil,BRA,Vulnerable,1200
+1617,Ili Turk,China,CHN,Severely endangered,1200
+1618,Lamu,China,CHN,Critically endangered,1200
+1619,Obokuitai,Indonesia,IDN,Vulnerable,1200
+1620,Polonomombauk,Vanuatu,VUT,Definitely endangered,1200
+1621,Samre,Cambodia,KHM,Critically endangered,1200
+1622,Tutuba,Vanuatu,VUT,Definitely endangered,1200
+1623,Northern Tutchone,Canada,CAN,Definitely endangered,1150
+1624,Dubu,Indonesia,IDN,Vulnerable,1100
+1625,Haisla,Canada,CAN,Critically endangered,1100
+1626,Heiltsuk,Canada,CAN,Critically endangered,1050
+1627,Kwegu,Ethiopia,ETH,Critically endangered,1030
+1628,Adnyamathanha,Australia,AUS,Definitely endangered,1000
+1629,Ainbai,Papua New Guinea,PNG,Severely endangered,1000
+1630,Arem,Lao People's Democratic Republic;Viet Nam,LAO;VNM,Severely endangered,1000
+1631,Banawá Yafi,Brazil,BRA,Vulnerable,1000
+1632,Bara (Colombia),Colombia,COL,Critically endangered,1000
+1633,Bikaru,Papua New Guinea,PNG,Severely endangered,1000
+1634,Boor,Chad,TCD,Critically endangered,1000
+1635,Burate,Indonesia,IDN,Severely endangered,1000
+1636,Callahuaya,Bolivia (Plurinational State of),BOL,Critically endangered,1000
+1637,Comanche,United States of America,USA,Severely endangered,1000
+1638,Djinang,Australia,AUS,Definitely endangered,1000
+1639,Dulbu,Nigeria,NGA,Critically endangered,1000
+1640,Ghomara,Morocco,MAR,Critically endangered,1000
+1641,Itelmen,Russian Federation,RUS,Critically endangered,1000
+1642,Jebero,Peru,PER,Critically endangered,1000
+1643,Jilbe,Nigeria,NGA,Critically endangered,1000
+1644,Kalamo,Papua New Guinea,PNG,Severely endangered,1000
+1645,Kanowit,Malaysia,MYS,Severely endangered,1000
+1646,Karas,Indonesia,IDN,Severely endangered,1000
+1647,Kiong,Nigeria,NGA,Critically endangered,1000
+1648,Kofei,Indonesia,IDN,Severely endangered,1000
+1649,Likum,Papua New Guinea,PNG,Definitely endangered,1000
+1650,Maricopa,United States of America,USA,Severely endangered,1000
+1651,Mohave (Arizona),United States of America,USA,Severely endangered,1000
+1652,Mohave (California),United States of America,USA,Severely endangered,1000
+1653,Molo,Sudan,SDN,Critically endangered,1000
+1654,Mvanip,Nigeria,NGA,Critically endangered,1000
+1655,Nafi,Papua New Guinea,PNG,Severely endangered,1000
+1656,Ninam (Venezuela),Venezuela (Bolivarian Republic of),VEN,Vulnerable,1000
+1657,Omagua (Peru),Peru,PER,Critically endangered,1000
+1658,Oroch,Russian Federation,RUS,Critically endangered,1000
+1659,Oroha,Solomon Islands,SLB,Severely endangered,1000
+1660,Pauwi,Indonesia,IDN,Vulnerable,1000
+1661,Piame,Papua New Guinea,PNG,Severely endangered,1000
+1662,Pyu,Indonesia,IDN,Severely endangered,1000
+1663,Ruga,India,IND,Critically endangered,1000
+1664,Sahaptin,United States of America,USA,Severely endangered,1000
+1665,Samatao,China,CHN,Critically endangered,1000
+1666,Seneca (United States of America),United States of America,USA,Severely endangered,1000
+1667,Senggi,Indonesia,IDN,Vulnerable,1000
+1668,Shawnee,United States of America,USA,Severely endangered,1000
+1669,Shiwiar,Ecuador,ECU,Severely endangered,1000
+1670,Shompen,India,IND,Critically endangered,1000
+1671,Soo,Uganda,UGA,Critically endangered,1000
+1672,Tangam,India,IND,Critically endangered,1000
+1673,Tariana (Brazil),Brazil,BRA,Critically endangered,1000
+1674,Tirahi,Afghanistan,AFG,Critically endangered,1000
+1675,Ute (Colorado;Southern Ute),United States of America,USA,Severely endangered,1000
+1676,Vehes,Papua New Guinea,PNG,Severely endangered,1000
+1677,Wik Ngathan,Australia,AUS,Definitely endangered,1000
+1678,Xokleng,Brazil,BRA,Critically endangered,1000
+1679,Yangkam,Nigeria,NGA,Critically endangered,1000
+1680,Yarawata,Papua New Guinea,PNG,Severely endangered,980
+1681,O'odham (Mexico),Mexico,MEX,Definitely endangered,940
+1682,Samosa,Papua New Guinea,PNG,Severely endangered,940
+1683,Mindiri,Papua New Guinea,PNG,Severely endangered,930
+1684,Usu,Papua New Guinea,PNG,Severely endangered,930
+1685,Iteri,Papua New Guinea,PNG,Severely endangered,900
+1686,Ngarinyin,Australia,AUS,Definitely endangered,900
+1687,Repanbitip,Vanuatu,VUT,Definitely endangered,900
+1688,Tofanma,Indonesia,IDN,Vulnerable,900
+1689,Taiap,Papua New Guinea,PNG,Severely endangered,890
+1690,Kusunda,Nepal,NPL,Critically endangered,870
+1691,Patamona (Brazil),Brazil,BRA,Vulnerable,870
+1692,Xiri,South Africa,ZAF,Critically endangered,870
+1693,Narau,Indonesia,IDN,Severely endangered,850
+1694,Ak,Papua New Guinea,PNG,Severely endangered,830
+1695,Araona,Bolivia (Plurinational State of),BOL,Severely endangered,810
+1696,Ari,Papua New Guinea,PNG,Severely endangered,800
+1697,Assiniboine (Canada),Canada,CAN,Critically endangered,800
+1698,Dorro,Papua New Guinea,PNG,Severely endangered,800
+1699,Gong,Thailand,THA,Severely endangered,800
+1700,Itik,Indonesia,IDN,Vulnerable,800
+1701,Mari,Papua New Guinea,PNG,Severely endangered,800
+1702,Pwapwa,New Caledonia (France),NCL,Severely endangered,800
+1703,Somm,Papua New Guinea,PNG,Definitely endangered,800
+1704,Tobati,Indonesia,IDN,Severely endangered,800
+1705,Moré,Bolivia (Plurinational State of),BOL,Critically endangered,760
+1706,Mores,Vanuatu,VUT,Severely endangered,750
+1707,Musan,Papua New Guinea,PNG,Severely endangered,750
+1708,Papi,Papua New Guinea,PNG,Severely endangered,750
+1709,Sarcee,Canada,CAN,Critically endangered,750
+1710,Sekani,Canada,CAN,Critically endangered,750
+1711,Arawun,Papua New Guinea,PNG,Severely endangered,730
+1712,Siriano (Brazil),Brazil,BRA,Vulnerable,710
+1713,Teko,Mexico,MEX,Severely endangered,710
+1714,Anus,Indonesia,IDN,Severely endangered,700
+1715,Awera,Indonesia,IDN,Vulnerable,700
+1716,Doutai,Indonesia,IDN,Severely endangered,700
+1717,East Cape Yupik,Russian Federation,RUS,Critically endangered,700
+1718,Iresim,Indonesia,IDN,Severely endangered,700
+1719,Mafea,Vanuatu,VUT,Definitely endangered,700
+1720,Vilamovian,Poland,POL,Severely endangered,700
+1721,Yankunytjatjara,Australia,AUS,Definitely endangered,700
+1722,Yanyuwa,Australia,AUS,Severely endangered,700
+1723,Yapunda,Papua New Guinea,PNG,Severely endangered,690
+1724,Bothar,Papua New Guinea,PNG,Severely endangered,680
+1725,Kari'ña (Brazil),Brazil,BRA,Definitely endangered,660
+1726,Ritharrngu,Australia,AUS,Definitely endangered,660
+1727,Northern Straits Salish,United States of America,USA,Critically endangered,650
+1728,Sumariup,Papua New Guinea,PNG,Severely endangered,650
+1729,Orok,Russian Federation,RUS,Critically endangered,640
+1730,Carapana (Brazil),Brazil,BRA,Severely endangered,630
+1731,Yan-nhangu,Australia,AUS,Definitely endangered,610
+1732,Atemble,Papua New Guinea,PNG,Definitely endangered,600
+1733,Bagupi,Papua New Guinea,PNG,Definitely endangered,600
+1734,Carapana (Colombia),Colombia,COL,Definitely endangered,600
+1735,Gooniyandi,Australia,AUS,Severely endangered,600
+1736,Gurrgoni,Australia,AUS,Vulnerable,600
+1737,Kija,Australia,AUS,Severely endangered,600
+1738,Montana Salish,United States of America,USA,Critically endangered,600
+1739,Ngangikurunggurr,Australia,AUS,Severely endangered,600
+1740,Senaya,Iran (Islamic Republic of),IRN,Critically endangered,600
+1741,Tahltan,Canada,CAN,Critically endangered,600
+1742,Tembé,Brazil,BRA,Severely endangered,600
+1743,Mosimo,Papua New Guinea,PNG,Severely endangered,580
+1744,Tapayuna,Brazil,BRA,Severely endangered,580
+1745,Bepour,Papua New Guinea,PNG,Severely endangered,570
+1746,Faita,Papua New Guinea,PNG,Severely endangered,570
+1747,Teribe (Costa Rica),Costa Rica,CRI,Critically endangered,570
+1748,Kiliwa,Mexico,MEX,Critically endangered,560
+1749,Moere,Papua New Guinea,PNG,Severely endangered,560
+1750,Baure,Bolivia (Plurinational State of),BOL,Critically endangered,550
+1751,Southern Haida,Canada,CAN,Critically endangered,550
+1752,Tlingit (Canada),Canada,CAN,Critically endangered,550
+1753,Upper Tanana (United States of America),United States of America,USA,Critically endangered,550
+1754,Zapotec of Asunción Tlacolulita,Mexico,MEX,Critically endangered,530
+1755,Trumai,Brazil,BRA,Critically endangered,510
+1756,Arabela,Peru,PER,Severely endangered,500
+1757,Arha,New Caledonia (France),NCL,Critically endangered,500
+1758,Banjima,Australia,AUS,Severely endangered,500
+1759,Bella Coola,Canada,CAN,Critically endangered,500
+1760,Budong-Budong,Indonesia,IDN,Critically endangered,500
+1761,Bulgebi,Papua New Guinea,PNG,Definitely endangered,500
+1762,Chiquitano (Brazil),Brazil,BRA,Critically endangered,500
+1763,Forest Yukagir,Russian Federation,RUS,Critically endangered,500
+1764,Gorovu,Papua New Guinea,PNG,Severely endangered,500
+1765,Karaim (Lithuania),Lithuania,LTU,Severely endangered,500
+1766,Kasong,Cambodia;Thailand,KHM;THA,Critically endangered,500
+1767,Kayupulau,Indonesia,IDN,Critically endangered,500
+1768,Lolak,Indonesia,IDN,Critically endangered,500
+1769,Maku'a,Timor-Leste,TLS,Critically endangered,500
+1770,Makurap,Brazil,BRA,Severely endangered,500
+1771,Miriwoong,Australia,AUS,Critically endangered,500
+1772,Moraori,Indonesia,IDN,Severely endangered,500
+1773,Nakkara,Australia,AUS,Severely endangered,500
+1774,Ngarinman,Australia,AUS,Severely endangered,500
+1775,Norfolk-Pitcairn (Pitcairn),Pitcairn  (U.K.),PCN,Vulnerable,500
+1776,Omaha-Ponca,United States of America,USA,Critically endangered,500
+1777,Omotik,Kenya,KEN,Critically endangered,500
+1778,Onge,India,IND,Critically endangered,500
+1779,Patua,China,CHN,Critically endangered,500
+1780,Paulohi,Indonesia,IDN,Critically endangered,500
+1781,Potawatomi (Kansas),United States of America,USA,Critically endangered,500
+1782,Potawatomi (Michigan),United States of America,USA,Critically endangered,500
+1783,Potawatomi (Oklahoma),United States of America,USA,Critically endangered,500
+1784,Potawatomi (Wisconsin),United States of America,USA,Critically endangered,500
+1785,Salas,Indonesia,IDN,Severely endangered,500
+1786,Samray,Cambodia;Thailand,KHM;THA,Critically endangered,500
+1787,Sapé,Venezuela (Bolivarian Republic of),VEN,Critically endangered,500
+1788,Sentilese,India,IND,Critically endangered,500
+1789,Sian,Malaysia,MYS,Severely endangered,500
+1790,Tambotalo,Vanuatu,VUT,Severely endangered,500
+1791,Tanacross,United States of America,USA,Critically endangered,500
+1792,Tanaina,United States of America,USA,Severely endangered,500
+1793,Tanimbili,Solomon Islands,SLB,Severely endangered,500
+1794,Warumungu,Australia,AUS,Severely endangered,500
+1795,Zapotec of San Felipe Tejalapan,Mexico,MEX,Critically endangered,500
+1796,Tench,Papua New Guinea,PNG,Critically endangered,490
+1797,Mudburra,Australia,AUS,Severely endangered,480
+1798,Nunggubuyu,Australia,AUS,Severely endangered,440
+1799,Dumun,Papua New Guinea,PNG,Critically endangered,420
+1800,Kudu-Camo,Nigeria,NGA,Critically endangered,420
+1801,Asumboa,Solomon Islands,SLB,Severely endangered,400
+1802,Bunuba,Australia,AUS,Severely endangered,400
+1803,Chamacoco,Brazil;Paraguay,BRA;PRY,Critically endangered,400
+1804,Garrwa,Australia,AUS,Severely endangered,400
+1805,Gumbaynggirr,Australia,AUS,Critically endangered,400
+1806,Maremgi,Indonesia,IDN,Definitely endangered,400
+1807,Mono (Western),United States of America,USA,Critically endangered,400
+1808,Southern Tutchone,Canada,CAN,Critically endangered,400
+1809,Tipai (United States of America),United States of America,USA,Severely endangered,400
+1810,Tofa,Russian Federation,RUS,Critically endangered,400
+1811,Udege,Russian Federation,RUS,Critically endangered,400
+1812,Yoki,Indonesia,IDN,Severely endangered,400
+1813,Noy,Chad,TCD,Critically endangered,360
+1814,Chulym Turk,Russian Federation,RUS,Critically endangered,350
+1815,Kapori,Indonesia,IDN,Critically endangered,350
+1816,Menominee,United States of America,USA,Critically endangered,350
+1817,Quechua of Pacaraos,Peru,PER,Critically endangered,350
+1818,Turaka,Papua New Guinea,PNG,Critically endangered,350
+1819,Barasana (Brazil),Brazil,BRA,Severely endangered,340
+1820,Bilakura,Papua New Guinea,PNG,Critically endangered,340
+1821,Macuna (Brazil),Brazil,BRA,Vulnerable,320
+1822,Jarawa,India,IND,Critically endangered,310
+1823,Kowaki,Papua New Guinea,PNG,Critically endangered,310
+1824,Mawak,Papua New Guinea,PNG,Critically endangered,310
+1825,Alabat Island Agta,Philippines,PHL,Critically endangered,300
+1826,Amahai,Indonesia,IDN,Critically endangered,300
+1827,Bardi,Australia,AUS,Severely endangered,300
+1828,Cahuilla,United States of America,USA,Critically endangered,300
+1829,Cambap,Cameroon,CMR,Critically endangered,300
+1830,Carijona,Colombia,COL,Critically endangered,300
+1831,Chintaw,China,CHN,Critically endangered,300
+1832,Comox/Sliammon,Canada,CAN,Critically endangered,300
+1833,Djeoromitxi,Brazil,BRA,Severely endangered,300
+1834,Duriankere,Indonesia,IDN,Critically endangered,300
+1835,Goundo,Chad,TCD,Critically endangered,300
+1836,Kwerisa,Indonesia,IDN,Critically endangered,300
+1837,Mono (Eastern),United States of America,USA,Critically endangered,300
+1838,Ngalkbun,Australia,AUS,Severely endangered,300
+1839,Punan Batu,Malaysia,MYS,Critically endangered,300
+1840,Sia Pedee,Ecuador,ECU,Critically endangered,300
+1841,Valley Yokuts,United States of America,USA,Severely endangered,300
+1842,Warnman,Australia,AUS,Severely endangered,300
+1843,Wik Ngencherr,Australia,AUS,Severely endangered,300
+1844,Wiradjuri,Australia,AUS,Critically endangered,300
+1845,Malinaltepec Tlapanec,Mexico,MEX,Vulnerable,290
+1846,Ahtna,United States of America,USA,Critically endangered,250
+1847,Bieria,Vanuatu,VUT,Critically endangered,250
+1848,Caddo,United States of America,USA,Critically endangered,250
+1849,Columbian,United States of America,USA,Critically endangered,250
+1850,Iquito,Peru,PER,Critically endangered,250
+1851,Kwazá,Brazil,BRA,Critically endangered,250
+1852,Marrithiyel,Australia,AUS,Critically endangered,250
+1853,Massep,Indonesia,IDN,Critically endangered,250
+1854,Mor,Indonesia,IDN,Severely endangered,250
+1855,Pisamira,Colombia,COL,Critically endangered,250
+1856,Sakurabiat,Brazil,BRA,Severely endangered,250
+1857,Upper Kuskokwim,United States of America,USA,Critically endangered,250
+1858,Zumaya,Cameroon,CMR,Critically endangered,250
+1859,Kashaya,United States of America,USA,Critically endangered,240
+1860,Kavalan,China,CHN,Critically endangered,240
+1861,Wardaman,Australia,AUS,Severely endangered,240
+1862,Washo,United States of America,USA,Severely endangered,240
+1863,Kuku Yalanji,Australia,AUS,Severely endangered,230
+1864,Sām,Nepal,NPL,Severely endangered,230
+1865,Alawa,Australia,AUS,Critically endangered,220
+1866,Tobian,Palau,PLW,Critically endangered,220
+1867,Bara (Brazil),Brazil,BRA,Vulnerable,210
+1868,Ixcatec,Mexico,MEX,Critically endangered,210
+1869,Añu,Venezuela (Bolivarian Republic of),VEN,Critically endangered,200
+1870,Barzani Jewish Neo-Aramaic (Israel),Israel,ISR,Critically endangered,200
+1871,Bom,Sierra Leone,SLE,Severely endangered,200
+1872,Bundjalung,Australia,AUS,Severely endangered,200
+1873,Chung (Cambodia),Cambodia,KHM,Critically endangered,200
+1874,Dusner,Indonesia,IDN,Critically endangered,200
+1875,Forest Enets,Russian Federation,RUS,Critically endangered,200
+1876,Hermit,Papua New Guinea,PNG,Critically endangered,200
+1877,Jawoyn,Australia,AUS,Severely endangered,200
+1878,Kamasa,Papua New Guinea,PNG,Critically endangered,200
+1879,Kanakanabu,China,CHN,Critically endangered,200
+1880,Kembra,Indonesia,IDN,Critically endangered,200
+1881,Kilen,China;Russian Federation,CHN;RUS,Critically endangered,200
+1882,Kim,Sierra Leone,SLE,Critically endangered,200
+1883,Koko Bera,Australia,AUS,Severely endangered,200
+1884,Kulina Páno,Brazil,BRA,Severely endangered,200
+1885,Leco,Bolivia (Plurinational State of),BOL,Critically endangered,200
+1886,Loun,Indonesia,IDN,Critically endangered,200
+1887,Mander,Indonesia,IDN,Critically endangered,200
+1888,Mangarla,Australia,AUS,Critically endangered,200
+1889,Maringarr,Australia,AUS,Critically endangered,200
+1890,Nataoran,China,CHN,Critically endangered,200
+1891,Nez Perce,United States of America,USA,Critically endangered,200
+1892,Nisvai,Vanuatu,VUT,Critically endangered,200
+1893,Nyamal,Australia,AUS,Severely endangered,200
+1894,Nyikina,Australia,AUS,Severely endangered,200
+1895,Panamint,United States of America,USA,Critically endangered,200
+1896,Pite Saami,Norway;Sweden,NOR;SWE,Critically endangered,200
+1897,Qawasqar,Chile,CHL,Critically endangered,200
+1898,Red Gelao (Viet Nam),Viet Nam,VNM,Critically endangered,200
+1899,Somyev,Cameroon;Nigeria,CMR;NGA,Critically endangered,200
+1900,Ume Saami,Sweden,SWE,Critically endangered,200
+1901,Usku,Indonesia,IDN,Critically endangered,200
+1902,Vote,Russian Federation,RUS,Critically endangered,200
+1903,Wajarri,Australia,AUS,Severely endangered,200
+1904,Wambaya,Australia,AUS,Critically endangered,200
+1905,Warekena (Brazil),Brazil,BRA,Critically endangered,200
+1906,White Gelao (Viet Nam),Viet Nam,VNM,Severely endangered,200
+1907,Uruak,Venezuela (Bolivarian Republic of),VEN,Critically endangered,190
+1908,Pacahuara,Bolivia (Plurinational State of),BOL,Critically endangered,180
+1909,Ririo,Solomon Islands,SLB,Critically endangered,180
+1910,Ava-Canoeiro,Brazil,BRA,Critically endangered,160
+1911,Ainu (Hokkaido),Japan,JPN,Critically endangered,150
+1912,Jaminjung,Australia,AUS,Severely endangered,150
+1913,Mwesen,Vanuatu,VUT,Critically endangered,150
+1914,Sechelt,Canada,CAN,Critically endangered,150
+1915,Tanana,United States of America,USA,Critically endangered,150
+1916,Ingalik,United States of America,USA,Critically endangered,140
+1917,Jingulu,Australia,AUS,Severely endangered,140
+1918,Zapotec of Mixtepe,Mexico,MEX,Critically endangered,140
+1919,Woria,Indonesia,IDN,Critically endangered,130
+1920,Aruá,Brazil,BRA,Severely endangered,120
+1921,Han (United States of America),United States of America,USA,Critically endangered,120
+1922,Hupa,United States of America,USA,Critically endangered,120
+1923,Karuk,United States of America,USA,Severely endangered,120
+1924,Makah,United States of America,USA,Critically endangered,120
+1925,Ngaliwuru,Australia,AUS,Critically endangered,120
+1926,Ofayé,Brazil,BRA,Critically endangered,120
+1927,Umpila,Australia,AUS,Severely endangered,120
+1928,Yurok,United States of America,USA,Critically endangered,120
+1929,Kinikinau,Brazil,BRA,Critically endangered,110
+1930,Wagiman,Australia,AUS,Severely endangered,110
+1931,Achumawi,United States of America,USA,Critically endangered,100
+1932,Arho,New Caledonia (France),NCL,Critically endangered,100
+1933,Arikara,United States of America,USA,Critically endangered,100
+1934,Ayizi,China,CHN,Critically endangered,100
+1935,Ch'orti' (Honduras),Honduras,HND,Critically endangered,100
+1936,Chung (Thailand),Thailand,THA,Critically endangered,100
+1937,Copper Island Aleut,Russian Federation,RUS,Critically endangered,100
+1938,Gros Ventre,United States of America,USA,Critically endangered,100
+1939,Gweno,United Republic of Tanzania,TZA,Critically endangered,100
+1940,Hoti,Indonesia,IDN,Critically endangered,100
+1941,Hulung,Indonesia,IDN,Critically endangered,100
+1942,Ibu,Indonesia,IDN,Critically endangered,100
+1943,Iranxe,Brazil,BRA,Critically endangered,100
+1944,Kamarian,Indonesia,IDN,Critically endangered,100
+1945,Karajarri,Australia,AUS,Critically endangered,100
+1946,Karipuna,Brazil,BRA,Definitely endangered,100
+1947,Katawixi,Brazil,BRA,Critically endangered,100
+1948,Kawaiisu,United States of America,USA,Critically endangered,100
+1949,Krenak,Brazil,BRA,Critically endangered,100
+1950,Kurrama,Australia,AUS,Critically endangered,100
+1951,Lardil,Australia,AUS,Critically endangered,100
+1952,Lorediakarkar,Vanuatu,VUT,Critically endangered,100
+1953,Madngele,Australia,AUS,Critically endangered,100
+1954,Malak Malak,Australia,AUS,Critically endangered,100
+1955,Manchu (Amur),China,CHN,Critically endangered,100
+1956,Manchu (Nonni),China,CHN,Critically endangered,100
+1957,Mandan,United States of America,USA,Critically endangered,100
+1958,Marrisyefin,Australia,AUS,Critically endangered,100
+1959,Massalat,Chad,TCD,Critically endangered,100
+1960,Matipu,Brazil,BRA,Critically endangered,100
+1961,Mawayana (Brazil),Brazil;Suriname,BRA;SUR,Critically endangered,100
+1962,Munsee (Canada),Canada,CAN,Critically endangered,100
+1963,Ngardi,Australia,AUS,Critically endangered,100
+1964,Ngbinda,Democratic Republic of the Congo,ZAI,Critically endangered,100
+1965,Northern Paiute (Idaho),United States of America,USA,Critically endangered,100
+1966,Nusa Laut,Indonesia,IDN,Critically endangered,100
+1967,Oneida (Wisconsin),United States of America,USA,Critically endangered,100
+1968,Onondaga (New York),United States of America,USA,Critically endangered,100
+1969,Osage,United States of America,USA,Critically endangered,100
+1970,Parintintin,Brazil,BRA,Critically endangered,100
+1971,Pawnee,United States of America,USA,Critically endangered,100
+1972,Puari,Papua New Guinea,PNG,Critically endangered,100
+1973,Rembarrnga,Australia,AUS,Critically endangered,100
+1974,Sene,Papua New Guinea,PNG,Critically endangered,100
+1975,Susuami,Papua New Guinea,PNG,Critically endangered,100
+1976,Taap,Papua New Guinea,PNG,Critically endangered,100
+1977,Ter Saami,Russian Federation,RUS,Critically endangered,100
+1978,Thao,China,CHN,Critically endangered,100
+1979,Tule-Kaweah Yokuts,United States of America,USA,Critically endangered,100
+1980,Tundra Enets,Russian Federation,RUS,Critically endangered,100
+1981,Wichita,United States of America,USA,Critically endangered,100
+1982,Xambioá,Brazil,BRA,Critically endangered,100
+1983,Yawalapiti,Brazil,BRA,Critically endangered,100
+1984,Yiiji,Australia,AUS,Critically endangered,100
+1985,Arára Shawãdáwa,Brazil,BRA,Critically endangered,90
+1986,Kuuku Ya'u,Australia,AUS,Critically endangered,90
+1987,Ngandi,Australia,AUS,Critically endangered,90
+1988,Ngarluma,Australia,AUS,Critically endangered,90
+1989,Zaparo,Ecuador;Peru,ECU;PER,Critically endangered,90
+1990,Ongota,Ethiopia,ETH,Critically endangered,80
+1991,Ajuru,Brazil,BRA,Severely endangered,80
+1992,Araki,Vanuatu,VUT,Critically endangered,80
+1993,Busuu,Cameroon,CMR,Critically endangered,80
+1994,Chamicuro,Peru,PER,Critically endangered,80
+1995,Dumi,Nepal,NPL,Critically endangered,80
+1996,Kayardild,Australia,AUS,Critically endangered,80
+1997,Munichi,Peru,PER,Critically endangered,80
+1998,N|uu,South Africa,ZAF,Critically endangered,80
+1999,Xetá,Brazil,BRA,Critically endangered,80
+2000,Kiksht,United States of America,USA,Critically endangered,70
+2001,Makolkol,Papua New Guinea,PNG,Critically endangered,70
+2002,Anambé,Brazil,BRA,Critically endangered,60
+2003,Arabana,Australia,AUS,Critically endangered,60
+2004,Ipai,United States of America,USA,Critically endangered,60
+2005,Karaim (Western Ukraine),Ukraine,UKR,Critically endangered,60
+2006,Kings River Yokuts,United States of America,USA,Critically endangered,60
+2007,Korana,South Africa,ZAF,Critically endangered,60
+2008,Mangarrayi,Australia,AUS,Critically endangered,60
+2009,Northern Sierra Miwok,United States of America,USA,Critically endangered,60
+2010,Abaga,Papua New Guinea,PNG,Critically endangered,50
+2011,Aleut (Western;Commander Islands),Russian Federation,RUS,Critically endangered,50
+2012,Aqaw Gelao,China,CHN,Critically endangered,50
+2013,Central Selkup,Russian Federation,RUS,Critically endangered,50
+2014,Cocama-Cocamilla (Brazil),Brazil,BRA,Critically endangered,50
+2015,Dyirbal,Australia,AUS,Critically endangered,50
+2016,Gamilaraay,Australia,AUS,Critically endangered,50
+2017,Great andamanese,India,IND,Critically endangered,50
+2018,Guató,Brazil,BRA,Critically endangered,50
+2019,Holikachuk,United States of America,USA,Critically endangered,50
+2020,Isarog Agta,Philippines,PHL,Critically endangered,50
+2021,Itonama,Bolivia (Plurinational State of),BOL,Critically endangered,50
+2022,Juma,Brazil,BRA,Critically endangered,50
+2023,Kalispel,United States of America,USA,Critically endangered,50
+2024,Kanoê,Brazil,BRA,Critically endangered,50
+2025,Liki,Indonesia,IDN,Critically endangered,50
+2026,Luiseño,United States of America,USA,Critically endangered,50
+2027,Lushootseed,United States of America,USA,Critically endangered,50
+2028,Mansim,Indonesia,IDN,Critically endangered,50
+2029,Naman,Vanuatu,VUT,Critically endangered,50
+2030,Nasarian,Vanuatu,VUT,Critically endangered,50
+2031,Ndai,Cameroon,CMR,Critically endangered,50
+2032,Ngalakan,Australia,AUS,Critically endangered,50
+2033,Oro Win,Brazil,BRA,Critically endangered,50
+2034,Resígaro,Peru,PER,Critically endangered,50
+2035,Southern Selkup,Russian Federation,RUS,Critically endangered,50
+2036,Vano,Solomon Islands,SLB,Critically endangered,50
+2037,Wunambal,Australia,AUS,Critically endangered,50
+2038,Yuchi,United States of America,USA,Critically endangered,50
+2039,Bonerif,Indonesia,IDN,Critically endangered,40
+2040,Coeur d'Alene,United States of America,USA,Critically endangered,40
+2041,Dharawal,Australia,AUS,Critically endangered,40
+2042,Lengilu,Indonesia,IDN,Critically endangered,40
+2043,Ouma,Papua New Guinea,PNG,Critically endangered,40
+2044,Paakantyi,Australia,AUS,Critically endangered,40
+2045,Saponi,Indonesia,IDN,Critically endangered,40
+2046,Tanema,Solomon Islands,SLB,Critically endangered,40
+2047,Tehuelche,Argentina,ARG,Critically endangered,40
+2048,Totoró,Colombia,COL,Critically endangered,40
+2049,Waanyi,Australia,AUS,Critically endangered,40
+2050,Worrorra,Australia,AUS,Critically endangered,40
+2051,Baldemu,Cameroon,CMR,Critically endangered,30
+2052,Bung,Cameroon,CMR,Critically endangered,30
+2053,Canichana,Bolivia (Plurinational State of),BOL,Extinct,30
+2054,Central Pomo,United States of America,USA,Critically endangered,30
+2055,Central Sierra Miwok,United States of America,USA,Critically endangered,30
+2056,Chemehuevi,United States of America,USA,Critically endangered,30
+2057,Kiowa Apache,United States of America,USA,Critically endangered,30
+2058,Konkow,United States of America,USA,Critically endangered,30
+2059,Lake Miwok,United States of America,USA,Critically endangered,30
+2060,Mabiri,Chad,TCD,Critically endangered,30
+2061,Mescalero-Chiricahua Apache (Oklahoma),United States of America,USA,Critically endangered,30
+2062,Northern Pomo,United States of America,USA,Critically endangered,30
+2063,Sabanê,Brazil,BRA,Critically endangered,30
+2064,Southern Pomo,United States of America,USA,Critically endangered,30
+2065,Southern Sierra Miwok,United States of America,USA,Critically endangered,30
+2066,Tubatulabal,United States of America,USA,Critically endangered,30
+2067,Tuscarora (United States of America),United States of America,USA,Critically endangered,30
+2068,Andoa (Peru),Peru,PER,Critically endangered,20
+2069,Arikapu,Brazil,BRA,Critically endangered,20
+2070,Aurê-Aurá,Brazil,BRA,Critically endangered,20
+2071,Baré (Brazil),Brazil,BRA,Critically endangered,20
+2072,Cayuvava,Bolivia (Plurinational State of),BOL,Critically endangered,20
+2073,Gajerrong,Australia,AUS,Critically endangered,20
+2074,Ganggalidda,Australia,AUS,Critically endangered,20
+2075,Klallam,United States of America,USA,Critically endangered,20
+2076,Kunjen,Australia,AUS,Critically endangered,20
+2077,Kuruáya,Brazil,BRA,Critically endangered,20
+2078,Lemerig,Vanuatu,VUT,Critically endangered,20
+2079,Luri,Nigeria,NGA,Critically endangered,20
+2080,Maidu,United States of America,USA,Critically endangered,20
+2081,Oneida (New York),United States of America,USA,Critically endangered,20
+2082,Poyanawa,Brazil,BRA,Critically endangered,20
+2083,Puruborá,Brazil,BRA,Critically endangered,20
+2084,Salamãy,Brazil,BRA,Critically endangered,20
+2085,Spokane,United States of America,USA,Critically endangered,20
+2086,Tharkarri,Australia,AUS,Critically endangered,20
+2087,Vacacocha,Peru,PER,Critically endangered,20
+2088,Wangaaybuwan,Australia,AUS,Critically endangered,20
+2089,Xipáya,Brazil,BRA,Critically endangered,20
+2090,Apiaká,Brazil,BRA,Critically endangered,10
+2091,Bikya,Cameroon,CMR,Critically endangered,10
+2092,Bishuo,Cameroon,CMR,Critically endangered,10
+2093,Diahói,Brazil,BRA,Critically endangered,10
+2094,Laua,Papua New Guinea,PNG,Critically endangered,10
+2095,Patwin,United States of America,USA,Critically endangered,10
+2096,Pazeh,China,CHN,Critically endangered,10
+2097,Pémono,Venezuela (Bolivarian Republic of),VEN,Critically endangered,10
+2098,Taushiro,Peru,PER,Critically endangered,10
+2099,Tinigua,Colombia,COL,Critically endangered,10
+2100,Tolowa,United States of America,USA,Critically endangered,10
+2101,Uru,Bolivia (Plurinational State of),BOL,Extinct,10
+2102,Volow,Vanuatu,VUT,Critically endangered,10
+2103,Wintu-Nomlaki,United States of America,USA,Critically endangered,10
+2104,Yahgan,Chile,CHL,Critically endangered,10
+2105,Yarawi,Papua New Guinea,PNG,Critically endangered,10
+2106,!Gan!ne,South Africa,ZAF,Extinct,0
+2107,Aasax,United Republic of Tanzania,TZA,Extinct,0
+2108,Ahom,India,IND,Extinct,0
+2109,Ainu (Kuril),Russian Federation,RUS,Extinct,0
+2110,Ainu (Sakhalin),Russian Federation,RUS,Extinct,0
+2111,Akkala Saami,Russian Federation,RUS,Extinct,0
+2112,Amanayé,Brazil,BRA,Extinct,0
+2113,Andoa (Ecuador),Ecuador,ECU,Extinct,0
+2114,Antoniano,United States of America,USA,Extinct,0
+2115,Aore,Vanuatu,VUT,Extinct,0
+2116,Arapaho (Oklahoma),United States of America,USA,Extinct,0
+2117,Arapáso,Brazil,BRA,Extinct,0
+2118,Aribwatsa,Papua New Guinea,PNG,Extinct,0
+2119,Arman,Russian Federation,RUS,Extinct,0
+2120,Arta,Philippines,PHL,Extinct,0
+2121,Atacameño,Argentina;Bolivia (Plurinational State of);Chile,ARG;BOL;CHL,Extinct,0
+2122,Atsugewi,United States of America,USA,Extinct,0
+2123,Babuza,China,CHN,Extinct,0
+2124,Baga Mboteni,Guinea,GIN,Critically endangered,0
+2125,Barbareño,United States of America,USA,Extinct,0
+2126,Barzani Jewish Neo-Aramaic (Iraq),Iraq,IRQ,Extinct,0
+2127,Basay,China,CHN,Extinct,0
+2128,Baygo,Sudan,SDN,Extinct,0
+2129,Berakou,Chad,TCD,Extinct,0
+2130,Berti,Sudan,SDN,Extinct,0
+2131,Bina,Papua New Guinea,PNG,Extinct,0
+2132,Birgid,Sudan,SDN,Extinct,0
+2133,Cacaopera,Nicaragua,NIC,Extinct,0
+2134,Cape Khoekhoe,South Africa,ZAF,Extinct,0
+2135,Cappadocian Greek (Turkey),Turkey,TUR,Extinct,0
+2136,Catawba,United States of America,USA,Extinct,0
+2137,Cayuga (Oklahoma),United States of America,USA,Extinct,0
+2138,Cayuse,United States of America,USA,Extinct,0
+2139,Central Kalapuyan,United States of America,USA,Extinct,0
+2140,Cholon,Peru,PER,Extinct,0
+2141,Coptic,Egypt,EGY,Extinct,0
+2142,Cowlitz,United States of America,USA,Extinct,0
+2143,Cupeño,United States of America,USA,Extinct,0
+2144,Dalmatian,Croatia,HRV,Extinct,0
+2145,Deti,Botswana,BWA,Extinct,0
+2146,Dharug,Australia,AUS,Critically endangered,0
+2147,Dhurga,Australia,AUS,Critically endangered,0
+2148,Dicamay Agta,Philippines,PHL,Extinct,0
+2149,Dororo,Solomon Islands,SLB,Extinct,0
+2150,Duli,Cameroon,CMR,Extinct,0
+2151,Dura,Nepal,NPL,Extinct,0
+2152,Eastern Abenaki,United States of America,USA,Extinct,0
+2153,Eastern Pomo,United States of America,USA,Extinct,0
+2154,Eel River Athabaskan,United States of America,USA,Extinct,0
+2155,Eliri,Sudan,SDN,Severely endangered,0
+2156,Elmolo,Kenya,KEN,Extinct,0
+2157,Eotile,Côte d'Ivoire,CIV,Extinct,0
+2158,Eyak,United States of America,USA,Extinct,0
+2159,Gaagudju,Australia,AUS,Extinct,0
+2160,Gafat,Ethiopia,ETH,Extinct,0
+2161,Garífuna (Nicaragua),Nicaragua,NIC,Critically endangered,0
+2162,Ge'ez,Ethiopia,ETH,Extinct,0
+2163,Getmata,Papua New Guinea,PNG,Extinct,0
+2164,Gey,Cameroon,CMR,Extinct,0
+2165,Gule,Sudan,SDN,Extinct,0
+2166,Guliguli,Solomon Islands,SLB,Extinct,0
+2167,Gününa Küne,Argentina,ARG,Extinct,0
+2168,Hanis,United States of America,USA,Extinct,0
+2169,Hoanya,China,CHN,Extinct,0
+2170,Homa,Sudan,SDN,Extinct,0
+2171,Horo,Chad,TCD,Extinct,0
+2172,Hpun,Myanmar,MMR,Extinct,0
+2173,Huitoto (Brazil),Brazil,BRA,Extinct,0
+2174,Hukumina,Indonesia,IDN,Extinct,0
+2175,Huron-Wyandot (United States of America),United States of America,USA,Extinct,0
+2176,Ifo,Vanuatu,VUT,Extinct,0
+2177,Ineseño,United States of America,USA,Extinct,0
+2178,Island Carib,Dominica,DMA,Extinct,0
+2179,Island Chumash,United States of America,USA,Extinct,0
+2180,Jorá,Bolivia (Plurinational State of),BOL,Critically endangered,0
+2181,Judeo-Berber (Morocco),Morocco,MAR,Extinct,0
+2182,Kamas,Russian Federation,RUS,Extinct,0
+2183,Kamas Turk,Russian Federation,RUS,Extinct,0
+2184,Kaniet,Papua New Guinea,PNG,Extinct,0
+2185,Kansa,United States of America,USA,Extinct,0
+2186,Karaim (Crimea),Ukraine,UKR,Extinct,0
+2187,Karami,Papua New Guinea,PNG,Extinct,0
+2188,Karelian (Valday),Russian Federation,RUS,Extinct,0
+2189,Katabaga,Philippines,PHL,Extinct,0
+2190,Kato,United States of America,USA,Extinct,0
+2191,Kayeli,Indonesia,IDN,Extinct,0
+2192,Kazukuru,Solomon Islands,SLB,Extinct,0
+2193,Kerek,Russian Federation,RUS,Extinct,0
+2194,Ketangalan,China,CHN,Extinct,0
+2195,Klamath-Modoc,United States of America,USA,Extinct,0
+2196,Konomihu,United States of America,USA,Extinct,0
+2197,Krenjê,Brazil,BRA,Extinct,0
+2198,Kulun,China,CHN,Extinct,0
+2199,Kurtjar,Australia,AUS,Extinct,0
+2200,Kw'adza,United Republic of Tanzania,TZA,Extinct,0
+2201,Kwadi,Angola,ANG,Extinct,0
+2202,Laghu,Solomon Islands,SLB,Extinct,0
+2203,Lenca,El Salvador;Honduras,SLV;HND,Extinct,0
+2204,Li-Ngbee,Democratic Republic of the Congo,ZAI,Extinct,0
+2205,Liliali,Indonesia,IDN,Extinct,0
+2206,Lipan,United States of America,USA,Extinct,0
+2207,Lishan Didan (Iran),Iran (Islamic Republic of),IRN,Extinct,0
+2208,Lishana Deni (Iraq),Iraq,IRQ,Extinct,0
+2209,Lishanid Noshan (Iraq),Iraq,IRQ,Extinct,0
+2210,Lower Chehalis,United States of America,USA,Extinct,0
+2211,Mapia,Indonesia,IDN,Extinct,0
+2212,Maragus,Vanuatu,VUT,Extinct,0
+2213,Marrgu,Australia,AUS,Extinct,0
+2214,Matagalpa,Nicaragua,NIC,Extinct,0
+2215,Mattole,United States of America,USA,Extinct,0
+2216,Miami-Illinois,United States of America,USA,Extinct,0
+2217,Migueleño,United States of America,USA,Extinct,0
+2218,Miraña (Brazil),Brazil,BRA,Critically endangered,0
+2219,Mirití Tapuia,Brazil,BRA,Critically endangered,0
+2220,Mlahso (Syria),Syrian Arab Republic,SYR,Extinct,0
+2221,Mlahso (Turkey),Turkey,TUR,Extinct,0
+2222,Moksela,Indonesia,IDN,Extinct,0
+2223,Molala,United States of America,USA,Extinct,0
+2224,Mulaha,Papua New Guinea,PNG,Extinct,0
+2225,Múra,Brazil,BRA,Extinct,0
+2226,Nagumi,Cameroon,CMR,Extinct,0
+2227,Naka'ela,Indonesia,IDN,Extinct,0
+2228,Natchez,United States of America,USA,Extinct,0
+2229,New River Shasta,United States of America,USA,Extinct,0
+2230,Ngarla,Australia,AUS,Extinct,0
+2231,Ngong,Cameroon,CMR,Extinct,0
+2232,Nila (Nila Island),Indonesia,IDN,Extinct,0
+2233,Nisenan,United States of America,USA,Extinct,0
+2234,Nooksack,United States of America,USA,Extinct,0
+2235,Northeastern Pomo,United States of America,USA,Extinct,0
+2236,Nukiní,Brazil,BRA,Extinct,0
+2237,Nupbikha,Bhutan,BTN,Vulnerable,0
+2238,Nyang'i,Uganda,UGA,Extinct,0
+2239,Obispeño,United States of America,USA,Extinct,0
+2240,Odut,Nigeria,NGA,Extinct,0
+2241,Old Sirenik,Russian Federation,RUS,Extinct,0
+2242,Omagua (Brazil),Brazil,BRA,Critically endangered,0
+2243,Ona,Argentina,ARG,Extinct,0
+2244,Ongkor Solon,China,CHN,Extinct,0
+2245,Orang Kanaq,Malaysia,MYS,Extinct,0
+2246,Palumata,Indonesia,IDN,Extinct,0
+2247,Panobo,Peru,PER,Extinct,0
+2248,Papora,China,CHN,Extinct,0
+2249,Pentlatch,Canada,CAN,Extinct,0
+2250,Pijao,Colombia,COL,Extinct,0
+2251,Piru,Indonesia,IDN,Extinct,0
+2252,Purisimeño,United States of America,USA,Extinct,0
+2253,Quapaw,United States of America,USA,Extinct,0
+2254,Quileute,United States of America,USA,Extinct,0
+2255,Rangkas,India,IND,Extinct,0
+2256,Sanhaja of Srair,Morocco,MAR,Critically endangered,0
+2257,Sened,Tunisia,TUN,Extinct,0
+2258,Serrano,United States of America,USA,Extinct,0
+2259,Seru,Malaysia,MYS,Extinct,0
+2260,Seward Peninsula Inupiaq (Big Diomede Island),Russian Federation,RUS,Extinct,0
+2261,Singa,Uganda,UGA,Extinct,0
+2262,Siraiya,China,CHN,Extinct,0
+2263,Sishee,New Caledonia (France),NCL,Extinct,0
+2264,Siuslaw,United States of America,USA,Extinct,0
+2265,Slovincian,Poland,POL,Extinct,0
+2266,Southeastern Pomo,United States of America,USA,Extinct,0
+2267,Southern Khanty,Russian Federation,RUS,Extinct,0
+2268,Southern Mansi,Russian Federation,RUS,Extinct,0
+2269,Subtiaba,Nicaragua,NIC,Extinct,0
+2270,Taman,Myanmar,MMR,Extinct,0
+2271,Tandia,Indonesia,IDN,Extinct,0
+2272,Taokas,China,CHN,Extinct,0
+2273,Te'un (Te'un Island),Indonesia,IDN,Extinct,0
+2274,Tetete,Ecuador,ECU,Extinct,0
+2275,Tillamook,United States of America,USA,Extinct,0
+2276,Togoyo,Sudan,SDN,Extinct,0
+2277,Tonjon,Côte d'Ivoire,CIV,Extinct,0
+2278,Torá,Brazil,BRA,Extinct,0
+2279,Tsetsaut,Canada,CAN,Extinct,0
+2280,Tunica,United States of America,USA,Extinct,0
+2281,Tututni,United States of America,USA,Extinct,0
+2282,Twana,United States of America,USA,Extinct,0
+2283,Ubykh (Caucasus),Russian Federation,RUS,Extinct,0
+2284,Ubykh (Turkey),Turkey,TUR,Extinct,0
+2285,Umutina,Brazil,BRA,Extinct,0
+2286,Upper Chehalis,United States of America,USA,Extinct,0
+2287,Uruava,Papua New Guinea,PNG,Extinct,0
+2288,Ventureño,United States of America,USA,Extinct,0
+2289,Vilela,Argentina,ARG,Extinct,0
+2290,Wanai,Venezuela (Bolivarian Republic of),VEN,Critically endangered,0
+2291,Wangkumara,Australia,AUS,Critically endangered,0
+2292,Wappo,United States of America,USA,Extinct,0
+2293,Western Mansi,Russian Federation,RUS,Extinct,0
+2294,Wiyot,United States of America,USA,Extinct,0
+2295,Xakriabá,Brazil,BRA,Extinct,0
+2296,Yaaku,Kenya,KEN,Extinct,0
+2297,Yameo,Peru,PER,Extinct,0
+2298,Yir Yoront,Australia,AUS,Extinct,0
+2299,Yoba,Papua New Guinea,PNG,Extinct,0
+2300,Yug,Russian Federation,RUS,Extinct,0
+2301,Yuki,United States of America,USA,Extinct,0
+2302,Yurutí (Brazil),Brazil,BRA,Extinct,0
+2303,Zeem,Nigeria,NGA,Extinct,0
+2304,|'Auni,South Africa,ZAF,Extinct,0
+2305,|Xam,South Africa,ZAF,Extinct,0
+2306,ǁKu ǁ'e,South Africa,ZAF,Extinct,0
+2307,ǁXegwi,South Africa,ZAF,Extinct,0
