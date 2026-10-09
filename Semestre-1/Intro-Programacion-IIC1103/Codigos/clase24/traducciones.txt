@@ -1,0 +1,4 @@
+gato&cat
+pez&fish
+leon&lion
+perro&dog

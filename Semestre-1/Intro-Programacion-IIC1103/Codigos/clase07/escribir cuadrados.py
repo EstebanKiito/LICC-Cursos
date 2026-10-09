@@ -1,0 +1,7 @@
+print('1\t1')
+print('2\t4')
+print('3\t9')
+print('4\t16')
+print('hola\n\n\n\nchao')
+print('hola',end='\t')
+print('chao')
